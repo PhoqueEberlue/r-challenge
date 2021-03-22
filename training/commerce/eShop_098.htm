@@ -1,0 +1,1873 @@
+
+
+
+
+
+<html>
+<head><title>Index</title>
+
+
+
+
+
+
+<script language="javascript">
+
+
+function doPromoPath(newLink, type_id, tag_id) {	
+		
+	if (newLink.length < 1) {		
+		return;
+	}		
+	
+	var mis_attributes = '' ;
+	var temp = '&' ;		
+	
+	if ((newLink.indexOf('?') < 0) && (newLink.indexOf('&#63') < 0)) {	
+		temp = '?' ;
+	}						
+			
+	if ((location.href.indexOf('navigation/home/index.do') > 0) && (!type_id.length < 1) && (!tag_id.length < 1)) {
+		mis_attributes = temp + 'Page_promo_id=' + tag_id + '&Mis_item_id=' + type_id + '&Mis_itemparamoc_id=3';
+	} else if ((location.href.indexOf('navigation/zone/index.do') > 0) && (!type_id.length < 1) && (!tag_id.length < 1)) {
+		mis_attributes = temp + 'Page_promo_id=' + tag_id + '&Mis_item_id=' + type_id + '&Mis_itemparamoc_id=4';
+	}			
+	
+	var path = '';
+	
+	if (newLink.indexOf("STDINTERNAL") >=0) {
+		path = 'http://www.index.co.uk';
+		newLink = newLink.substring(newLink.indexOf("STDINTERNAL")+11);
+	} else if (newLink.indexOf("SSLINTERNAL") >=0) {
+		path = 'https://www.index.co.uk';
+		newLink = newLink.substring(newLink.indexOf("SSLINTERNAL")+11);	
+	} else if (newLink.toLowerCase().indexOf("http") >=0) {
+		path = '';							
+	} else {
+		path = '/rf';
+	}
+			
+    path = path+newLink+mis_attributes
+   
+   return path;   
+}
+
+
+
+function doPromoLink(newLink, type_id, tag_id) {	
+	
+	path = doPromoPath(newLink, type_id, tag_id);
+	options="";
+		
+	if (path.indexOf("promo-popup") != -1) {
+	    
+	    parameters=newLink.toString().split("?");
+        param ="";
+        otherparam="";
+        if(parameters[1]) {
+            param = parameters[1].split("&"); /* now param is an array of all parameters */
+        }
+        if(param[0]) {
+            for (var i=0;i<param.length;i++) {
+                if (param[i].indexOf("ixstatus") != -1){
+	                options+=",status";
+	            }
+	            else if (param[i].indexOf("ixtoolbar") != -1){
+	                options+=",toolbar";
+	            }
+	            else if (param[i].indexOf("ixlocation") != -1){
+	                options+=",location";
+	            }
+	            else if (param[i].indexOf("ixscrollbars") != -1){
+	                options+=",scrollbars";
+	            }
+	            else if (param[i].indexOf("ixmenubar") != -1){
+	                options+=",menubar";
+	            }
+	            else if (param[i].indexOf("ixresizable") != -1){
+	                options+=",resizable";
+	            }
+	            else if (param[i].indexOf("ixheight") != -1){
+	                options+=",height="+param[i].slice(param[i].indexOf("=")+1);
+	            }
+	            else if (param[i].indexOf("ixwidth") != -1){
+	                options+=",width="+param[i].slice(param[i].indexOf("=")+1);
+	            }
+	            else if (param[i].indexOf("promo-popup") != -1){
+	            }
+	            else {
+	              otherparam+="&"+param[i];
+	            }
+            }
+	    }
+	    if(otherparam.length >1){
+	        newpath=parameters[0]+"?"+otherparam.substr(1);
+	    }
+	    else{
+	        newpath=parameters[0];
+	    }
+        popupwin = window.open(path,'popup',options);
+        popupwin.focus;
+    }
+    else if (path.indexOf("promo-favorites") != -1) {
+        if (window.external){
+  	        window.external.AddFavorite(path,"Index");
+	    }
+	    else {
+	          myWindow = window.open("", "homepage", 'toolbar,width=200,height=100');
+              myWindow.document.write('<a href="'+ path +'">Drag this link onto your Bookmarks button to add this page to your Favorite.</a>');
+              myWindow.focus;
+        }
+	}
+	else if (path.indexOf("promo-myhomepage") != -1) {
+        if (window.external){
+            thisPage.style.behavior='url(#default#homepage)';
+            try{
+  	            thisPage.setHomePage(path);
+  	        }
+  	        catch(er){
+  	            alert("Sorry you do not have permissions to set your home page");
+  	        }
+	    }
+	    else {
+	          myWindow = window.open("", "homepage", 'toolbar,width=200,height=100');
+              myWindow.document.write('<a href="'+ path +'">Drag this link onto your Home button to make this your Home Page.</a>');
+              myWindow.focus;
+        }
+	}
+	
+    else {
+        location.href = path;
+    }
+	return;
+}
+
+function applyStyle(priceStg, styleArray) {			
+		
+	var output = '' ;	
+	splitStg = priceStg.split('<br>') ;
+	
+	for ( var i = 0; i <splitStg.length; i++ ) {	
+		output += '<tr><td class="'
+		output += styleArray[i] ;
+		output += '">' ;		
+		
+		if (!doHomePageTest()) {			
+			if (splitStg[i].toUpperCase().indexOf("WAS") > -1) {				
+				output += splitStg[i].substring(0, splitStg[i].indexOf("&pound;")) ;
+				output += '<s>' ;
+				output += splitStg[i].substring(splitStg[i].indexOf("&pound;")) ;		
+				output += '</s>' ;				
+			} else {
+				output += splitStg[i] ;
+			}
+			
+		} else {			
+			output += splitStg[i] ;			
+		}
+		
+		output += '</td></tr>' ;							
+	}		
+
+	return output ;
+}
+	
+</script>
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" id="thisPage">
+<a name="top"></a>
+<table width="740" cellspacing="0" cellpadding="6" align="CENTER" height="20" class="headinglrgebold">
+  <tr>
+    <td>
+      <table width="740" cellspacing="0" cellpadding="1" bgcolor="#666666" height="20">
+        <tr> 
+          <td bgcolor="#666666"> 
+            <table width="740" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td bgcolor="#FFFFFF"> 
+                  <table width="740" border="0" cellspacing="0" cellpadding="0">
+
+                    <tr>
+                      <td>
+                          
+
+
+<script language="JavaScript">
+    function doHomePageTest() {
+		if (location.href.indexOf("/navigation/home/index.do")>0 || location.href.indexOf("/navigation/entersite.do") >0) { 
+   			return true;
+		}
+		else {
+   			return false;
+ 		}
+	}
+    function get_cookie(Name) {
+        var search = Name + "="
+        var returnvalue = "";
+        if (document.cookie.length > 0) {
+            offset = document.cookie.indexOf(search)
+
+            if (offset != -1) { // if the cookie exists
+                offset += search.length
+                end = document.cookie.indexOf(";", offset); 
+      
+                if (end == -1) {
+                    end = document.cookie.length;
+                }
+
+                returnvalue=unescape(document.cookie.substring(offset, end))
+            }
+        }
+       
+        return returnvalue;
+    }
+</script>
+<table width="740" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#FFFFFF">
+<link href="/rfweb/ix/css/main.css" src="/rfweb/ix/css/main.css" rel="STYLESHEET" type="text/css">
+  <tr>
+    <td width="182"><a href="/rf/navigation/home/index.do"><img src="/images/top_nav/lin_nav_bar_logo.gif" width="182" height="68" border="0"></a></td>
+    <td width="268"><img src="/images/brandmsg1_ani.gif" width="268" height="68" border="0"></td>
+    <td width="286">
+      <table width="286" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+	<!--policy links-->
+            <table width="286" border="0" cellspacing="0" cellpadding="1" bgcolor="#FFFFFF">
+              <tr> 
+                <td rowspan="2" width="1"><img src="/images/line_nav.gif" width="1" height="35"></td>
+		<script language="JavaScript">
+               	   if (doHomePageTest()) {           
+  		       document.write('<td width="60" height="18"><a href="/rf/navigation/multinav/index.do?page=multioffer" class="topnav">promotions</a></td>');
+                   }else { 
+  		       document.write('<td width="60" height="18"><a href="http://www.index.co.uk/index/rf.inf.RFServlet?pathinfo=home/Home.html" class="topnav">homepage</a></td>');
+                   }
+		</script>
+                <td rowspan="2" width="1"><img src="/images/line_nav.gif" width="1" height="35"></td>                
+                <td width="75" height="18"><a href="/rf/navigation/multinav/index.do?page=onlineservices" class="topnav">online services</a></td>
+                <td rowspan="2" width="1"><img src="/images/line_nav.gif" width="1" height="35"></td>
+                <!--<td width="61" height="18"><a href="https://www.index.co.uk/index/rf.inf.RFServlet?pathinfo=index/registration/Registration.html" class="topnav">register</a></td>-->
+                <script language="JavaScript">
+                   if (get_cookie('state')=='on') {           
+                       document.write('<td width="38" height="18"><a href="http://www.index.co.uk/index/rf.inf.RFServlet?pathinfo=index/UserLogoff.html" class="topnav">log-off</a></td>');
+                   }else { 
+                       document.write('<td width="38" height="18"><a href="https://www.index.co.uk/index/rf.inf.RFServlet?pathinfo=index/registration/Logon.html" class="topnav">log-on</a></td>');
+                   }
+                </script>
+                <td rowspan="2" width="1"><img src="/images/line_nav.gif" width="1" height="35"></td>
+                <td width="38" height="18"><a href="http://www.index.co.uk/index/rf.inf.RFServlet?pathinfo=index/help/HelpGuide.html" class="topnav">help</a></td>
+              </tr>
+              <tr> 
+                <td width="60" height="18"><a href="http://www.index.co.uk/index/rf.inf.RFServlet?pathinfo=giftfinder/GiftFinder.html" class="topnav">gift finder</a></td>                
+                <td width="75" height="18"><a href="/rf/multiform/productform.do" class="topnav">quick order</a></td>
+		<!--<td width="62" height="18"><a href="http://www.index.co.uk/index/rf.inf.RFServlet?pathinfo=index/locator/StoreLocator.html" class="topnav">stores</a></td>-->                
+                <td width="65" height="18"><a href="https://www.index.co.uk/index/rf.inf.RFServlet?pathinfo=accman/AccountStatus.html" class="topnav">my account</a></td>                
+                <td width="65" height="18"><a href="http://www.index.co.uk/index/rf.inf.RFServlet?pathinfo=index/basket/Basket.html" class="topnav">view basket</a></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td>
+	<!--search area-->
+            <table width="286" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td bgcolor="#E9EAEE"> 
+                  <table width="286" border="0" cellspacing="0" cellpadding="5">
+                    <tr> 
+                      <td> 
+                        <table width="272" border="0" cellspacing="0" cellpadding="0">
+                          <tr> 
+                            <td> 
+                              <table width="272" border="0" cellspacing="0" cellpadding="1" bgcolor="#666666">
+                                <tr> 
+                                  <td> 
+                                    <table width="278" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF">
+                                      <tr> 
+                                        <td width="60" class="bodytextwhite" align="center" valign="middle" bgcolor="#9B9EA6">SEARCH&nbsp;</td>
+                                        <form onSubmit="return false;" name="ProductSearchForm" method="GET">
+                                        <INPUT TYPE="hidden" NAME="StandardURL" VALUE="http://www.index.co.uk/index/rf.inf.RFServlet?pathinfo=index/search/SearchPortal.html">
+                                        <SCRIPT LANGUAGE="JavaScript" SRC="/rfweb/navigation/js/lrl_search.js"></SCRIPT>
+                                        <td width="202">
+                                           <input name="searchtext" type="text" class="textboxsearch" size="29" align="center" valign="middle" value="enter keyword or order number" onkeydown="javascript:searchCalled()" onClick="javascript:clearText(this)" >
+                                        </td>
+                                        <td bgcolor="#339966" width="28"><a href="javascript:checkForm();" name="search"><img src="/images/go_button.gif" width="28" height="16" border="0"></a></td>
+                		        </form>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+
+
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>
+                          
+
+
+<!--Zone navigation-->
+<SCRIPT LANGUAGE="Javascript" SRC="/rfweb/navigation/js/mouseover.js"></SCRIPT>
+<script language="Javascript">
+var context = '/rf';
+isMac = navigator.userAgent.indexOf("Mac") != -1
+tm  = new Object();
+function cancelCloseMenu(num){
+	if(self.tm[num]) clearTimeout(tm[num])
+}
+
+function showMenu(num){
+cancelCloseMenu(num)
+		menu=layer('topmenu'+num)
+		submenu=layer('submenu'+num)
+    submenu.style.width=menu.getWidth();
+    add_w = (isMac)? 3 : 0; 
+	submenu.moveTo(menu.getAbsoluteLeft(), menu.getAbsoluteTop() + menu.getHeight() - add_w) // move second menu relatively
+	submenu.show()
+}
+
+function initiateHideMenu(num){
+tm[num]=setTimeout("hideMenu("+num+")",100) 
+}
+
+function hideMenu(num){
+submenu=layer('submenu'+num)
+	submenu.hide()
+}
+
+function showMenu(num){
+cancelCloseMenu(num)
+		menu=layer('topmenu'+num)
+		submenu=layer('submenu'+num)
+    submenu.style.width=menu.getWidth();
+    add_w = (isMac)? 3 : 0; 
+
+if ((parseInt(num)>8)) {
+
+submenu.moveTo(menu.getAbsoluteLeft() + menu.getWidth() - submenu.getWidth(), menu.getAbsoluteTop() + menu.getHeight() - add_w+1) // move second menu relatively
+}
+else {
+	submenu.moveTo(menu.getAbsoluteLeft(), menu.getAbsoluteTop() + menu.getHeight() - add_w+1) // move second menu relatively
+}
+	submenu.show()
+}
+
+</script>
+<link rel="STYLESHEET" type="text/css" href="/rfweb/ix/navigation/css/zonenavstylesINDEXSHOP.css">
+
+<!-- zone nav -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+            <tr>
+
+    
+       
+
+       <div id="topmenu1">
+       	    <td width="5%">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" id="electrical">
+              <tr> 
+               <th>
+                <a href="/rf/navigation/zone/index.do?versionid=723"><div id="topmenu1" ><nobr>sound/vision</nobr></div></a>
+              </td>
+            </tr>
+            </table></td>
+           </div>
+             
+       
+    
+       
+    
+       
+    
+       
+    
+       
+    
+       
+    
+       
+    
+       
+    
+       
+    
+       
+                  
+
+    
+       
+    
+       
+
+       <div id="topmenu2">
+       	    <td width="5%">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" id="appliances">
+              <tr> 
+               <th>
+                <a href="/rf/navigation/zone/index.do?versionid=724"><div id="topmenu2" ><nobr>appliances</nobr></div></a>
+              </td>
+            </tr>
+            </table></td>
+           </div>
+             
+       
+    
+       
+    
+       
+    
+       
+    
+       
+    
+       
+    
+       
+    
+       
+    
+       
+                  
+
+    
+       
+    
+       
+    
+       
+
+       <div id="topmenu3">
+       	    <td width="5%">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" id="furniture">
+              <tr> 
+               <th>
+                <a href="/rf/navigation/zone/index.do?versionid=725"><div id="topmenu3" ><nobr>furniture</nobr></div></a>
+              </td>
+            </tr>
+            </table></td>
+           </div>
+             
+       
+    
+       
+    
+       
+    
+       
+    
+       
+    
+       
+    
+       
+    
+       
+                  
+
+    
+       
+    
+       
+    
+       
+    
+       
+
+       <div id="topmenu4">
+       	    <td width="5%">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" id="textiles">
+              <tr> 
+               <th>
+                <a href="/rf/navigation/zone/index.do?versionid=726"><div id="topmenu4" ><nobr>textiles</nobr></div></a>
+              </td>
+            </tr>
+            </table></td>
+           </div>
+             
+       
+    
+       
+    
+       
+    
+       
+    
+       
+    
+       
+    
+       
+                  
+
+    
+       
+    
+       
+    
+       
+    
+       
+    
+       
+
+       <div id="topmenu5">
+       	    <td width="5%">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" id="athome">
+              <tr> 
+               <th>
+                <a href="/rf/navigation/zone/index.do?versionid=727"><div id="topmenu5" ><nobr>household</nobr></div></a>
+              </td>
+            </tr>
+            </table></td>
+           </div>
+             
+       
+    
+       
+    
+       
+    
+       
+    
+       
+    
+       
+                  
+
+    
+       
+    
+       
+    
+       
+    
+       
+    
+       
+    
+       
+
+       <div id="topmenu6">
+       	    <td width="5%">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" id="leisure">
+              <tr> 
+               <th>
+                <a href="/rf/navigation/zone/index.do?versionid=728"><div id="topmenu6" ><nobr>garden/diy</nobr></div></a>
+              </td>
+            </tr>
+            </table></td>
+           </div>
+             
+       
+    
+       
+    
+       
+    
+       
+    
+       
+                  
+
+    
+       
+    
+       
+    
+       
+    
+       
+    
+       
+    
+       
+    
+       
+
+       <div id="topmenu7">
+       	    <td width="5%">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" id="sports">
+              <tr> 
+               <th>
+                <a href="/rf/navigation/zone/index.do?versionid=729"><div id="topmenu7" ><nobr>sports</nobr></div></a>
+              </td>
+            </tr>
+            </table></td>
+           </div>
+             
+       
+    
+       
+    
+       
+    
+       
+                  
+
+    
+       
+    
+       
+    
+       
+    
+       
+    
+       
+    
+       
+    
+       
+    
+       
+
+       <div id="topmenu8">
+       	    <td width="5%">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" id="toys">
+              <tr> 
+               <th>
+                <a href="/rf/navigation/zone/index.do?versionid=722"><div id="topmenu8" ><nobr>toys/nursery</nobr></div></a>
+              </td>
+            </tr>
+            </table></td>
+           </div>
+             
+       
+    
+       
+    
+       
+                  
+
+    
+       
+    
+       
+    
+       
+    
+       
+    
+       
+    
+       
+    
+       
+    
+       
+    
+       
+
+       <div id="topmenu9">
+       	    <td width="5%">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" id="gifts">
+              <tr> 
+               <th>
+                <a href="/rf/navigation/zone/index.do?versionid=730"><div id="topmenu9" ><nobr>gifts/jewellery</nobr></div></a>
+              </td>
+            </tr>
+            </table></td>
+           </div>
+             
+       
+    
+       
+                  
+
+    
+       
+    
+       
+    
+       
+    
+       
+    
+       
+    
+       
+    
+       
+    
+       
+    
+       
+    
+       
+
+       <div id="topmenu10">
+       	    <td width="5%">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" id="sale">
+              <tr> 
+               <th>
+                <a href="/rf/navigation/zone/index.do?versionid=731"><div id="topmenu10" ><nobr>latest offers</nobr></div></a>
+              </td>
+            </tr>
+            </table></td>
+           </div>
+             
+       
+                  
+    
+            </tr>         
+</table>   
+<!-- /zone nav -->
+
+<LINK HREF="/rfweb/navigation/css/dropdowns.css" REL="STYLESHEET" TYPE="text/css">
+<script language="JavaScript" src="/rfweb/navigation/js/dropdowns.js"></script>
+<script language="JavaScript" src="/rfweb/navigation/js/menuPosition.js"></script>
+<script language="javascript">
+
+
+</script>
+
+
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <td>
+                          
+
+
+
+
+
+
+
+<script language="JavaScript">
+
+
+
+	var showrollovers=false
+
+
+function addAsFavorite(v_url, v_title) {
+	// if the browser is IE open the add favorite window
+	if (window.external) {
+		// Add the document location and title to the AddFavorite window
+		external.AddFavorite(v_url, v_title);
+	}
+	else {
+		// Display and alert box for any other browser.
+		alert("Sorry, your browser doesn't support this feature." + 
+		      "\nPlease use the bookmark feature of your browser to save the location of this page.");
+	}
+}
+
+
+var heroPopup="hero_cookie"
+var p = 'status=no,toolbar=no,location=no,directories=no,resizable=no,menubar=no,left='+screen.width+',top='+screen.height+',scrollbars=0, height=340 , width=479'
+var one_time=1
+
+function loadornot(){
+
+  var query = location.search; 
+  var affValue = query.substring(query.indexOf("aff=") + 4, query.indexOf("aff=") + 10);
+
+        if (affValue == 'google'){
+              document.cookie="heroPopup=yes"
+        }
+
+
+	if (get_cookie('heroPopup')==''){
+		load_pop_power()
+		document.cookie="heroPopup=yes"
+	}
+}
+
+function load_pop_power(){	
+	winHero=window.open('/rf/promos/heropromo.do','Littlewoods',p)		
+	winHero.blur()
+}
+
+function launch(){
+  	if (one_time==0)
+    	load_pop_power()
+  	else
+    	loadornot()
+}
+
+</script>
+
+<!-- Style set up as promotion -->
+	
+	
+		
+
+
+
+<!-- Uses PagePromotions bean -->
+
+<style type="text/css">
+
+a.hometitle:link {
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-decoration: none
+}
+a.hometitle:visited {
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-decoration: none
+}
+a.hometitle:hover {
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    color: #fff200;
+    text-decoration: none
+}
+
+.productdesc {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+    color: #000000;
+    text-decoration: none
+}
+
+.productdesc:link {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+    color: #000000;
+    text-decoration: none
+}
+.productdesc:visited {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+    color: #000000;
+    text-decoration: none
+}
+.productdesc:hover {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+    color: #000000;
+    text-decoration: underline
+}
+
+.bodytextbold {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none
+}
+
+.headinglrgebold {
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #;
+    text-decoration: none
+}
+
+.topTenText { 
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+    font-size: 10px; 
+    font-weight: normal; 
+    color: #; 
+    text-decoration: none
+}
+
+
+a.topTenText:link {
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+    font-size: 10px; 
+    font-weight: normal; 
+    color: #; 
+    text-decoration: none
+}
+a.topTenText:visited {
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+    font-size: 10px; 
+    font-weight: normal; 
+    color: #; 
+    text-decoration: none
+}
+a.topTenText:hover {
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+    font-size: 10px; 
+    font-weight: normal; 
+    color: #; 
+    text-decoration: underline
+}
+
+
+a.sublinkwhite:link {
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none
+}
+a.sublinkwhite:visited {
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none
+}
+a.sublinkwhite:hover {
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: underline
+}
+
+.homemaincolour {  
+    background-color: #ed3338;
+}
+
+.homeproductcolour { 
+    background-color: #ffef00;
+}
+
+.homefootercolour {
+    background-color: #3366ff;
+}
+
+.toptenscolour {
+    background-color: #;
+}
+.brandbar {
+    border: 1px solid #3366ff;
+}
+</style>
+	
+
+
+<table width="740" cellspacing="0" cellpadding="0" bgcolor="#666666" height="20">
+	<tr> 
+		<td bgcolor="#666666"> 
+			<table width="740" border="0" cellspacing="0" cellpadding="0">
+				<tr> 
+					<td bgcolor="#FFFFFF"> 
+						<table width="740" border="0" cellspacing="0" cellpadding="0">
+							<tr> 		
+								<td class="homemaincolour"> 
+									<table width="740" border="0" cellspacing="0" cellpadding="0">
+										<tr> 
+											<!-- Main Promotion Image -->
+												
+												<td>
+													
+														
+
+
+
+<!-- Uses PagePromotions bean -->
+
+													
+	        
+		
+	   
+	  
+	
+	<table cellpadding="0" cellspacing="0">
+		<tr> 
+			<td style="cursor: hand;" onClick="doPromoLink('STDINTERNAL/rf/navigation/zone/index.do?versionid=731&amp;categoryid=212166546', '22', '2025187');"><img src="/images/promotions/lin_ss04/main/primary/electrical_left_panel.gif" width="370" height="194" border="0"></td>
+		</tr>
+	</table>
+	
+								
+
+
+
+													
+												</td>
+												
+											<td valign="top">                             
+												<table width="370" border="0" cellspacing="0" cellpadding="0">
+													<tr> 
+														<!-- Main Promotion Background Image -->
+															
+															
+															
+																	
+
+
+
+<!-- Uses PagePromotions bean -->
+
+														  	
+
+	<td height="194" background="/images/promotions/lin_ss04/main/primary/electrical_right_panel.gif">
+	
+
+
+
+																																													
+														 																																																																																			
+															<table width="370" height="194" border="0" cellspacing="0" cellpadding="0">
+  																<tr>
+   																	<td width="35" rowspan="9">&nbsp;</td>
+   																	<td height="32">&nbsp;</td>
+  																</tr>  
+  																<tr>
+   																	<!-- Static Promotion 1 -->
+																	
+																												
+																		
+																		<td height="25" valign="center">
+																			
+																				
+
+
+
+<!-- Uses PagePromotions bean -->
+
+	
+	<a href="javascript:doPromoLink('STDINTERNAL/rf/navigation/thumbnails.do?versionid=731&amp;categoryid=212870552', '', '');" class="hometitle">great digital deals!</a>
+
+
+
+
+
+																			
+																		</td>
+																	
+																	
+																	
+  																</tr>
+  																<tr>
+   																	<td height="10"></td>
+  																</tr>  
+  																<tr>
+   																	<!-- Static Promotion 2 -->
+																	
+																												
+																		
+																		<td height="25" valign="center">
+																			
+																				
+
+
+
+<!-- Uses PagePromotions bean -->
+
+	
+	<a href="javascript:doPromoLink('STDINTERNAL/index/rf.inf.RFServlet?pathinfo=index/prizedraw3/IndexPrizeDraw.html', '', '');" class="hometitle">win a fab pampering kit!</a>
+
+
+
+
+
+																			
+																		</td>
+																	
+																	
+																	
+  																</tr>
+  																<tr>
+   																	<td height="10"></td>
+  																</tr>  
+  																<tr>
+   																	<!-- Static Promotion 3 -->
+																	
+																												
+																		
+																		<td height="25" valign="center">
+																			
+																				
+
+
+
+<!-- Uses PagePromotions bean -->
+
+	
+	<a href="javascript:doPromoLink('STDINTERNAL/rf/navigation/thumbnails.do?versionid=729&amp;categoryid=213113518', '', '');" class="hometitle">experience the outdoor!</a>
+
+
+
+
+
+																			
+																		</td>
+																	
+																	
+																	
+  																</tr>
+  																<tr>
+   																	<td height="10"></td>
+  																</tr>  
+  																<tr>
+  																	<!-- Static Promotion 4 -->
+																	
+																												
+																		
+																		<td height="25" valign="center">
+																			
+																				
+
+
+
+<!-- Uses PagePromotions bean -->
+
+	
+	<a href="javascript:doPromoLink('STDINTERNAL/rf/navigation/thumbnails.do?versionid=728&amp;categoryid=149949409', '', '');" class="hometitle">bargains for gardens!</a>
+
+
+
+
+
+																			
+																		</td>
+																	
+																	
+																	
+  																</tr>
+  																<tr>
+   																	<td></td>
+  																</tr>
+															</table>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr> 
+								<td> 
+								<!--branded pages-->
+									<table class="brandbar" width="740" border="0" cellspacing="0" cellpadding="0">
+										<tr> 
+											<td width="13"><img src="/images/clear.gif" width="13" height="2"></td>
+											<td valign="middle" width="140" class="subtextblue">Featured brands...</td>
+											<td valign="middle" width="23"  class="subtextblue">&nbsp;</td>
+											<td width="100"><a href="http://www.index.co.uk/index/rf.inf.RFServlet?pathinfo=index/spreads/sony1.html" class="hometitle" ><img src="http://www.index.co.uk/rfweb/ix/navigation/home/images/brand_logo_sony_w.gif" width="90" height="24" border="0"></a></td>
+											<td width="100"><a href="http://www.index.co.uk/index/rf.inf.RFServlet?pathinfo=index/spreads/bodysculpture1.html" class="hometitle" ><img src="http://www.index.co.uk/rfweb/ix/navigation/home/images/brand_logo_bodysculpture_w.gif" width="90" height="24" border="0"></a></td>
+											<td width="110"><a href="http://www.index.co.uk/index/rf.inf.RFServlet?pathinfo=index/spreads/fisherprice1.html" class="hometitle"><img src="http://www.index.co.uk/rfweb/ix/navigation/home/images/brand_logo_fisherprice_w.gif" width="90" height="24" border="0"></a></td>
+											<td width="115"><a href="http://www.index.co.uk/index/rf.inf.RFServlet?pathinfo=index/spreads/virgin1.html" class="hometitle" ><img src="http://www.index.co.uk/rfweb/ix/navigation/home/images/brand_logo_virgin_w.gif" width="90" height="24" border="0"></a></td>
+											<td width="115"><a href="http://www.index.co.uk/index/rf.inf.RFServlet?pathinfo=index/spreads/dyson1.html" class="hometitle" ><img src="http://www.index.co.uk/rfweb/ix/navigation/home/images/brand_logo_dyson_w.gif" width="90" height="24" border="0"></a></td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr> 
+								<td> 
+									<table  border="0" cellspacing="4" cellpadding="0">
+										<tr> 
+											<td> 
+												<table width="221" border="0" cellspacing="9" cellpadding="0">
+													<tr>
+														<!-- Static Promotion 5 -->
+														
+																									
+															
+															<td>
+																
+																	
+
+
+
+<!-- Uses PagePromotions bean -->
+
+			
+	<table width="213" height="58" cellpadding="0" cellspacing="0"  style="cursor: pointer; cursor: hand;" onClick="javascript:doPromoLink('STDINTERNAL/rf/navigation/zone/index.do?versionid=731&amp;categoryid=211040714', '', '');">
+		<tr> 
+			<td width="100" valign="top"><img src="/images/promotions/lin_ss04/tertiary/toys_tertiary.gif" width="213" height="58"></td>
+		</tr>
+	</table>
+
+			
+			
+																
+															</td>
+														
+														
+														
+													</tr>
+													<tr>
+														<!-- Static Promotion 6 -->
+														
+																									
+															
+															<td>
+																
+																	
+
+
+
+<!-- Uses PagePromotions bean -->
+
+			
+	<table width="213" height="58" cellpadding="0" cellspacing="0"  style="cursor: pointer; cursor: hand;" onClick="javascript:doPromoLink('STDINTERNAL/rf/navigation/zone/index.do?versionid=731&amp;categoryid=212166528', '', '');">
+		<tr> 
+			<td width="100" valign="top"><img src="/images/promotions/lin_ss04/main/tertiary/home_tertiary.gif" width="213" height="58"></td>
+		</tr>
+	</table>
+
+			
+			
+																
+															</td>
+														
+														
+														
+													</tr>
+													<tr>
+														<!-- Static Promotion 7 -->
+														
+																									
+															
+															<td>
+																
+																	
+
+
+
+<!-- Uses PagePromotions bean -->
+
+			
+	<table width="213" height="58" cellpadding="0" cellspacing="0"  style="cursor: pointer; cursor: hand;" onClick="javascript:doPromoLink('STDINTERNAL/rf/navigation/thumbnails.do?versionid=722&amp;categoryid=176937743', '', '');">
+		<tr> 
+			<td width="100" valign="top"><img src="/images/promotions/lin_ss04/tertiary/tertiary_easter_summerfun.gif" width="213" height="58"></td>
+		</tr>
+	</table>
+
+			
+			
+																
+															</td>
+														
+														
+														
+													</tr>
+												</table>
+											</td>
+											<td>
+												<table width="246" height="192" cellpadding="0" border="0" cellspacing="0">
+													<tr>
+															
+															
+															
+																	
+
+
+
+<!-- Uses PagePromotions bean -->
+
+														  	
+
+	<td background="/images/promotions/lin_ss04/main/primary/ix_hotproduct_weekend_bkg.jpg">
+	
+
+																																													
+														 
+																												
+														<!-- Hot Product Link (Primary Product Promotion 1 -->														
+																						
+																									
+																														
+															
+																
+
+
+
+
+<!-- Uses PagePromotions bean -->
+                                                                                                                                                            
+													
+	
+
+		<table width="246" height="192" cellpadding="0" border="0" cellspacing="0" valign="top"  style="cursor: pointer; cursor: hand;" onClick="doPromoLink('/navigation/product.do?SN=149949142&Np=1&versionid=723&categoryid=149949142&thisprod=179456164&product=179456164&D=180095124&Ntt=180095124&Dx=mode+matchall&Ntk=pca_id&Ntx=mode+matchall&N=0&Nu=this_product&Nty=1', '35', '2025567');">
+			<tr>
+				<td width="10" rowspan="6"><img src="/images/clear.gif" width="10" height="1"></td>
+				<td height="10" colspan="2"><img src="/images/clear.gif" height="10"></td>
+				<td  rowspan="6" width="45">&nbsp</td>
+			</tr>
+			<tr>
+				<td colspan="2" width="191"  height="120" valign="center" align="center"><img src="/images/promotions/lin_ss04/hot_products/hotproduct_606306.jpg" width="191"  height="120"></td>
+			</tr>
+			<tr height="20">
+				<td colspan=2 class="greyheadingbold" valign="middle" style="padding-left:3px">ORANGE</td>
+			</tr>
+			<tr>
+				<td colspan="2" valign="top" style="padding-left:3px"><span class="productdesc">nokia n-gage</span></td></td>
+			</tr>
+			<tr>
+				<td valign="top"  style="padding-left:3px">
+					<span class="productdesc"><strong>£199.95</strong></span>					
+				</td>
+				<td valign="top" align="right"  style="padding-right:3px">
+					<span class="productdesc">Click here..</span>					
+				</td>
+			</tr>
+			<tr>
+				<td height="5" colspan="2"><img src="/images/clear.gif" height="5"></td>
+			</tr>
+		</table>
+
+											
+				
+			
+																														
+														
+														
+														
+														
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td>
+												<table width="220" border="0" cellspacing="10" cellpadding="0">
+													<tr>	
+														<!-- Secondary Product Promotion 1 -->
+																						
+																									
+															
+															<td valign="bottom">
+																
+																	
+
+
+
+
+<!-- Uses PagePromotions bean -->
+                                                                                                                                                            
+													
+	
+	
+		<table width="220" border="0" cellspacing="0" cellpadding="0"  style="cursor: pointer; cursor: hand;" onClick="doPromoLink('/navigation/product.do?SN=149949128&Np=1&versionid=723&categoryid=149949128&thisprod=42582940&product=42582940&D=180598375&Ntt=180598375&Dx=mode+matchall&Ntk=pca_id&Ntx=mode+matchall&N=0&Nu=this_product&Nty=1', '4', '2025450');">
+			<tr> 
+				<td rowspan="4" bgcolor="#FFFFFF" class="greyheadingbold" width="81" height="81" align="center" valign="middle"><img src="/images/products/thumbnail/61/610567v1tx.jpg"></td>
+				<td class="greyheadingbold" valign="middle" width="159" style="padding-left:3px">ORION</td>
+			</tr>
+			<tr> 
+				<td class="homeproductcolour" valign="top" width="159" style="padding-left:3px"><span class="productdesc">14in televideo in 2 colours</span></td>
+			</tr>
+			<tr> 
+				<td class="homeproductcolour" valign="bottom" style="padding-left:3px">
+					<span class="productdesc">
+						was <b>£109.50</b><br>now <b>£99.50</b><br>save <b>9%</b>
+					</span>
+				</td>
+			</tr>			 
+		</table>
+											
+
+
+                                    
+                                    
+
+																
+															</td>
+														
+														
+														
+													</tr>
+													<tr>
+														<!-- Secondary Product Promotion 2 -->
+																						
+																									
+															
+															<td valign="bottom">
+																
+																	
+
+
+
+
+<!-- Uses PagePromotions bean -->
+                                                                                                                                                            
+													
+	
+	
+		<table width="220" border="0" cellspacing="0" cellpadding="0"  style="cursor: pointer; cursor: hand;" onClick="doPromoLink('/navigation/product.do?SN=149949140&Np=1&versionid=723&categoryid=149949140&thisprod=19939077&product=19939077&D=180372374&Ntt=180372374&Dx=mode+matchall&Ntk=pca_id&Ntx=mode+matchall&N=0&Nu=this_product&Nty=1', '5', '2025448');">
+			<tr> 
+				<td rowspan="4" bgcolor="#FFFFFF" class="greyheadingbold" width="81" height="81" align="center" valign="middle"><img src="/images/products/thumbnail/60/605233v03tx.jpg"></td>
+				<td class="greyheadingbold" valign="middle" width="159" style="padding-left:3px">BT</td>
+			</tr>
+			<tr> 
+				<td class="homeproductcolour" valign="top" width="159" style="padding-left:3px"><span class="productdesc">cordless telephone</span></td>
+			</tr>
+			<tr> 
+				<td class="homeproductcolour" valign="bottom" style="padding-left:3px">
+					<span class="productdesc">
+						<b>£29.75</b>
+					</span>
+				</td>
+			</tr>			 
+		</table>
+											
+
+
+                                    
+                                    
+
+																
+															</td>
+														
+														
+														
+													</tr> 
+												</table>
+											</td>
+										</tr>                        
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr> 
+		<td height="22" valign="middle" width="740" class="homefootercolour">
+		<table width="740" border="0" cellspacing="0" cellpadding="4">
+			<tr>
+				  
+					
+																								
+																						
+																									 													
+																					
+					
+																								
+																						
+																									 													
+																					
+					
+																								
+																						
+																									 													
+																					
+					
+																								
+																						
+																									 													
+																					
+					
+																								
+																						
+																									 													
+																					
+					
+																								
+																						
+																									 													
+																					
+					
+																								
+																						
+																									 													
+																					
+					
+																								
+																						
+																									 													
+																					
+					
+																								
+																						
+																											
+													
+								
+																			
+								
+									
+
+
+
+<!-- Uses PagePromotions bean --> 
+
+<td valign="center" width="185" height="20">
+	<a href="javascript:doPromoLink('STDINTERNAL/index/rf.inf.RFServlet?pathinfo=index/clickreserve/IndexStoreLocator.html', '38', '1998936');"><img src="/images/promotions/lin_ss04/footer_blue/click.gif" border="0" height="20" width="122"></a>
+</td>
+
+
+
+
+								
+								
+																		
+																										
+							
+																									 													
+																					
+					
+																								
+																						
+																									 													
+																					
+					
+																								
+																						
+																									 													
+																					
+					
+																								
+																						
+																									 													
+																					
+															
+										
+					
+				  
+					
+																								
+																						
+																									 													
+																					
+					
+																								
+																						
+																									 													
+																					
+					
+																								
+																						
+																									 													
+																					
+					
+																								
+																						
+																									 													
+																					
+					
+																								
+																						
+																									 													
+																					
+					
+																								
+																						
+																									 													
+																					
+					
+																								
+																						
+																									 													
+																					
+					
+																								
+																						
+																									 													
+																					
+					
+																								
+																						
+																									 													
+																					
+					
+																								
+																						
+																											
+													
+								
+																			
+								
+									
+
+
+
+<!-- Uses PagePromotions bean --> 
+
+<td valign="center" width="185" height="20">
+	<a href="javascript:doPromoLink('STDINTERNAL/rf/promos/redirect.do?page=subscribeemail&amp;popup=yes ', '43', '2025145');"><img src="/images/promotions/lin_ss04/footer_blue/email.gif" border="0" height="20" width="122"></a>
+</td>
+
+
+
+
+								
+								
+																		
+																										
+							
+																									 													
+																					
+					
+																								
+																						
+																									 													
+																					
+					
+																								
+																						
+																									 													
+																					
+															
+										
+					
+				  
+					
+																								
+																						
+																									 													
+																					
+					
+																								
+																						
+																									 													
+																					
+					
+																								
+																						
+																									 													
+																					
+					
+																								
+																						
+																									 													
+																					
+					
+																								
+																						
+																									 													
+																					
+					
+																								
+																						
+																									 													
+																					
+					
+																								
+																						
+																									 													
+																					
+					
+																								
+																						
+																									 													
+																					
+					
+																								
+																						
+																									 													
+																					
+					
+																								
+																						
+																									 													
+																					
+					
+																								
+																						
+																											
+													
+								
+																			
+								
+									
+
+
+
+<!-- Uses PagePromotions bean --> 
+
+<td valign="center" width="185" height="20">
+	<a href="javascript:doPromoLink('STDINTERNAL/index/rf.inf.RFServlet?pathinfo=contactus/ContactUsIsEasy.html', '44', '1998948');"><img src="/images/promotions/lin_ss04/footer_blue/contactus.gif" border="0" height="20" width="122"></a>
+</td>
+
+
+
+
+								
+								
+																		
+																										
+							
+																									 													
+																					
+					
+																								
+																						
+																									 													
+																					
+															
+										
+					
+				  
+					
+																								
+																						
+																									 													
+																					
+					
+																								
+																						
+																									 													
+																					
+					
+																								
+																						
+																									 													
+																					
+					
+																								
+																						
+																									 													
+																					
+					
+																								
+																						
+																									 													
+																					
+					
+																								
+																						
+																									 													
+																					
+					
+																								
+																						
+																									 													
+																					
+					
+																								
+																						
+																									 													
+																					
+					
+																								
+																						
+																									 													
+																					
+					
+																								
+																						
+																									 													
+																					
+					
+																								
+																						
+																									 													
+																					
+					
+																								
+																						
+																											
+													
+								
+																			
+								
+									
+
+
+
+<!-- Uses PagePromotions bean --> 
+
+<td valign="center" width="185" height="20">
+	<a href="javascript:doPromoLink('STDINTERNAL/index/rf.inf.RFServlet?pathinfo=index/affiliate/Affiliate.html', '45', '1998951');"><img src="/images/promotions/lin_ss04/footer_blue/affiliate.gif" border="0" height="20" width="122"></a>
+</td>
+
+
+
+
+								
+								
+																		
+																										
+							
+																									 													
+																					
+															
+										
+					
+				
+			</tr>
+		</table>
+		</td>
+	</tr>
+	<tr> 
+		<td> 
+			<table width="740" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF">
+				<tr> 
+					<td width="494"> 
+						<table width="494" border="0" cellspacing="0" cellpadding="4">
+							<tr> 
+								<td class="greyheading"><b>0845 075 2233</b> we're here to help you... lines open 8am - 8pm / 7 days a week</td>
+							</tr>
+						</table>
+					</td>
+					<td width="30"><a href="/index/rf.inf.RFServlet?pathinfo=index/indexservices/Security.html"><img src="/images/secure.gif" width="30" height="26" border="0"></a></td>
+					<td width="216"> 
+						<div align="right"><img src="/images/cards.gif" width="216" height="26"></div>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+
+<script>	
+
+		
+		<!-- Launch hero popup for this portal -->	
+		launch() ;	
+	
+</script>
+
+                      </td>
+                    </tr>
+
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+<SCRIPT language="javascript">
+setMenuPosition();
+themenus.output();
+themenus.init("DOWN");
+</script>
+
+
+
+
+<TABLE cellspacing="0" cellpadding="0" border="0">
+	<TR> 
+        <TD>
+            
+
+<!-- 
+Need to get a reference to the HIT_TAGS="hit_tags" Map on the request object.
+For each key / value pair, need to add them to the hits.do URI as request 
+attributes.
+-->
+<IMG SRC="/rf/hits/hits.do?ANON_CUSTOMER=10967268&amp;REFERRER=UNASSIGNED&amp;NETRA=en51&amp;HIT_TIME=1089810781626&amp;HIT_TIMESTAMP=2004-07-14 14:13:01.734&amp;PAGE=/navigation/home/index.do&amp;REMOTE_ADDRESS=127.0.0.1&amp;PORTAL=INDEXSHOP&amp;CUSTOMER=&amp;STATE=58247693&amp;HIT_FROMTIME=2004-07-14 14:13:01.626&amp;BROWSER=Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)&amp;MEDIA=PC&amp;HIT_SERVERTIME=2004-07-14 14:13:01.734" >
+        
+         </TD>
+	</TR>
+</TABLE>
+
+
+</body>
+</html>

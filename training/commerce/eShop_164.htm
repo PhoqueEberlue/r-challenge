@@ -1,0 +1,89 @@
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<TITLE>Sony Style Europe- Buy direct from Sony</TITLE>
+<META HTTP-EQUIV="content-type" content="text/html; charset=iso-8859-1">
+<META HTTP-EQUIV="expires" content="never">
+<META NAME="title" CONTENT="Sony Style Europe- Buy direct from Sony">
+<META NAME="language" CONTENT="EN">
+<META NAME="Description" CONTENT="Welcome to the Sony shop: laptops, desktop, accessories, Clie, digital cameras, memory stick, display, AIBO, audio, projectors...">
+<META NAME="page-topic" CONTENT="Commercial site, Shopping, Online shop">
+<META NAME="Keywords" CONTENT="sony, SONY, sony style, vaio, sony vaio, sony laptops, laptops,laptop, vaio pcg, vaio pcv, vaio vgn, sonystyle, clie, vaio, accessory, accessories, computer, desktop, PCG, memory stick, sony shop, pda, dvd, www.sony.co.uk, camcorder, camcorders, printer, cybershot, sonystyle, digital, camera, cameras, viao, AIBO, aibo, dsc, walkman, aiwa, playstation, playstation 2, PS2,electronics,home entertainment,walkman,projectors,My Sony,sony europe,sony.com">
+<META NAME="Author" CONTENT="customerservice_en@sonystyle-europe.com">
+<META NAME="REVISIT-AFTER" CONTENT="7 days">
+<META NAME="ROBOTS" CONTENT="INDEX,FOLLOW">
+<META NAME="copyright" content="Copyright (c) 2004 by Sony eSolutions Europe BV">
+
+<!-- <title>Sony Style - Shopping Online</title> -->
+  <script type="text/javascript">
+    // Define some variables to allow the leaflet/basket interaction
+    var leafletOpened = false;
+    var leafletHandle = null; 
+    
+    /**
+     * Opens a new leaflet. This function is called from
+     * the miniBasket.jsp and the basket.jsp to display the
+     * leaflet form.
+     *
+     * @param href URL of the leaflet window to open
+     */
+    function leaflet(href) {
+        winleaflet = window.open('', 'leaflet',
+                                 'width=700,height=500,scrollbars=yes,resizable=yes');
+        
+        winleaflet.location.href = href;
+        leafletHandle = winleaflet;
+        leafletOpened = true;
+        winleaflet.focus();
+    }
+
+    /**
+     * Refreshes the displayed basket/minibasket screen.
+     * This function is called from the leaflet after a
+     * item was added to the basket.
+     *
+     * @param url The url of the basket to be displayed
+     */
+    function refreshBasketDisplay(url) {
+        if ((this.isaTop != null) && (this.isaTop.bottom != null)) {
+            if (this.isaTop.bottom.right != null) {
+                this.isaTop.bottom.right.location.href = url + "&forward=success";
+            }
+            else {
+                this.isaTop.bottom.location.href = url + "&forward=successmaxi";
+            }        
+        }
+    }
+    
+    /**
+     * Refreshes the displayed leaflet
+     * This function is called by the basket/minibasket jsps to update
+     * the leaflet window. The function checks whether or not the leaflet
+     * window is present and updates it.
+     */
+    function refreshLeaflet() {
+        if ((leafletHandle != null) && (leafletOpened) && (!leafletHandle.closed)) {
+            leafletHandle.location.href = '/SonyStyle/b2c/leaflet.do';
+        }
+    }
+          
+    </script> 
+
+</head>
+  <frameset rows="100%,0" id="isaTopFS" border="0" frameborder="0" framespacing="0"  >
+    <frame name="isaTop" src="/SonyStyle/b2c/mainFS_inner.jsp" frameborder="0" scrolling="auto" marginwidth="0" marginheight="0">
+    <noframes>
+        <body></body>
+    </noframes>
+  </frameset>
+
+</html>
+

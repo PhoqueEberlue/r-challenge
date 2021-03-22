@@ -1,0 +1,1436 @@
+<HTML>
+<head>
+<title>NAS Parallel Tools Group Hotlist</title>
+<H1>
+<a href="http://www.nas.nasa.gov/NAS/Tools/"> <img src="../images/toolsb.gif" 
+align=middle
+alt="[Click Here]"> </a>
+NAS Parallel Tools Group Hotlist </H1>
+</head>
+This information is kept for the handy reference of the NAS Parallel Tools
+team, and is made available here in the chance that it may be useful to others.
+<p>
+See also the <a href="../IPG/">Information Power Grid Hotlist</a>.
+<p>
+<body>
+<a href="#IconLegend"> Icon Legend </a>
+<ul>
+<li><a href="#ReqDesAn">   Requirements/Design/Analysis</a>
+ <ul>
+ <li> Formal Methods
+ <li> Templates & Skeletons
+ <li> Requirements
+ <li> Cleanroom
+ </ul>
+<li><a href="#Programming"> Programming </a>
+ <ul>
+ <li> Visual/Graphical/Animation and CASE
+ <li> Functional/Dataflow
+ <li> Object Oriented (& C++)
+ <li> SIMD and Collective Operations
+ <li> Message Passing (PVM, MPI)
+ <li> I/O
+ <li>Application Libraries
+ <li> Portable Parallel Programming & Distributed Shared Memory
+ <li> (Low-level) Run-time Systems
+ <li> Distributed Arrays
+ <li> Other Programming Approaches
+ </ul>
+<li><a href="#ProcControl">Process Control (Scheduling/Queuing/Checkpointing/Migration) </a>
+<li><a href="#DebugPerf">  Debugging and Performance Analysis/Visualization </a>
+ <ul>
+ <li> Tools
+ <li> Benchmarks and Performance Comparisons
+ </ul>
+<li><a href="#Systems">	   High-Speed (Low-Cost?) Parallel Systems </a>
+<li><a href="#Indexes">    Indexes, Bibliographies, Archives</a>
+<li><a href="#Vendor">     Vendor-Specific Info</a>
+<li><a href="#Schools">    Schools, Centers, Consortia</a>
+<li><a href="#Conferences">Conferences, Workshops</a>
+<li><a href="#Education">  Education</a>
+<li><a href="#Reports">    Reports, Books</a>
+<li><a href="#People">     People</a>
+<li><a href="#Other">      Other</a>
+  <ul>
+    <li>Visual Programming & Visualization
+    <li>CS Indexes, Bibliographies, Archives
+    </ul>
+</ul>
+
+<A href="http://www.nas.nasa.gov/NAS/Tools/">
+<img src="../images/toolsb.gif" 
+align=top
+alt="[Click Here]">
+ <I>To NAS Parallel Tools Team</I></A> 
+
+<A href="http://www.nas.nasa.gov/home.html">
+<img src="../Projects/AIMS/images/pagelogo.gif" 
+align=top
+alt="[Click Here]">
+ <I>To NAS Home Page</I></A>
+</BODY>
+
+<P>
+<ADDRESS>
+Currently maintained by: <A HREF="/~dinucci">David DiNucci</A> <BR>
+Responsible official: <A HREF="/~schulbac">Cathy Schulbach</A> <BR>
+Send questions, comments and requests for more information to <A href="mailto:dinucci@nas.nasa.gov">
+dinucci@nas.nasa.gov</A> <BR>
+
+<P>
+Last modified: February 10, 1997 <BR>
+
+</ADDRESS>
+
+<p>
+<img src="/images/rainbow-line.gif"
+alt="-------------------------------------------------------------------------">
+<a name=IconLegend /a>
+<h2>Icon Legend</h2>
+<ul>
+<li><img src="icons/prog.gif">
+	Organized around a software package
+<li><img src="icons/person.gif">
+	Organized around a person
+<li><img src="icons/place.gif">
+	Organized around institution or place
+<li><img src="icons/com.gif">
+	Organized around company (money-making institution)
+<li><img src="icons/paper.gif">
+	A paper/report
+<li><img src="icons/ptrs.gif">
+	Links to other WWW sites
+<li><img src="icons/archive.gif">
+	Archive
+<li><img src="icons/faq.gif">
+	FAQ, to answer questions on some topic
+<li><img src="icons/book.gif">
+	Information about a book or the book itself
+<li><img src="icons/bib.gif">
+	Textual bibliographic listing
+<li><img src="icons/call.gif">
+	Announcement/Call for Papers
+<li><img src="icons/disc.gif">
+	Discussion Group/Mailing List Archive
+</ul>
+<img src="/images/rainbow-wide.gif"
+alt="=========================================================================">
+<p>
+
+<a name=ReqDesAn /a>
+<h2> Requirements/Design/Analysis </h2>
+ <ul>
+ <li> Formal Methods
+  <ul>
+  <li>
+	<img src="icons/prog.gif">
+	<A HREF="http://netlib.att.com/netlib/att/cs/home/holzmann-spin.html">
+	The SPIN Model Checker</A>(Bell Labs)
+  <li>
+	<img src="icons/place.gif">
+	<A HREF="http://www.cs.cmu.edu/~modelcheck/modck.html">
+	Model Checking at CMU</A>
+  <li>
+	<img src="icons/faq.gif">
+	<A HREF="http://www.comlab.ox.ac.uk/archive/formal-methods.html">
+	Formal Methods</a> (Oxford)
+  <li>
+	<img src="icons/paper.gif">
+	<A HREF="http://www-scm.tees.ac.uk/bresource/docs/B/BROOT.html">
+	The B-Technologies</A>
+  <li>
+	<img src="icons/person.gif">
+	<A HREF="http://boole.stanford.edu/pratt.html">
+	Vaughan Pratt</a> (Stanford, Concurrency theory)
+  <li>
+	<img src="icons/person.gif">
+	<A HREF="ftp://ftp.cl.cam.ac.uk/users/rm135/">
+	Robin Milner</a> (Concurrency theory)
+  <li>
+	<img src="icons/place.gif">
+	<A HREF="http://atb-www.larc.nasa.gov/cgi-bin/fm.cgi">
+	NASA Langley Formal Methods Program</A>
+  <li>
+	<img src="icons/faq.gif">
+	<A HREF="http://atb-www.larc.nasa.gov/whatfm.html">
+	What is Formal Methods</A>
+  <li>
+	<img src="icons/book.gif">
+	<A HREF="http://csalpha.unomaha.edu/jss/">
+	Journal of Systems and Software, Special Issue on FM</A>
+  <li>
+	<img src="icons/faq.gif">
+	<A HREF="http://www.cs.iastate.edu/~leavens/larch-faq.html">
+	Larch Frequently Asked Questions</A>
+  <li>
+	<img src="icons/book.gif">
+	<A HREF="http://www.cs.man.ac.uk/fmethods/facj/index.html">
+	Formal Aspects of Computing Journal</A>
+  <li>
+	<img src="icons/ptrs.gif">
+	<A HREF="http://www.cs.tcd.ie/FME/">
+	Formal Methods Europe HUB</A>
+  <li>
+	<img src="icons/paper.gif">
+	<A HREF="http://www.cs.yorku.ca/People/jonathan/survey/combined-paper/combined-paper.html">
+	Formal Methods for Real-Time Safety Critical Systems</A> (Ostroff)
+  <li>
+	<img src="icons/ptrs.gif">
+	<A HREF="http://www.daimi.aau.dk/~petrinet/">
+	Petri Nets</A>
+  <li>
+	<img src="icons/ptrs.gif">
+	<A HREF="http://www.di.ufpe.br/~lrl/statecharts.html">
+	Statecharts</A>
+  <li>
+	<img src="icons/place.gif">
+	<A HREF="http://cuiwww.unige.ch/Theory/theory.html">
+	CUI -- Computing theory Group</A> (Geneva)
+	<img src="icons/new2.gif">
+  </ul>
+ <li> Templates & Skeletons
+  <ul>
+  <li>
+	<img src="icons/ptrs.gif">
+	<A HREF="http://www.dcs.ed.ac.uk/home/mic/skeletons.html">
+	Skeletal Parallelism Homepage</A>
+  <li>
+	<img src="icons/bib.gif">
+	<A HREF="http://www.lpac.ac.uk/SEL-HPC/Articles/SkeletonArchive.html">
+	Skeletons Bibliography</A>
+  <li>
+	<img src="icons/ptrs.gif">
+	<A HREF="http://www.cs.caltech.edu/~berna/Archetypes.html">
+	Archetypes for Parallel Scientific Computing</A>
+  <li>
+	<img src="icons/ptrs.gif">
+	<A HREF="http://st-www.cs.uiuc.edu/users/patterns/patterns.html">
+	Patterns</A>
+  </ul>
+ <li> Requirements
+  <ul>
+  <li>
+	<img src="icons/paper.gif">
+	<A HREF="http://www.nero.net/~pancake/SSTguidelines/">
+	Guidelines for Writing System Software and Tools Requirements</A>
+  </ul>
+
+ <li> Cleanroom
+  <ul>
+   <li>
+	<A HREF="http://www.asset.com/stars/loral/cleanroom/tutorial/cleanroom.html">
+	Cleanroom Software Engineering</A>
+   <li>
+	<A HREF="http://www.clearlake.ibm.com/MFG/solutions/cstc.html">
+	   IBM's Cleanroom Software Technology Center</A>
+  </ul>
+ </ul>
+
+<a name=Programming /a>
+<h2> Programming </h2>
+ <ul>
+ <li> Visual/Graphical/Animation and CASE
+  <ul>
+  <li>
+	<img src="icons/prog.gif">
+	<A HREF="http://www.llnl.gov/liv_comp/mpimap/">
+	MPIMap: Graphical MPI Type Display</A>
+  <li>
+	<img src="icons/prog.gif">
+	<A HREF="http://www.cc.gatech.edu/gvu/softviz/parviz/pvanim/pvanim.html">
+	PVaniM</a>
+  <li>
+	<img src="icons/prog.gif">
+	<A HREF="http://www.cs.utk.edu:80/~newton/vpe/vpe.html">
+	VPE:  A Visual Parallel Programming Environment</A> (U Tenn Knoxville)
+  <li>
+	<img src="icons/prog.gif">
+	<A HREF="http://www.nist.gov/itl/div895/pade/pade.html">
+	PADE: Parallel Applications Development Environment</A> (NIST)
+  <li>
+	<img src="icons/prog.gif">
+	<A HREF="http://www.irisa.fr/pampa/Pampa_anglais.html">
+	Pampa Project</A>(IRISA, France)
+  <li>
+	<img src="icons/prog.gif">
+	<A HREF="http://web.cs.ualberta.ca/~enter/">
+	Enterprise Distributed Computing</A> (U. Alberta)
+  <li>
+	<img src="icons/book.gif">
+	<A HREF="http://www.computer.org/conferen/vl95/GENHP.html">
+	  Proceedings - 11th Intl. Symposium on Visual Languages</A>
+  <li>
+	<img src="icons/prog.gif">
+	<A HREF="http://www.ait.nrl.navy.mil/pgmt/PGMspectoc.html">
+	PGM2.0 Specification</A>
+  <li>
+	<img src="icons/prog.gif">
+	<A HREF="http://www.emer.com/MadeWithPrograph/">
+	  Made With Prograph</A>
+  </ul>
+
+ <li> Functional/Dataflow
+  <ul>
+  <li>
+	<img src="icons/prog.gif">
+	<A HREF="http://www.llnl.gov/sisal/">
+	Sisal Parallel Language</A> (Livermore Nat. Lab.)
+  <li>
+	<img src="icons/ptrs.gif">
+	<A HREF="http://odyssey.ucc.ie/www/dataflow.html">
+	  The Dataflow Web Page</A>
+  <li>
+	<img src="icons/prog.gif">
+	<A HREF="http://ptolemy.eecs.berkeley.edu/Ptolemy.html">
+	  Ptolemy Project</A>
+  <li>
+	<img src="icons/prog.gif">
+	<A HREF="http://www.csl.sri.com/GLU.html">
+	  GLU Parallel Programming Toolkit</A>
+  <li>
+	<img src="icons/book.gif">
+	<A HREF="http://ptolemy.eecs.berkeley.edu/~murthy/book.html">
+	Software Synthesis from Dataflow Graphs </a> (S. S. Bhattacharyya,
+	P. K. Murthy, and E. A. Lee)
+  <li>
+	<img src="icons/disc.gif">
+	<A HREF="http://www.cs.chalmers.se/WG2.8/">
+	IFIP WG 2.8 - Functional Programming</A>
+  </ul>
+
+ <li> Object Oriented (& C++)
+  <ul>
+  <li>
+	<img src="icons/prog.gif">
+	<A HREF="http://uvacs.cs.virginia.edu/~mentat/">
+	Mentat</A> (Virginia)
+  <li>
+	<img src="icons/prog.gif">
+	<A HREF="http://www.cs.cmu.edu/afs/cs.cmu.edu/Web/People/Dome/">
+	Dome:  Distributed Object Migration Environment </A> (CMU)
+  <li>
+	<img src="icons/ptrs.gif">
+	<A HREF="ftp://riacs.edu/pub/Excalibur/parcpp-projects.html">
+	Parallel C++ Projects Archive</A>
+  <li>
+	<img src="icons/book.gif">
+	<A HREF="http://www-mitpress.mit.edu:80/mitp/recent-books/comp/wilrp-toc.html">
+	  Parallel Programming Using C++</A> (Book)
+  <li>
+	<img src="icons/faq.gif">
+	<A HREF="http://iamwww.unibe.ch:80/~scg/OOinfo/FAQ/">
+	  Object-Orientation FAQ</A>
+  <li>
+	<img src="icons/person.gif">
+	<A HREF="http://ourworld.compuserve.com/homepages/marber/">
+	  Software Design/OO Methodology Research</A>
+  <li>
+	<img src="icons/prog.gif">
+	<A HREF="http://www.loria.fr/para++/">
+	  Para++: C++ Bindings for Message-Passing Libraries</A>
+  <li>
+	<img src="icons/prog.gif">
+	<A HREF="http://inferno.bell-labs.com/inferno/index.html">
+	Inferno (Bell labs)</A>
+	<img src="icons/new2.gif">
+  </ul>
+
+ <li> SIMD and Collective Operations
+  <ul>
+  <li>
+	<img src="icons/prog.gif">
+	<A HREF="http://www.cs.cmu.edu/afs/cs.cmu.edu/Web/People/ECO/">
+	ECO:  Effective Collective Ops </A> (Built upon PVM, CMU)
+  <li>
+	<img src="icons/prog.gif">
+	<A HREF="http://www.cs.utexas.edu/users/rvdg/intercom/">
+	iCC: Interprocessor Collective Communications Library</A>
+  </ul>
+
+ <li> Message Passing (PVM, MPI)
+  <ul>
+  <li>
+	<img src="icons/prog.gif">
+	MPI: Message Passing Interface
+	(<A HREF="http://www.mcs.anl.gov/mpi/index.html">
+				Argonne </A>)
+	(<A HREF="http://WWW.ERC.MsState.Edu:80/mpi/">
+				Miss. State </A>)
+	(<A HREF="http://www.osc.edu/lam.html">
+				LAM @ OSC </A>)
+	(<A HREF="http://www.hp.com/wsg/ssa/mpi/mpihome.html">
+				HP</A> )
+  <li>
+	<img src="icons/prog.gif">
+	<A HREF="http://www.epm.ornl.gov/pvm/">
+	PVM: Parallel Virtual Machine</A>
+  <li>
+	<img src="icons/prog.gif">
+	<A HREF="http://now.cs.berkeley.edu/AM/active_messages.html">
+	Active Messages</A> (UC Berkeley)
+  <li>
+	<img src="icons/person.gif">
+	<A HREF="http://www.cs.utk.edu/~mucci/">
+	Philip J. Mucci's Home page</A> (AM on PVM & other good links)
+	<img src="icons/new2.gif">
+  <li>
+	<img src="icons/prog.gif">
+	<A HREF="http://www.cs.utk.edu/~fagg/pvmpi/">
+	PVMPI : PVM integrating MPI applications</A> (UTK)
+  </ul>
+
+ <li> I/O
+  <ul>
+  <li>
+	<img src="icons/prog.gif">
+	<A HREF="http://parallel.nas.nasa.gov/MPI-IO/mpi-io.html">
+	MPI-IO: Standard for Parallel I/O </A>
+  <li>
+	<img src="icons/ptrs.gif">
+	<A HREF="http://www.cs.dartmouth.edu/pario/">
+	Parallel I/O Archive </A> (Dartmouth)
+  </ul>
+
+ <li>Application Libraries
+  <ul>
+  <li>
+	<img src="icons/prog.gif">
+	<A HREF="http://www.cs.utk.edu/~rwhaley/Blacs.html">
+	BLACS:  Basic Lin. Alg. Comm. Subprograms </A> (U. Tenn. Knoxville)
+  <li>
+	<img src="icons/prog.gif">
+	<A HREF="http://www.mcs.anl.gov/petsc/petsc.html">
+	PETSc:  Portable, Extensible, Toolkit for Scientific Computing</A> (ANL)
+  <li>
+	<img src="icons/prog.gif">
+	<A HREF="http://www.cs.colorado.edu/~broker/mpi_rgl">
+	MPI-RGL: A Regular Grid Library for MPI</A>
+  <li>
+	<img src="icons/ptrs.gif">
+	<A HREF="http://www-ocean.tamu.edu/~baum/linuxlist.html">
+	Linux Software for Scientists</A>
+  </ul>
+
+ <li> Portable Parallel Programming & Distributed Shared Memory
+  <ul>
+  <li>
+	<img src="icons/prog.gif">
+	<A HREF="http://www.nas.nasa.gov/NAS/Tools/Projects/CDS">
+	CDS:  Cooperative Data Sharing (Portable Comm Lib)</A> (NAS, NASA Ames)
+  <li>
+	<img src="icons/prog.gif">
+	<A HREF="http://www.crpc.rice.edu/HPFF/home.html">
+	HPF: High Performance Fortran (HPFF) </A>
+  <li>
+	<img src="icons/prog.gif">
+	<A HREF="http://www.cs.yale.edu/HTML/YALE/CS/Linda/linda.html">
+	Linda</A> (Yale)
+  <li>
+	<img src="icons/prog.gif">
+	<A HREF="http://www.cs.arizona.edu/schooner/">
+	Schooner:  Interconnecting Heterogeneous HPC Scientific Applications</A>
+		   (U Arizona)
+  <li>
+	<img src="icons/ptrs.gif">
+	<A HREF="http://www.cs.umd.edu/~keleher/dsm.html" >
+	Distributed Shared Memory Home Pages</A>
+  <li>
+	<img src="icons/person.gif">
+	<A HREF="http://www.cs.rice.edu/~hhl/">
+	Honghui Lu</A> (Treadmarks papers & benchmarks)
+	<img src="icons/new2.gif">
+  <li>
+	<img src="icons/paper.gif">
+	<A HREF="http://www.research.digital.com/wrl/publications/abstracts/95.7.html">
+	Shared Memory Consistency Models: A Tutorial</A>
+  <li>
+	<img src="icons/prog.gif">
+	<A HREF="http://www.lifl.fr/~dumoulin/dsm.html">
+	Dream:  Distributed Shared Memory on PVM</A>
+  <li>
+	<img src="icons/prog.gif">
+	<A HREF="http://www.cs.wisc.edu/~wwt/">
+	WWT:  Wisconsin Wind Tunnel</A>
+  </ul>
+
+ <li> (Low-level) Run-time Systems
+  <ul>
+  <li>
+	<img src="icons/prog.gif">
+	<A HREF="http://www.cs.uoregon.edu:80/paracomp/ports/">
+	PORTS: POrtable RunTime System </A> (PORTS Consortium, U. Oregon)
+  <li>
+	<img src="icons/prog.gif">
+	<A HREF="http://www.mcs.anl.gov/nexus/">
+	The Nexus Multithreaded Runtime System</A> (Argonne)
+  <li>
+	<img src="icons/prog.gif">
+	<A HREF="http://www.sun.com/sunsoft/Products/Developer-products/sig/threads/">
+	Threads</A>(Sun)
+  <li>
+	<img src="icons/paper.gif">
+	<A HREF="http://tofu.alt.net/~lk/242.paper/242.paper.html">
+	A Survey of Mutual-Exclusion Algorithms for Multiprocessor Operating Systems</A>
+	<img src="icons/new2.gif">
+  <li>
+	<img src="icons/person.gif">
+	<A HREF="http://www.cs.unc.edu/~anderson/papers.html">
+	James Anderson - Papers</A> (Lots of stuff on low-level locks)
+	<img src="icons/new2.gif">
+  </ul>
+
+ <li> Distributed Arrays
+  <ul>
+  <li>
+	<img src="icons/prog.gif">
+	Global Array Toolkit
+	(<A HREF="http://www.emsl.pnl.gov:2080/docs/global/ga.html">
+		PNL </A>)
+	(<A HREF="http://pscinfo.psc.edu/general/software/packages/globalarrays/GlobalArrays.html">
+		PSC </A>)
+  <li>
+	<img src="icons/ptrs.gif">
+	<A HREF="http://godel.ph.utexas.edu/Members/parashar/survey/mainhtml.html">
+	Scalable Distributed Dynamic Grids: A Survey of Existing Support</A>
+  </ul>
+
+ <li> Other Programming Approaches
+  <ul>
+  <li>
+	<img src="icons/prog.gif">
+	<A HREF="ftp://ftp.cray.com/product-info/program_env/program_model.html">
+	MPP Fortran Programming Model </A> (Cray)
+  <li>
+	<img src="icons/prog.gif">
+	<A HREF="http://www.scs.carleton.ca/~palepu/BSP.html">
+	BSP:  Bulk Synchronous Parallel</A> (Carleton, Harvard, Oxford)
+  <li>
+	<img src="icons/ptrs.gif">
+	<A HREF="http://www.computer.org/cspress/catalog7.htm#par-hpc">
+	  IEEE Books on Parallel and High-Performance Computing</A>
+  <li>
+	<img src="icons/ptrs.gif">
+	<A HREF="http://www.cs.berkeley.edu/projects/coordination/papers.html">
+	  Papers on Coordination in Parallel Programs</A> (Berkeley)
+  <li>
+	<img src="icons/place.gif">
+	<A HREF="http://www.cs.sunysb.edu/~sas/sdcr/">
+	  Strategic Directions in Computing Resrch: Concurrency WG</A>
+  <li>
+	<img src="icons/prog.gif">
+	<A HREF="http://www.cs.unc.edu/Research/proteus/">
+	Proteus </A>
+  </ul>
+ </ul>
+
+<a name=ProcControl /a>
+<h2> Process Control (Scheduling/Queuing/Checkpointing/Migration) </h2>
+  <ul>
+  <li>
+	<img src="icons/prog.gif">
+	<A HREF="http://wwwbode.informatik.tu-muenchen.de/~stellner/CoCheck.html">
+	CoCheck:  Checkpointing and Process Migration</A>
+  <li>
+	<img src="icons/prog.gif">
+	<A HREF="http://nii-server.isi.edu/gost-group/products/prm">
+	Prospero Resource Monitor</A>
+  <li>
+	<img src="icons/ptrs.gif">
+	<A HREF="http://www.epm.ornl.gov/~zhou/lds/lds.html">
+	Job Management and Scheduling</A>
+  <li>
+	<img src="icons/ptrs.gif">
+	<A HREF="http://cornelius.ucsf.edu/~srp/batch/systems.html">
+	Batch Queuing Systems</A>
+  <li>
+	<img src="icons/disc.gif">
+	<A HREF="http://parallel.nas.nasa.gov/Psched/">
+	API Standards for Parallel Job/Resource Scheduling</A> (NASA Ames)
+  </ul>
+
+<a name=DebugPerf /a>
+<h2> Debugging and Performance Analysis/Visualization </h2>
+ <ul>
+ <li> Tools
+  <ul>
+  <li>
+	<img src="icons/prog.gif">
+	<A HREF="http://www.nas.nasa.gov/NAS/Tools/Projects/AIMS">
+	AIMS:  Automated Instrumentation and Monitoring System </A>
+	(NAS, NASA Ames)
+  <li>
+	<img src="icons/prog.gif">
+	<A HREF="http://www.nas.nasa.gov/NAS/Tools/Projects/NTV">
+	NTV:  NAS Trace Visualizer</A> (NAS, NASA Ames)
+  <li>
+	<img src="icons/prog.gif">
+	<A HREF="http://www.nas.nasa.gov/NAS/Tools/Projects/P2D2">
+	P2D2:  Portable Parallel/Distributed Debugger</A> (NAS, NASA Ames)
+  <li>
+	<img src="icons/prog.gif">
+	<A HREF="http://www.cs.wisc.edu/~paradyn/">
+	Paradyn Parallel Performance Tools</A> (U. Wisc.)
+  <li>
+	<img src="icons/prog.gif">
+	<A HREF="http://bugle.cs.uiuc.edu/Picasso.html">
+	Pablo</A> (U. Ill.)
+  <li>
+	<img src="icons/prog.gif">
+	<A HREF="http://www.cs.auc.dk/~hagen/debugging/">
+	The TraceInvader</A>
+	<img src="icons/new2.gif">
+  <li>
+	<img src="icons/paper.gif">
+	<A HREF="http://www.CS.ORST.EDU/~pancake/hpdf/">
+	HPD (High Perf. Debug.) Forum - White Paper</A>
+	<img src="icons/new2.gif">
+  <li>
+	<img src="icons/prog.gif">
+	PGPVM: Performance Visualization for PVM
+       (<A HREF="http://www.cc.gatech.edu/gvu/people/Phd/Brad.Topol/pgpvm.html">
+				GA Tech version</A>)
+	(<A HREF="http://www.nsrc.nus.sg/STAFF/edward/pg_pvm.html">
+				Singapore version</A>)
+  </ul>
+ <li> Benchmarks and Performance Comparisons
+   <ul>
+   <li>
+	<img src="icons/paper.gif">
+	<A HREF="http://www.netlib.org/utk/papers/latbw/commperf.html">
+	Message-Passing Performance Report </A>(Dongarra, Dunigan@utk)
+   <li>
+	<img src="icons/paper.gif">
+	<A HREF="http://www.cnct.com/~gunter/">
+	World's most powerful computing sites </A>
+   <li>
+	<img src="icons/prog.gif">
+	<A HREF="http://www.csg.lcs.mit.edu:8001/impala/">
+	Impala:  IMplicitly PArallel LAnguage Application Suite</A> (in ID)
+   <li>
+	<img src="icons/prog.gif">
+	<A HREF="http://www.specbench.org/">
+	SPEC</A>
+   <li>
+	<img src="icons/prog.gif">
+	<A HREF="http://www.nas.nasa.gov/NAS/NPB/">
+	NAS Parallel Benchmarks </A>
+   <li>
+	<img src="icons/faq.gif">
+	<A HREF="http://www.cs.virginia.edu/stream/">
+	STREAM:  Sustainable Bandwidth in HPC</A>
+   <li>
+	<img src="icons/paper.gif">
+	<A HREF="http://www.netlib.org/benchmark/top500.html">
+	TOP500 Supercomputer sites (based on Linpack benchmark) </A>
+   </ul>
+ </ul>
+
+
+<a name=Systems /a>
+ <h2> High-Speed (Low-Cost?) Parallel Systems </h2>
+  <ul>
+   <li>
+	<img src="icons/ptrs.gif">
+	<A HREF="http://www.cs.cornell.edu/home/mdw/hpc/hpc.html" >
+	Linux in High-Performance Computing</A>
+   <li>
+	<img src="icons/paper.gif">
+	<A HREF="http://yara.ecn.purdue.edu/~pplinux/pphowto.html">
+	Linux Parallel Processing HOWTO</A>
+   <li>
+	<img src="icons/paper.gif">
+	<A HREF="http://www.cs.huji.ac.il/labs/distrib/index.html">
+	MOSIX - Multicomputer Operating System for UNIX</A>
+   <li>
+	<img src="icons/paper.gif">
+	<A HREF="http://cesdis.gsfc.nasa.gov/linux-web/beowulf/beowulf.html">
+	Beowulf Project</A>
+   <li>
+	<img src="icons/paper.gif">
+	<A HREF="http://garage.ecn.purdue.edu/~papers/Index.html">
+	PAPERS: Purdue Adapter for Parallel Exec. & Rapid Sync.</A>
+   <li>
+	<img src="icons/paper.gif">
+	<A HREF="http://pavel.physics.sunysb.edu/RSFQ/RSFQ.html">
+	RSFQ Laboratory (Advanced Device Technology) </A>
+   <li>
+	<img src="icons/ptrs.gif">
+	<A HREF="http://www.cs.wisc.edu/~arch/www/">
+	WWW Computer Architecture Home Page</A>
+   <li>
+	<img src="icons/paper.gif">
+	<A HREF="http://www.digital.com:80/info/hpc/systems/symc.html">
+	MEMORY CHANNEL</A>
+   <li>
+	<img src="icons/place.gif">
+	<A HREF="http://www.ai.mit.edu/projects/transit/rc_home_page.html">
+	Reinventing Computing Home Page</A> (MIT)
+   <li>
+	<img src="icons/place.gif">
+	<A HREF="http://www.rwcp.or.jp/">
+	Real World Computing Partnership Home Page</A> (Japan)
+   <li>
+	<img src="icons/prog.gif">
+	<A HREF="http://ece-www.colorado.edu/~harry/spoc/spoc.html">
+	Stored Program Optical Computer Home Page</A>
+	<img src="icons/new2.gif">
+   <li>
+	<img src="icons/ptrs.gif">
+	<A HREF="http://aerodec.anu.edu.au/~qc/index.html">
+	Quantum computing</A>
+	<img src="icons/new2.gif">
+  </ul>
+
+<a name=Indexes /a>
+<h2>Other Parallel Indexes, Bibliographies, Archives</h2>
+
+<ul>
+<li>
+	<img src="icons/archive.gif">
+	<img src="icons/disc.gif">
+	<A HREF="http://www.hensa.ac.uk/parallel/internet/usenet/comp.parallel/">
+	Archive of comp.parallel newsgroup</A>
+<li>
+	<img src="icons/ptrs.gif">
+	<A HREF="http://www.nhse.org/home.html">
+	National HPCC Software Exchange </A> (NHSE, Netlib)
+<li>
+	<img src="icons/archive.gif">
+	<img src="icons/ptrs.gif">
+	<A HREF="http://www.cs.cmu.edu/~scandal/resources.html">
+	Supercomputing and Parallel Computing Resources </A> (CMU)
+<li>
+	<img src="icons/archive.gif">
+	<A HREF="http://www.comlab.ox.ac.uk/archive/concurrent.html">
+	Concurrent Systems</a> (Oxford)
+<li>
+	<img src="icons/ptrs.gif">
+	<A HREF="http://www.cwi.nl/cwi/departments/AA1/distcom/distcom.html">
+	Distributed Algorithms & Systems </A> (CWI)
+<li>
+	<img src="icons/ptrs.gif">
+	<A HREF="http://www.umiacs.umd.edu/~dbader/sites.html">
+	David A. Bader's Parallel Sites</A> (U. Maryland)
+<li>
+	<img src="icons/ptrs.gif">
+	<A HREF="http://stove.cs.yale.edu:8001/">
+	Jonathan Wang's Bookshelf</A> (Yale)
+<li>
+	<img src="icons/ptrs.gif">
+	<A HREF="http://www.cs.rit.edu/~ncs/parallel.html">
+	Nan's Parallel Computing Page</A> (Rochester IT)
+<li>
+	<img src="icons/ptrs.gif">
+	<a href="http://umbc7.umbc.edu/~jack/supercomputer-resources.html">
+	Supercomputing Resources</a> (U. Maryland Balt. Cnty)
+<li>
+	<img src="icons/archive.gif">
+	<A HREF="http://unix.hensa.ac.uk/parallel/index.html">
+	Parallel Computing Archive </A> (HENSA)
+<li>
+	<img src="icons/place.gif">
+	<A HREF="http://alphamor.zdv.uni-tuebingen.de/PARALLEL/welcome-e.html">
+	Archive for parallel computing </A> (ZDV Tübingen)
+<li>
+	<img src="icons/archive.gif">
+	<A HREF="http://www.lpac.ac.uk/SEL-HPC/Articles/index.html">
+	SEL-HPC Article Archive</A>
+<li>
+	<img src="icons/place.gif">
+	<A HREF="http://www.eecg.utoronto.ca/EECG/RESEARCH/ParallelSys/publications.html">
+	U. Toronto Parallel System Publications</a>
+<li>
+	<img src="icons/faq.gif">
+	<A HREF="http://infopad.eecs.berkeley.edu/CIC/">
+	CPU Info Center</A> (Berkeley)
+	<img src="icons/new2.gif">
+</ul>
+
+
+<a name=Vendor /a>
+<h2>Vendor-Specific Info</h2>
+<i>(This partial list does not represent endorsement)</i>
+<ul>
+<li>
+	<img src="icons/com.gif">
+	<A HREF="http://www.atg.apple.com/">
+	Apple Research Laboratories</A>
+<li>
+	<img src="icons/com.gif">
+	<A HREF="http://www.asi.com/">
+	Adaptive Solutions</A>
+<li>
+	<img src="icons/com.gif">
+	<A HREF="http://www.teraflop.com/acs/acs.html">
+	Avalon</A>
+<li>
+	<img src="icons/com.gif">
+	<A HREF="http://www.bbn.com/">
+	BBN</A>
+<li>
+	<img src="icons/com.gif">
+	<A HREF="http://cm.bell-labs.com/cm/cs/">
+	Bell Labs Computing Sciences Research Center</A>
+	<img src="icons/new2.gif">
+<li>
+	<img src="icons/com.gif">
+	<A HREF="http://continuumsi.com/">
+	Continuum Software, Inc.</A>
+	<img src="icons/new2.gif">
+<li>
+	<img src="icons/com.gif">
+	<A HREF="http://www.convex.com/">
+	Convex</A>
+<li>
+	<img src="icons/com.gif">
+	<A HREF="http://www.cray.com/">
+	Cray Research</A>
+<li>
+	<img src="icons/com.gif">
+	<A HREF="http://www.geocities.com/SiliconValley/Heights/8695/">
+	Cray Research Resource Guide (Unofficial)</A>
+<li>
+	<img src="icons/com.gif">
+	<A HREF="http://www.digital.com/info/hpc/hpc.html">
+	DEC HPC Products </A>
+<li>
+	<img src="icons/com.gif">
+	<A HREF="http://www.dolphinics.com/">
+	Dolphin ICS</A>
+<li>
+	<img src="icons/com.gif">
+	<A HREF="http://www.fujitsu.com/FAI/SCG/scg_dot/2-products.html">
+	Fujitsu Supercomputing</A>
+<li>
+	<img src="icons/com.gif">
+	<A HREF="http://www.hpl.hp.com/">
+	HP Labs</A>
+<li>
+	<img src="icons/com.gif">
+	<A HREF="http://ibm.tc.cornell.edu/">
+	IBM SP2</A>
+<li>
+	<img src="icons/com.gif">
+	<A HREF="http://www.iced.com">
+	Integrated Computing Engines</A>
+<li>
+	<img src="icons/com.gif">
+	<A HREF="http://www.ssd.intel.com">
+	Intel SSD</A>
+<li>
+	<img src="icons/com.gif">
+	<A HREF="http://www.meiko.com/">
+	Meiko</A>
+<li>
+	<img src="icons/com.gif">
+	<A HREF="http://www.myri.com/">
+	Myricom Home Page</A>
+<li>
+	<img src="icons/com.gif">
+	<A HREF="http://www.nec.com/products/sx/">
+	NEC SX-4</A>
+<li>
+	<img src="icons/com.gif">
+	<A HREF="http://www.hstc.necsyl.com/">
+	NEC HNSX Marketing Home Page</A>
+<li>
+	<img src="icons/com.gif">
+	<A HREF="http://www.ppgsoft.com/">
+	Parallel Performance Group, Inc </A>
+<li>
+	<img src="icons/com.gif">
+	<A HREF="http://www.pgroup.com/">
+	The Portland Group, Inc </A>
+<li>
+	<img src="icons/com.gif">
+	<A HREF="http://www.sgi.com/">
+	Silicon Graphics</A>
+<li>
+	<img src="icons/com.gif">
+	<A HREF="http://www.tandem.com/">
+	Tandem</A> (e.g. ServerNet)
+<li>
+	<img src="icons/com.gif">
+	<A HREF="http://www.tera.com/tera.html">
+	Tera Computer Company </A>
+</ul>
+
+<a name=Schools /a>
+<h2>Schools, Centers, Consortia</h2>
+
+<ul>
+<li>
+	<img src="icons/ptrs.gif">
+	<A HREF="http://www.cs.cmu.edu/afs/cs.cmu.edu/project/scandal/public/www/research-groups.html">
+	Supercomputing and Parallel Computing Research Groups </a> (Scandal, CMU)
+<li>
+	<img src="icons/place.gif">
+	<A HREF="http://www.ccsf.caltech.edu">
+	Center for Advanced Computing Research </a> (Caltech)
+<li>
+	<img src="icons/place.gif">
+	<A HREF="http://www.epcc.ed.ac.uk/">
+	U. Edinburgh -- Parallel Computing Centre </A>
+<li>
+	<img src="icons/place.gif">
+	<A HREF="http://prometheus.gup.uni-linz.ac.at:8001/">
+	Kepler U. -- GUP Linz</A>
+<li>
+	<img src="icons/place.gif">
+	<A HREF="http://www.pdc.kth.se/">
+	Center for Parallel Computers </A> (Sweden)
+<li>
+	<img src="icons/place.gif">
+	<A HREF="http://www.cse.ogi.edu/DSRG/">
+	Oregon Grad. Inst. -- Distributed Systems Research </A>
+<li>
+	<img src="icons/place.gif">
+	<A HREF="http://perelandra.cms.udel.edu/hpc/">
+	University of Delaware</a>
+<li>
+	<img src="icons/place.gif">
+	<A HREF="http://wwwbode.informatik.tu-muenchen.de/parallelrechner/tools/index.html">
+	Prog Envs and Tools Group </A>(Tech. Univ. Munich)
+<li>
+	<img src="icons/place.gif">
+	<a href="http://www.mcs.anl.gov/tpf">
+	The Task Parallelism Forum </a>
+<li>
+	<img src="icons/place.gif">
+	<A HREF="http://jukebox.lcs.mit.edu/">
+	Large-Scale Parallel Software</a> (MIT)
+<li>
+	<img src="icons/place.gif">
+	<A HREF="http://www.nas.nasa.gov/HPCC/home.html">
+	NASA High Performance Computing and Communications Program</A>
+<li>
+	<img src="icons/place.gif">
+	<A HREF="http://www.whitehouse.gov/OSTP.html">
+	US Executive Office of Science and Technology Policy</A>
+<li>
+	<img src="icons/place.gif">
+	<A HREF="http://www.llnl.gov/ptools/ptools.html">
+	The Parallel Tools Consortium</A>
+<li>
+	<img src="icons/place.gif">
+	<A HREF="http://www.cs.uoregon.edu:80/paracomp/ports/">
+	PORTS Consortium Home Page</A>
+<li>
+	<img src="icons/place.gif">
+	<A HREF="http://olympic.jpl.nasa.gov/SSTWG/">
+	NASA System Software and Tools Working Group</A>
+<li>
+	<img src="icons/place.gif">
+	<A HREF="http://scicomp.math.uni-augsburg.de/scicomp/gsci/index.html">
+	German Scientific Computing </a> (University of Augsburg)
+<li>
+	<img src="icons/place.gif">
+	<A HREF="http://www.itl.nist.gov/div895/sasg/parallel/">
+	NIST Parallel Processing</A>
+<li>
+	<img src="icons/place.gif">
+	<A HREF="http://www.ito.darpa.mil/">
+	DARPA Information Technology Office Home Page</A>
+<li>
+	<img src="icons/place.gif">
+	<A HREF="http://www.aist.go.jp/">
+	Agency of Industrial Science and Technology </A>(MITI Japan)
+<li>
+	<img src="icons/place.gif">
+	<A HREF="http://www.llnl.gov/comp/news/">
+	ASCI Tera-Scale Computing</A>
+<li>
+	<img src="icons/place.gif">
+	<A HREF="http://www.ait.nrl.navy.mil/about-ait.html">
+	The NRL Advanced Information Technology (AIT) Branch</A>
+<li>
+	<img src="icons/place.gif">
+	<A HREF="http://stc.org/">
+	STC:  Society for Technical Communication</a>
+<li>
+	<img src="icons/place.gif">
+	<A HREF="http://www.softwareforum.org/">
+	Software Forum</A>
+<li>
+	<img src="icons/ptrs.gif">
+	<A HREF="http://scilib.ucsd.edu/subjectdir/computersci.html">
+	UCSD Science & Engineering Library - Computer Science</A>
+<li>
+	<img src="icons/place.gif">
+	<A HREF="http://symbolicnet.mcs.kent.edu/">
+	SymbolicNet: Sym. Math. Computation Info Center</A> (Kent State)
+	<img src="icons/new2.gif">
+<li>
+	<img src="icons/place.gif">
+	<A HREF="http://www.hpcc.gov/imp95/section.4.4.html">
+	HPCC ASTA:  Adv. Software Tech. & Algorithms </A> ('95?)
+	<img src="icons/new2.gif">
+<li>
+	<img src="icons/place.gif">
+	<A HREF="http://www.cra.org">
+	Computing Research Association </A>
+	<img src="icons/new2.gif">
+<li>
+	<img src="icons/place.gif">
+	<A HREF="http://www.inria.fr/welcome-eng.html">
+	INRIA:  French Nat. Inst. for Research in CS </A>
+	<img src="icons/new2.gif">
+<li>
+	<img src="icons/place.gif">
+	<A HREF="http://www.acm.org">
+	The ACM</A>
+	<img src="icons/new2.gif">
+<li>
+	<img src="icons/place.gif">
+	<A HREF="http://www.sfbayacm.org/">
+	San Francisco Bay Area Chapter, ACM</A>
+	<img src="icons/new2.gif">
+</ul>
+
+<a name=Conferences /a>
+<h2>Conferences, Workshops (Always out of date)</h2>
+<ul>
+<li>
+	<img src="icons/ptrs.gif">
+	<a href="http://www.cs.cmu.edu/~scandal/conferences.html">
+	Conferences and Journals</a> (CMU)
+<li>
+	<img src="icons/ptrs.gif">
+	<A HREF="http://www.cs.rice.edu/~roth/conferences.html">
+	Upcoming Compiler and Parallel Computing Conferences </a> (Rice)
+<li>
+	<img src="icons/ptrs.gif">
+	<A HREF="http://www.csg.lcs.mit.edu:8001/Conferences/index.html">
+	Upcoming Conferences and Workshops</A> (MIT)
+<li>
+	<img src="icons/archive.gif">
+	<A HREF="http://www.dcc.ufmg.br/~sbc/sbac/sbac/congressos.html">
+	Congressos/Conferences</A>
+	<img src="icons/new2.gif">
+<li>
+	<img src="icons/call.gif">
+	<A HREF="http://www-iscr.llnl.gov/iscr/projects/crg/pact97/pact97.html">
+	PACT 97: Par. Arch. & Compiling Techniques </A>
+	<img src="icons/new2.gif">
+<li>
+	<img src="icons/call.gif">
+	<A HREF="http://dgicii.mty.itesm.mx:8090/EnglishVersion.html">
+	ISACC'97: Int'l Symp. on App. Corporate Computing</A>
+	<img src="icons/new2.gif"> (Monterrey, Mexico)
+<li>
+	<img src="icons/call.gif">
+	<A HREF="http://www-osl.cs.uiuc.edu/PDSE97/welcome.html">
+	PDSE'97: 2nd Int'l Wkshp on Soft. Eng. for Par. & Dist. Systems</A>
+	<img src="icons/new2.gif">
+<li>
+	<img src="icons/call.gif">
+	<A HREF="http://parallel.rz.uni-mannheim.de/sc/suparcup/">
+	Supercomputer '97 - SuParCup '97</A> (Germany)
+	<img src="icons/new2.gif">
+<li>
+	<img src="icons/call.gif">
+	<A HREF="http://www.cs.reading.ac.uk/zum97/">
+	10th International Conference of Z Users - ZUM'97</A> (UK)
+<li>
+	<img src="icons/call.gif">
+	<A HREF="http://www.icpads97.korea.ac.kr/">
+	ICPADS '97:  Int'l Conf. on Par. & Dist. Systems</A> (Korea)
+<li>
+	<img src="icons/call.gif">
+	<A HREF="http://www.cps.udayton.edu/~pan/pdpta/">
+	PDPTA: Int'l Conf. on Par. & Dist. Proc. Techniques & Appl. </A>
+<li>
+	<img src="icons/call.gif">
+	<A HREF="http://flp.cs.tu-berlin.de/~coord97/">
+	Coordination'97</A> (Berlin)
+<li>
+	<img src="icons/call.gif">
+	<A HREF="http://www.cs.umd.edu/users/pugh/popl97/">
+	POPL97: Principles of Programming Languages </A>
+<li>
+	<img src="icons/call.gif">
+	<A HREF="http://www.cs.cornell.edu/Info/People/chandra/podc97/podc97.html">
+	PODC '97: Priniciples of Distributed Computing</A>
+<li>
+	<img src="icons/call.gif">
+	<A HREF="http://www.cs.jhu.edu/Conferences/SPAA/">
+	SPAA '97: Symp. on Par. Algs. & Architectures </A>
+<li>
+	<img src="icons/call.gif">
+	<A HREF="http://wwwtios.cs.utwente.nl/~tacas97/">
+	TACAS'97</A>
+<li>
+	<img src="icons/call.gif">
+	<A HREF="http://www.mathcs.emory.edu/~ccc97/">
+	Cluster Computing Conference (CCC '97)</A>
+<li>
+	<img src="icons/call.gif">
+	<A HREF="http://www.cs.dartmouth.edu/iopads/">
+	IOPADS '97</A>
+<li>
+	<img src="icons/call.gif">
+	<A HREF="http://www.gmd.de/SCAI/parco97/">
+	Parco97 Home Page</A>
+<li>
+	<img src="icons/call.gif">
+	<A HREF="http://alethea.ukc.ac.uk/Dept/Computing/Research/NDS/FMOODS/">
+	FMOODS 97 - CFP and index</A>
+<li>
+	<img src="icons/call.gif">
+	<A HREF="http://cui.unige.ch/~ipps97/#parcon">
+	Welcome to IPPS '97</A>
+<li>
+	<img src="icons/call.gif">
+	<A HREF="http://www.ipser.com/svase/nextmeeting.htm">
+	SVASE Next Meeting</A>
+<li>
+	<img src="icons/call.gif">
+	<A HREF="http://www.tc.cornell.edu/Edu/VW/">
+	Cornell Theory Center Virtual Workshops </a>
+<li>
+	<img src="icons/call.gif">
+	<A HREF="http://www.supercomp.org/sc96/">
+	Supercomputing '96 Home Page</A>
+<li>
+	<img src="icons/call.gif">
+	<A HREF="http://theory.doc.ic.ac.uk:80/theory/COORDINATION/cfp.html">
+	COORDINATION'96 Call for Papers</A>
+<li>
+	<img src="icons/call.gif">
+	<A HREF="http://soglio.colorado.edu/Web/vl96.html" >
+	VL '96: 1996 IEEE Symposium on Visual Languages</A>
+<li>
+	<img src="icons/call.gif">
+	<A HREF="http://www.cs.wisc.edu/~paradyn/spdt96.html">
+	SPDT '96 Home Page</A>
+<li>
+	<img src="icons/call.gif">
+	<A HREF="http://cesdis.gsfc.nasa.gov/front96.html">
+	Frontiers '96 </A>
+<li>
+	<img src="icons/call.gif">
+	<A HREF="http://www.ens-lyon.fr:80/LIP/europar96/">
+	Euro-Par'96</A>
+<li>
+	<img src="icons/call.gif">
+	<A HREF="http://www.sics.se:80/europar95/">
+	EURO-PAR'95 Conference Information </A>
+<li>
+	<img src="icons/book.gif">
+	<A HREF="http://www.supercomp.org/sc95/proceedings/">
+	SC'95 Proceedings</A>
+<li>
+	<img src="icons/book.gif">
+	<A HREF="http://www.supercomp.org/sc96/proceedings/">
+	SC'96 Proceedings</A>
+<li>
+	<img src="icons/call.gif">
+	<A HREF="http://www.acl.lanl.gov/Pooma/intro.html">
+	Parallel Object-Oriented Methods and Applications Workshop '94</A>
+<li>
+	<img src="icons/call.gif">
+	MPI Developer's Conf
+	(<A HREF="http://www.erc.msstate.edu/~george/mpidc.html"> 1st </A>
+	 <A HREF="http://www.cse.nd.edu/mpidc96/"> 2nd </A>)
+<li>
+	<img src="icons/call.gif">
+	<A HREF="http://www.cs.rpi.edu:80/lcr/">
+	Third Workshop on Languages, Compilers and Run-Time Systems for Scalable Computers </A>
+<li>
+	<img src="icons/call.gif">
+	<A HREF="http://WWW.ERC.MsState.Edu/conferences/splc96/">
+	Scalable Parallel Libraries Conference III (SPLC96)</A>
+
+</ul>
+
+<a name=Education /a>
+<h2>Education</h2>
+<ul>
+<li>
+	<img src="icons/call.gif">
+	<A HREF="http://www.wellesley.edu/CS/pmetaxas/ForumPreliminaryCFP.html">
+	Forum on Parallel Computing Curricula</A>
+<li>
+	<img src="icons/paper.gif">
+	<A HREF="http://sci.aaas.org/nextwave/careers95/">
+	Future of PhDs</a> (Science Magazine)
+</ul>
+
+<a name=Reports /a>
+<h2>Reports and Books</h2>
+<ul>
+<li>
+	<img src="icons/paper.gif">
+	<A HREF="http://cesdis.gsfc.nasa.gov/hpccm/annual.reports/ann.rpt.95/cas.95/cas.95.ar.toc.html">
+	The CAS 1995 Annual Report</A>
+<li>
+	<img src="icons/paper.gif">
+	<A HREF="http://cesdis.gsfc.nasa.gov/hpccm/accomp/95accomp/95accomps.html">
+	NASA HPCC FY 1995 Top Level Accomplishments</A>
+<li>
+	<img src="icons/paper.gif">
+	<A HREF="http://www.cise.nsf.gov/asc/W/default.html" >
+	Task Force on the Future of the NSF Supercomputer Centers Program</A>
+<li>
+	<img src="icons/paper.gif">
+	<A HREF="http://www.npac.syr.edu/techreports/html/0700/abs-0748.html">
+	Cluster Computing Review </a>
+<li>
+	<img src="icons/book.gif">
+	<A HREF="http://www.research.att.com:80/orgs/ssr/book/reuse/">
+	Practical Reusable UNIX Software </a> (ed Krishnamurthy)
+<li>
+	<img src="icons/book.gif">
+	<A HREF="http://www.mcs.anl.gov/dbpp/">
+	Designing and Building Parallel Programs</a> (Foster)
+<li>
+	<img src="icons/book.gif">
+	<A HREF="http://www.npac.syr.edu/copywrite/pcw/BOOK.html">
+	Parallel Computing Works</a> (Fox, Williams, Messina)
+<li>
+	<img src="icons/paper.gif">
+	<A HREF="http://www.ccs.neu.edu/home/wand/ariane5rep.html">
+	ARIANE 5 Failure - Full Report</A>
+<li>
+	<img src="icons/com.gif">
+	<img src="icons/paper.gif">
+	<A HREF="http://www.walston1.com/schatz/">
+	The Schatz Report</A>
+</ul>
+
+
+<a name=Other /a>
+<h2>Other (Generally non-parallel)</h2>
+<ul>
+<li> Visual Programming & Visualization
+<ul>
+<li>
+	<A HREF="http://www.simphonics.com/VPLus/Vplus.htm">
+	VPLus Visual Programming System</A>
+<li>
+	<A HREF="http://www.cogs.susx.ac.uk/users/ianr/vpl.html">
+	Visual Programming</A>
+<li>
+	<A HREF="http://www.cs.utk.edu:80/~newton/vpe/vpe.html">
+	VPE:  A Visual Parallel Programming Environment</A>
+<li>
+	<A HREF="http://www.algonet.se/~djon/panbox/">
+	Pancode/Boxcharts</A>
+<li>
+	<A HREF="http://cobia-f.icase.edu:80/workshops/vtvd/">
+	Visualizing Time-Varying Data</A>
+<li>
+	<A HREF="http://soglio.colorado.edu/Web/vl96.html" ADD_DATE="0">
+	VL '96: 1996 IEEE Symposium on Visual Languages</A>
+<li>
+	<A HREF="http://www.cs.brown.edu:80/people/sdt/visual.html">
+	Visual Programming</A>
+<li>
+	<A HREF="http://cocoa.apple.com/cocoa">
+	Cocoa (was KidSim) Pictorial Programming System</a> (Apple)
+<li>
+	<A HREF="http://www.cs.uni-sb.de/RW/users/sander/html/gstools.html">
+	Graph Drawing Tools</A>
+<li>
+	<A HREF="http://www.informatik.uni-bremen.de/~davinci/">
+	daVinci Graph Visualization System</A>
+</ul>
+<li> CS Indexes, Bibliographies, Archives, Bookstores
+<ul>
+<li> A Collection of Computer Science Bibliographies
+	(<A HREF="http://liinwww.ira.uka.de/bibliography/index.html"> In Germany</A>)
+	(<A HREF="ftp://ftp.cs.umanitoba.ca/pub/bibliographies/index.html">
+	Mirror in Canada</A> )
+<li>
+	<A HREF="http://www.rdt.monash.edu.au/tr/siteslist.html">
+	Computer Science Technical Reports Archive Sites</A>
+<li>
+	<A HREF="http://www.cs.indiana.edu/cstr/search">
+	Unified CS TR Index (UCSTRI)</A>
+<li>
+	<A HREF="http://www.infoseek.com/">
+	InfoSeek Home Page</A>
+<li>
+	<A HREF="http://web.nexor.co.uk/aliweb/doc/aliweb.html">
+	ALIWEB</A>
+<li>
+	<A HREF="http://www.zblmath.fiz-karlsruhe.de/cs/lncs-form.html">
+	Lecture Notes in Computer Science Bibliography</a>
+<li>
+	<A HREF="http://techreports.larc.nasa.gov/ltrs/ltrs.html">
+	Langley Technical Report Server (LTRS)</A>
+<li>
+	<A HREF="http://http.hq.eso.org/eso-homepage.html">
+	ESO On-Line Information System</A>
+<li>
+	<A HREF="http://web.mit.edu/afs/athena.mit.edu/dept/libdata/applications/www/depts/document_services/docs.html">
+	MIT Document Services' Resource Page</A>
+<li>
+	<A HREF="http://www.lpac.ac.uk/SEL-HPC/Articles/SkeletonArchive.html">
+	Skeletons Bibliography</A>
+<li>
+	<A HREF="http://perelandra.cms.udel.edu/hpc/" >
+	High Performance Computing</A>
+<li>
+	<A HREF="http://computing.unn.ac.uk/~alanb/computing.html">
+	Computer Science Links</a>
+<li>
+	<A HREF="http://larch-www.lcs.mit.edu:8001/pub/larch.bib">
+	Larch bibliography</a> (MIT)
+<li>
+	<A HREF="http://liinwww.ira.uka.de/bibliography/SE/Bmethod.bib.gz">
+	B Method bibligraphy</a>
+<li>
+	<A HREF="http://www.comlab.ox.ac.uk/archive/z/z.bib">
+	Z Bibliography</a>
+<li>
+	<A HREF="ftp://ftp.ifad.dk/pub/vdm/vdm.bib.gz">
+	VDM (Vienna Development Method) Bib </A>
+<li>
+	<A HREF="http://www.mit.edu:8001/people/cdemello/univ.html">
+	College and University Home Pages</A>
+<li>
+	<A HREF="http://sunsite.unc.edu/patents/intropat.html">
+	STO Patent Search System </A>
+<li>
+	<A HREF="http://www.powells.com/cgi-bin/track.pl/Technical.html">
+	Powell's Technical Bookstore </A>
+<li>
+	<A HREF="http://www.clbooks.com/">
+	Comp Lit Bookstores </a>
+</ul>
+</ul>
+
+
+<h2> The refiling shelf </h2>
+<ul>
+<li>
+	<img src="icons/call.gif">
+	<img src="icons/book.gif">
+	<A HREF="http://cimic.rutgers.edu/jodl/">
+	International Journal of Digital Libraries</A>
+<li>
+	<img src="icons/ptrs.gif">
+	<A HREF="http://clumber.tc.cornell.edu/HyperNews/get/OtherSites.html">
+	Other WWW Sites about POWERparallel and Related topics</A>
+<li>
+	<img src="icons/com.gif">
+	<A HREF="http://www.chips.ibm.com/products/ppc/">
+	PowerPC info</A> (IBM)
+<li>
+	<img src="icons/place.gif">
+	<A HREF="http://stc.org/">
+	Society for Technical Communication (STC) Home Page</A>
+<li>
+	<img src="icons/faq.gif">
+	<A HREF="http://wagner.princeton.edu/foldoc/">
+	Computing Dictionary</A>
+<li>
+	<img src="icons/place.gif">
+	<A HREF="http://www.fas.org/">
+	Federation of American Scientists</A>
+<li>
+	<img src="icons/place.gif">
+	<A HREF="http://www.icsi.berkeley.edu/">
+	The International Computer Science Institute</A> (Berkeley, CA)
+<li>
+	<img src="icons/paper.gif">
+	<A HREF="http://www.ieee.org/comsoc/stallings.html">
+	IPv6: The New Internet Protocol</A>
+<li>
+	<img src="icons/ptrs.gif">
+	<A HREF="http://www.llnl.gov/llnl/lists/listsc.html">
+	Lists of lists</A>
+<li>
+	<img src="icons/person.gif">
+	<A HREF="http://www.phil.ruu.nl:80/home/pve/">
+	Peter van Eijk -- Professionally</A>
+<li>
+	<img src="icons/paper.gif">
+	<A HREF="http://www.prairienet.org/~jlarson/Tribute_to_Seymour.html">
+	A tribute to Seymour Cray. Supercomputing '96, November 19, 1996</A>
+<li>
+	<img src="icons/paper.gif">
+	<A HREF="http://www2.eis.net.au/~karlerik/Information.html#Shannon">
+	What is Information?</A>
+
+<li>
+	<img src="icons/prog.gif">
+	<A HREF="http://www.eas.asu.edu/~calypso/docs/calypso_nt_100/doc.html">
+	Calypso NT 1.0 Parallel Processing for Networked Computers</A>
+<li>
+	<img src="icons/prog.gif">
+	<A HREF="http://cs.nyu.edu/calypso/">
+	Calypso Project Home Page</A>
+
+<li>
+	<img src="icons/ptrs.gif">
+	<A HREF="http://clumber.tc.cornell.edu/HyperNews/get/OtherSites.html">
+	WWW Sites about POWERparallel and Related topics</A> (Cornell)
+<li>
+	<img src="icons/archive.gif">
+	<A HREF="file://ftp.daimi.aau.dk/pub/palsberg/papers/">
+	Directory of /pub/palsberg/papers</A> (Palsberg)
+<li>
+	<img src="icons/faq.gif">
+	<A HREF="http://www.ieee.org/comsoc/stallings.html">
+	IPv6: The New Internet Protocol</A> (IEEE)
+<li>
+	<img src="icons/faq.gif">
+	<A HREF="http://www.awl.com/cp/lea.html">
+	Concurrent Programming in Java</A>
+<li>
+	<img src="icons/faq.gif">
+	<A HREF="http://www.riec.tohoku.ac.jp/lab/yamashita/main-e.html">
+	Superconductive Computing Devices</A>
+<li>
+	<img src="icons/place.gif">
+	<A HREF="http://www.ncic.ac.cn/ewelcome.html">
+	Welcome to the NCIC</A>
+<li>
+	<img src="icons/person.gif">
+	<A HREF="http://segovia.cs.purdue.edu:7777/publications/publications.stml">
+	Juan's Publications and Papers</A>
+<li>
+	<img src="icons/call.gif">
+	<A HREF="http://ctoserver.arc.nasa.gov/news_and_info/ctpf.html">
+	ARC Commercial Technology Projects Fund (CTPF): FY 97 Call for Proposals</A>
+
+<li>
+	<img src="icons/person.gif">
+	<A HREF="http://www.scl.ameslab.gov/Personnel/nan.folder/john.html">
+	John Gustafson</A>
+	<img src="icons/new2.gif">
+</DL><p>
+</ul>
+
+<p>
+<img src="/images/rainbow-line.gif"
+alt="-------------------------------------------------------------------------">
+<p>
+<A href="http://www.nas.nasa.gov/NAS/Tools/">
+<img src="../images/toolsb.gif" 
+align=top
+alt="[Click Here]">
+ <I>To NAS Parallel Tools Team</I></A> 
+
+<A href="http://www.nas.nasa.gov/home.html">
+<img src="../Projects/AIMS/images/pagelogo.gif" 
+align=top
+alt="[Click Here]">
+ <I>To NAS Home Page</I></A>
+</BODY>
+
+<P>
+<ADDRESS>
+Currently maintained by: <A HREF="/~dinucci">David DiNucci</A> <BR>
+Responsible official: <A HREF="/~schulbac">Cathy Schulbach</A> <BR>
+Send questions, comments and requests for more information to <A href="mailto:dinucci@nas.nasa.gov">
+dinucci@nas.nasa.gov</A> <BR>
+
+<P>
+Last modified: February 10, 1997 <BR>
+
+</ADDRESS>
+
+</HTML>

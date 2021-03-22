@@ -1,0 +1,199 @@
+
+
+<HTML>
+<HEAD>
+<TITLE>Beebuzz - Search the Web</TITLE>
+<LINK href="/include/style.css" rel="stylesheet" type="text/css">
+<META NAME="description" CONTENT="Beebuzz - Search the Web">
+<META NAME="keywords" CONTENT="clicks, profit, paid, money, Beebuzz,
+search engine, category, agents, keywords, description, profit, affiliate,
+shared, log in, password, user name, powered, web sites, busy, bees, statistics
+goto, auctions, help, finance, news, marketing, promotion, clicks, traffic, eBay">
+
+<SCRIPT>
+<!--
+
+var objCount = 0;
+pics = new Array();
+
+preload("home", "/gif/home.gif", "/gif/home_on.gif");
+preload("search", "/gif/search.gif", "/gif/search_on.gif");
+preload("advertisingtools", "/gif/advertisingtools.gif", "/gif/advertisingtools_on.gif");
+preload("myaccount", "/gif/myaccount.gif", "/gif/myaccount_on.gif");
+preload("mywebpageads", "/gif/mywebpageads.gif", "/gif/mywebpageads_on.gif");
+
+// preload images and place them in an array
+function preload(name, first, second) 
+{     
+    pics[objCount] = new Array(2);
+    // Off image.
+    pics[objCount][0] = new Image();
+    pics[objCount][0].src = first;
+    // On image.
+    pics[objCount][1] = new Image();
+    pics[objCount][1].src = second;
+
+    objCount++;
+}
+
+// This function will change the images.
+function turn(i, on, name)
+{
+	if(document.images != null)
+	{
+		if(on)
+		{
+			// Show the images for the mouse being on a certain button.
+			document[name].src = pics[i][1].src;
+		}
+		else
+		{
+			// Show the images for the mouse rolling off a certain button.
+			document[name].src = pics[i][0].src;
+		}		
+	}		
+}
+
+// -->
+</SCRIPT>
+
+</HEAD>
+<BODY topmargin="0" leftmargin="0" marginwidth="0" marginheight="0">
+
+
+<TABLE width='100%' border='0' cellspacing='0' cellpadding='0' align='center'>
+	<TR>
+		<TD colspan="2"><IMG src="/gif/spacer.gif" width="1" height="5"></TD>
+	</TR>
+	<TR>
+		<TD><IMG src="/gif/spacer.gif" width="40" height="1"><a href='/index.asp'><img src='/gif/web_c200.gif' width='200' height='64' alt='Beebuzz' border='0'></a></td>
+		<TD align='right'><FONT class="normal"><A href="/help.asp">Help</A></FONT><img src="/gif/spacer.gif" width="40" height="1"></td>
+	</TR>
+	<TR>
+		<TD colspan="2"><IMG src="/gif/spacer.gif" width="1" height="5"></TD>
+	</TR>
+	<TR>
+		<TD align="center" colspan="2" background="/gif/menuback.gif">
+			<TABLE width="100" border="0" cellspacing="0" cellpadding="0">
+				<TR>
+					<TD><a href="/index.asp" onMouseOut="turn(0, false, 'home')" onMouseOver="turn(0, true, 'home')"><img src="/gif/home.gif" name="home" width="67" height="19" alt="Home" border="0"></a></TD>
+					<TD><a href="/search.asp" onMouseOut="turn(1, false, 'search')" onMouseOver="turn(1, true, 'search')"><img src="/gif/search.gif" name="search" width="79" height="19" alt="Search" border="0"></a></TD>
+					<TD><a href="/advertisingtools.asp" onMouseOut="turn(2, false, 'advertisingtools')" onMouseOver="turn(2, true, 'advertisingtools')"><img src="/gif/advertisingtools.gif" name="advertisingtools" width="155" height="19" alt="Advertising Tools" border="0"></a></TD>
+				</TR>
+			</TABLE>
+		</TD>
+	</TR>
+</TABLE>
+
+
+<P>
+
+<TABLE align="center">
+	<TR>
+		<TD><IMG src="/gif/searchtheweb.gif" width="421" height="149" alt="Search the Web"></TD>
+	</TR>				
+</TABLE>
+
+<p>
+
+<TABLE align="center" cellpadding="2" cellspacing="0" bordercolor="#666699" border="1">
+	<TR>
+		<TD colspan="2" align="center" bgcolor="#666699"><FONT class="white"><B>Search the Web</B></FONT></TD>
+	</TR>
+	<TR>
+		<TD colspan="2">
+			<TABLE align="center">
+				<TR>
+					<FORM action="/search.asp" method="post" target="_top"><TD><INPUT type="text" name="what" size="50" maxlength="200">
+					<INPUT type="submit" value="Search"></TD></FORM>
+				</TR>
+
+				<TR>
+					<TD><FONT class="small">Family Filter is <B>on</B> ~ <A HREF='/filter.asp?value=1'>off</A></FONT></TD>
+				</TR>
+				
+			</TABLE>
+		</TD>
+	</TR>
+</TABLE>
+
+<P>
+
+<TABLE cellpadding="3" align="center">
+	<TR>
+		<TD valign="top" align="center">
+			<TABLE width="350" cellpadding="4">
+				<TR>
+					<TD><FONT class="normal"><B><A HREF="/search.asp">Search</A></B><BR>
+					Search the web using our search engine.</FONT></TD>
+				</TR>
+				<TR>
+					<TD><FONT class="normal"><B><A HREF="/advertisingtools.asp">Advertising Tools</A></B><BR>
+					We partnered with several leading search engine companies to help you
+					increase your web site's traffic. Our partners include: 
+					<a href="http://www.qksrv.net/click-1475010-10280699" target="_top" >Overture</a>, 
+					<a href="http://www.qksrv.net/click-1475010-10310012" target="_top" >Search123</a>, 
+					<a href="http://www.qksrv.net/click-1475010-9928419" target="_top" >Excite.com</a>, 
+					<a href="http://www.qksrv.net/click-1475010-10295228" target="_top" >FindWhat.com</a>, 
+					<a href="http://www.qksrv.net/click-1475010-10297804" target="_top" >Enhance Interactive</a> and 
+					<a href="http://www.qksrv.net/click-1475010-10286021" target="_top" >SubmitFire</a></FONT></TD>
+				</TR>
+				<TR>
+					<TD><FONT class="normal"><B><A HREF="/catalog.asp">Shop</A></B><br>
+					Browse for items in our catalog.<br>
+					<A HREF="/catalog/B00005JM02.asp">Finding Nemo</A><br>
+					<A HREF="/catalog/B00005JKZY.asp">The Lord of the Rings - The Return of the King</A></FONT></TD>
+				</TR>				
+			</TABLE>
+		</TD>
+		<TD valign="top" align="left" width="160">
+			<table cellpadding="5">
+				<tr>
+					<td><a href="http://www.qksrv.net/click-1475010-9928419" target="_top" ><img src="http://www.qksrv.net/image-1475010-9928419" width="125" height="125" alt="" border="0"></a></td>
+				</tr>
+				<tr>
+					<td><a href="http://www.qksrv.net/click-1475010-10357516" target="_top" ><img src="http://www.qksrv.net/image-1475010-10357516" width="75" height="31" alt="Bid, Buy or Sell on eBay!" border="0"></a><br>
+					<FONT class="small">Do you have a hard time finding certain items on eBay? We are thinking of creating some
+					new search services. <a href="mailto:info@beebuzz.com&subject=eBay">Send us an email and let us know.</a></FONT></td>
+				</tr>
+			</table>
+		</TD>
+	</TR>	
+</TABLE>
+
+<P>
+
+
+<TABLE cellpadding="0" cellspacing="0" border="0" width="100%">
+	<TR>
+		<TD background="/gif/border.gif"><img src="/gif/spacer.gif" width="2" height="2"></TD>
+	</TR>
+	<TR>
+		<TD height="10"><IMG src="/gif/spacer.gif" width="2" height="10"></TD>
+	</TR>
+</TABLE>
+
+<CENTER>
+<FONT class="small">
+<A HREF="/index.asp">Home</A>
+|
+<A HREF="/search.asp">Search</A>
+|
+<A HREF="/advertisingtools.asp">Advertising Tools</A>
+|
+<A HREF="/help.asp">Help</A>
+</FONT>
+</CENTER>
+
+<TABLE cellpadding="0" cellspacing="0" border="0" width="100%">
+	<TR>
+		<TD height="10"><IMG src="/gif/spacer.gif" width="2" height="10"></TD>
+	</TR>
+</TABLE>
+
+<CENTER><FONT class="small">Copyright &copy; 2004 Beebuzz. All rights reserved. Established 1998.</FONT></CENTER>
+
+
+</BODY>
+</HTML>
+

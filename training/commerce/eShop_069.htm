@@ -1,0 +1,653 @@
+<STYLE>
+<!--
+A.{color: #333399}
+A:hover{color: #ff6600}
+TD {font-size:12px; font-family:Arial}
+.boardheading {font-family:Arial, Helvetica, sans-serif; font-size:17px; font-weight: bold; color: white;}
+.bdlink {font-size: 11px; font-family:Arial, Helvetica, Sans Serif; font-weight: bold;} 
+.cText  {font-size:11px; font-family:Arial, Helvetica, Sans Serif; line-height:18px}
+.cTitle  {font-size:11px; font-family:Arial, Helvetica, Sans Serif; letter-spacing:1pt}
+.hand {CURSOR: hand}
+.leftLink {font-size:11px; font-family:Arial, Helvetica, Sans Serif; line-height:12px}
+.nav2Link	{font-size: 11px; font-family:Arial, Helvetica, Sans Serif;}
+.fieldname	{font-size: 10px; font-family:Arial, Helvetica, Sans Serif;}
+.whitehead  {font-family: Arial; font-size: 11px; color: ffffff; font-weight: bold; text-align: center; text-transform: uppercase; text-decoration: none; letter-spacing: 1.5px}
+.footerLink {font-size: 11px; font-family:Arial, Helvetica, Sans Serif; } 
+.BlankLink:link		{text-decoration: none; font-weight: normal;cursor: text}
+.BlankLink:visited	{text-decoration: none; font-weight: normal;cursor: text}
+.BlankLink:active	{text-decoration: none; font-weight: normal;cursor: text}
+.BlankLink:hover	{text-decoration: none; font-weight: normal;cursor: text}
+.destination  {font-size:11px; font-family:Arial, Helvetica, Sans Serif;font-weight: bold;color: #333399; line-height:16px;}
+.small  {font-size:11px; font-family:Arial, Helvetica, Sans Serif;line-height:16px;}
+.size9{font-family:arial;font-size:9px}
+.size11{font-family:arial;font-size:11px}
+.size11B{font-family:arial;font-size:11px; WIDTH:65px}
+.size12, .size13 {FONT-FAMILY: arial; FONT-SIZE: 12px}
+.text1, .text2 {FONT-FAMILY: arial; FONT-SIZE: 11px; WIDTH: 120px}
+.text1B, .text4 {FONT-FAMILY: arial; FONT-SIZE: 11px; WIDTH: 130px}
+.text3 {FONT-FAMILY: arial; FONT-SIZE: 11px; WIDTH: 60px}
+.text5 {FONT-FAMILY: arial; FONT-SIZE: 11px; WIDTH: 100px}
+.text6 {FONT-FAMILY: arial; FONT-SIZE: 11px; WIDTH: 110px}
+.smText{font-size:11px;font-family:Arial,Helvetica,Sans Serif;line-height:14px}
+.nav3Link{font-size:11px;font-family:Arial,Helvetica,Sans Serif;line-height:11px}
+A.city{font-size:16px;text-decoration:none;color:#CC6600;}
+.MDBPrice {font-weight: bold; color: #cc0000}
+.price{ color: CC0000;font-size:11px;font-weight: bold;font-family:Arial,Helvetica,Sans Serif;}
+.cText10px {FONT-SIZE: 10px; LINE-HEIGHT: 14px; COLOR: #000000; FONT-FAMILY: Arial,Helvetica,Sans Serif}
+.destinationOrngBold   {font-family: Arial; font-size: 12px; color:#CC6600; font-weight: bold; text-transform: none; margin_top: 10px;}
+.priceLink {font-family: Arial; font-size: 11px; color:#CC0000; font-weight: bold; text-transform: none; margin_top: 10px; text-decoration: underline;}
+ -->
+</STYLE>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<TITLE>Expedia.co.uk Travel > Book cheap flights, travel, hotels & package holidays</title>
+<LINK REL="SHORTCUT ICON" HREF="http://www.expedia.com/favicon.ico">
+<meta name="description" content="Expedia.co.uk. Your No1 online travel agent to book cheap flights, arrange car hire & travel insurance, search for hotels, & find last minute deals on package holidays & city breaks."
+<meta name="keywords" content="travel,late,deals,hotels,book,flights,hotel, package, holidays, city, breaks, last minute, reservations,booking, holiday, guides, car hire, Amsterdam, Boston, Las Vegas, London, New York, Paris, bargain, air fares, travel insurance">
+<META http-equiv="PICS-Label" content='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l gen false comment "RSACi North America Server" for "http://www.expedia.co.uk" on "2000.03.10T05:10-0800" r (n 0 s 0 v 0 l 0))'>
+<STYLE>
+<!--
+
+#flt{display:block;font-family:arial;font-size:13px;height:110px}
+#hot{display:none;font-family:arial;font-size:11px;height:110px}
+#car{display:none;font-family:arial;font-size:11px;height:110px}
+#hol{display:none;font-family:arial;font-size:11px;height:110px}
+#ski{display:none;font-family:arial;font-size:11px;height:110px}
+#dts{display:block;font-family:arial;font-size:11px;height:20px}
+
+-->
+</style>
+<COMMENT ID="FMT_DATE" TITLE="DD/MM/YY"></COMMENT>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+dom = document.getElementById? true:false
+function AttB(f){f.style.display='block';}
+function AttN(f){f.style.display='none';}
+function show(idLayer,idParent){cLayer=dom?document.getElementById(idLayer).style:document.all[idLayer].style;
+cLayer.display='block';var d=document.Wiz;
+if (idLayer=='car'){AttB(d.CAge);AttB(d.Ctime1);AttB(d.Ctime2);d.srch[2].status='true';}
+else if (idLayer=='hot'){d.srch[1].status='true';}
+else if (idLayer=='ski'){d.srch[4].status='true';}
+else if (idLayer=='flt'){AttB(d.FcAdu);d.srch[0].status='true';if (idParent!='flt' && d.opts[1].checked) show('dts','flt');}
+else if (idLayer=='hol'){d.srch[3].status='true';}}
+function hide(idLayer,idParent){cLayer=dom?document.getElementById(idLayer).style:document.all[idLayer].style;
+var d=document.Wiz;if(idLayer!='flt')AttN(d.CAge);AttN(d.Ctime1);AttN(d.Ctime2);cLayer.display='none'}
+function hideAll(){hide('flt');hide('hot');hide('car');hide('hol');hide('ski');hide('dts','flt');}
+//-->
+</SCRIPT>
+</head> <!--disabled include virtual="/daily/live/alert.asp"--> <STYLE>
+.cTitleLM {font-size:11px;font-family:Arial, Helvetica, Sans Serif;letter-spacing:1.5px}
+</STYLE> <body bgcolor=#ffffff link=#333399 vlink=#333399 alink=#333399 topmargin=0 leftmargin=0 marginwidth=0 marginheight=0> <basefont face="arial, helvetica" size=2>  <TABLE cellSpacing=0 cellPadding=0 border=0 width=772 ID=Table2> <tr> <td width=16><img src="/eta/spaceit.gif" width=16 height=1></td> <td width=272><img src="/eta/spaceit.gif" width=272 height=1></td> <td width=468><img src="/eta/spaceit.gif" width=468 height=1></td> <td width=16><img src="/eta/spaceit.gif" width=16 height=1></td> </tr>  <tr> <td></td> <td><img border=0 src="/daily/common/images/spaceit.gif" width=208 height=1><br><a HREF="/?rfrr=-12191" target=_top><img border=0 alt="Expedia Travel. book deals on hotel rooms, last minute hotels & accomodation, book flights, arrange car hire, travel insurance, city breaks & holidays worldwide.  Book online now." src="/daily/common/images/expe_logo04.gif" width=220 height=60></a></td> <td  width=468><nobr><a 
+href="http://ads.expedia.com/event.ng/Type=click&FlightID=29169&AdID=49921&TargetID=7046&Segments=
+482,729,962,2755,2798,2863,4133,4406,4993,5070,5150,5155,5237,5718,5845,6013&Targets=1204,3570,3737,5792,6181,7046,7157,7271,7276,8058,8263&Values=31,43,51,60,72,83,90,100,150,253,317,5060,5083,5142,5150,5162,5348,5543&RawValues=&Redirect=http%253A%252F%252Fwww%252Eexpedia
+%252Eco%252Euk%252Fdaily%252Fpromos%252Fjuly04%252Fpname2%252Easp%253Frfrr%253D%252D30247"><b><font 
+style="font-size: 11px" color=#333399 size=1>Expedia's July Sale - Beach and Sun Holidays from <FONT 
+COLOR="CC0000"><b>&pound;203</b></FONT></font></b></a></nobr></td> <td></td> </tr>  <tr> <td colspan=4><img src="/eta/spaceit.gif" width=1 height=4></td> </tr> <tr> <td></td> <td></td> <td colspan=2 valign=top><FONT CLASS=hdrText><NOBR>&nbsp;<font size=2><FONT class=small><NOBR><b>Welcome - </b>Already a member?  <a TARGET=_top href=http://www.expedia.co.uk/pub/agent.dll?qscr=logi&ussl=1>Sign in</a></NOBR></font></NOBR>&nbsp;</FONT><img src="/eta/spaceit.gif" width=1 height=17> </td> </tr> <tr> <td colspan=4><img src="/eta/spaceit.gif" width=1 height=4></td> </tr>  </table>  <TABLE cellSpacing=0 cellPadding=0 border=0 width=772> <TR> <TD width=160></TD> <TD align=right><NOBR> <A TARGET=_top HREF="/?rfrr=-12180"><IMG BORDER=0 src="/pubspec/images/header/zthoms.gif" ALT=Home></A><A TARGET=_top HREF="/daily/promos/seatsale/default.asp?rfrr=-12181"><IMG id=deal_tab BORDER=0 src="/pubspec/images/header/ztdlsn.gif" ALT=Deals></A><A TARGET=_top HREF="/pub/agent.dll?qscr=fltw&rfrr=-12182"><IMG BORDER=0 src="/pubspec/images/header/ztfltn.gif" ALT=Flights></A><A TARGET=_top HREF="/pub/agent.dll?qscr=htin&rfrr=-12183"><IMG BORDER=0 src="/pubspec/images/header/zthotn.gif" ALT=Hotels></A><A TARGET=_top HREF="/pub/agent.dll?qscr=carw&rfrr=-12185"><IMG BORDER=0 src="/pubspec/images/header/ztcarn.gif" ALT=Cars></A><A TARGET=_top HREF="/pub/agent.dll?qscr=cmsh&rfrr=-12184"><IMG BORDER=0 src="/pubspec/images/header/ztholn.gif" ALT=Holidays></A><A TARGET=_top HREF="/daily/tvts/cruises.asp?rfrr=-12187"><IMG BORDER=0 src="/pubspec/images/header/ztcrun.gif" ALT=Cruises></A><A TARGET=_top HREF="/daily/places/?rfrr=-12186"><IMG BORDER=0 src="/pubspec/images/header/ztguin.gif" ALT=Guides></A><A TARGET=_top HREF="/pubspec/scripts/eap.asp?GOTO=MAPS&rfrr=-12188"><IMG BORDER=0 src="/pubspec/images/header/ztmapn.gif" ALT=Maps></A><A TARGET=_top HREF="/daily/feeds/halifax/?rfrr=-12189"><IMG BORDER=0 src="/pubspec/images/header/ztinsn.gif" ALT=Insurance></A><A TARGET=_blank HREF="http://www.expediacorporate.co.uk?rfrr=-21745"><IMG BORDER=0 src="/pubspec/images/header/ztcorn.gif" ALT="Corporate Travel"></A></NOBR></center></td><TD width=16> </td></tr></table> <TABLE BGCOLOR="#FFDF7B" WIDTH=772 CELLSPACING=0 CELLPADDING=0 BORDER=0  >  <tr> <td valign=top align=left width="157" bgcolor="#FFDF7B" height="22">  <table border=0 cellpadding=0 cellspacing=0 height="22"> <tr> <td valign=top><img src="/daily/common/images/left_yellow_corner.gif" width=8 height=7></td> </tr> </table>  </td> <td align=right width=615 bgcolor="#FFDF7B" height=22> <table cellspacing=0 cellpadding=0 bgcolor="#FFDF7B" border=0> <tr>  <td noWrap align=middle><a href=# onclick="window.open('/daily/user_guide/swf.html?rfrr=-12211','UserGuide','scrollbars=no,screenX=0,screenY=0,toolbar=no,location=no,menubar=no,width=700,height=455');return false;" class=nav2Link ><img src="/daily/common/images/userguide.gif" align=left border=0></a></td> <td noWrap align=middle><a href=# onclick="window.open('/daily/user_guide/swf.html?rfrr=-12211','UserGuide','scrollbars=no,screenX=0,screenY=0,toolbar=no,location=no,menubar=no,width=700,height=455');return false;" class=nav2Link ><font class=nav2Link size=1>Expedia User Guide</font></a></td> <td>&nbsp;|&nbsp;</td>  <td noWrap align=middle><a href="/daily/service/sitemap.asp?rfrr=-12192" target=_top><img src="/eta/SiteMap.gif" align=left border=0></a></td> <td noWrap align=middle><a href="/daily/service/sitemap.asp?rfrr=-12192" target=_top><font class=nav2Link size=1>Site Map</font></a></td> <td>&nbsp;|&nbsp;</td>  <td noWrap align=middle><a href="/pub/agent.dll?qscr=litn&rfrr=-12193" target=_top><img src="/eta/MyItins.gif" align=left border=0></a></td> <td noWrap align=middle><a href="/pub/agent.dll?qscr=litn&rfrr=-12193" target=_top><font class=nav2Link size=1>My Trips</font></a></td> <td>&nbsp;|&nbsp;</td> <td noWrap align=middle><a HREF="/pub/agent.dll?qscr=info&rfrr=-12194" target=_top><img src="/eta/AcctInfo.gif" align=left border=0></a></td> <td noWrap align=middle><a HREF="/pub/agent.dll?qscr=info&rfrr=-12194" target=_top><font class=nav2Link size=1>My Profile</font></a></td>  <td>&nbsp;|&nbsp;</td> <td noWrap align=middle><a HREF="/daily/service/?rfrr=-12190" target=_top><img src="/pubspec/images/essentta.gif" align=left border=0></a></td> <td noWrap align=middle><a HREF="/daily/service/?rfrr=-12190" target=_top><font class=nav2Link size=1>Customer Support</font></a></td> <td noWrap>&nbsp;</td> <td>&nbsp;&nbsp;</td>  </tr> </table> </td> <td valign=top align=left width=8 bgcolor="#FFDF7B" height=22> <div align=right><img src="/daily/common/images/right_yellow_corner.gif" width=8 height=7 align=top></div> </td> </tr>  <tr bgcolor=#CED6E6> <td valign=top align=left colspan=3 height=2></td> </tr>  </table>  <TABLE WIDTH=772 BORDER=0 CELLPADDING=0 CELLSPACING=0> <TR valign=top> <TD rowspan=2 WIDTH=150 valign=top align=center> 
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+    <td align="center"><a href="/daily/promos/july04/pname1.asp?rfrr=-30249"><img src="/daily/includes/images/julysaleon.gif" alt="Expedia's July Sale" width="147" height="216" border="0"></a></td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+	<td rowspan="3" width="16"></td>
+    <td width="124" height="24"><a href="/daily/promos/july04/pname1.asp?rfrr=-30249"><b>European City Breaks</b></a></td>
+</tr>
+<tr>
+    <td height="24"><a href="/daily/promos/july04/pname2.asp?rfrr=-30250"><b>Beach and Sun</b></a></td>
+</tr>
+<tr>
+    <td height="24"><a href="/daily/promos/july04/pname3.asp?rfrr=-30251"><b>Worldwide Cities</b></a></td>
+</tr>
+</table>
+ <IMG SRC="/daily/common/spaceit.gif" WIDTH=144 HEIGHT=5> <br>  <!-- <IMG SRC="/daily/common/spaceit.gif" WIDTH=144 HEIGHT=12><br> --> <table> <tr><td><img src="http://media.expedia.com/ads/UK/UK-HouseAds/spaceit.gif"></td></tr> <tr><td height=5></td></tr>  <tr><td height=6></td></tr> </table>  <IMG SRC="/daily/common/spaceit.gif" WIDTH=144 HEIGHT=10><br>  <script src="/daily/common/navbar/tools_js.asp"></script>  <IMG SRC="/daily/common/spaceit.gif" WIDTH=144 HEIGHT=1><br clear=all> <br><br> <!-- blip_promo2 --> </TD> <td width=12><IMG SRC="/daily/common/spaceit.gif" WIDTH=12 HEIGHT=1 BORDER=0></td> <TD width=600 valign=top align=center> <table> <tr valign=top> <td width=450>  <IMG SRC="/daily/common/spaceit.gif" WIDTH=144 HEIGHT=12><br>  <table cellpadding=0 cellspacing=0 border=0 width=450 bgcolor="#FFF7E7"> <tr> <td> <table border=0 cellspacing=0 cellpadding=0 width="100%"> <tr bgcolor="#FFA529" height=16> <td><img src="/images/ora_bar_l.gif" width=8 height=16 border=0></td> <td align=center height=16><font size=3 style="font-family:Arial;font-size:11px;color:000000;font-weight:bold;text-align:center;text-decoration:none;letter-spacing:1.5px"><b>CREATE YOUR PERFECT TRIP</b></font></td> <td align=right><img src="/images/ora_bar_r.gif" width=8 height=16 border=0></td> </tr> </table> </td> </tr> <tr> <td style="background-repeat:repeat-x;"> <table cellpadding=0 cellspacing=0 border=0 style="border-left:#FFA529 1px solid;border-right:#FFA529 1px solid;"> <tr> <td width=10> <img src="/eta/spaceit.gif" width=5 height=1> </td> <td> <table cellpadding=0 cellspacing=0 width="100%" border=0> <form onsubmit="return(SubHA())" name=Wiz method=post action="/daily/home/process_bun.asp"> <tr> <td colspan=4><img src="/eta/spaceit.gif" width=1 height=10 border=0></td> </tr>  <tr> <td align=right width=150> <table cellspacing=0 cellpadding=0 border=0 width="100%" ID=Table7> <tr> <td onclick="handleWiz('1');" onmouseover="style.cursor='hand';"><font class=size13><img src="/images/Icon_flights.gif" width=33 height=24 alt="Flight only" border=0><input type=radio name=srch value=flt ID=Radio4><font style="POSITION: relative; TOP: -2px">Flight&nbsp;only</font></font></td> </tr> <tr> <td onclick="handleWiz('2');" onmouseover="style.cursor='hand';"><font class=size13><img src="/images/Icon_hotels.gif" width=33 height=24 alt="Hotel only" border=0><input type=radio name=srch value=hot ID=Radio5><font style="POSITION: relative; TOP: -2px">Hotel&nbsp;only</font></font></td> </tr> <tr> <td onclick="handleWiz('3');" onmouseover="style.cursor='hand';"><font class=size13><img src="/images/Icon_cars.gif" width=33 height=24 alt="Car only" border=0><input type=radio name=srch value=car ID=Radio6><font style="POSITION: relative; TOP: -2px">Car&nbsp;only</font></font></td> </tr> </table> </td> <td> &nbsp; </td> <td width=270> <table width="100%" border=0 cellspacing=0 cellpadding=0 bgcolor=#FFFFFF id=Table1> <tr> <td> <table cellspacing=0 cellpadding=0 border=0 width="100%" ID=Table2> <tr> <td width=8 bgcolor=#FFF7E7><img src="/images/ora_corner1.gif" width=8 height=8></td> <td valign=top><img src="/images/FFDF7Bdot.gif" height=2 width="100%"></td> <td width=8 bgcolor=#FFF7E7><img src="/images/ora_corner2.gif" width=8 height=8></td> </tr> </table> <table bgcolor=#FFFFFF cellspacing=0 cellpadding=0 border=0 width="100%" style="border-left:#FFDF7B 2px solid;border-right:#FFDF7B 2px solid;" ID=Table3> <tr valign=top> <td> <table cellspacing=0 cellpadding=0 border=0 width="100%" ID=Table4> <tr> <td> <table cellspacing=0 cellpadding=0 border=0 width="100%" ID=Table5> <tr> <td onclick="handleWiz('4');" onmouseover="style.cursor='hand';"><font class=size13><img src="/eta/spaceit.gif" width=1 height=14 border=0><input type=radio name=srch value=flthot ID=Radio1><font style="POSITION: relative; TOP: -2px">Flight&nbsp;+&nbsp;Hotel</font></font></td> </tr> <tr> <td onclick="handleWiz('5');" onmouseover="style.cursor='hand';"><font class=size13><img src="/eta/spaceit.gif" width=1 height=24 border=0><input type=radio name=srch value=flthotcar ID=Radio2><font style="POSITION: relative; TOP: -2px">Flight&nbsp;+&nbsp;Hotel&nbsp;+&nbsp;Car&nbsp;&nbsp;&nbsp;</font></font></td> </tr> <tr> <td onclick="handleWiz('6');" onmouseover="style.cursor='hand';"><font class=size13><img src="/eta/spaceit.gif" width=1 height=24 border=0><input type=radio name=srch value=hotcar ID=Radio3><font style="POSITION: relative; TOP: -2px">Flight&nbsp;+&nbsp;Car&nbsp;&nbsp;&nbsp;</font></font></td> </tr> </table> </td> <td width=140 align=center valign=middle> <font style="color:#CC0000;font-weight:bold;">Book together</font> <br> <font style="color:#CC0000;font-size:16px;font-weight:bold;">and save!</font> <br> <font style="color:#333399;font-size:11px;font-weight:none;"><a href=# onclick="window.open('/daily/promos/packages/default_popup.asp?rfrr=-19054','TellMeMore','scrollbars=yes,screenX=0,screenY=0,toolbar=no,location=no,menubar=no,width=650,height=455');return false;"><img src="/images/tellmemore.gif" alt="Tell me more" border=0></A></font> </td> </tr> </table> </td> </tr> </table> <table cellspacing=0 cellpadding=0 border=0 width="100%" ID=Table6> <tr> <td width=8 bgcolor=#FFF7E7><img src="/images/ora_corner3.gif" width=8 height=8></td> <td valign=bottom bgcolor=#FFFFFF><img src="/images/FFDF7Bdot.gif" height=2 width="100%"></td> <td width=8 bgcolor=#FFF7E7><img src="/images/ora_corner4.gif" width=8 height=8></td> </tr> </table> </td> </tr> </table> </td> <td width=20> &nbsp; </td> </tr>  <tr> <td colspan=4><img src="/eta/spaceit.gif" width=1 height=10 border=0></td> </tr> <tr> <td><img src="/eta/spaceit.gif" width=1 height=5 border=0></td> </tr> </table> </td> <td width=10> <img src="/eta/spaceit.gif" width=5 height=1> </td> </tr> <tr> <td width=10> <img src="/eta/spaceit.gif" width=5 height=1> </td> <td> <!-- blip_fffinder_inc -->
+<STYLE>
+<!--
+#fltbun, #fltbunchild {display:none;font-family:arial;font-size:13px;height:50px}
+#pacbun {display:block;font-family:arial;font-size:13px;height:50px}
+#asc {display:block;font-family:arial;font-size:13px;height:25px}
+#asc2 {display:block;font-family:arial;font-size:13px;height:25px}
+#ac {display:none;font-family:arial;font-size:13px;height:25px}
+#childage {display:none;font-family:arial;font-size:13px;height:25px}
+#carbun {display:none;font-family:arial;font-size:13px;height:50px}
+#hotbun, {display:none;font-family:arial;font-size:13px;height:40px}
+#FHDests {display:none;font-family:arial;font-size:13px;}
+#fltbunopts {display:block;font-family:arial;font-size:13px;height:20px}
+#hotbunopts, #carbunopts, #flthotbunopts {display:none;font-family:arial;font-size:13px;height:20px}
+.buntext1 {FONT-FAMILY:arial;FONT-SIZE:11px;WIDTH:180px;}
+.buntext2 {FONT-FAMILY:arial;FONT-SIZE:11px;WIDTH:100px;}
+.bunNew {FONT-FAMILY:arial;FONT-SIZE:11px;WIDTH:83px;}
+.bundatetext {FONT-FAMILY:arial;FONT-SIZE:11px;WIDTH:60px;}
+.bungreenGoBtn	{border-bottom:thin solid #006600;border-right:thin solid #006600;border-top:thin solid #CCCCCC;border-left:thin solid #CCCCCC;font-size:11px;font-family:Arial;font-weight:bold;background-color:#009900;color:#FFFFFF;line-height:.85;padding-top:3px;text-transform: capitalize;cursor: hand;width:60px}
+.iFade50 {filter: alpha(opacity=50) !important;}
+.iFadeNone {filter: alpha(opacity=100) !important;}
+.text1, .text2 {FONT-FAMILY: arial; FONT-SIZE: 11px; WIDTH: 120px}
+.text1B, .text4 {FONT-FAMILY: arial; FONT-SIZE: 11px; WIDTH: 130px}
+.text3 {FONT-FAMILY: arial; FONT-SIZE: 11px; WIDTH: 60px}
+.text5 {FONT-FAMILY: arial; FONT-SIZE: 11px; WIDTH: 100px}
+.text6 {FONT-FAMILY: arial; FONT-SIZE: 11px; WIDTH: 110px}
+.smText{font-size:11px;font-family:Arial,Helvetica,Sans Serif;line-height:14px}
+.DATAHEAD {font-size: 10pt; color: white; font-family: Arial, Helvetica; BACKGROUND-COLOR: #6699CC; TEXT-ALIGN: center}
+.DATACELL {FONT-WEIGHT: bold; FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Arial, Helvetica; BACKGROUND-COLOR: #FFDF7B; TEXT-ALIGN: center}
+.DATACELLWITHOUTBOLD {FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Arial, Helvetica; BACKGROUND-COLOR: #FFDF7B; TEXT-ALIGN: center}
+.DataTitle {FONT-WEIGHT: bold; FONT-SIZE: 10pt; COLOR: #003399; FONT-FAMILY: Arial, Helvetica}
+-->
+</STYLE>
+<SCRIPT LANGUAGE="javascript">
+<!--
+function handleWiz(id)
+{
+var d;d = document.Wiz;
+switch (id)
+{
+	case '1':{d.srch[0].checked = true;break;}
+	case '2':{d.srch[1].checked = true;break;}
+	case '3':{d.srch[2].checked = true;break;}
+	case '4':{d.srch[3].checked = true;break;}
+	case '5':{d.srch[4].checked = true;break;}
+	case '6':{d.srch[5].checked = true;break;}
+	default:{d.srch[0].checked = true;}
+}
+if (d.srch[0].checked == true){hotbun.style.display = 'none';carbun.style.display = 'none';pacbun.style.display = 'none';FHDests.style.display = 'none';ac.style.display ='none';fltbun.style.display = 'block';asc.style.display = 'block';asc2.style.display = 'none';childage.style.display = 'none';bunwizopts.innerHTML = '<b>More flight search options:</b><br><A href="#" onmouseover="window.status=\'Flight search\';return(true);" onmouseout="window.status=\'\'" onclick="SetOtherOptsURL();return(false);">Additional airports, multiple destinations...</A>';d.BundleType.value = "1";}
+else if ((d.srch[1].checked == true)){fltbun.style.display = 'none';carbun.style.display = 'none';pacbun.style.display = 'none';asc.style.display = 'none';FHDests.style.display = 'none';hotbun.style.display = 'block';ac.style.display ='block';asc2.style.display = 'none';childage.style.display = 'none';bunwizopts.innerHTML = '<b>More hotel search options:</b><br><A href="#" onmouseover="window.status=\'Hotel search\';return(true);" onmouseout="window.status=\'\'" onclick="SetOtherOptsURL();return(false);">Hotel details, multiple rooms...</A>';d.BundleType.value = "2";}
+else if (d.srch[2].checked == true){fltbun.style.display = 'none';hotbun.style.display = 'none';pacbun.style.display = 'none';FHDests.style.display = 'none';asc.style.display = 'none';ac.style.display ='none';carbun.style.display = 'block';asc2.style.display = 'none';childage.style.display = 'none';bunwizopts.innerHTML = '<b>More car search options:</b><br><A href="#" onmouseover="window.status=\'Car search\';return(true);" onmouseout="window.status=\'\'" onclick="SetOtherOptsURL();return(false);">Additional car hire...</A>';d.BundleType.value = "4";	}
+else if (d.srch[3].checked == true){hotbun.style.display = 'none';carbun.style.display = 'none';fltbun.style.display = 'none';ac.style.display ='none';FHDests.style.display = 'block';pacbun.style.display = 'block';asc.style.display = 'block';asc2.style.display = 'none';childage.style.display = 'none';bunwizopts.innerHTML = '<b>More holiday search options:</b><br><A href="#" onmouseover="window.status=\'Package search\';return(true);" onmouseout="window.status=\'\'" onclick="SetOtherOptsURL();return(false)">Multiple rooms, more destinations...</A>';d.BundleType.value = "3";}
+else if (d.srch[4].checked == true){hotbun.style.display = 'none';carbun.style.display = 'none';fltbun.style.display = 'none';FHDests.style.display = 'block';ac.style.display ='none';pacbun.style.display = 'block';asc.style.display = 'block';asc2.style.display = 'none';childage.style.display = 'block';bunwizopts.innerHTML = '<b>More holiday search options:</b><br><A href="#" onmouseover="window.status=\'Package search\';return(true);" onmouseout="window.status=\'\'" onclick="SetOtherOptsURL();return(false)">Multiple rooms, more destinations...</A>';d.BundleType.value = "7";}
+else if (d.srch[5].checked == true){hotbun.style.display = 'none';carbun.style.display = 'none';fltbun.style.display = 'none';ac.style.display ='none';FHDests.style.display = 'block';pacbun.style.display = 'block';asc.style.display = 'block';asc2.style.display = 'none';childage.style.display = 'block';bunwizopts.innerHTML = '<b>More holiday search options:</b><br><A href="#" onmouseover="window.status=\'Package search\';return(true);" onmouseout="window.status=\'\'" onclick="SetOtherOptsURL();return(false)">More destinations...</A>';d.BundleType.value = "5";}
+else{hotbun.style.display = 'none';carbun.style.display = 'none';pacbun.style.display = 'none';ac.style.display ='none';fltbun.style.display = 'block';asc.style.display = 'block';asc2.style.display = 'none';childage.style.display = 'none';bunwizopts.innerHTML = '<b>More flight search options:</b><br><A href="#" onmouseover="window.status=\'Flight search\';return(true);" onmouseout="window.status=\'\'" onclick="SetOtherOptsURL();return(false);">One-way trips, multiple destinations...</A>';d.BundleType.value = "0";}
+}
+
+
+function SetOtherOptsURL()
+{if (document.Wiz.srch[0].checked == true){document.location.href="/pubspec/scripts/eap.asp?GOTO=EXPFLTWIZ&DepAirpName=" + document.Wiz.Fcity1.value + "&DestAirpName=" + document.Wiz.Fcitd1.value + "&DepDate=" + document.Wiz.date1.value + "&DepTime=" + document.Wiz.FltTime1.options[document.Wiz.FltTime1.selectedIndex].value + "&ReturnDate=" + document.Wiz.date2.value + "&ReturnTime=" + document.Wiz.FltTime2.options[document.Wiz.FltTime2.selectedIndex].value + "&NumAdult=" + document.Wiz.FcAdu.options[document.Wiz.FcAdu.selectedIndex].value + "&NumSenior=0&NumChild=" + document.Wiz.FcChi.options[document.Wiz.FcChi.selectedIndex].value + "&NoSubmit=1&rfrr=-12118";}
+else if (document.Wiz.srch[1].checked == true){document.location.href="/pubspec/scripts/eap.asp?GOTO=HotWiz&MoreOptions=1&CityName=" + document.Wiz.Hlocn.value + "&InDate=" + document.Wiz.date3.value + "&OutDate=" + document.Wiz.date4.value + "&NumAdult=" + document.Wiz.Hcadt.options[document.Wiz.Hcadt.selectedIndex].value + "&NumChild=" + document.Wiz.Hckid.options[document.Wiz.Hckid.selectedIndex].value + "&rfrr=-12119";}
+else if (document.Wiz.srch[2].checked == true){document.location.href="/pubspec/scripts/eap.asp?GOTO=CarWizD&PickUpLoc="+document.Wiz.Ccity1.value+"&PickUpDate="+document.Wiz.date5.value+"&PickUpTime="+document.Wiz.Ctime1.options[document.Wiz.Ctime1.selectedIndex].value+"&CarClass="+document.Wiz.CKind.options[document.Wiz.CKind.selectedIndex].value+"&DropOffDate="+document.Wiz.date6.value+"&DropOffTime="+document.Wiz.Ctime2.options[document.Wiz.Ctime2.selectedIndex].value+"&rfrr=-12120";}
+else if (document.Wiz.srch[3].checked == true){document.location.href="/pubspec/scripts/eap.asp?GOTO=PKGLAUNCH&FrAirport=" + document.Wiz.Pcity.value + "&DestID=" + document.Wiz.dest.options[document.Wiz.dest.selectedIndex].value + "&FromDate=" + document.Wiz.date7.value + "&FromTime=" + document.Wiz.Ptime1.options[document.Wiz.Ptime1.selectedIndex].value + "&ToDate=" + document.Wiz.date8.value + "&ToTime=" + document.Wiz.Ptime2.options[document.Wiz.Ptime2.selectedIndex].value + "&NumAdult=" + document.Wiz.FcAdu.options[document.Wiz.FcAdu.selectedIndex].value + "&NumSenior=0&NumChild=" + document.Wiz.FcChi.options[document.Wiz.FcChi.selectedIndex].value + "&PackageType=2&rfrr=-12121";}
+else if (document.Wiz.srch[4].checked == true){document.location.href="/pubspec/scripts/eap.asp?GOTO=PKGLAUNCH&FrAirport=" + document.Wiz.Pcity.value + "&DestID=" + document.Wiz.dest.options[document.Wiz.dest.selectedIndex].value + "&FromDate=" + document.Wiz.date7.value + "&FromTime=" + document.Wiz.Ptime1.options[document.Wiz.Ptime1.selectedIndex].value + "&ToDate=" + document.Wiz.date8.value + "&ToTime=" + document.Wiz.Ptime2.options[document.Wiz.Ptime2.selectedIndex].value + "&NumAdult=" + document.Wiz.FcAdu.options[document.Wiz.FcAdu.selectedIndex].value + "&NumSenior=0&NumChild=" + document.Wiz.FcChi.options[document.Wiz.FcChi.selectedIndex].value + "&PackageType=1&rfrr=-12121";}
+else if (document.Wiz.srch[5].checked == true){document.location.href="/pubspec/scripts/eap.asp?GOTO=PKGLAUNCH&FrAirport=" + document.Wiz.Pcity.value + "&DestID=" + document.Wiz.dest.options[document.Wiz.dest.selectedIndex].value + "&FromDate=" + document.Wiz.date7.value + "&FromTime=" + document.Wiz.Ptime1.options[document.Wiz.Ptime1.selectedIndex].value + "&ToDate=" + document.Wiz.date8.value + "&ToTime=" + document.Wiz.Ptime2.options[document.Wiz.Ptime2.selectedIndex].value + "&NumAdult=" + document.Wiz.FcAdu.options[document.Wiz.FcAdu.selectedIndex].value + "&NumSenior=0&NumChild=" + document.Wiz.FcChi.options[document.Wiz.FcChi.selectedIndex].value + "&PackageType=3&rfrr=-12121";}
+}
+
+
+function SyncVals(obj, indx)
+{
+var sFldNme = obj.name;var d = document.Wiz;
+if (sFldNme=='Fcity1'||sFldNme=='Pcity'){d.Fcity1.value = d.Pcity.value = obj.value;}
+else if (sFldNme=='Hlocn'||sFldNme=='Fcitd1'||sFldNme=='Ccity1'){d.Fcitd1.value = d.Hlocn.value = d.Ccity1.value =  obj.value;}
+else if (sFldNme=='date1'||sFldNme=='date3'||sFldNme=='date5'||sFldNme=='date7'){d.date1.value=d.date3.value=d.date5.value=d.date7.value=obj.value;}
+else if (sFldNme=='date2'||sFldNme=='date4'||sFldNme=='date6'||sFldNme=='date8'){d.date2.value=d.date4.value=d.date6.value=d.date8.value=obj.value;}
+else if (sFldNme=='FltTime1'||sFldNme=='Ptime1'){d.FltTime1.selectedIndex = d.Ptime1.selectedIndex = obj.selectedIndex;}
+else if (sFldNme=='Hcadt'||sFldNme=='FcAdu'){d.Hcadt.selectedIndex = d.FcAdu.selectedIndex = obj.selectedIndex;}
+else if (sFldNme=='FcChi'||sFldNme=='FcInf'){d.Hckid.value = parseInt(d.FcChi.value) + parseInt(d.FcInf.value) + '';}
+else if (sFldNme=='Hckid'){d.FcChi.value = obj.value;}
+else if (sFldNme=='FltTime2'||sFldNme=='Ptime2'){d.FltTime2.selectedIndex = d.Ptime2.selectedIndex = obj.selectedIndex;}
+}
+//-->
+</SCRIPT>
+
+<input type=hidden name="fltonly" value="0">
+<table cellspacing=0 cellpadding=0 width=100% border=0>
+	<tr>
+		<td colspan=7 valign=top>
+			<div id="fltbun">
+			<table cellpadding=0 cellspacing=0 border=0 width="100%">
+				<tr><td width=180><font class=size11 face=Arial size=1><label for=idFcity1>Departing from:</LABEL><br><input class=buntext1 maxLength=100 name=Fcity1 id=idFcity1 value=""></td><td width=10>&nbsp;</td><td width=100><font class=size11 face=Arial size=1>Depart:<br><input style="width:80px;" class=bundatetext maxLength=12 size=1 name=date1 onclick=event.cancelBubble=true; value="dd/mm/yyyy" onfocus="ShowCalendarOnClick(document.Wiz.date1,document.Wiz.date1,null,'14 July 2004', '06/11/2005',null,true)"><!--<a href="javascript:ShowCalendar(document.Wiz.dimg1,document.Wiz.date1,null,'14 July 2004', '06/11/2005',null,true)" onclick=event.cancelBubble=true;><IMG align=top border=0 height=21 id="dimg1" src="/images/calendar.gif" style="POSITION: relative" width=34></a>--></font></td><td width=5>&nbsp;</td><td><br><font><select class=text5 face=Arial id=FltTime1 name=FltTime1 onchange="SyncVals(this);" style="width:100px" onfocus="HideCalendar()"><option SELECTED value=361>Morning<option  value=721>Midday<option  value=1081>Evening<option SELECTED  value=362>Anytime</select></font></td></tr>
+				<tr><td colspan=5><img src="/eta/spaceit.gif" width=1 height=5 border=0></td></tr>
+				<tr><td align=left width=180><font class=size11 face=Arial size=1><label for=idFcitd1>Going to:</label><br><input class=buntext1 value="" id=idFcitd1 maxLength=100 name=Fcitd1></font></td><td width=10>&nbsp;</td><td width=100><font class=size11 face=Arial size=1>Return:<br><input class=bundatetext  style="width:80px;" maxLength=12 name=date2 size=9 value="dd/mm/yyyy" onclick="event.cancelBubble=true;"  onfocus="ShowCalendarOnClick(document.Wiz.date2,document.Wiz.date2,document.Wiz.date1,'14 July 2004','06/11/2005', null,true)"><!--<a href="javascript:ShowCalendar(document.Wiz.dimg2,document.Wiz.date2,document.Wiz.date1,null,'14 July 2004','06/11/2005', null,true)" onclick=event.cancelBubble=true;><IMG align=top border=0 height=21 id="dimg2" src="/images/calendar.gif" style="POSITION: relative" width=34></a>--></font></td><td width=5>&nbsp;</td><td><br><font><select onfocus="HideCalendar()" class=text5 face=Arial id=FltTime2 name=FltTime2 onchange="SyncVals(this);" style="width:100px"><option SELECTED value=361>Morning<option  value=721>Midday<option  value=1081>Evening<option SELECTED  value=362>Anytime</select></font></td></tr>
+				<tr><td colspan=5><img src="/eta/spaceit.gif" width=1 height=5 border=0></td></tr>
+			</table>
+			</div>
+			<div id="hotbun">
+			<table cellpadding=0 cellspacing=0 border=0 width="100%">
+				<tr><td width=180><font class=size11 face=Arial size=1><label for=idHlocn>Destination:</label><br><input class=buntext1 maxLength=100 name=Hlocn id=idHlocn value="" onblur="SyncVals(this);"></font></td><td width=10>&nbsp;</td><td width=100><font class=size11 face=Arial size=1>Check-in:<br><input class=bundatetext  style="width:80px;" maxLength=12 name=date3 size=9 value="dd/mm/yyyy" ID="Text14" onclick=event.cancelBubble=true; onfocus="ShowCalendarOnClick(document.Wiz.date3,document.Wiz.date3,null,'14 July 2004', '06/11/2005',null,true)"><!--<a href="javascript:ShowCalendar(document.Wiz.dimg3,document.Wiz.date3,null,'14 July 2004', '06/11/2005',null,true)" onclick=event.cancelBubble=true;><IMG align=top border=0 height=21 id=dimg3 src="/images/calendar.gif" style="POSITION: relative" width=34></a>--></font></td><td width=5>&nbsp;</td><td><font class=size11 face=Arial size=1>Check-out:<br><nobr><input class=bundatetext  style="width:80px;" maxLength=12 name=date4 size=9 value="dd/mm/yyyy"  onclick=event.cancelBubble=true; onfocus="ShowCalendarOnClick(document.Wiz.date4,document.Wiz.date4,document.Wiz.date3,'14 July 2004', '06/11/2005',null,true)"><!--<a href="javascript:ShowCalendar(document.Wiz.dimg4,document.Wiz.date4,document.Wiz.date3,'14 July 2004', '06/11/2005',null,true)" onclick=event.cancelBubble=true;><IMG align=top border=0 height=21 id=dimg4 src="/images/calendar.gif" style="POSITION: relative" width=34></a>--><img src="/eta/spaceit.gif" width=3 height=1 border=0></nobr></font></td></tr>
+				<tr><td colspan=5><img src="/eta/spaceit.gif" width=1 height=5 border=0></td></tr>
+			</table>
+			</div>
+			<div id="carbun">
+			<table cellpadding=0 cellspacing=0 border=0 width="100%">
+				<tr>
+					<td width=130><font class=size11 face=Arial size=1>Pick-up location:<br><input class=buntext1 maxLength=100 name=Ccity1 value="" onchange="SyncVals(this);" ID="Text5"></font></td>
+					<td width=10 align=left>&nbsp;</td>
+					<td width=100><font class=size11 face=Arial size=1>Pick-up:<br><input class=bundatetext maxLength=15 name=date5 size=9  style="width:80px;" value="dd/mm/yyyy" onfocus="ShowCalendarOnClick(document.Wiz.date5,document.Wiz.date5,null,'15 July 2004', '06/11/2005', null,true)"  onclick=event.cancelBubble=true;><!--<a href="javascript:ShowCalendar(document.Wiz.dimg5,document.Wiz.date5,null,'15 July 2004', '06/11/2005', null,true)" onclick=event.cancelBubble=true;><IMG align=top border=0 height=21 id=dimg5 src="/images/calendar.gif" style="POSITION: relative" width=34></a>--></font></td>
+					<td width=5>&nbsp;</td>
+					<td><br><font class=size11 face=Arial size=1>
+						<select class=buntext2 id=Ctime1 name=Ctime1 style="width:88px" onfocus="HideCalendar()">
+							<option SELECTED value="12AM">12:00 midnight
+							<option  value="1AM">1:00 AM
+							<option  value="2AM">2:00 AM
+							<option  value="3AM">3:00 AM
+							<option  value="4AM">4:00 AM
+							<option  value="5AM">5:00 AM
+							<option  value="6AM">6:00 AM
+							<option  value="7AM">7:00 AM
+							<option  value="8AM">8:00 AM
+							<option  value="9AM">9:00 AM
+							<option  value="10AM">10:00 AM
+							<option SELECTED value="11AM">11:00 AM
+							<option  value="12PM">12:00 noon
+							<option  value="1PM">1:00 PM
+							<option  value="2PM">2:00 PM
+							<option  value="3PM">3:00 PM
+							<option  value="4PM">4:00 PM
+							<option  value="5PM">5:00 PM
+							<option  value="6PM">6:00 PM
+							<option  value="7PM">7:00 PM
+							<option  value="8PM">8:00 PM
+							<option  value="9PM">9:00 PM
+							<option  value="10AM">10:00 PM
+							<option  value="11PM">11:00 PM
+						</select></font></td>
+					</tr>
+					<tr>
+						<td colspan=5><img src="/eta/spaceit.gif" width=1 height=5 border=0></td>
+					</tr>
+					<tr>
+						<td width=130><font class=size11 face=Arial size=1>Car class:<br>
+							<select class=buntext1 id=CKind name=CKind onfocus="HideCalendar()">
+								<option selected value="NoPreference">No Preference
+								<option>Economy
+								<option>Compact
+								<option>Midsize
+								<option>Standard
+								<option value="FullSize">Full Size
+								<option>Premium
+								<option>Luxury
+								<option value="Minivan">Mini-van
+							</select></font></td>
+						<td width=10 align=left>&nbsp;</td>
+						<td width=100><font class=size11 face=Arial size=1>Drop-off:<br><input class=bundatetext maxLength=15 name=date6  style="width:80px;" size=9 value="dd/mm/yyyy" onfocus="ShowCalendarOnClick(document.Wiz.date6,document.Wiz.date6,document.Wiz.date5,'15 July 2004', '06/11/2005', null,true)"  onclick=event.cancelBubble=true;><!--<a href="javascript:ShowCalendar(document.Wiz.dimg6,document.Wiz.date6,document.Wiz.date5,null,'15 July 2004', '06/11/2005', null,true)" onclick=event.cancelBubble=true;><IMG align=top border=0 height=21 id=dimg6 src="/images/calendar.gif" style="POSITION: relative" width=34></a>--></font></td>
+						<td width=5>&nbsp;</td>
+						<td><br><font class=size11 face=Arial size=1>
+							<select class=buntext2 id=Ctime2 name=Ctime2 style="width:88px" onfocus="HideCalendar()">
+							<option SELECTED value="12AM">12:00 midnight
+							<option  value="1AM">1:00 AM
+							<option  value="2AM">2:00 AM
+							<option  value="3AM">3:00 AM
+							<option  value="4AM">4:00 AM
+							<option  value="5AM">5:00 AM
+							<option  value="6AM">6:00 AM
+							<option  value="7AM">7:00 AM
+							<option  value="8AM">8:00 AM
+							<option  value="9AM">9:00 AM
+							<option  value="10AM">10:00 AM
+							<option SELECTED value="11AM">11:00 AM
+							<option  value="12PM">12:00 noon
+							<option  value="1PM">1:00 PM
+							<option  value="2PM">2:00 PM
+							<option  value="3PM">3:00 PM
+							<option  value="4PM">4:00 PM
+							<option  value="5PM">5:00 PM
+							<option  value="6PM">6:00 PM
+							<option  value="7PM">7:00 PM
+							<option  value="8PM">8:00 PM
+							<option  value="9PM">9:00 PM
+							<option  value="10AM">10:00 PM
+							<option  value="11PM">11:00 PM
+							</select></font></td>
+						</tr>
+						<tr>
+							<td colspan=5><img src="/eta/spaceit.gif" width=1 height=18 border=0></td>
+						</tr>
+						<tr>
+							<tr>
+								<td colspan=5><FONT SIZE=1 STYLE="font-size:11px;">Please Note: All drivers must have held a full licence for at least one year and be 25 or older.  If the driver is over 65, please call Expedia.co.uk on (0870) 050 0808</td>
+							</td>
+						</tr>
+						<tr>
+							<td colspan=5><img src="/eta/spaceit.gif" width=1 height=5 border=0></td>
+						</tr>
+					</table>
+			</div>
+			<div id="pacbun">
+			<table cellpadding=0 cellspacing=0 border=0 width="100%">
+				<tr>
+					<td width=180><font class=size11 face=Arial size=1><label for=idPcity1>Departing from:</LABEL><br><input class=buntext1 maxLength=100 name=Pcity id=idPcity value=""></font></td>
+					<td width=10>&nbsp;</td>
+					<td width=100><font class=size11 face=Arial size=1>Depart:<br><input class=bundatetext maxLength=12 name=date7 size=9 value="dd/mm/yyyy" onfocus="ShowCalendarOnClick(document.Wiz.date7,document.Wiz.date7,null, '15 July 2004', '06/11/2005',null,true)"  style="width:80px;" onclick=event.cancelBubble=true; ID="Text8"><!--<a href="javascript:ShowCalendar(document.Wiz.dimg7,document.Wiz.date7,null, '15 July 2004', '06/11/2005',null,true)" onclick=event.cancelBubble=true;><IMG align=top border=0 height=21 id=dimg7 src="/images/calendar.gif" style="POSITION: relative" width=34></a>--></font></td>
+					<td width=5>&nbsp;</td>
+					<td><br><font><select class=text5 face=Arial id=Ptime1 name=Ptime1 onchange="SyncVals(this);" onfocus="HideCalendar()" style="width:100px"><option SELECTED value=361>Morning<option  value=721>Midday<option  value=1081>Evening<option SELECTED  value=362>Anytime</select></font></td>
+				</tr>
+				<tr><td colspan=5><img src="/eta/spaceit.gif" width=1 height=5 border=0></td></tr>
+				<tr>
+					<td align=left width=180><font class=size11 face=Arial size=1>Going to:<BR>
+					<div id="FHDests"><select class=buntext1 name=dest id="Select4" onchange="SyncVals(this);" onfocus="HideCalendar()">
+					<SCRIPT src="/includes/package_dest.asp?page_name=home&default="></SCRIPT>
+					</select>
+					</div>
+					</font></td>
+					<td width=10>&nbsp;</td>
+					<td width=100><font class=size11 face=Arial size=1>Return:<br><input class=bundatetext maxLength=12 name=date8 size=9  style="width:80px;" value="dd/mm/yyyy" ID="Text9" onfocus="ShowCalendarOnClick(document.Wiz.date8,document.Wiz.date8,document.Wiz.date7,'15 July 2004', '06/11/2005',null,true)"  onclick=event.cancelBubble=true;><!--<a href="javascript:ShowCalendar(document.Wiz.dimg8,document.Wiz.date8,document.Wiz.date7,'15 July 2004', '06/11/2005',null,true)" onclick=event.cancelBubble=true;><IMG align=top border=0 height=21 id=dimg8 src="/images/calendar.gif" style="POSITION: relative" width=34></a>--></font></td>
+					<td width=5>&nbsp;</td>
+					<td><br><font><select class=text5 face=Arial id=Ptime2 name=Ptime2 onchange="SyncVals(this);" style="width:100px" onfocus="HideCalendar()"><option SELECTED value=361>Morning<option  value=721>Midday<option  value=1081>Evening<option SELECTED  value=362>Anytime</select></font></td>
+				</tr>
+				<tr><td colspan=5><img src="/eta/spaceit.gif" width=1 height=5 border=0></td></tr>
+			</table>
+			</div>
+			<div id="asc">
+			<table cellspacing=0 cellpadding=0 width="100%" border=0>
+				<tr><td colspan=5>
+						<table cellspacing=0 cellpadding=0 width="100%" border=0>
+							<tr>
+								<td width=115><font class=size11 face=Arial size=1><nobr>Adults:&nbsp;(12-64)</nobr><br><select class=size11 id=FcAdu name=FcAdu onchange="SyncVals(this);" onfocus="HideCalendar()">
+									<option >0
+									<option SELECTED>1
+									<option >2
+									<option >3
+									<option >4
+									<option >5
+									<option >6</select></font></td>
+								<td width=130><font class=size11 face=Arial size=1><nobr>Seniors:&nbsp;(65+)</nobr><br><select onfocus="HideCalendar()" class=size11 id=FcSen name=FcSen> 
+									<option SELECTED>0
+									<option >1
+									<option >2
+									<option >3
+									<option >4
+									<option >5
+									<option >6</select></font></td>
+								<td width=115><font class=size11 face=Arial size=1><nobr>Children:&nbsp;(2-11)</nobr><br><select onfocus="HideCalendar()" class=size11 id=FcChi name=FcChi onchange="SyncVals(this);">
+									<option SELECTED>0
+									<option >1
+									<option >2
+									<option >3
+									<option >4
+									<option >5
+									<option >6</select></font></td>
+								<td width=115><font class=size11 face=Arial size=1><nobr>Infants:&nbsp;(under 2)</nobr><br><select  onfocus="HideCalendar()" class=size11 id=FcInf name=FcInf onchange="SyncVals(this);">
+									<option SELECTED>0
+									<option >1
+									<option >2
+									<option >3
+									<option >4
+									<option >5
+									<option >6</select></font></td>
+								<td width=115></td><td valign=bottom align=right></td>
+							</tr>
+							<tr><td colspan=5><img src="/eta/spaceit.gif" width=1 height=5 border=0></td></tr>
+						</table>
+					</td></tr>
+			</table>
+			</div>
+			<div id="asc2">
+			<table cellspacing=0 cellpadding=0 width="100%" border=0 ID="Table1">
+				<tr><td colspan=5>
+						<table cellspacing=0 cellpadding=0 width="100%" border=0 ID="Table2">
+							<tr>
+								<td width=115><font class=size11 face=Arial size=1><nobr>Adults:&nbsp;(12-64)</nobr><br><select  onfocus="HideCalendar()" class=size11 id=FcAdu2 name=FcAdu2 onchange="SyncVals(this);">
+									<option>0
+									<option SELECTED>1
+									<option>2
+									<option>3
+									<option>4
+									<option>5
+									<option>6</select></font></td>
+								<td width=130><font class=size11 face=Arial size=1><nobr>Seniors:&nbsp;(65+)</nobr><br><select onfocus="HideCalendar()" class=size11 id=FcSen2 name=FcSen2> 
+									<option SELECTED>0
+									<option >1
+									<option >2
+									<option >3
+									<option >4
+									<option >5
+									<option >6</select></font></td>
+								<td width=115><font class=size11 face=Arial size=1><nobr>Children:&nbsp;(2-11)</nobr><br><select onfocus="HideCalendar()" class=size11 id=FcChi2 name=FcChi2 onchange="SyncVals(this);">
+									<option SELECTED>0
+									<option >1
+									<option >2
+									<option >3
+									<option >4
+									<option >5
+									<option >6</select></font></td>
+								<td width=115><font class=size11 face=Arial size=1><nobr>Infants:&nbsp;(under 2)</nobr><br><select onfocus="HideCalendar()" class=size11 id=FcInf2 name=FcInf2 onchange="SyncVals(this);">
+									<option SELECTED>0
+									<option >1
+									<option >2
+									<option >3
+									<option >4
+									<option >5
+									<option >6</select></font></td>
+								<td width=115></td><td valign=bottom align=right></td>
+							</tr>
+							<tr><td colspan=5><img src="/eta/spaceit.gif" width=1 height=5 border=0></td></tr>
+						</table>
+					</td></tr>
+			</table>
+			</div>
+			<div id="ac">
+			<table cellspacing=0 cellpadding=0 width="100%" border=0>
+				<tr><td colspan=5>
+						<table cellspacing=0 cellpadding=0 width="100%" border=0>
+							<tr>
+								<td width=115><font class=size11 face=Arial size=1><nobr>Adults:&nbsp;(age&nbsp;12+)</nobr><br><select onfocus="HideCalendar()" class=size11 id=Hcadt name=Hcadt onchange="SyncVals(this);"> 
+									<option >0
+									<option SELECTED>1
+									<option >2
+									<option >3
+									<option >4
+									<option >5
+									<option >6</select></font></td>
+								<td width=115><font class=size11 face=Arial size=1><nobr>Children:&nbsp;(0-11)</nobr><br><select onfocus="HideCalendar()" class=size11 id=Hckid name=Hckid onchange="SyncVals(this);">
+									<option SELECTED>0
+									<option >1
+									<option >2
+									<option >3
+									<option >4
+									<option >5
+									<option >6</select></font></td>
+								<td width=130></td><td valign=bottom align=right></td>
+							</tr>
+						</table>
+					</td></tr>
+				<tr><td colspan=5><img src="/eta/spaceit.gif" width=1 height=5 border=0></td></tr>
+			</table>
+			</div>
+			<div id="childage">
+			<table cellspacing=0 cellpadding=0 width="100%" border=0>
+				<tr>
+					<td><FONT SIZE=1 STYLE="font-size:11px;">Please Note: All drivers must have held a full licence for at least one year and be 25 or older.  If the driver is over 65, please call Expedia.co.uk on (0870) 050 0808</td>
+				</tr>
+			</table>
+			</div>
+		</td>
+	</tr>
+</table>
+
+<SCRIPT LANGUAGE="JavaScript">
+function SubHA()
+{
+	return(true);
+}
+</SCRIPT>
+ </td> <td width=10> <img src="/eta/spaceit.gif" width=5 height=1> </td> </tr> <tr> <td valign=top colspan=3 height=3 bgcolor=#FFF7E7 align=center><img src="/images/yellow_dot.gif" width=428 height=1></td> </tr> <tr> <td valign=top colspan=3 height=5 bgcolor=#FFF7E7></td> </tr> <tr> <td width=10 bgcolor=#FFF7E7> <img src="/eta/spaceit.gif" width=5 height=1> </td> <td bgcolor=#FFF7E7> <table width=100% cellpadding=0 cellspacing=0> <tr bgcolor=#FFF7E7> <td width=80%><table cellpadding=0 cellspacing=0 border=0 width=100%><tr><td><div id=bunwizopts><b>More flight search options:</b><br><A href=# onmouseover="window.status='Flight Wizard';return(true);" onmouseout="window.status=''" onclick="SetOtherOptsURL();return(false);">One-way trips, multiple destinations...</A></div></td></tr></table></td> <td width=20% valign=middle>&nbsp;&nbsp;<input class=bungreenGoBtn name=SearchWiz type=submit value=Search></td> </tr> <tr bgcolor=#FFF7E7><td colspan=4><img src="/eta/spaceit.gif" width=1 height=5><input type=hidden name=BundleType value=0 ID=Hidden4><input type=hidden name=BundleWiz value=1 ID=Hidden5><input name=opts type=hidden value=spec ID=Hidden6></td></tr> </table> </td> <td width=10 bgcolor=#FFF7E7> <img src="/eta/spaceit.gif" width=5 height=1> </td> </tr> </table> <table cellpadding=0 cellspacing=0 border=0 width="100%"> <tr> <td width=8 valign=bottom><img src="/images/ora_line_l.gif" width=8 height=8 border=0></td> <td bgcolor=#FFF7E7 valign=bottom width="100%"><img src="/images/6b8ec6dot.gif" height=1 width="100%"></td> <td width=8 align=right valign=bottom><img src="/images/ora_line_r.gif" width=8 height=8 border=0></td> </tr> </table> </td> </tr></form> </table><SCRIPT language="JavaScript" For="window" Event="onload">
+<!-- 
+
+var f=document.Wiz;if(f.srch[1].checked){f.srch[1].click();}else if(f.srch[2].checked){f.srch[2].click();}else if(f.srch[3].checked){f.srch[3].click();}else if(f.srch[4].checked){f.srch[4].click();}else if(f.srch[5].checked){f.srch[5].click();}else {f.srch[0].click();}
+
+//-->
+</SCRIPT> <table width=450 border=0 cellpadding=0 cellspacing=0> <tr> <td colspan=7 height=8></td> </tr> <tr> <td colspan=7><img src="/daily/promos/july04/images/home/header.gif" width=450 height=62 alt="Expedia's July Sale"></td> </tr> <tr> <td width=2 bgcolor=#7DC243></td> <td width=149 class=small valign=top align=center><b><font class=destinationOrngBold>European City Breaks</font></b><br> <a href="/daily/promos/july04/pname1.asp?rfrr=-30240"><img src="/daily/promos/july04/images/home/thumb_eurocity.gif" alt="European City Breaks" width=121 height=44 vspace=3 border=0 border-color=#000000><br> <b>Flight + Hotel from <font color=#CC0000>&pound;114</font></b></a><br> Including: Amsterdam,<br> Prague, Paris...</td> <td width=1><img src="/daily/promos/july04/images/home/dots.gif" width=1 height=122></td> <td width=149 class=small valign=top align=center><b><font class=destinationOrngBold>Beach and Sun</font></b><br> <a href="/daily/promos/july04/pname2.asp?rfrr=-30241"><img src="/daily/promos/july04/images/home/thumb_eurosun.gif" width=121 height=44 vspace=3 border=0 alt="Beach and Sun"><br> <b>Flight + Hotel from <font color=#CC0000>&pound;213</font></b></a><br>Including: Algarve,<br> Ibiza, Barbados...</td> <td width=1><img src="/daily/promos/july04/images/home/dots.gif" width=1 height=122></td> <td width=149 class=small valign=top align=center><b><font class=destinationOrngBold>Worldwide Cities</font></b><br> <a href="/daily/promos/july04/pname3.asp?rfrr=-30242"><img src="/daily/promos/july04/images/home/thumb_beyond.gif" width=121 height=44 vspace=3 border=0 alt="Worldwide Cities"><br> <b>Flight + Hotel from <font color=#CC0000>&pound;361</font></b></a><br>Including: New York,<br> Hong Kong, San Francisco...<br></td> <td width=2 bgcolor=#7DC243></td> </tr> <tr> <td colspan=7><a href=# onclick="window.open('/daily/promos/packages/default_popup.asp?rfrr=-19054','TellMeMore','scrollbars=yes,screenX=0,screenY=0,toolbar=no,location=no,menubar=no,width=650,height=455');return false;"><img src="/daily/promos/july04/images/home/bottom.gif" width=450 height=38 alt="Book together and SAVE!" border=0></a></td> </tr> </table>  </TD> <td width=2><img src="/daily/common/spaceit.gif" height=1 width=2></td> <TD WIDTH=148 valign=top> <IMG SRC="/daily/common/spaceit.gif" WIDTH=144 HEIGHT=10><br> <IMG SRC="/daily/common/spaceit.gif" HEIGHT=5 WIDTH=1><br> <table cellpadding=0 cellspacing=0 border=0 ID=Table3>  <tr> <td class=cTitle><a hre="/daily/deals/?rfrr=-21748"><img src="/daily/home/images/brand/t_hoteldeals.gif" alt="Hotel Deals" border=0></a></td> <td class=small align=right>from</td> </tr> <tr> <td class=cText><a href="/daily/deals/hotel/nyc.asp?rfrr=-18438">New&nbsp;York&nbsp;hotels</a>&nbsp;</td> <td class=small align=right><a href="/daily/deals/hotel/nyc.asp?rfrr=-18438"><font color=#CC0000><strong>£36</strong></font></a></td> </tr> <tr> <td class=cText><a href="/daily/deals/hotel/barcelona.asp?rfrr=-18439">Barcelona&nbsp;hotels</a></td> <td class=small align=right><a href="/daily/deals/hotel/barcelona.asp?rfrr=-18439"><font color=#CC0000><strong>£56</strong></font></a></td> </tr> <tr> <td class=cText><a href="/daily/deals/hotel/rome.asp?rfrr=-18440">Rome&nbsp;hotels</a></td> <td class=small align=right><a href="/daily/edit/store/rome?rfrr=-18440"><font color=#CC0000><strong>£56</strong></font></a></td> </tr> <tr> <td class=cText><a href="/daily/deals/hotel/amsterdam.asp?rfrr=-18441">Amsterdam&nbsp;hotels</a></td> <td class=small align=right><a href="/daily/deals/hotel/amsterdam.asp?rfrr=-18441"><font color=#CC0000><strong>£71</strong></font></a></td> </tr> <tr> <td class=cText><a href="/daily/deals/hotel/orlando.asp?rfrr=-18442">Orlando&nbsp;hotels</a></td> <td class=small align=right><a href="/daily/deals/hotel/orlando.asp?rfrr=-18442"><font color=#CC0000><strong>£32</strong></font></a></td> </tr> <tr> <td class=cText><a href="/daily/deals/hotel/london.asp?rfrr=-18443">London&nbsp;hotels</a></td> <td class=small align=right><a href="/daily/deals/hotel/london.asp?rfrr=-18443"><font color=#CC0000><strong>£84</strong></font></a></td> </tr> <tr> <td class=cText><a href="/daily/deals/hotel/paris.asp?rfrr=-18444">Paris&nbsp;hotels</a></td> <td class=small align=right><a href="/daily/deals/hotel/paris.asp?rfrr=-18444"><font color=#CC0000><strong>£53</strong></font></a></td> </tr> <tr> <td class=cText><a href="/daily/deals/hotel/uk_ireland.asp?rfrr=-18445">UK&nbsp;&&nbsp;Ireland&nbsp;hotels</a></td> <td class=small align=right><a href="/daily/deals/hotel/uk_ireland.asp?rfrr=-18445"><font color=#CC0000><strong>£55</strong></font></a></td> </tr> <tr> <td colspan=2 height=15></td> </tr> <tr> <td class=cTitle><a hre="/daily/deals/?rfrr=-21747"><img src="/daily/home/images/brand/t_flighthotel.gif" alt="Flight + Hotel" border=0></a></td> <td class=small align=right>from</td> </tr> <tr> <td class=cText><a href="/daily/edit/store/lastminute?rfrr=-18431">Last&nbsp;minute&nbsp;deals</a></td> <td class=small align=right><a href="daily/edit/store/lastminute?rfrr=-18431"><font color=#CC0000><strong>£145</strong></font></a></td> </tr> <tr> <td class=cText><a href="/daily/edit/store/family?rfrr=-18432">Family&nbsp;holidays</a></td> <td class=small align=right><a href="daily/edit/store/family?rfrr=-18432"><font color=#CC0000><strong>£285</strong></font></a></td> </tr> <tr> <td class=cText><a href="/daily/edit/store/caribbean?rfrr=-18433">Caribbean holidays</a></td> <td class=small align=right><a href="daily/edit/store/caribbean?rfrr=-18433"><font color=#CC0000><strong>£498</strong></font></a></td> </tr> <tr> <td class=cText><a href="/daily/edit/store/regional/?rfrr=-18434">Regional departures</a></td> <td class=small align=right><a href="daily/edit/store/regional/?rfrr=-18434"><font color=#CC0000><strong>£125</strong></font></a></td> </tr> <tr> <td class=cText><a href="/daily/edit/store/florida?rfrr=-18435">Florida holidays</a></td> <td class=small align=right><a href="daily/edit/store/florida?rfrr=-18435"><font color=#CC0000><strong>£400</strong></font></a></td> </tr> <tr> <td class=cText><a href="/daily/edit/store/luxury?rfrr=-18436">Luxury breaks</a></td> <td class=small align=right><a href="daily/edit/store/luxury?rfrr=-18436"><font color=#CC0000><strong>£143</strong></font></a></td> </tr> <tr> <td class=cText><a href="/daily/edit/store/bankholidays?rfrr=-18437">August Bank Holidays</a></td> <td class=small align=right><a href="daily/edit/store/bankholidays?rfrr=-18437"><font color=#CC0000><strong>£108</strong></font></a></td> </tr> <tr> <td height=15></td> </tr> <tr> <td class=cTitle><a hre="/daily/edit/store/citybreaks/default.asp?rfrr=-21749"><img src="/daily/home/images/brand/t_flightdeals.gif" alt="Flight Deals" border=0></a></td> <td class=small align=right>from</td> </tr> <tr> <td class=cText><a href="/daily/promos/seatsale/flights.asp?rfrr=-26296">New York</a></td> <td class=small align=right><a href="/daily/promos/seatsale/flights.asp?rfrr=-26296"><font color=#CC0000><strong>£319</strong></font></a></td> </tr> <tr> <td class=cText><a href="/daily/promos/seatsale/flights.asp?rfrr=-26297">Paris</a></td> <td class=small align=right><a href="/daily/promos/seatsale/flights.asp?rfrr=-26297"><font color=#CC0000><strong>£66</strong></font></a></td> </tr> <tr> <td class=cText><a href="/daily/promos/seatsale/flights.asp?rfrr=-26298">Amsterdam</a></td> <td class=small align=right><a href="/daily/promos/seatsale/flights.asp?rfrr=-26298"><font color=#CC0000><strong>£68</strong></font></a></td> </tr> <tr> <td height=15></td> </tr> <tr> <td class=cTitle><a hre="/daily/edit/store/citybreaks/default.asp?rfrr=-21749"><img src="/daily/home/images/brand/t_cardeals.gif" alt="Car Deals" border=0></a></td> <td class=small align=right></td> </tr> <tr> <td class=cText>Price per day</td> <td class=small align=right>from</td> </tr> <tr> <td class=cText><a href="/pub/agent.dll?qscr=carw&locn=Orlando-(MCY)&rfrr=-26299">Orlando</a></td> <td class=small align=right><a href="/pub/agent.dll?qscr=carw&locn=Orlando-(MCY)&rfrr=-26299"><font color=#CC0000><strong>£17</strong></font></a></td> </tr> <tr> <td class=cText><a href="/pub/agent.dll?qscr=carw&locn=Algarve-(FAO)&rfrr=-26300">Algarve</a></td> <td class=small align=right><a href="/pub/agent.dll?qscr=carw&locn=Algarve-(FAO)&rfrr=-26300"><font color=#CC0000><strong>£16</strong></font></a></td> </tr> <tr> <td class=cText><a href="/pub/agent.dll?qscr=carw&locn=Nice-(NCE)&rfrr=-26301">Nice</a></td> <td class=small align=right><a href="/pub/agent.dll?qscr=carw&locn=Nice-(NCE)&rfrr=-26301"><font color=#CC0000><strong>£17</strong></font></a></td> </tr> </table> <br>  <br>  </TD> </TR> </table> <br> </td></tr> </TABLE> </TABLE>  </TD> </TR> <!-- blip_footer -->
+
+<TABLE WIDTH=772 BORDER=0 CELLSPACING=0 CELLPADDING=0>
+  <TR><TD COLSPAN=3 HEIGHT=2 BGCOLOR="#FFDF7B"><IMG SRC="/daily/common/spaceit.gif"></TD></TR>
+<TR><TD HEIGHT=7 COLSPAN=3><IMG SRC="/daily/common/spaceit.gif"></TD></TR>
+<TR>
+    <TD WIDTH=136 ALIGN=LEFT VALIGN=TOP>&nbsp; 
+	
+      
+<a href="/daily/service/legal.asp?rfrr=-12171#bonding"><IMG ALT="ATOL PROTECTED / IATA" border=0 SRC="/pubspec/images/travel_org_logos_flt.gif" WIDTH=95 HEIGHT=64></a>
+		
+    </TD>
+<TD width="598" ALIGN=CENTER VALIGN=TOP>
+<FONT SIZE=1 STYLE="font-size:10px;font-family:Arial,Helvetica,Sans Serif;"><br>
+
+		<A  HREF="/daily/press/?rfrr=-12172">press office</A>&nbsp;
+		<A  HREF="/daily/flights/flights.asp">flights</A>&nbsp;
+		<A  HREF="/daily/hotels/">hotels</A>&nbsp;
+		<A  HREF="/daily/cars/">car hire</A>&nbsp;
+		<A  HREF="/daily/holidays/">holidays</A>&nbsp;
+		<A  HREF="/daily/service/sitemap.asp?rfrr=-12173">site map</A>&nbsp;
+		<A  HREF="/affiliate/?rfrr=-12174">affiliates</A>&nbsp;
+		<A  HREF="mailto:uksales@adlink.net">advertising</A>&nbsp;&nbsp;
+		<A  HREF="/pub/agent.dll?qscr=hgen&hfnm=h_EX_intl.htx&rfrr=-12176">international sites</A>&nbsp;
+		<A  HREF="/daily/service/legal.asp?rfrr=-12178">terms of use</A>&nbsp;
+		<A  HREF="/daily/service/privacy.asp?rfrr=-12179">privacy policy</A>&nbsp;
+<br>&copy;2004 Expedia, Inc. All rights reserved. <a  href="/">travel</a>,  
+  and <A  HREF="/daily/wg/?rfrr=-12175">travel guides</A>. <a href="/daily/service/partner.asp?rfrr=12110">preferred partners</a> <BR>Expedia, Inc., not responsible for content on external Web sites.<br>
+    </TD>
+</TD>
+</TR>
+<TR><TD HEIGHT=7><IMG SRC="/eta/spaceit.gif"></TD></TR>
+
+
+</TD>
+<TD WIDTH=136 ALIGN=RIGHT VALIGN=TOP>&nbsp;
+
+</TD>
+</TR>
+</TABLE>
+<!--calendar-->
+
+<IFRAME STYLE="display:none; position:absolute; width:148; height:194; z-index:30" ID="CalFrame" MARGINHEIGHT=0 MARGINWIDTH=0 NORESIZE FRAMEBORDER=0 SCROLLING=NO SRC="/eta/calendar.htm"></IFRAME>
+<SCRIPT LANGUAGE="javascript">
+<!--
+var g_month=0;var g_day=0;var g_year=0;function GD(t){var l=t.length;if(0==l)return false;var cS='\0';var sS1="";var sS2="";for(var i=0;i<l;i++){var c=t.charAt(i);if(c!=' '&&!isdigit(c)){if(cS=='\0'&&(c=='/'||c=='-'||c=='.'))
+{cS=c;sS1=t.substring(i+1,l);}else if(c==cS)sS2=t.substring(i+1,l);else return false;}}if(0==sS1.length)return false;var m=atoi(sS1);var d=atoi(t);var y;if(0!=sS2.length)y=atoi(sS2);else y=DefYr(m,d);
+if(y<100)y+=2000;if(y<1601||y>4500||m<1||m>12||d<1||d>GetMonthCount(m,y))return false;g_month=m;g_day=d;g_year=y;return true;}
+function DefYr(m,d){var dt=new Date();var yC=(dt.getYear()<1000)?1900+dt.getYear():dt.getYear();if(m-1<dt.getMonth()||(m-1==dt.getMonth()&&d<dt.getDate()))yC++;return yC;}
+function atoi(s){var t=0;for(var i=0;i<s.length;i++){var c=s.charAt(i);if(!isdigit(c))return t;else t=t*10+(c-'0');}return t;}function CB(){event.cancelBubble=true}
+function isdigit(c){return(c>='0'&&c<='9');}function GetMonthCount(m,y){var c=rM[m-1];if((2==m)&&IsLY(y))c++;return c;}function IsLY(y){if(0==y%4&&((y%100!=0)||(y%400==0))) return true;else return false;}
+var rM=new Array(12);rM[0]=rM[2]=rM[4]=rM[6]=rM[7]=rM[9]=rM[11]=31;rM[3]=rM[5]=rM[8]=rM[10]=30;rM[1]=28;var g_eC=null;var g_eCV="";
+
+function ShowCalendar(eP,eD,eDP,dmin,dmax,fnCB,absdt)
+{
+var dF=document.all.CalFrame;
+var wF=window.frames.CalFrame;
+if(null==wF.g_fCalLoaded||false==wF.g_fCalLoaded)
+{
+	alert("Unable to load popup calendar.\r\nPlease reload the page.");
+	return;
+}
+if(absdt==true)
+{
+	var dN=new Date(dmin);
+	var dM=new Date(dmax);
+}
+else
+{
+	var dN=new Date();
+	dN.setDate(dN.getDate()+dmin);
+	var dM=new Date();
+	dM.setDate(dM.getDate()+dmax);
+}
+wF.SetMinMax(new Date(dN),new Date(dM));
+if(eD==g_eC&&"block"==dF.style.display){if(g_eCV!=eD.value&&GD(eD.value)){wF.SetInputDate(g_day,g_month,g_year);wF.SetDate(g_day,g_month,g_year);g_eCV=eD.value;}
+else dF.style.display="none";}
+else{
+	if(GD(eD.value)||(null!=eDP&&GD(eDP.value))){wF.SetInputDate(g_day,g_month,g_year);wF.SetDate(g_day,g_month,g_year);}
+	else{var dt=new Date(dN);wF.SetInputDate(-1,-1,-1);wF.SetDate(dt.getDate(),dt.getMonth()+1,dt.getFullYear());}var eL=0;var eT=0;var p=eP;while(p&&p.tagName!="BODY"){eT+=p.offsetTop;eL+=p.offsetLeft;p=p.offsetParent;}
+		var eH=eP.offsetHeight;var dH=dF.style.pixelHeight;var sT=document.body.scrollTop;var dW=dF.style.pixelWidth;if(eL+eP.offsetWidth+dW>document.body.clientWidth)eL-=dW-eP.width;dF.style.left=eL;if(eT-dH>=sT&&eT+eH+dH>document.body.clientHeight+sT)eT-=dH;else eT+=eH;dF.style.top=eT;
+if("none"==dF.style.display)dF.style.display="block";g_eC=eD;g_eCV=eD.value;LMn(12);}
+}
+
+function SetDate(d,m,y){
+	g_eC.value=d+"/"+m+"/"+y;g_eCV=g_eC.value;
+	SyncVals(g_eC);
+}
+
+function GetDowStart(){return 1;}
+function DOW2(d,m,y){var dt=new Date(y,m-1,d);return(dt.getDay()+(7-GetDowStart()))%7;}
+function PLI(s){var i=document.createElement("IMG");i.src=s;}
+function LMn(n){var dt=new Date();var m=dt.getMonth()+1;var y=dt.getFullYear();for(i=0;i<n;i++){PLI("/eta/months/w"+DOW2(1,m,y)+"d"+GetMonthCount(m,y)+".gif");m++;if(12<m){m=1;y++;}}}LMn(2);
+
+function HideCalendar(obj, indx) 
+{
+	var dF=document.all.CalFrame;
+	dF.style.display="none";
+	if (null!=obj) SyncVals(obj, indx);
+}
+
+function ShowCalendarOnClick(eP,eD,eDP,dmin,dmax,fnCB,absdt)
+{
+
+	var dF=document.all.CalFrame;
+	var wF=window.frames.CalFrame;
+
+	if ("block"==dF.style.display && eD==g_eC) 
+	{
+		HideCalendar();
+	}
+	else
+	{	
+		if(null==wF.g_fCalLoaded||false==wF.g_fCalLoaded)
+		{
+			alert("Unable to load popup calendar.\r\nPlease reload the page.");
+			return;
+		}
+
+		if(absdt==true)
+		{
+			var dN=new Date(dmin);
+			var dM=new Date(dmax);
+		}
+		else
+		{
+			var dN=new Date();
+			dN.SetDate(dN.getDate()+dmin);
+			var dM=new Date();
+			dM.SetDate(dM.getDate()+dmax);
+		}
+		wF.SetMinMax(new Date(dN),new Date(dM));
+		if(eD==g_eC&&"block"==dF.style.display)
+		{
+			if(g_eCV!=eD.value&&GD(eD.value))
+			{
+				wF.SetInputDate(g_day,g_month,g_year);
+				wF.SetDate(g_day,g_month,g_year);
+				g_eCV=eD.value;
+			}
+			else dF.style.display="none";
+		}
+		else
+		{
+			if(GD(eD.value)||(null!=eDP&&GD(eDP.value)))
+			{
+				wF.SetInputDate(g_day,g_month,g_year);
+				wF.SetDate(g_day,g_month,g_year);
+			}
+			else
+			{
+				var dt=new Date(dN);
+				wF.SetInputDate(-1,-1,-1);
+				wF.SetDate(dt.getDate(),dt.getMonth()+1,dt.getFullYear());
+			}
+			var eL=0;
+			var eT=0;
+			var p=eP;
+			while(p&&p.tagName!="BODY")
+			{
+				eT+=p.offsetTop;eL+=p.offsetLeft;p=p.offsetParent;
+			}
+			var eH=eP.offsetHeight;
+			var dH=dF.style.pixelHeight;
+			var sT=document.body.scrollTop;
+			var dW=dF.style.pixelWidth;
+			if(eL+eP.offsetWidth+dW>document.body.clientWidth)eL-=dW-eP.width;dF.style.left=eL;
+			if(eT-dH>=sT&&eT+eH+dH>document.body.clientHeight+sT)eT-=dH;
+			else eT+=eH;dF.style.top=eT;
+			if("none"==dF.style.display)dF.style.display="block";
+			g_eC=eD;g_eCV=eD.value;LMn(12);
+		}
+	}
+}
+
+//-->
+</SCRIPT>
+
+<SCRIPT FOR=document EVENT="onclick()">
+<!--
+document.all.CalFrame.style.display="none";
+//document.all.CalFrame2.style.display="none";
+//-->
+</SCRIPT>
+
+
+<!-- end calendar -->
+<script language="javascript" src="/daily/home/includes/netraker/NRIJS.asp"></script>
+ <!-- begin ZEDO --> <script language="JavaScript">var zflag_nid=198;var zflag_cid="12";var zflag_sid=13;var zflag_sz=15;</script> <script language="JavaScript" src="http://c2.zedo.com/jsc/c2/ff.js"></script> <!-- end ZEDO -->  </body> </html>

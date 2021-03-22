@@ -1,0 +1,1237 @@
+<html>
+
+<head>
+<title>Windows 2000 Installation Security Checklist</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="Description" content="Checklist for creating secure Windows 2000 Professional and Server installations">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="KeyWords" content="securing windows 2000, win2k, win2000, resources, lock down, security checklist">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta name="Microsoft Border" content="none, default">
+</head>
+
+<body link="#000080" vlink="#000080" alink="#000080" topmargin="0" leftmargin="0">
+
+<div align="left">
+  <table border="0" cellspacing="0" width="100%" cellpadding="2">
+    <tr>
+      <td width="50%"><a href="http://www.labmice.net">
+      <img border="0" src="/images/labmice_banner_2002.gif"  alt="LabMice.net - The Windows 2000\XP\.NET Resource Index" width="332" height="60"></a></td>
+      <td width="50%" valign="top" align="right"><IMG SRC="http://service.bfast.com/bfast/serve?bfmid=37628499&siteid=38466770&bfpage=test_hot_deals" BORDER="0" WIDTH="1" HEIGHT="1" NOSAVE >
+      <a href="http://searchwin2000.techtarget.com" target="_new"><img border="0" src="/images/labmice_header_banner.gif"  width="468" height="60"></a>
+</td>
+    </tr>
+    <tr>
+      <td width="50%" height="24" background="../images/backblkred.gif" bgcolor="#000000"><nowrap><font face="Arial" size="2" color="#FFFFFF"><b><a href="http://www.labmice.net" style="color: rgb(255,255,255)">Home</a> | <a href="../about.htm" style="color: rgb(255,255,255)">About Us</a> | <a href="../search.htm" style="color: rgb(255,255,255)"><u>Search</u></a>
+        |</b></font></td>
+      <td width="50%" height="24" background="../images/backblkred.gif" bgcolor="#000000">
+        <p align="right"><font face="Arial" size="2" color="#FFFFFF"><b>Last Updated
+        <!--webbot bot="Timestamp" s-type="EDITED" s-format="%B %d, %Y" startspan -->December 10, 2003<!--webbot bot="Timestamp" i-checksum="39463" endspan --></b></font></td>
+    </tr>
+  </table>
+</div>
+<div align="left">
+  <table border="0" cellspacing="0" width="100%" cellpadding="3">
+    <tr>
+      <td width="88%" valign="top" align="left">
+        <div align="center">
+          <center>
+          <table border="0" cellpadding="2" cellspacing="1" width="100%">
+            <tr>
+              <td width="10%" height="90%">
+                <p align="center">
+                <img border="0" src="../images/securewin2000.gif" width="32" height="32"></td>
+              <td width="100%" height="66">
+                <h1><b><span style="letter-spacing: -1pt"><font face="Arial" color="#CC0000" size="5">Windows 2000
+                Security Checklist&nbsp;</font></span></b></h1>
+              </td>
+            </tr>
+            <tr>
+              <td width="100%" colspan="2"><b><font face="Arial" size="2"><i>Windows
+                2000 includes a number of improved security features and
+                options, and when properly configured it can be a very secure
+                Operating System. Keep in mind that there is a trade off between
+                increased security levels and usability for any Operating
+                System. Assess your potential risks, and balance your needs.&nbsp;
+                Microsoft includes a Security Configuration Toolkit, security analyzer,
+                and a number of default security templates with Windows 2000
+                that can help you pick the level of security you need. Below is a checklist we've compiled of
+                recommended security practices for locking down a Windows 2000
+                Professional or Server installation. This is a &quot;live&quot;
+                document which will be updated over time as new security
+                recommendations are published by Microsoft. We have tried to
+                make the checklist as complete as possible, however if you have
+                any suggestions or feedback, please e-mail <a href="mailto:bernie@labmice.net">bernie@labmice.net</a>&nbsp;<br>
+                &nbsp;&nbsp;</i></font></b>
+                <div align="center">
+                  <table border="2" cellpadding="2" cellspacing="0" width="90%" bordercolorlight="#FF0000" bordercolordark="#800000">
+                    <tr>
+                      <td width="100%"><font size="1" face="Tahoma">INFORMATION PROVIDED IN THIS DOCUMENT IS PROVIDED 'AS IS' WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND FREEDOM
+                        FROM INFRINGEMENT. The user assumes the entire risk as to the accuracy and the use of this document. This document may be copied and distributed subject to the following conditions:<br>
+                        1. All text must be copied without modification and all pages must be included<br>
+                        2. All copies must contain LabMice.net's llogo and copyright notice and any other notices provided therein
+                        (including this one)<br>
+                        3. This document may not be distributed for profit.</font></td>
+                    </tr>
+                  </table>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td width="100%" colspan="2"><b><font face="Arial" size="2"><a href="../default.htm">Home</a>
+                &gt; <a href="../security/default.htm">Security</a> &gt; <a href="../security/securewin2000.htm">Securing
+                Network Resources</a></font></b></td>
+            </tr>
+          </table>
+          </center>
+        </div>
+        <div align="left">
+          <table border="0" cellpadding="2" cellspacing="0" width="100%">
+            <tr>
+              <td width="100%" bgcolor="#800000" background="../images/burgbartile.gif" valign="top" height="28"><font color="#FFFFFF" size="3" face="Arial"><b>Security
+                Checklist</b></font></td>
+              <td width="100%" bgcolor="#800000" background="../images/burgbartile.gif" valign="top" height="28">&nbsp;</td>
+            </tr>
+            <tr>
+              <td width="100%" valign="top" align="left">
+                <div align="center">
+                  <center>
+                  <table border="0" cellpadding="3" cellspacing="3" width="100%">
+                    <tr>
+                      <td width="100%" valign="top" colspan="2"><b><font color="#800000" size="3" face="Arial">Basic Security
+                        Considerations</font></b></td>
+                    </tr>
+                    <tr>
+                      <td width="5%" valign="top">
+                      <img border="0" src="../images/clipboard_check.gif" width="32" height="32"></td>
+                      <td width="95%"><font size="2" face="Arial"><b><i>Provide Physical Security for the machine</i></b><br>
+                        Most security breaches in corporate environments occur from the
+                        inside. Culprits can be well meaning &quot;power
+                        users&quot; who configure their co-workers PCs, to disgruntled employees, or
+                        they can be full blown corporate spies
+                        that are working at your company. It may not be
+                        practical to physically secure every workstation in your
+                        environment, but your servers need to be in a locked room with monitored access. Consider placing surveillance cameras in your
+                        server rooms and keeping the tapes for 30 days. For
+                        desktops, install
+                        a lock on the CPU case, keep it locked, and store the
+                        key safely away from the computer at a secure location.
+                        (i.e. a locked cabinet in the server room)</font></td>
+                    </tr>
+                    <tr>
+                      <td width="5%" valign="top">
+                      <img border="0" src="../images/clipboard_check.gif" width="32" height="32"></td>
+                      <td width="95%"><font size="2" face="Arial"><b><i>Disable the Guest Account</i></b><br>
+                        Windows 2000 finally disables the guest account by default, but if you didn't build the image yourself, always double check to make sure the guest account is not enabled.
+                        For additional security assign a complex password to the
+                        account anyway, and restrict its logon 24x7.&nbsp;</font></td>
+                    </tr>
+                    <tr>
+                      <td width="5%" valign="top">
+                      <img border="0" src="../images/clipboard_check.gif" width="32" height="32"></td>
+                      <td width="95%"><font size="2" face="Arial"><b><i>Limit the number of unnecessary accounts</i></b><br>
+                        Eliminate any duplicate user accounts, test accounts,
+                        shared accounts, general department accounts, etc., Use group policies to assign permissions as needed, and audit your accounts regularly. These generic accounts are famous for having weak passwords
+                        (and lots of access) and are at the top of every hacker's list of accounts to crack first.
+                        This can be a big problem at larger companies with
+                        understaffed IT departments. An audit at a Fortune 10
+                        company I worked for revealed that 3,000 of their 15,000
+                        active user accounts were assigned
+                        to </font><font size="2" face="Arial">employees</font><font size="2" face="Arial">
+                        who no longer worked for the company. To make matters
+                        worse, we were able to crack the passwords on more than
+                        half of those inactive accounts.&nbsp;</font></td>
+                    </tr>
+                    <tr>
+                      <td width="5%" valign="top">
+                      <img border="0" src="../images/clipboard_check.gif" width="32" height="32"></td>
+                      <td width="95%"><font size="2" face="Arial"><b><i>Create 2
+                        accounts for Administrators</i></b><br>
+                        I know this goes against the previous caveat, but this
+                        is the exception to the rule. Create one regular user
+                        account for your Administrators for reading mail and
+                        other common tasks, and a separate account (with a more aggressive
+                        password policy) for tasks requiring administrator privileges.
+                        Have your Administrators use the <a href="../windows2000/Administration/runas.htm"> &quot;Run As&quot;</a>
+                        command available with Windows 2000 to enable the access
+                        they need. This prevents malicious code from spreading
+                        through your network with admin privileges.&nbsp;</font></td>
+                    </tr>
+                    <tr>
+                      <td width="5%" valign="top">
+                      <img border="0" src="../images/clipboard_check.gif" width="32" height="32"></td>
+                      <td width="95%"><font size="2" face="Arial"><b><i>Rename the Administrator Account</i></b><br>
+                        Many hackers will argue that this won't stop them, because they will use the SID to find the name of the account and hack that. Our view is, why make it easy for them. Renaming the Administrator account will stop some amateur hackers cold, and will annoy the more determined
+                        ones. Remember that hackers won't know what the inherit or group permissions are for an account, so they'll try to hack any local account they find and then try to hack other accounts as they go to improve their access. If you rename the account, try not to use the word
+                        'Admin&quot; in its name. Pick something that won't sound like it
+                        has rights to anything.</font></td>
+                    </tr>
+                    <tr>
+                      <td width="5%" valign="top">
+                      <img border="0" src="../images/clipboard_check.gif" width="32" height="32"></td>
+                      <td width="95%"><font size="2" face="Arial"><b><i>Consider creating a dummy Administrator account</i></b><br>
+                        Another strategy is to create a local account named &quot;Administrator&quot;,
+                        then giving that account no privileges and impossible to guess +10 digit complex password. This should keep the script kiddies busy for a while.
+                        If you create a dummy Administrative account, enabled
+                        auditing so you'll know when it is being tampered with.</font></td>
+                    </tr>
+                    <tr>
+                      <td width="5%" valign="top">
+                      <img border="0" src="../images/clipboard_check.gif" width="32" height="32"></td>
+                      <td width="95%"><font size="2" face="Arial"><b><i>Replace
+                        the &quot;Everyone&quot; Group with &quot;Authenticated
+                        Users&quot; on file shares</i></b><br>
+                        &quot;Everyone&quot; in the context of Windows 2000
+                        security, means anyone who gains access to your network
+                        can access the data. Never assign the
+                        &quot;Everyone&quot; Group to have access to a file
+                        share on your network, use &quot;Authenticated
+                        Users&quot; instead. This is especially important for
+                        printers, who have the &quot;Everyone&quot; Group
+                        assigned by default.</font></td>
+                    </tr>
+                    <tr>
+                      <td width="5%" valign="top">
+                      <img border="0" src="../images/clipboard_check.gif" width="32" height="32"></td>
+                      <td width="95%"><font size="2" face="Arial"><b><i>Password Security</i></b><br>
+                        A good password policy is essential to your network
+                        security, but is often overlooked. In large organizations there is a huge temptation for lazy administrators to create all local Administrator accounts (or worse, a common domain level administrator account) that uses a variation of the company name, computer name, or advertising tag line. i.e. <i>%companyname%</i>#1,
+                        win2k<i>%companyname%, </i>etc. Even worse are new user accounts with simple passwords such as &quot;welcome&quot;, &quot;letmein&quot;, &quot;new2you&quot;, that aren't required to changed the password after the first logon. Use complex passwords that are
+                        changed at least every 60 -90 days. <font class="ListPara1">Passwords
+                        should contain at least eight characters, and preferably
+                        nine (recent security information reports that many
+                        cracking programs are using the eight character standard
+                        as a starting point). Also, each password must follow
+                        the standards set for strong passwords .</font></font></td>
+                    </tr>
+                    <tr>
+                      <td width="5%" valign="top">
+                      <img border="0" src="../images/clipboard_check.gif" width="32" height="32"></td>
+                      <td width="95%"><font size="2" face="Arial"><i><b>Password
+                        protect the screensaver</b><br>
+                        </i>
+                        Once again this is a basic security step that is often
+                        circumvented by users. Make sure all of your
+                        workstations and servers have this feature enabled to
+                        prevent an internal threat from taking advantage of an
+                        unlocked console. For best results, choose the blank
+                        screensaver or logon screensaver. Avoid the OpenGL and
+                        graphic intensive program that eat CPU cycles and
+                        memory. Make sure the wait setting is appropriate for
+                        your business. If you can get your users in the habit of
+                        manually locking their workstations when they walk away
+                        from their desks, you can probably get away with an idle
+                        time of 15 minutes or more. You can keep users from
+                        changing this setting via Group Policy.&nbsp;&nbsp;</font></td>
+                    </tr>
+                    <tr>
+                      <td width="5%" valign="top">
+                      <img border="0" src="../images/clipboard_check.gif" width="32" height="32"></td>
+                      <td width="95%"><font size="2" face="Arial"><i><b>Use NTFS
+                        on all partitions<br>
+                        </b></i>FAT and FAT32 File systems don't support file
+                        level security and give hackers a big wide open door to
+                        your system. Make sure all of your system partitions are
+                        formatted using NTFS.</font></td>
+                    </tr>
+                    <tr>
+                      <td width="5%" valign="top">
+                      <img border="0" src="../images/clipboard_check.gif" width="32" height="32"></td>
+                      <td width="95%"><font size="2" face="Arial"><b><i>Always run
+                        Anti-Virus software</i></b><br>
+                        Again, this is something that is considered a basic
+                      tenet of security, but you would be surprised at how many companies don't run Anti-Virus software, or run it but don't update it. Today's AV software does more than just check for known viruses,
+                        many scan for other types of
+                        malicious code as well.</font></td>
+                    </tr>
+                    <tr>
+                      <td width="5%" valign="top">
+                      <img border="0" src="../images/clipboard_check.gif" width="32" height="32"></td>
+                      <td width="95%"><font size="2" face="Arial"><b><i>Secure
+                        your Backup tapes</i></b><br>
+                        It's amazing how many organizations implement excellent
+                        platform security, and then don't encrypt and/or lock up
+                        their backup tapes containing the same data. It's also a
+                        good idea to keep your Emergency Repair Disks locked up
+                        and stored away from your servers.</font></td>
+                    </tr>
+                    <tr>
+                      <td width="100%" valign="top" colspan="2">
+                        <hr>
+                        <b><font color="#800000" face="Arial" size="3">Mid Level Security Measures</font></b></td>
+                    </tr>
+                    <tr>
+                      <td width="5%" valign="top">
+                      <img border="0" src="../images/clipboard_check.gif" width="32" height="32"></td>
+                      <td width="95%"><font size="2" face="Arial"><b><i>Use the Security Configuration Toolset
+                        included with Windows 2000 to configure policies.</i></b><br>
+                        Microsoft provides a Security Configuration Toolset which provides plug in templates for the MMC that allow you to easily configure your policies based on the level of security you require.
+                        The template includes a long list of configurable
+                        options (many of which appear on this checklist) and also
+                        includes a useful security analysis tool. For more information, download the documentation
+                        <a href="http://www.microsoft.com/windows2000/techinfo/howitworks/security/sctoolset.asp">here.</a>&nbsp;
+                        If your workstation is not part of a domain, you can
+                        still enable policies by using the Poledit.exe file from
+                        the Windows 2000 Server CD-ROM. For more information, check
+                        out <a href="http://support.microsoft.com/?kbid=269799">Microsoft Knowledge Base Article:
+                        </a><a href="http://support.microsoft.com/?kbid=269799">269799 - How to Secure Windows
+                        2000 Professional in a Non-Domain Environment.</a></font></td>
+                    </tr>
+                    <tr>
+                      <td width="5%" valign="top">
+                      <img border="0" src="../images/clipboard_check.gif" width="32" height="32"></td>
+                      <td width="95%"><font size="2" face="Arial"><b><i>Don't allow unmonitored modems in your environment</i></b><br>
+                        One of the easiest hacks in the world is finding a company's phone number prefix and suffix range and wardialing for a modem that picks up. After weeding through the fax machines, you can either look for an unsecured workstation with RAS enabled, or one with Symantec's PC
+                        Anywhere loaded on it. If either one is configured incorrectly, you can easily gain access to the local machine and work up from there. If you have a digital phone system, get a list of every analog line that comes into your workplace and find out where it goes! Every PC
+                        hooked to a modem is a security risk. Make sure they're configured correctly and audited regularly.</font></td>
+                    </tr>
+                    <tr>
+                      <td width="5%" valign="top">
+                      <img border="0" src="../images/clipboard_check.gif" width="32" height="32"></td>
+                      <td width="95%"><font size="2" face="Arial"><b><i>Shut down unnecessary services</i></b><br>
+                        Unnecessary services take up system resources and can open holes into your operating system.
+                        IIS, RAS, and Terminal Services have security and configuration
+                        issues of their own, and should be implemented carefully
+                        if required. There are also several malicious programs that can run quietly as services without anyone knowing.
+                        You should be aware of
+                        all the services that all run on your servers and audit them periodically. The default services
+                        allowed in a Windows NT 4.0 <a href="http://www.winnetmag.com/Articles/Index.cfm?ArticleID=2293">C2
+                        certified</a> installation are: </font>
+                        <table border="1" width="90%">
+                          <tr>
+                            <td width="50%">
+                              <table border="0" width="355" cellspacing="1">
+                                <tr>
+                            <td valign="top" width="21">
+                            <img border="0" src="../images/ico_services.gif" width="20" height="20"></td>
+                            <td valign="top" width="100%"><font face="Arial" size="2">Computer Browser</font></td>
+                                </tr>
+                                <tr>
+                            <td valign="top" width="21">
+                            <img border="0" src="../images/ico_services.gif" width="20" height="20"></td>
+                            <td valign="top" width="100%"><font face="Arial" size="2">Microsoft DNS Server&nbsp;</font></td>
+                                </tr>
+                                <tr>
+                            <td valign="top" width="21">
+                            <img border="0" src="../images/ico_services.gif" width="20" height="20"></td>
+                            <td valign="top" width="100%"><font face="Arial" size="2">Netlogon</font></td>
+                                </tr>
+                                <tr>
+                            <td valign="top" width="21">
+                            <img border="0" src="../images/ico_services.gif" width="20" height="20"></td>
+                            <td valign="top" width="100%"><font face="Arial" size="2">NTLM SSP</font></td>
+                                </tr>
+                                <tr>
+                            <td valign="top" height="18" width="21">
+                            <img border="0" src="../images/ico_services.gif" width="20" height="20"></td>
+                            <td valign="top" height="18" width="100%"><font face="Arial" size="2">RPC Locator</font></td>
+                                </tr>
+                                <tr>
+                            <td valign="top" height="18" width="21">
+                            <img border="0" src="../images/ico_services.gif" width="20" height="20"></td>
+                            <td valign="top" height="18" width="100%"><font face="Arial" size="2">RPC Service</font></td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td width="50%" valign="top">
+                              <table border="0" cellspacing="1" width="100%">
+                                <tr>
+                            <td valign="top">
+                            <img border="0" src="../images/ico_services.gif" width="20" height="20"></td>
+                            <td valign="top" width="100%"><font face="Arial" size="2">TCP/IP NetBIOS Helper</font></td>
+                                </tr>
+                                <tr>
+                            <td valign="top">
+                            <img border="0" src="../images/ico_services.gif" width="20" height="20"></td>
+                            <td valign="top" width="100%"><font face="Arial" size="2">Spooler</font></td>
+                                </tr>
+                                <tr>
+                            <td valign="top" width="21">
+                            <img border="0" src="../images/ico_services.gif" width="20" height="20"></td>
+                            <td valign="top" width="100%"><font face="Arial" size="2">Server</font></td>
+                                </tr>
+                                <tr>
+                            <td valign="top" width="21">
+                            <img border="0" src="../images/ico_services.gif" width="20" height="20"></td>
+                            <td valign="top" width="100%"><font face="Arial" size="2">WINS</font></td>
+                                </tr>
+                                <tr>
+                            <td valign="top" width="21">
+                            <img border="0" src="../images/ico_services.gif" width="20" height="20"></td>
+                            <td valign="top" width="100%"><font face="Arial" size="2">Workstation</font></td>
+                                </tr>
+                                <tr>
+                            <td valign="top" width="21">
+                            <img border="0" src="../images/ico_services.gif" width="20" height="20"></td>
+                            <td valign="top" width="100%"><font face="Arial" size="2">Event Log</font></td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td width="5%" valign="top"></td>
+                      <td width="95%"><font size="2" face="Arial">Windows 2000
+                        has not been submitted for C2 certification by
+                        Microsoft, so an updated list of services is not
+                        available. What services are deemed unnecessary may vary
+                        based on the function of your server and/or
+                        workstations. Please test your specific configuration in
+                        a lab environment before enabling it in your production
+                        network. A list of services available in Windows 2000
+                        Server (as well as their default settings) can be found <a href="win2000services.htm">here</a></font></td>
+                    </tr>
+                    <tr>
+                      <td width="5%" valign="top">
+                      <img border="0" src="../images/clipboard_check.gif" width="32" height="32"></td>
+                      <td width="95%"><font size="2" face="Arial"><b><i>Shut down unnecessary ports</i></b><br>
+                        This is a judgment call based on your needs and risks. Workstations
+                        aren't normally at risk behind a firewall, but never assume your servers are safe!&nbsp; A hackers first attempt at rattling the doors and windows usually involves using a port scanner. You can find out
+                        a list of open ports on your local system by opening the file located at
+                        %systemroot%\drivers\etc\services. You can configure
+                        your ports via the TCP/IP Security console located in
+                        the TCP/IP properties<b> </b>(<b>Control Panel &gt; Network and
+                        Dial Up Connections &gt; Local Area Connection &gt;
+                        Internet Protocol (TCP/IP) &gt; Properties &gt; Advanced
+                        &gt; Options &gt; TCP/IP Filtering</b>) To allow only TCP
+                        and ICMP connections, configure the UDP and IP Protocol
+                        check boxes to &quot;Permit Only&quot; and leave the
+                        fields blank. A list of default ports for Windows 2000
+                        Domain Controllers can be found <a href="http://support.microsoft.com/?kbid=289241">here</a></font></td>
+                    </tr>
+                    <tr>
+                      <td width="5%" valign="top">
+                      <img border="0" src="../images/clipboard_check.gif" width="32" height="32"></td>
+                      <td width="95%"><font face="Arial" size="2"><b><i>Enable
+                        Auditing</i></b><br>
+                        The most basic form of Intrusion Detection for Windows
+                        2000 is to enable auditing. This will alert you to
+                        changes in account policies, attempted password hacks, unauthorized
+                        file access, etc.,&nbsp; Most users are unaware of the
+                        types of doors they have unknowingly left open on their
+                        local workstation, and these risks are often discovered
+                        only after a serious security breach has occurred. At
+                        the very minimum, consider auditing the following
+                        events:</font>
+                        <div align="left">
+                          <table width="400" cellspacing="0" cellpadding="0" border="1" bordercolor="#CC0000">
+                            <tr>
+                              <th align="left" width="200" bgcolor="#CC0000"><font class="TableHeadings" size="2" face="Arial" color="#FFFFFF">Event</font></th>
+                              <th align="left" width="200" bgcolor="#CC0000"><font class="TableHeadings" size="2" face="Arial" color="#FFFFFF">Level
+                                of Auditing</font></th>
+                            </tr>
+                            <tr>
+                              <td vAlign="top" width="200" bgcolor="#FFFFCC"><font class="TableText" size="2" face="Arial">Account
+                                logon events</font></td>
+                  </center>
+                            <td vAlign="top" width="200" bgcolor="#FFFFCC">
+                              <p align="left"><font class="TableText" size="2" face="Arial">Success,
+                              failure</font></td>
+                          </tr>
+                  <center>
+                  <center>
+                  <tr>
+                    <td vAlign="top" width="200" bgcolor="#FFFFCC"><font class="TableText" size="2" face="Arial">Account
+                      management</font></td>
+                    <td vAlign="top" width="200" bgcolor="#FFFFCC"><font class="TableText" size="2" face="Arial">Success,
+                      failure</font></td>
+                  </tr>
+                  <tr>
+                    <td vAlign="top" width="200" bgcolor="#FFFFCC"><font class="TableText" size="2" face="Arial">Logon
+                      events</font></td>
+                    <td vAlign="top" width="200" bgcolor="#FFFFCC"><font class="TableText" size="2" face="Arial">Success,
+                      failure</font></td>
+                  </tr>
+                  <tr>
+                    <td vAlign="top" width="200" bgcolor="#FFFFCC"><font class="TableText" size="2" face="Arial">Object
+                      access</font></td>
+                    <td vAlign="top" width="200" bgcolor="#FFFFCC"><font class="TableText" size="2" face="Arial">Success</font></td>
+                  </tr>
+                  <tr>
+                    <td vAlign="top" width="200" bgcolor="#FFFFCC"><font class="TableText" size="2" face="Arial">Policy
+                      change</font></td>
+                    <td vAlign="top" width="200" bgcolor="#FFFFCC"><font class="TableText" size="2" face="Arial">Success,
+                      failure</font></td>
+                  </tr>
+                  <tr>
+                    <td vAlign="top" width="200" bgcolor="#FFFFCC"><font class="TableText" size="2" face="Arial">Privilege
+                      use</font></td>
+                    <td vAlign="top" width="200" bgcolor="#FFFFCC"><font class="TableText" size="2" face="Arial">Success,
+                      failure</font></td>
+                  </tr>
+                  <tr>
+                    <td vAlign="top" width="200" bgcolor="#FFFFCC"><font class="TableText" size="2" face="Arial">System
+                      events</font></td>
+                    <td vAlign="top" width="200" bgcolor="#FFFFCC"><font class="TableText" size="2" face="Arial">Success,
+                      failure</font></td>
+                  </tr>
+                  </table>
+                          </center>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td width="5%" valign="top">
+                      <img border="0" src="../images/clipboard_check.gif" width="32" height="32"></td>
+                      <td width="95%"><font color="#000000" size="2" face="Arial"><b><i>Set
+                        permissions on </i></b><b><i>the security event log</i></b><br>
+                        The event log files are not protected by default, so
+                        permissions should be set on the event log files to
+                        allow access to Administrator and System accounts
+                        only.&nbsp;</font></td>
+                    </tr>
+                    <tr>
+                      <td width="5%" valign="top">
+                      <img border="0" src="../images/clipboard_check.gif" width="32" height="32"></td>
+                      <td width="95%"><font size="2" face="Arial"><b><i>Store
+                        all sensitive documents on file servers</i></b><br>
+                        Although most new workstations come with some very large
+                        drives, you should consider storing all of a users data
+                        (documents, spreadsheets, project files, etc.,) on a
+                        secured server, where the data is backed up regularly.
+                        Modify the parameters for the &quot;My Documents&quot;
+                        folder to always point to the users network share on a
+                        secured server. For laptop users, enable the &quot;Make
+                        available offline&quot; capabilities to synchronize the
+                        folder's content.</font></td>
+                    </tr>
+                    <tr>
+                      <td width="5%" valign="top">
+                      <img border="0" src="../images/clipboard_check.gif" width="32" height="32"></td>
+                      <td width="95%"><font color="#000000" size="2" face="Arial"><b><i>Prevent
+                        the last logged-in user name from being displayed<br>
+                        </i></b>When you press Ctrl-Alt-Del, a login dialog box
+                        appears which displays the name of the last user who
+                        logged in to the computer, and makes it easier to
+                        discover a user name that can later be used in a
+                        password-guessing attack. This can be disabled using the
+                        security templates provided on the installation CD, or
+                        via Group Policy snap in. For more information, see <a href="http://support.microsoft.com/?kbid=310125">Microsoft
+                        KB Article Q310125</a></font></td>
+                    </tr>
+                    <tr>
+                      <td width="5%" valign="top">
+                      <img border="0" src="../images/clipboard_check.gif" width="32" height="32"></td>
+                      <td width="95%"><font size="2" face="Arial"><b><i>Check Microsoft's web site for the latest hotfixes</i></b><br>
+                        Nobody writes 30 million lines of code and is going to have it
+                        perfect the first time, so updating service packs and
+                        hotfixes can go a long way to plug security holes. The
+                        problem is that hotfixes and service packs aren't </font><font size="2" face="Arial">regression-tested&nbsp;as
+                        thoroughly as service packs and </font><font size="2" face="Arial">can come with bugs of their
+                        own. You should always test them on a comparable, non
+                        production system before deploying them. Check <a href="http://www.microsoft.com/TechNet/security/default.asp">Microsoft's
+                        TechNet Security Page</a> frequently for the latest hotfixes and decide which ones you need to roll out. <b><i>Tip:</i></b> Our home page at <a href="http://www.labmice.net">LabMice.net</a> always features Microsoft's latest hotfix to save you time.</font></td>
+                    </tr>
+                    <tr>
+                      <td width="100%" valign="top" colspan="2">
+                        <hr>
+                        <b><font color="#800000" face="Arial" size="3">Advanced Security Settings</font></b></td>
+                    </tr>
+                    <tr>
+                      <td width="5%" valign="top">
+                      <img border="0" src="../images/clipboard_check.gif" width="32" height="32"></td>
+                      <td width="95%"><font size="2" face="Arial"><b><i>Set a power on password</i><br>
+                        </b>This should be mandatory for all laptop users, but is rarely done in most environments for servers and workstations because it doesn't allow you to remotely log on and reboot a machine to the point that the Operating System will restart. Keep in mind that an intruder who
+                        can physically open your computer's central processing unit (CPU) can adjust hardware switches to disable the power-on password, and could also temporarily install a drive and boot another OS,
+                        bypassing all of your security settings. If this is a concern for your company, consider locking the case (if the model
+                        permits it) or using removable hard drives that are locked up every night.</font></td>
+                    </tr>
+                    <tr>
+                      <td width="5%" valign="top">
+                      <img border="0" src="../images/clipboard_check.gif" width="32" height="32"></td>
+                      <td width="95%"><font size="2" face="Arial"><b><i>Disable DirectDraw</i></b><br>
+                        This prevents direct access to video hardware and memory
+                        which is required to meet the basic C2 security
+                        standards. Disabling DirectDraw may impact some programs
+                        that require DirectX (games), but most business
+                        applications should be unaffected. To disable it edit the Registry </font><font face="Arial" size="2"><i>HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\DCI</i> and set the value for Timeout (REG_DWORD) to 0</font></td>
+                    </tr>
+                    <tr>
+                      <td width="5%" valign="top">
+                      <img border="0" src="../images/clipboard_check.gif" width="32" height="32"></td>
+                      <td width="95%"><font face="Arial" size="2"><b><i>Disable
+                        the default shares</i></b><br>
+                        Windows NT and Windows 2000 open hidden shares on each
+                        installation for use by the system account. <font SIZE="2">(Tip:
+                        You can view all of the shared folders on your computer
+                        by typing <b>NET SHARE</b> from a command prompt.) You
+                        can disable the default Administrative shares two ways. One is to stop
+                        or disable the Server service, which removes the ability to share
+                        folders on your computer. (However, you can still access shared folders on other
+                        computers.) When you disable the Server service (via <b>Control
+                        Panel &gt; Administration Tools &gt; Services</b>), be
+                        sure to click Manual or Disabled or else the service
+                        will start the next time the computer is restarted. The
+                        other way is via the Registry by editing <b>HKeyLocal
+                        Machine</b></font><b>\SYSTEM\CurrentControlSet\Services\LanManServer\Parameters</b><font SIZE="2">.
+                        For Servers edit AutoShareServer with a REG_DWORD Value
+                        of 0. For Workstations, the edit AutoShareWks. Keep in mind that d</font>isabling
+                        these shares provide an extra measure of security, but
+                        may cause problems with applications. Test your changes
+                        in a lab before disabling these in a production
+                        environment. The default hidden shares are:</font>
+                        <div align="center">
+                          <center>
+                          <table border="1" cellspacing="0" width="90%" bordercolor="#800000" cellpadding="0">
+                            <tr>
+                              <td width="100%">
+                                <div align="center">
+                                  <table border="0" cellspacing="0" width="100%" cellpadding="0">
+                                    <tr>
+                            <td width="68" bgcolor="#CC0000" nowrap><font size="2" face="Arial" color="#FFFFFF"><b>&nbsp;
+                              Share</b></font></td>
+                            <td width="100%" bgcolor="#CC0000"><font size="2" face="Arial" color="#FFFFFF"><b>Path
+                              and Function</b></font></td>
+                                    </tr>
+                                    <tr>
+                            <td width="68" bgcolor="#FFFFCC" nowrap valign="top"><font size="2" face="Arial"><b>C$
+                              D$ E$</b></font></td>
+                            <td width="100%" bgcolor="#FFFFCC"><font size="2" face="Arial">Root
+                              of each partition. For a Windows&nbsp;2000
+                              Professional computer, only members of the
+                              Administrators or Backup Operators group can
+                              connect to these shared folders. For a Windows&nbsp;2000
+                              Server computer, members of the Server Operators
+                              group can also connect to these shared folders</font></td>
+                                    </tr>
+                                    <tr>
+                            <td width="68" bgcolor="#FFFFCC" nowrap valign="top"><font size="2" face="Arial"><b>ADMIN$</b></font></td>
+                            <td width="100%" bgcolor="#FFFFCC"><font size="2" face="Arial">%SYSTEMROOT%&nbsp;
+                              This share is used by the system during remote
+                              administration of a computer. The path of this
+                              resource is always the path to the Windows&nbsp;2000
+                              system root (the directory in which Windows&nbsp;2000
+                              is installed: for example, C:\Winnt).</font></td>
+                                    </tr>
+                                    <tr>
+                            <td width="68" bgcolor="#FFFFCC" nowrap valign="top"><font size="2" face="Arial"><b>FAX$</b></font></td>
+                            <td width="100%" bgcolor="#FFFFCC"><font size="2" face="Arial">On
+                              Windows 2000 server, this used by fax clients in
+                              the process of sending a fax. The shared folder
+                              temporarily caches files and accesses cover pages
+                              stored on the server.</font></td>
+                                    </tr>
+                                    <tr>
+                            <td width="68" bgcolor="#FFFFCC" nowrap valign="top"><font size="2" face="Arial"><b>IPC$</b></font></td>
+                            <td width="100%" bgcolor="#FFFFCC"><font size="2" face="Arial">Temporary
+                              connections between servers using named pipes
+                              essential for communication between programs. It
+                              is used during remote administration of a computer
+                              and when viewing a computer's shared resources</font></td>
+                                    </tr>
+                                    <tr>
+                            <td width="68" bgcolor="#FFFFCC" nowrap valign="top"><font size="2" face="Arial"><b>NetLogon</b></font></td>
+                            <td width="100%" bgcolor="#FFFFCC"><font size="2" face="Arial">This
+                              share is used by the Net Logon service of a
+                              Windows&nbsp;2000 Server computer while processing
+                              domain logon requests.</font></td>
+                                    </tr>
+                                    <tr>
+                            <td width="68" bgcolor="#FFFFCC" nowrap valign="top"><font size="2" face="Arial"><b>PRINT$</b></font></td>
+                            <td width="100%" bgcolor="#FFFFCC"><font size="2" face="Arial">%SYSTEMROOT%\SYSTEM32\SPOOL\DRIVERS&nbsp;
+                              Used during remote administration of printers.</font></td>
+                                    </tr>
+                                  </table>
+                                </div>
+                              </td>
+                            </tr>
+                          </table>
+                          </center>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td width="5%" valign="top">
+                      <img border="0" src="../images/clipboard_check.gif" width="32" height="32"></td>
+                      <td width="95%"><font size="2" face="Arial"><i><b>Disable
+                        Dump File Creation<br>
+                        </b></i>A dump file can be a useful troubleshooting tool
+                        when either the system or application crashes and causes
+                        the infamous &quot;Blue Screen of Death&quot;. However,
+                        they also can provide a hacker with potentially
+                        sensitive information such as application passwords. You
+                        can disable the dump file by going to the <b> Control Panel
+                        &gt; System Properties &gt; Advanced &gt; Startup and
+                        Recovery</b> and change the options for 'Write Debugging
+                        Information&quot; to None. If you need to troubleshoot
+                        unexplained crashes at a later date, you can re-enable
+                        this option until the issue is resolved but be sure to
+                        disable it again later and delete any stored dump files.</font></td>
+                    </tr>
+                    <tr>
+                      <td width="5%" valign="top">
+                      <img border="0" src="../images/clipboard_check.gif" width="32" height="32"></td>
+                      <td width="95%"><font size="2" face="Arial"><b><i>Enable
+                        EFS (Encrypting File System)</i><br>
+                        </b>Windows 2000 ships with a powerful encryption system
+                        that adds an extra layer of security for drives,
+                        folders, or files. This will help prevent a hacker from
+                        accessing your files by physically mounting the hard
+                        drive on another PC and taking ownership of files. Be
+                        sure to enable encryption on Folders, not just files.
+                        All files that are placed in that folder will be
+                        encrypted. For
+                        more information check out our <a href="../windows2000/FileMgmt/EFS.htm">EFS
+                        Resource Center</a></font></td>
+                    </tr>
+                    <tr>
+                      <td width="5%" valign="top">
+                      <img border="0" src="../images/clipboard_check.gif" width="32" height="32"></td>
+                      <td width="95%"><font size="2" face="Arial"><b><i>Encrypt
+                        the Temp Folder</i><br>
+                        </b>Applications use the temp folder to store copies of
+                        files while they are being updated or modified, but they
+                        don't always clean the folder when you close the
+                        program. Encrypting the temp folder provides an extra
+                        layer of security for your files.</font></td>
+                    </tr>
+                    <tr>
+                      <td width="5%" valign="top">
+                      <img border="0" src="../images/clipboard_check.gif" width="32" height="32"></td>
+                      <td width="95%"><font size="2" face="Arial"><i><b>Lock
+                        down the Registry<br>
+                        </b></i>In Windows 2000, only Administrators and Backup
+                        Operators have default network access to the registry,
+                        however you may wish to tighten this down even further.
+                        To restrict network access to the registry, follow the
+                        steps listed in <a href="http://support.microsoft.com/?kbid=153183">TechNet
+                        Article Q153183</a></font></td>
+                    </tr>
+                    <tr>
+                      <td width="5%" valign="top">
+                      <img border="0" src="../images/clipboard_check.gif" width="32" height="32"></td>
+                      <td width="95%"><font size="2" face="Arial"><i><b>Clear
+                        the Paging File at shutdown<br>
+                        </b></i>The Pagefile is the temporary swap file Windows
+                        NT/2000 uses to manage memory and improve performance.
+                        However, some 3rd party programs may store store
+                        unencrypted passwords in memory, and there may be other
+                        sensitive data cache as well. You can clear the pagefile
+                        at shutdown by editing the Registry Key </font><kbd class="FIXEDTEXT"><font size="2" face="Arial"><i>HKLM\SYSTEM\CurrentControlSet\Control\Session
+                        Manager\Memory Management</i> and </font></kbd><font size="2" face="Arial">changing
+                        the data value of the ClearPageFileAtShutdown value to 1&nbsp;</font></td>
+                    </tr>
+                    <tr>
+                      <td width="5%" valign="top">
+                      <img border="0" src="../images/clipboard_check.gif" width="32" height="32"></td>
+                      <td width="95%"><font size="2" face="Arial"><b><i>Disable
+                        the ability to boot from a floppy or CD ROM on physically unsecured
+                        systems.</i></b><br>
+                        There are a number of 3rd party utilities that pose a
+                        security risk if used via a boot disk
+                        (including resetting the local administrator password.)
+                        If your security needs are more extreme, consider
+                        removing the floppy and CD drives entirely.&nbsp; As an
+                        alternative, store the CPU in a locked external case
+                        that still provides adequate ventilation.&nbsp;</font></td>
+                    </tr>
+                    <tr>
+                      <td width="5%" valign="top">
+                      <img border="0" src="../images/clipboard_check.gif" width="32" height="32"></td>
+                      <td width="95%"><font size="2" face="Arial"><b><i>Disable
+                        AutoRun for CD-ROM drives on physically unsecured
+                        systems.</i></b><br>
+                        One of the easiest ways for a hacker with physical
+                        access to a company's PC's to distribute malicious code
+                        is via the CD-ROM. By creating a custom CD with a
+                        payload set to launch from the autorun feature in any
+                        machine, a hacker
+                        can affect any number of unlocked systems without ever
+                        leaving a fingerprint or touching a keyboard. Or he/she
+                        can simply leave a few of these lying around the office
+                        marked &quot;MP3's&quot;, or &quot;Payroll Data&quot;
+                        and wait for an unsuspecting user to simply pick it up
+                        and insert it into their machine. You can disable this
+                        function by editing the Registry and changing the <b>
+                        HKEY_LOCAL_MACHINE \SYSTEM \CurrentControlSet \Services
+                        Cdrom</b> subkey and set the <b> AutoRun </b> value to 0</font></td>
+                    </tr>
+                    <tr>
+                      <td width="5%" valign="top">
+                      <img border="0" src="../images/clipboard_check.gif" width="32" height="32"></td>
+                      <td width="95%"><font size="2" face="Arial"><i><b>Remove the
+                        OS/2 and POSIX Subsystems<br></b>
+                        </i>If you are not using these subsystems (and people
+                        rarely do), removing them may improve performance and
+                        also closes a potential security risk.<br>
+                        <br>
+                        <b><font color="#800000">To remove the OS/2 and POSIX subsystems:<br>
+                        </font></b>1. Delete the <b>\winnt\system32\os2</b>
+                        directory and all of its subdirectories.<br>
+                        2. Use the Registry Editor to remove the
+                        following registry entries:<br>
+                        </font>
+                        <div align="center">
+                          <center>
+                          <table border="1" width="90%" bordercolor="#CC0000" cellspacing="0">
+                            <tr>
+                              <td width="100%">
+                                <div align="center">
+                                  <table border="0" width="100%" bgcolor="#FFFFCC" cellspacing="0">
+                                    <tr>
+                            <td WIDTH="65">
+                              <p ALIGN="LEFT"><b><font FACE="Arial" size="2">
+                              Key:</font></b></td>
+                            <td WIDTH="100%" HEIGHT="0">
+                              <p ALIGN="LEFT"><font FACE="Arial" size="2">
+                              HKEY_LOCAL_MACHINE\SOFTWARE</font></td>
+                                    </tr>
+                                    <tr>
+                            <td WIDTH="65" HEIGHT="0">
+                              <p ALIGN="LEFT"><b><font FACE="Arial" size="2">
+                              Subkey:</font></b></td>
+                            <td WIDTH="100%" HEIGHT="0">
+                              <p ALIGN="LEFT"><font FACE="Arial" size="2">
+                              Microsoft\OS/2 Subsystem for NT</font></td>
+                                    </tr>
+                                    <tr>
+                            <td WIDTH="65" HEIGHT="0">
+                              <p ALIGN="LEFT"><b><font FACE="Arial" size="2">
+                              Entry:</font></b></td>
+                            <td WIDTH="100%" HEIGHT="0">
+                              <p ALIGN="LEFT"><font FACE="Arial" size="2">
+                              delete all subkeys</font></td>
+                                    </tr>
+                                    <font size="2" face="Arial">
+                                    <tr>
+                            <td WIDTH="100%" colspan="2">
+                              <hr>
+                              <font size="2" face="Arial">
+                        </font>
+                                      </td>
+                                    </tr>
+                        </font>
+                                    <tr>
+                            <td WIDTH="65">
+                              <p ALIGN="LEFT"><b><font FACE="Arial" size="2">
+                              Key:</font></b></td>
+                            <td WIDTH="100%" HEIGHT="0">
+                              <p ALIGN="LEFT"><font FACE="Arial" size="2">
+                              HKEY_LOCAL_MACHINE\SYSTEM</font></td>
+                                    </tr>
+                                    <tr>
+                            <td WIDTH="65">
+                              <p ALIGN="LEFT"><b><font FACE="Arial" size="2">
+                              Subkey:</font></b></td>
+                            <td WIDTH="100%" HEIGHT="0">
+                              <p ALIGN="LEFT"><font FACE="Arial" size="2">
+                              CurrentControlSet\Control\Session
+                              Manager\Environment</font></td>
+                                    </tr>
+                                    <tr>
+                            <td WIDTH="65">
+                              <p ALIGN="LEFT"><b><font FACE="Arial" size="2">
+                              Entry:</font></b></td>
+                            <td WIDTH="100%" HEIGHT="0">
+                              <p ALIGN="LEFT"><font FACE="Arial" size="2">
+                              Os2LibPath</font></td>
+                                    </tr>
+                                    <tr>
+                            <td WIDTH="65">
+                              <p ALIGN="LEFT"><b><font FACE="Arial" size="2">
+                              Value:</font></b></td>
+                            <td WIDTH="100%" HEIGHT="0">
+                              <p ALIGN="LEFT"><font FACE="Arial" size="2">
+                              delete entry</font></td>
+                                    </tr>
+                                    <font size="2" face="Arial">
+                                    <tr>
+                            <td WIDTH="100%" colspan="2">
+                              <hr>
+                                      </td>
+                                    </tr>
+                        </font>
+                                    <tr>
+                            <td WIDTH="65" HEIGHT="0">
+                              <p ALIGN="LEFT"><b><font FACE="Arial" size="2">
+                              Key:</font></b></td>
+                            <td WIDTH="100%" HEIGHT="0">
+                              <p ALIGN="LEFT"><font FACE="Arial" size="2">
+                              HKEY_LOCAL_MACHINE\SYSTEM</font></td>
+                                    </tr>
+                                    <tr>
+                            <td WIDTH="65" HEIGHT="0">
+                              <p ALIGN="LEFT"><b><font FACE="Arial" size="2">
+                              Subkey:</font></b></td>
+                            <td WIDTH="100%" HEIGHT="0">
+                              <p ALIGN="LEFT"><font FACE="Arial" size="2">
+                              CurrentControlSet\Control\Session Manager\SubSystems</font></td>
+                                    </tr>
+                                    <tr>
+                            <td WIDTH="65" HEIGHT="0">
+                              <p ALIGN="LEFT"><b><font FACE="Arial" size="2">
+                              Entry:</font></b></td>
+                            <td WIDTH="100%" HEIGHT="0">
+                              <p ALIGN="LEFT"><font FACE="Arial" size="2">
+                              Optional</font></td>
+                                    </tr>
+                                    <tr>
+                            <td WIDTH="65" HEIGHT="0">
+                              <p ALIGN="LEFT"><b><font FACE="Arial" size="2">
+                              Values:</font></b></td>
+                            <td WIDTH="100%" HEIGHT="0">
+                              <p ALIGN="LEFT"><font FACE="Arial" size="2">
+                              delete entry</font></td>
+                                    </tr>
+                                    <font size="2" face="Arial">
+                                    <tr>
+                            <td WIDTH="100%" colspan="2">
+                              <hr>
+                                      </td>
+                                    </tr>
+                        </font>
+                                    <tr>
+                            <td width="65">
+                              <p ALIGN="LEFT"><b><font FACE="Arial" size="2">
+                              Key:</font></b></td>
+                            <td WIDTH="567" HEIGHT="0">
+                              <p ALIGN="LEFT"><font FACE="Arial" size="2">
+                              HKEY_LOCAL_MACHINE\SYSTEM</font></td>
+                                    </tr>
+                                    <tr>
+                            <td width="65">
+                              <p ALIGN="LEFT"><b><font FACE="Arial" size="2">
+                              Subkey:</font></b></td>
+                            <td WIDTH="567" HEIGHT="0">
+                              <p ALIGN="LEFT"><font FACE="Arial" size="2">
+                              CurrentControlSet\Control\Session Manager\SubSystems</font></td>
+                                    </tr>
+                                    <tr>
+                            <td width="65">
+                              <p ALIGN="LEFT"><b><font FACE="Arial" size="2">
+                              Entry:</font></b></td>
+                            <td WIDTH="567" HEIGHT="0">
+                              <p ALIGN="LEFT"><font FACE="Arial" size="2">
+                              delete entries for OS2 and POSIX</font></td>
+                                    </tr>
+                                    <font size="2" face="Arial">
+                                    <tr>
+                                      <td width="65">&nbsp;</td>
+                                      <td width="100%">&nbsp;</td>
+                                    </tr>
+                                    </table>
+                                  </div>
+                                </font>
+                                </td>
+                              </tr>
+                            </table>
+                          </center>
+                          </div>
+                        <p ALIGN="LEFT"><font FACE="Arial" SIZE="2">The
+                            changes take effect the next time the computer is
+                            started. You might want to update the emergency
+                            repair disk to reflect these changes.</p>
+                        </font></td>
+                    </tr>
+                    <tr>
+                      <td width="5%" valign="top">
+                      <img border="0" src="../images/clipboard_check.gif" width="32" height="32"></td>
+                      <td width="95%"><font size="2" face="Arial"><b><i>Consider
+                        using SmartCard or Biometric devices instead of
+                        passwords.</i></b><br>
+                        The more stringent your password policy is, the more
+                        likely your users will begin keeping paper password
+                        lists in their desk drawers, or taped to the bottom of
+                        their keyboard. Windows 2000 supports these devices, so
+                        consider the costs vs. risks of your most sensitive
+                        data.</font></td>
+                    </tr>
+                    <tr>
+                      <td width="5%" valign="top">
+                      <img border="0" src="../images/clipboard_check.gif" width="32" height="32"></td>
+                      <td width="95%"><font size="2" face="Arial"><b><i>Consider
+                        implementing IPSec</i></b><br>
+                        Basically, IPSec provides encryption for network
+                        sessions using the Internet Protocol (IP) and promises
+                        to offer transparent and automatic encryption of network
+                        connections. For more information, click <a href="../networking/ipsec.htm">here</a></font></td>
+                    </tr>
+                  </table>
+                </div>
+              </td>
+              <td width="100%"><script language="JavaScript" type="text/javascript">
+<!--
+URL = new String(location.pathname);
+
+// patterns to match go here
+areas = new Array('BackOffice','security','antivirus/default.htm','disaster.htm');
+// corresponding zones go here
+zones = new Array('BackOffice','sec','sec','sec');
+
+
+for (i=0; i<areas.length; i++) {
+     var pattern = URL.match(areas[i]);
+		 if(pattern) {
+		    var foundIt = zones[i];
+				break;
+		 }
+}
+if (pattern) {
+  var zone = foundIt;
+} else { var zone = "albm"; 
+}
+if (typeof adPTile == "undefined") var adPTile = 0;
+adPTile = adPTile + 1;
+if (typeof adDcopt == "undefined") {
+    var adDcopt = "ist";
+} else {
+    adDcopt = "";
+}
+
+document.write("<SCRI");
+document.write("PT LANGUAGE='JavaScript1.1' SRC='http://ad.doubleclick.net/adj/albm/" + zone + ";dcopt=" + adDcopt + ";ptile=" + adPTile + ";sz=160x600;ord=" + Math.round(Math.random() * 10000000) + "?'></SCR");
+document.write("IPT>");
+
+var adCall = "http://ad.doubleclick.net/adj/albm/" + zone + ";dcopt=" + adDcopt + ";ptile=" + adPTile + ";sz=160x600;ord=" + Math.round(Math.random() * 10000000) + "?" ;
+if (window.location.search.indexOf("adString=on") != -1)
+    window.alert("http://ad.doubleclick.net/adj/albm/" + zone + ";dcopt=" + adDcopt + ";ptile=" + adPTile + ";sz=160x600;ord=" + Math.round(Math.random() * 10000000) + "?");
+
+
+//-->
+</script>
+
+</td>
+            </tr>
+          </table>
+        </div>
+        </td>
+    </tr>
+    <tr>
+      <td width="88%">
+        <hr>
+        <div align="center">
+          <center>
+          <table border="1" cellspacing="0" width="400" bordercolor="#FF0000">
+            <tr>
+              <td bordercolor="#FF0000">
+                <div align="center">
+                  <table border="0" cellspacing="0" width="400">
+                    <tr>
+                      <td width="30">
+                        <p align="center"><a href="mailto:feedback@labmice.net">
+                        <img border="0" ../images/feedback.gif" src="../images/Feedback.gif" width="32" height="32"></a></td>
+                      <td width="100%">
+                        <p align="center"><b><font face="Arial" size="4" color="#FF0000">Send us your feedback!<br>
+                        </font></b><font face="Arial" color="#000000" size="2">If
+                        you have any questions, comments, or suggestions that
+                        would help us improve this page, please <a href="mailto:feedback@labmice.net">drop
+                        us a line</a> and let us know!</font></td>
+                    </tr>
+                  </table>
+                </div>
+              </td>
+            </tr>
+          </table>
+          </center>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td width="88%">
+        <p align="center"><IMG SRC="http://service.bfast.com/bfast/serve?bfmid=37628499&siteid=38466770&bfpage=test_hot_deals" BORDER="0" WIDTH="1" HEIGHT="1" NOSAVE >
+        <A HREF="http://service.bfast.com/bfast/click?bfmid=37628499&siteid=38466770&bfpage=test_hot_deals" TARGET="_top"><IMG SRC="http://di.dell.com/images/us/html/segments/bsd/images/affiliates/affiliate_468x60.gif" BORDER="0" WIDTH="468" HEIGHT="60" ALT="Dell Business Weekly Promo"></A>
+</td>
+    </tr>
+    <tr>
+      <td width="88%">
+<!-- NEW ADSENSE -->
+<!-- Google AdSense -->
+<script>
+<!--
+function ss(w){window.status=w;return true;}
+function cs(){window.status='';}
+function ga(o,e){
+	if (document.getElementById){
+		a=o.id.substring(1);
+		p="";
+		g=e.target;
+			if(g){
+				t=g.id;f=g.parentNode;
+					if(f)p=f.id;
+				}
+			else{t=e.srcElement.id;}
+				if(t==a||p==a)return;location.href=document.getElementById(a).href
+	}
+}
+//-->
+</script>
+
+<style>
+<!--
+.ch{cursor:pointer;cursor:hand}
+//-->
+</style>
+
+<script language="JavaScript">
+<!--
+function google_ad_request_done(google_ads) {
+var i;
+if(google_ads.length > 0) {
+	document.write('<!-- begin Google AdSense writes -->');
+	document.write('<table border="0" width="100%">');
+	document.write('<tr>');
+	document.write('<td colspan="2">&nbsp;</td>');
+	document.write('</tr>');
+	document.write('<tr>');
+	document.write('<td width="100%" colspan="2" background="/images/graybartile.gif" height="29">');
+	document.write('<font size="3" face="Arial" color="#FFFFFF"><b>Relevant Sponsored Links</b></font>');
+	document.write('</td>');
+	document.write('</tr>');
+
+    for(i = 0; i < google_ads.length; ++i) {
+		document.write('<!-- begin ad -->');
+		document.write('<tr>');
+		document.write('<td colspan="2" style="cursor:pointer; cursor:hand" onMouseOver="return ss(\'' + google_ads[i].visible_url + '\')" onMouseOut="cs()" onClick="window.location.href=\'' + google_ads[i].url + '\'">');
+		document.write('<br>');
+		document.write('<a class="box2" target="_blank" href="' + google_ads[i].url + '"><b><font face="Arial" size="3">' + google_ads[i].line1 + '</font></b></a><font size="2" face="Arial"><br>' + google_ads[i].line1 + ' ' + google_ads[i].line2 + ' ' + google_ads[i].line3 + '<br>');
+		document.write('<a href="' + google_ads[i].url + '" style="color: red; text-decoration: none">' + google_ads[i].visible_url + '</a></font>');
+		document.write('</td>');
+		document.write('</tr>');
+		document.write('<!-- end ad -->');
+
+	}
+	
+	document.write('<tr><td colspan="2"><hr></td></tr>');
+	document.write('</table>');
+	document.write('<!-- end Google AdSense writes -->');
+}
+}
+// -->
+</script>
+
+<script language="JavaScript">
+<!--
+         google_ad_client = 'techtarget_js';
+         google_ad_channel = 'techtarget_labmice';
+         google_ad_output = 'js';
+         google_max_num_ads = 5;
+// -->
+</script>
+
+<script language="JavaScript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+<!-- end Google AdSense --> 
+
+<!-- END NEW ADSENSE -->
+<b><i><font size="1" face="Tahoma" color="#808080">This page and its contents are Copyright 1999-2003 by LabMice.net.
+        Microsoft, NT, BackOffice, MCSE, and Windows are registered trademarks of Microsoft Corporation. Microsoft Corporation in no way endorses or is
+        affiliated with LabMice.net. The products referenced in this site are provided by parties other than LabMice.net. LabMice.net makes no representations regarding either the products or any information about the products.
+        Any questions, complaints, or claims regarding the products must be
+        directed to the appropriate manufacturer or vendor. This document is for
+        informational purposes only. LABMICE.NET
+        MAKES NO WARRANTIES, EXPRESS OR IMPLIED, IN THIS DOCUMENT.</font></i></b></td>
+    </tr>
+  </table>
+</div>
+<script language="JavaScript"> 
+<!-- BEGIN WEBSIDESTORY CODE v7.3 -->   
+
+
+var _pn = document.location.href;
+var _mlc="/labmice";
+var _seg="";
+var _cmp="";
+var _gp="";
+var _cmpn="";
+var _gpn="";
+var _cp="null";
+var _acct="DM5212204PCA83EN3;DM521219CPNS83EN3";
+var _pndef="title";
+var _ctdef="full";
+var _dlf="n";
+var _elf="n";
+var _epg="n";
+var _mn="we91";
+var _gn="ehg-techtarget.hitbox.com";
+var _lp=location.protocol.indexOf('https')>-1?'https://':'http://';
+var  _hcv=68; 
+function _gf(x){return x.substring(x.lastIndexOf("/")+1,x.length);};
+
+function _wn(_nm)
+{
+	return(!_nm.indexOf("PUT")&&_nm.indexOf("NAME")>0)||(!_nm.indexOf("CONTENT")&&_nm.indexOf("CATEGORY")>0)
+};
+
+function _gd(x,w)
+{
+	var d=x.lastIndexOf("/");
+	var b=(w!="full")?x.lastIndexOf("/",d-2):x.indexOf("/");return(b==d)?"/":x.substring(b,d);
+};
+function _vc(_ml)
+{
+	_mll=_ml.length-1;
+	if(_ml.lastIndexOf("/")==_mll){
+		_ml=_ml.substring(0,_mll)
+	}
+	if(_ml.indexOf("/")!=0)_ml="/"+_ml;return _ml
+};
+function _ps(b,_pml)
+{
+	var l=location.pathname;
+	if(b&&_wn(_pml))
+	{
+		return(_pndef=="title"&&document.title!="")?document.title:_gf(l)?_gf(l):_pndef;
+	}
+	else
+	{
+		return _wn(_pml)?_gd(l,_ctdef):_vc(_pml,_pml.length-1);
+	}
+};
+
+function _pm(_ml,_fml,h)
+{
+	if(_ml.indexOf(";")!=-1)
+	{
+		_nml=_ml.substring(0,_ml.indexOf(";"));
+		_rm=_ml.substring(_ml.indexOf(";")+1,_ml.length);
+		_fml+=_ps(h,_nml)+";";
+		_fp=_pm(_rm,_fml,h);
+		return _fp;
+	}
+	else
+	{
+		_fml+=_ps(h,_ml);
+		return _fml;
+	}
+}
+
+var _sv=10;
+var _bn=navigator.appName;
+if(_bn.substring(0,9)=="Microsoft")
+{
+	_bn="MSIE";
+};
+var _bv=(Math.round(parseFloat(navigator.appVersion)*100));
+if((_bn=="MSIE")&&(parseInt(_bv)==2))_bv=301;
+var _rf=escape(document.referrer);
+_mlc=_pm(_mlc,"",false);
+_pn=_pm(_pn,"",true);
+
+</script>
+<script language="javascript1.1">
+_sv=11;
+</script>
+
+<script language="javascript1.1" defer src="/hbe.js"></script>
+
+<script language="JavaScript">
+
+if(_sv<11){if(document.cookie.indexOf("CP=")!=-1)
+{
+	_ce="y";
+}
+else
+{
+	document.cookie="CP=null*; path=/; expires=Wed, 1 J"+"an 2020 00:00:00 GMT";
+	_ce=(document.cookie.indexOf("CP=")!=-1)?"y":"n";};
+	if((_rf=="undefined")||(_rf==""))
+	{
+		_rf="bookmark";};
+		document.write("<img src='"+_lp+_gn+"/HG?hc="+_mn+"&hb="+escape(_acct)+"&n="+escape(_pn)+"&bn="+escape(_bn)+"&bv="+_bv+"&ce="+_ce+"&ss=na&sc=na&dt=&sv="+_sv+"&con="+escape(_ct)+"&vcon="+escape(_mlc)+"&epg="+_epg+"&hp=u&cy=u&ja=na&ln=na&cp="+escape(_cp)+"&pl=&cd="+"1&hv=6&seg="+_seg+"&rf="+_rf+"' border=0 height=1 width=1>");
+	}
+</script><noscript><img src="http://ehg-techtarget.hitbox.com/HG?hc=we91&cd=1&hv=6&ce=u&hb=DM521219CPNS83EN3&n=labmice-noscript&vcon=labmice&seg=&cmp=&gp=" border="0" width="1" height="1"></noscript><!--//-->
+<!-- END WEBSIDESTORY CODE  --></script>
+ </body>
+
+</html>

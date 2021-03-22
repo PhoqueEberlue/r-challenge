@@ -1,0 +1,216 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0065)http://java.sun.com/docs/books/tutorial/i18n/intro/checklist.html -->
+<HTML><HEAD><TITLE>Checklist</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<SCRIPT language=JavaScript>
+<!-- hide
+function openWin(term) {
+  url="../../information/glossary.html#" + term;
+  myWin= window.open(url, "Glossary",
+              "width=400,height=150,scrollbars=yes,status=no,toolbar=no,menubar=no");
+  myWin.focus();
+}
+//-->
+</SCRIPT>
+
+<META content="MSHTML 6.00.2800.1400" name=GENERATOR></HEAD>
+<BODY link=#000099 bgColor=#ffffff><B><FONT size=-1>The Java</FONT><SUP><FONT 
+size=-2>TM</FONT></SUP> <FONT size=-1>Tutorial</FONT></B> <BR>
+<TABLE width=550 summary=layout>
+  <TBODY>
+  <TR>
+    <TD vAlign=center align=left><A 
+      href="http://java.sun.com/docs/books/tutorial/i18n/intro/steps.html" 
+      target=_top><IMG height=26 alt="Previous Page" 
+      src="checklist_000000000040_files/PreviousArrow.gif" width=26 align=middle 
+      border=0></A> <A 
+      href="http://java.sun.com/docs/books/tutorial/i18n/TOC.html#intro" 
+      target=_top><IMG height=26 alt="Lesson Contents" 
+      src="checklist_000000000040_files/TOCIcon.gif" width=26 align=middle 
+      border=0></A> <A 
+      href="http://java.sun.com/docs/books/tutorial/i18n/locale/index.html" 
+      target=_top><IMG height=26 alt="Next Page" 
+      src="checklist_000000000040_files/NextArrow.gif" width=26 align=middle 
+      border=0></A></TD>
+    <TD vAlign=center align=middle><FONT size=-1><A 
+      href="http://java.sun.com/docs/books/tutorial/index.html" 
+      target=_top>Start of Tutorial</A> &gt; <A 
+      href="http://java.sun.com/docs/books/tutorial/i18n/index.html" 
+      target=_top>Start of Trail</A> &gt; <A 
+      href="http://java.sun.com/docs/books/tutorial/i18n/intro/index.html" 
+      target=_top>Start of Lesson</A> </FONT></TD>
+    <TD vAlign=center align=right><FONT size=-1><A 
+      href="http://java.sun.com/docs/books/tutorial/search.html" 
+      target=_top>Search</A> <BR><A 
+      href="http://java.sun.com/docs/books/tutorial/forms/sendusmail.html">Feedback 
+      Form</A> </FONT></TD></TR></TBODY></TABLE><IMG height=8 alt="" 
+src="checklist_000000000040_files/blueline.gif" width=550 align=bottom> 
+<BR><FONT size=-1><B>Trail</B>: Internationalization <BR><B>Lesson</B>: 
+Introduction </FONT>
+<H2>Checklist </H2>
+<BLOCKQUOTE>Many programs are not internationalized when first written. These 
+  programs may have started as prototypes, or perhaps they were not intended for 
+  international distribution. If you must internationalize an existing program, 
+  take the following steps: </BLOCKQUOTE>
+<H3>Identify Culturally Dependent Data</H3>
+<BLOCKQUOTE>Text messages are the most obvious form of data that varies with 
+  culture. However, other types of data may vary with region or language. The 
+  following list contains examples of culturally dependent data: 
+  <UL>
+    <LI>Messages 
+    <LI>Labels on GUI components 
+    <LI>Online help 
+    <LI>Sounds 
+    <LI>Colors 
+    <LI>Graphics 
+    <LI>Icons 
+    <LI>Dates 
+    <LI>Times 
+    <LI>Numbers 
+    <LI>Currencies 
+    <LI>Measurements 
+    <LI>Phone numbers 
+    <LI>Honorifics and personal titles 
+    <LI>Postal addresses 
+    <LI>Page layouts </LI></UL></BLOCKQUOTE>
+<H3>Isolate Translatable Text in Resource Bundles</H3>
+<BLOCKQUOTE>Translation is costly. You can help reduce costs by isolating the 
+  text that must be translated in <CODE>ResourceBundle</CODE> objects. 
+  Translatable text includes status messages, error messages, log file entries, 
+  and GUI component labels. This text is hardcoded into programs that haven't 
+  been internationalized. You need to locate all occurrences of hardcoded text 
+  that is displayed to end users. For example, you should clean up code like 
+  this: 
+  <BLOCKQUOTE><PRE>String buttonLabel = "OK";
+...
+JButton okButton = new JButton(buttonLabel);
+</PRE></BLOCKQUOTE>
+  <P>See the section <A 
+  href="http://java.sun.com/docs/books/tutorial/i18n/resbundle/index.html">Isolating 
+  Locale-Specific Data</A> for details. </P></BLOCKQUOTE>
+<H3>Deal with Compound Messages</H3>
+<BLOCKQUOTE>Compound messages contain variable data. In the message "The disk 
+  contains 1100 files." the integer 1100 may vary. This message is difficult to 
+  translate because the position of the integer in the sentence is not the same 
+  in all languages. The following message is not translatable, because the order 
+  of the sentence elements is hardcoded by concatenation: 
+  <BLOCKQUOTE><PRE>Integer fileCount;
+...
+String diskStatus = "The disk contains " + fileCount.toString() 
+                    + " files.";
+</PRE></BLOCKQUOTE>Whenever possible, you should avoid constructing compound 
+  messages, because they are difficult to translate. However, if your 
+  application requires compound messages, you can handle them with the 
+  techniques described in the section <A 
+  href="http://java.sun.com/docs/books/tutorial/i18n/format/messageintro.html">Messages</A>. 
+</BLOCKQUOTE>
+<H3>Format Numbers and Currencies</H3>
+<BLOCKQUOTE>If your application displays numbers and currencies, you must 
+  format them in a locale-independent manner. The following code is not yet 
+  internationalized, because it will not display the number correctly in all 
+  countries: 
+  <BLOCKQUOTE><PRE>Double amount;
+TextField amountField;
+...
+String displayAmount = amount.toString();
+amountField.setText(displayAmount);
+</PRE></BLOCKQUOTE>
+  <P>You should replace the preceding code with a routine that formats the 
+  number correctly. The Java programming language provides several classes that 
+  format numbers and currencies. These classes are discussed in the section <A 
+  href="http://java.sun.com/docs/books/tutorial/i18n/format/numberintro.html">Numbers 
+  and Currencies</A>. </P></BLOCKQUOTE>
+<H3>Format Dates and Times</H3>
+<BLOCKQUOTE>Date and time formats differ with region and language. If your 
+  code contains statements like the following, you need to change it: 
+  <BLOCKQUOTE><PRE>Date currentDate = new Date();
+TextField dateField;
+...
+String dateString = currentDate.toString();
+dateField.setText(dateString);
+</PRE></BLOCKQUOTE>
+  <P>If you use the date-formatting classes, your application can display dates 
+  and times correctly around the world. For examples and instructions, see the 
+  section <A 
+  href="http://java.sun.com/docs/books/tutorial/i18n/format/dateintro.html">Dates 
+  and Times</A>. </P></BLOCKQUOTE>
+<H3>Use Unicode Character Properties</H3>
+<BLOCKQUOTE>The following code tries to verify that a character is a letter: 
+  <BLOCKQUOTE><PRE>char ch;
+...
+if ((ch &gt;= 'a' &amp;&amp; ch &lt;= 'z') || 
+    (ch &gt;= 'A' &amp;&amp; ch &lt;= 'Z'))       // WRONG!
+</PRE></BLOCKQUOTE>Watch out for code like this, because it won't work with 
+  languages other than English. For example, the <CODE>if</CODE> statement 
+  misses the character ü in the German word Grün. 
+  <P>The <CODE>Character</CODE> comparison methods use the Unicode standard to 
+  identify character properties. Thus you should replace the previous code with 
+  the following: 
+  <BLOCKQUOTE><PRE>char ch;
+...
+if (Character.isLetter(ch))
+</PRE></BLOCKQUOTE>For more information on the <CODE>Character</CODE> 
+  comparison methods, see the section <A 
+  href="http://java.sun.com/docs/books/tutorial/i18n/text/charintro.html">Checking 
+  Character Properties</A>. </BLOCKQUOTE>
+<H3>Compare Strings Properly</H3>
+<BLOCKQUOTE>When sorting text you often compare strings. If the text is 
+  displayed, you shouldn't use the comparison methods of the <CODE>String</CODE> 
+  class. A program that hasn't been internationalized might compare strings as 
+  follows: 
+  <BLOCKQUOTE><PRE>String target;
+String candidate;
+...
+if (target.equals(candidate)) {
+...
+if (target.compareTo(candidate) &lt; 0) {
+...
+</PRE></BLOCKQUOTE>
+  <P>The <CODE>String.equals</CODE> and <CODE>String.compareTo</CODE> methods 
+  perform binary comparisons, which are ineffective when sorting in most 
+  languages. Instead you should use the <CODE>Collator</CODE> class, which is 
+  described in the section <A 
+  href="http://java.sun.com/docs/books/tutorial/i18n/text/collationintro.html">Comparing 
+  Strings</A>. </P></BLOCKQUOTE>
+<H3>Convert Non-Unicode Text</H3>
+<BLOCKQUOTE>
+  <P>Characters in the Java programming language are encoded in Unicode. If your 
+  application handles non-Unicode text, you might need to translate it into 
+  Unicode. For more information, see the section <A 
+  href="http://java.sun.com/docs/books/tutorial/i18n/text/convertintro.html">Converting 
+  Non-Unicode Text</A>. </P></BLOCKQUOTE><IMG height=8 alt="" 
+src="checklist_000000000040_files/blueline.gif" width=550 align=bottom> <BR>
+<TABLE width=550 summary=layout>
+  <TBODY>
+  <TR>
+    <TD vAlign=center align=left><A 
+      href="http://java.sun.com/docs/books/tutorial/i18n/intro/steps.html" 
+      target=_top><IMG height=26 alt="Previous Page" 
+      src="checklist_000000000040_files/PreviousArrow.gif" width=26 align=middle 
+      border=0></A> <A 
+      href="http://java.sun.com/docs/books/tutorial/i18n/TOC.html#intro" 
+      target=_top><IMG height=26 alt="Lesson Contents" 
+      src="checklist_000000000040_files/TOCIcon.gif" width=26 align=middle 
+      border=0></A> <A 
+      href="http://java.sun.com/docs/books/tutorial/i18n/locale/index.html" 
+      target=_top><IMG height=26 alt="Next Page" 
+      src="checklist_000000000040_files/NextArrow.gif" width=26 align=middle 
+      border=0></A></TD>
+    <TD vAlign=center align=middle><FONT size=-1><A 
+      href="http://java.sun.com/docs/books/tutorial/index.html" 
+      target=_top>Start of Tutorial</A> &gt; <A 
+      href="http://java.sun.com/docs/books/tutorial/i18n/index.html" 
+      target=_top>Start of Trail</A> &gt; <A 
+      href="http://java.sun.com/docs/books/tutorial/i18n/intro/index.html" 
+      target=_top>Start of Lesson</A> </FONT></TD>
+    <TD vAlign=center align=right><FONT size=-1><A 
+      href="http://java.sun.com/docs/books/tutorial/search.html" 
+      target=_top>Search</A> <BR><A 
+      href="http://java.sun.com/docs/books/tutorial/forms/sendusmail.html">Feedback 
+      Form</A> </FONT></TD></TR></TBODY></TABLE>
+<P><FONT size=-1><A 
+href="http://java.sun.com/docs/books/tutorial/information/copyright.html">Copyright</A> 
+1995-2005 Sun Microsystems, Inc. All rights reserved. </FONT></P>
+<SCRIPT language=JavaScript 
+src="checklist_000000000040_files/s_code_remote.js"></SCRIPT>
+</BODY></HTML>

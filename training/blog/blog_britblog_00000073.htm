@@ -1,0 +1,755 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>yardbird and strings</title>
+
+  <!-- Meta Information -->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta name="generator" content="Blogger" />
+<link rel="alternate" type="application/atom+xml" title="yardbird and strings" href="atom.xml" />
+<link rel="service.post" type="application/atom+xml" title="yardbird and strings" href="http://www.blogger.com/atom/7553324" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.blogger.com/rsd.g?blogID=7553324" />
+<style type="text/css">
+@import url("http://www.blogger.com/css/blog_controls.css");
+@import url("http://www.blogger.com/dyn-css/authorization.css?blogID=7553324");
+</style>
+
+
+  <style type="text/css">
+/*
+-----------------------------------------------
+Blogger Template Style
+Name:     565
+Designer: Douglas Bowman
+URL:      www.stopdesign.com
+Date:     28 Feb 2004
+----------------------------------------------- */
+
+
+body {
+  background:#cdb;
+  margin:0;
+  padding:10px 0 14px;
+  font:x-small Verdana,Sans-serif;
+  text-align:center;
+  color:#333;
+  font-size/* */:/**/small;
+  font-size: /**/small;
+  }
+
+
+/* Page Structure
+----------------------------------------------- */
+#wrap {
+  position:relative;
+  top:4px;
+  left:4px;
+  background:#ab8;
+  width:744px;
+  margin:0 auto;
+  text-align:left;
+  }
+#wrap2 {
+  position:relative;
+  top:-4px;
+  left:-4px;
+  background:#fff;
+  padding:10px;
+  }
+#content {
+  background:url("http://www.blogblog.com/no565/bg_content.gif") repeat-y left top;
+  width:100%;
+  font-size:85%;
+  }
+#main {
+  background:#cdb url("http://www.blogblog.com/no565/corner_main.gif") no-repeat right top;
+  width:460px;
+  float:left;
+  color:#333;
+  }
+#main2 {
+  margin:0;
+  padding:15px 20px;
+  }
+#sidebar {
+  background:#565 url("http://www.blogblog.com/no565/corner_sidebar.gif") no-repeat left top;
+  width:254px;
+  float:right;
+  padding:0;
+  color:#cdb;
+  }
+#sidebar2 {
+  margin:0;
+  padding:2px 20px 10px;
+  }
+
+
+/* Links
+----------------------------------------------- */
+a:link {
+  color:#388;
+  text-decoration:none;
+  }
+a:visited {
+  color:#776;
+  text-decoration:none;
+  }
+a:hover {
+  color:#333;
+  text-decoration:underline;
+  }
+a img {
+  border-width:0;
+  }
+#sidebar a:link {
+  color:#fff;
+  }
+#sidebar a:visited {
+  color:#ab9;
+  }
+#sidebar a:hover {
+  color:#fff;
+  }
+
+
+/* Header
+----------------------------------------------- */
+#header {
+  background:#be4 url("http://www.blogblog.com/no565/topleft.gif") no-repeat left bottom;
+  padding:0 0 0 160px;
+  margin:0 0 10px;
+  color:#fff;
+  width:100%;
+  width/* */:/**/auto;
+  width:auto;
+  }
+#blog-title {
+  background:url("http://www.blogblog.com/no565/bg_header.gif") no-repeat left top;
+  margin:0;
+  padding:40px 0 0;
+  font:bold 275%/97px Helvetica,Arial,Verdana,Sans-serif;
+  text-transform:lowercase;
+  }
+#blog-title a {
+  color:#fff;
+  text-decoration:none;
+  }
+.postpage #blog-title {
+  padding-top:0;
+  background-position:0 -40px;
+  }
+
+
+/* Description
+----------------------------------------------- */
+#description {
+  background:#f90 url("http://www.blogblog.com/no565/bg_desc_top.gif") no-repeat left top;
+  margin:0 0 10px;
+  padding:12px 0 0;
+  color:#fff;
+  }
+#description p {
+  background:url("http://www.blogblog.com/no565/bg_desc_bot.gif") no-repeat left bottom;
+  margin:0;
+  padding:0 0 12px;
+  }
+#description em {
+  /* To remove the word next to the desription, delete the following background property */
+  background:url("http://www.blogblog.com/no565/temp_no.gif") no-repeat left center;
+  /* Keep everything below */
+  display:block;
+  padding:0 0 0 160px;
+  font:bold 75%/1.6em Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  min-height:12px;
+  }
+.postpage #description em {
+  font-size:1px;
+  line-height:1px;
+  color:#8df;
+  visibility:hidden;
+  }
+
+
+/* Posts
+----------------------------------------------- */
+.date-header {
+  margin:0 0 .5em;
+  font:bold 112%/1.4em Arial,Verdana,Sans-serif;
+  text-transform:lowercase;
+  color:#fff;
+  }
+.post {
+  margin:0 0 2em;
+  }
+.post-title {
+  margin:0 0 .25em;
+  font:bold 150%/1.4em Helvetica,Arial,Verdana,Sans-serif;
+  color:#333;
+  }
+#main .post-title a {
+  text-decoration:none;
+  color:#366;
+  }
+#main .post-title a:hover {
+  color:#333;
+  }
+.post p, .post-body {
+  margin:0 0 .75em;
+  line-height:1.6em;
+  }
+.post-footer {
+  color:#ab9;
+  text-transform:lowercase;
+  }
+.post-footer em {
+  font-style:normal;
+  color:#787;
+  }
+.post blockquote {
+  margin:1em 20px;
+  padding:5px 0;
+  border:2px solid #dec;
+  border-width:2px 0;
+  }
+.post blockquote p {
+  margin:.5em 0;
+  }
+.post img {
+  border:5px solid #fff;
+  }
+
+
+/* Comments
+----------------------------------------------- */
+#comments {
+  margin:2em 0 0;
+  border-top:2px solid #dec;
+  padding-top:1em;
+  }
+#comments h4 {
+  margin:0 0 .25em;
+  font:bold 150%/1.4em Helvetica,Arial,Verdana,Sans-serif;
+  text-transform:lowercase;
+  color:#366;
+  }
+#comments-block {
+  margin:0;
+  line-height:1.6em;
+  }
+.comment-poster {
+  margin:0 0 .25em;
+  font:bold 112%/1.4em Arial,Verdana,Sans-serif;
+  text-transform:lowercase;
+  }
+.comment-body, .comment-body p {
+  margin:0 0 .75em;
+  }
+p.comment-timestamp {
+  margin:-.25em 0 2em;
+  }
+.deleted-comment {
+  font-style:italic;
+  color:gray;
+  }
+
+
+/* Sidebar
+----------------------------------------------- */
+.sidebar-title {
+  margin:1em 0 .25em;
+  font:bold 150%/1.4em Helvetica,Arial,Verdana,Sans-serif;
+  color:#897;
+  text-transform:lowercase;
+  }
+#sidebar ul {
+  margin:0 0 1.5em;
+  padding:0;
+  list-style:none;
+  }
+#sidebar li {
+  margin:0;
+  padding:0 0 .25em 20px;
+  text-indent:-20px;
+  line-height:1.4em;
+  }
+#sidebar p {
+  margin:0 0 .75em;
+  line-height:1.4em;
+  }
+
+
+/* Profile
+----------------------------------------------- */
+#profile-container {
+  margin:0 0 1.75em;
+  }
+.profile-datablock, .profile-textblock {
+  margin:0 0 .75em;
+  line-height:1.4em;
+  }
+.profile-img {
+  display:inline;
+  }
+.profile-img img {
+  float:left;
+  margin:0 10px 5px 0;
+  border:5px solid #786;
+  }
+.profile-data {
+  font-weight:bold;
+  color:#fff;
+  }
+.profile-data strong {
+  display:none;
+  }
+
+
+/* Footer
+----------------------------------------------- */
+#footer {
+  clear:both;
+  padding:10px 0 0;
+  }
+#footer hr {
+  display:none;
+  }
+#footer p {
+  margin:0;
+  padding:5px 0;
+  }
+
+
+/* Misc
+----------------------------------------------- */
+.clear {
+  clear:both;
+  display:block;
+  height:1px;
+  margin:0;
+  padding:0;
+  font-size:1px;
+  line-height:1px;
+  }
+  </style>
+
+<!-- --><style type="text/css">@import url(http://www.blogger.com/css/navbar/main.css);
+@import url(http://www.blogger.com/css/navbar/1.css);
+</style>
+
+</head>
+
+<body><!-- --><div id="b-navbar"><a href="http://www.blogger.com/" id="b-logo" title="Go to Blogger.com"><img src="http://www.blogger.com/img/navbar/1/logobar.gif" alt="Blogger" width="80" height="24" /></a><form id="b-search" action="http://www.google.com/search"><div id="b-more"><a href="http://www.blogger.com/" id="b-getorpost"><img src="http://www.blogger.com/img/navbar/1/btn_getblog.gif" alt="Get your own blog" width="112" height="15" /></a><a href="http://www.blogger.com/redirect/next_blog.pyra?navBar=true" id="b-next"><img src="http://www.blogger.com/img/navbar/1/btn_nextblog.gif" alt="Next blog" width="72" height="15" /></a></div><div id="b-this"><input type="text" id="b-query" name="q" /><input type="hidden" name="ie" value="UTF-8" /><input type="hidden" name="sitesearch" value="rmyoder.blogspot.com" /><input type="image" src="http://www.blogger.com/img/navbar/1/btn_search.gif" alt="Search" value="Search" id="b-searchbtn" title="Search this blog with Google" /><a href="javascript:BlogThis();" id="b-blogthis">BlogThis!</a></div></form></div><script type="text/javascript"><!--
+
+function BlogThis() {Q='';x=document;y=window;if(x.selection) {Q=x.selection.createRange().text;} else if (y.getSelection) { Q=y.getSelection();} else if (x.getSelection) { Q=x.getSelection();}popw = y.open('http://www.blogger.com/blog_this.pyra?t=' + escape(Q) + '&u=' + escape(location.href) + '&n=' + escape(document.title),'bloggerForm','scrollbars=no,width=475,height=300,top=175,left=75,status=yes,resizable=yes');void(0);}
+
+ --></script><div id="space-for-ie"></div>
+
+<!-- Begin wraps -->
+<div id="wrap"><div id="wrap2">
+
+
+<div id="header">
+  <h1 id="blog-title">
+    
+	yardbird and strings
+	
+  </h1>
+</div>
+
+
+<div id="description">
+  <p><em></em></p>
+</div>
+
+
+<!-- Begin #content -->
+<div id="content">
+
+
+<!-- Begin #main -->
+<div id="main"><div id="main2">
+
+  
+
+    
+  <h2 class="date-header">3.14.2005</h2>
+  
+  
+     
+  <!-- Begin .post -->
+  <div class="post"><a name="111083785150160390"></a>
+     
+    
+    <h3 class="post-title">
+	 
+
+	 i heart spring break
+	 
+    </h3>
+    
+     
+    <div class="post-body">
+    <p>
+      Just for posterity's sake, let's go over all the spring breaks of my college career:<br /><br />2000:  New Orleans with Jessica & Ross.  Mardi Gras!  It smelled awful but I saw Britney Spears, grand marshalling a parade with a plastic shield around her to protect her from projectiles.<br /><br />2001:  Nashville with Jessica.  Camping at a random lake, met a band who is now famous (The Duhks), met a guy claiming to be the first professional mascot ever to parachute into a stadium.  Sort of funny that his name was "Crash."<br /><br />2002:  Left my humdrum life in Costa Rica to vacation at Bocas del Toro, islands off the coast of Panama.  Met lots of people, drank a lot, stayed at a hotel for $5 a night, snorkeled, drank a lot, etc.<br /><br />2003:  Smoky Mountains with Greg.  It was cold but we had rocks to heat in the fire & put in our sleeping bags.  The scenery was amazing, including water bubbles squirting through ice waterfalls in an interesting fashion.  (You had to be there.)<br /><br />2004:  Colorado with Rin.  Free skiing & snowboarding since she worked at A-Basin, lots of night life, I almost died when I lost control skiing down a mountain.  It was the scariest moment of my life.  (Jenna, it was even scarier than when we were chased from our campsite by an unidentified animal in Nevada!)<br /><br />2005:  To be continued ... I have to go now.
+    </p>
+    </div>
+    
+    <p class="post-footer">
+
+      <em>posted by maelstromqueen at <a href="http://rmyoder.blogspot.com/2005/03/i-heart-spring-break.html" title="permanent link">4:47 PM</a></em>
+       |
+         <a class="comment-link" href="http://rmyoder.blogspot.com/2005/03/i-heart-spring-break.html#comments">3 comments</a>
+       
+    </p>
+  
+  </div>
+  <!-- End .post -->
+
+  <!-- Begin #comments -->
+ 
+  <!-- End #comments -->
+
+
+
+    
+  <h2 class="date-header">3.2.2005</h2>
+  
+  
+     
+  <!-- Begin .post -->
+  <div class="post"><a name="110979392145428658"></a>
+     
+    
+    <h3 class="post-title">
+	 
+
+	 Thoughts on Dawn and Dusk
+	 
+    </h3>
+    
+     
+    <div class="post-body">
+    <p>
+      The difference between dawn and dusk <br />is that dawn is hopeful.<br />Daily miracle of first light<br />new each day to fresh eyes.<br />Colors spread bright as the first ones seen<br />after emerging from the dark of the womb.<br /><br />But if dawn is rebirth then dusk is death.<br />The time for work is done though work itself is not<br />and tired eyes mourn the passing of the light.<br />Impending darkness swallows the key to the past.<br />Another day, banished forever to memory.<br /><br />In photographs the difference is unclear<br />for the camera has no memory,<br />   no hopes to go unfulfilled<br />   no dreams to die.<br />The camera does not sleep.<br />But human eyes lie sheathed<br />   forgetting during the night<br />   the promise of the light <br />   to come.
+    </p>
+    </div>
+    
+    <p class="post-footer">
+
+      <em>posted by maelstromqueen at <a href="http://rmyoder.blogspot.com/2005/03/thoughts-on-dawn-and-dusk.html" title="permanent link">2:56 PM</a></em>
+       |
+         <a class="comment-link" href="http://rmyoder.blogspot.com/2005/03/thoughts-on-dawn-and-dusk.html#comments">3 comments</a>
+       
+    </p>
+  
+  </div>
+  <!-- End .post -->
+
+  <!-- Begin #comments -->
+ 
+  <!-- End #comments -->
+
+
+
+    
+  <h2 class="date-header">2.17.2005</h2>
+  
+  
+     
+  <!-- Begin .post -->
+  <div class="post"><a name="110866959920109627"></a>
+     
+    
+    <h3 class="post-title">
+	 
+
+	 Avoiding Traffic Control...
+	 
+    </h3>
+    
+     
+    <div class="post-body">
+    <p>
+      ... is what I got a ticket for on Monday.  Avoiding Traffic Control!!  As Greg said, "Who gets a ticket for THAT?"  It sounds bad doesn't it?  Let me explain:  <br /><br />There is a street near my house that goes through a shopping center.  Instead of continuing straight on the road towards my house, they force you to take a right on Michigan Ave.  You aren't allowed to go straight on the road, even though after Michigan the road continues.  SO, what I often do is take a left into the Sears shopping center, then turn right onto Michigan and take a left on the road in the little left-turn lane.  I guess I sort of knew it was not being a model driver, but I didn't know it was Illegal.  I mean, cutting through a gas station to avoid a red light is illegal.  Finding a way around an idiotic traffic pattern should not be.  So I did it right in front of a cop at 11 PM and he pulled me over, and told me that Sears calls them and complains and so they have to do something about it.  (Sears was closed at the time and the parking lot was deserted.)  Oh well... I guess it was bound to happen eventually since I did it like every day.  But I still think it is not my fault, because the trafic patterns are so screwy.  That is one of the things I don't like about Michigan.  <br /><br />In other news, I met with the Doc yesterday and tried to learn how to think rationally.  I find that I worry about things that really are irrelevant, or not worth worrying about, or that deserve a plan of action instead of just a pit in my stomach.  So I am attempting to eliminate the large amount of irrational thinking that I do.  The hardest thing is to pin down exactly what the thoughts are - I have to really stop what I'm doing and trace it back.  It is an ongoing project, that's for sure.
+    </p>
+    </div>
+    
+    <p class="post-footer">
+
+      <em>posted by maelstromqueen at <a href="http://rmyoder.blogspot.com/2005/02/avoiding-traffic-control.html" title="permanent link">2:38 PM</a></em>
+       |
+         <a class="comment-link" href="http://rmyoder.blogspot.com/2005/02/avoiding-traffic-control.html#comments">6 comments</a>
+       
+    </p>
+  
+  </div>
+  <!-- End .post -->
+
+  <!-- Begin #comments -->
+ 
+  <!-- End #comments -->
+
+
+
+    
+  <h2 class="date-header">2.12.2005</h2>
+  
+  
+     
+  <!-- Begin .post -->
+  <div class="post"><a name="110824261938135464"></a>
+     
+    
+    <h3 class="post-title">
+	 
+
+	 Swamp Thing
+	 
+    </h3>
+    
+     
+    <div class="post-body">
+    <p>
+      Today I thought I would climb from the depths of the flu swamp and surface to pick up my life where I left off on Monday.  After waking up with no fever after 14 hours of sleep I thought I was better.  So I dragged myself to school and got out the axe, put it up to my face, blew, and about passed out.  I gave it a few more half-hearted tries, then realized it was futile and put it away.  I was sweating and dizzy after that.  Then I tried e-mail and blogging, and the only prose I find myself able to compose is this collection of self-pity you see here.  When have I gone a week without practicing?  Probably not since last spring break in CO with Rin.  The thing is, my week for not practicing was already scheduled for March 6-13, but oh well.  <br /><br />Good news:  I have become a dedicated "Sex and the City" fan.  I watched the entire fourth season (18 episodes) in four days.  At first I didn't like it, but then I realized it was just that I had a fever and didn't especally like anything at the moment.  So my schedule since Monday has gone pretty much like this:<br /><br />8:00 <br />Turn off alarm<br /><br />10:00 <br />Wake up, check temperature: 100.  Call prof and explain why I missed class.  Drink water.  Take pills and cough syrup.  Think about eating breakfast.  Decide oatmeal is the only good thing, because it is not crunchy and dangerous like normal breakfast cereal.  Put on Sex and the City or risk seeing Katie Couric gush about Valentines Day (gag).<br /><br />11:30<br />Check temperature.  Back down.  Realize that if I'm going to wake up for Bold and the Beautiful, I better take a nap NOW.  Crawl into bed with Carl Hiassen book.<br /><br />1:35<br />Drag myself out of bed after missing the first 5 minutes of B&B.  Watch Ridge & Bridget stuck in a mine shaft due to Amber's evil plot to videotape them showing their affections for each other.  <br /><br />2:00 <br />Check temperature.  Back up.  Think about eating lunch.  Nope.  Take Tylenol instead.  Nothing good on - watch Sex and the City while in semi-comatose state.  <br /><br />4:00 <br />Dr Phil is on - I guess I'll watch it.  Drink some Bolthouse Farms smoothie and try to convince myself to eat something.<br /><br />5:00<br />Hey I think I feel better!  Let me check my temp:  100.  Oh well.  Now I am feeling worse.  Realize that if I am going to take a nap before actually going to bed, better do it now.<br /><br />7:00<br />Wake up - check temperature - 100.  Take Tylenol.  Realize that the only food in the world that appeals to me is pancakes.  Make pancakes and eat them.  Feel satisfied that at least I ate something.  Wonder if I took Tylenol yet.  Figure that I did since the bottle is on the table.  Realize that nothing is on TV - put on Sex and the City.<br /><br />9:00<br />Call Greg and lament about still being sick.  Bask in his pity and concern.  <br /><br />10:00 PM<br />Take last round of drugs.  Crawl into bed with Carl Hiassen book and read until I start seeing the words move because of the codeine.  Fall asleep for the night.  (Except for waking at 2 and 6 for more Tylenol.)<br /><br /><br />Well, there you have it.  Greg's not coming til next weekend cause then I will feel better and we'll have more time.  5 year anniversary!  Wow!  What is that, paper?  Wood?
+    </p>
+    </div>
+    
+    <p class="post-footer">
+
+      <em>posted by maelstromqueen at <a href="http://rmyoder.blogspot.com/2005/02/swamp-thing.html" title="permanent link">3:50 PM</a></em>
+       |
+         <a class="comment-link" href="http://rmyoder.blogspot.com/2005/02/swamp-thing.html#comments">2 comments</a>
+       
+    </p>
+  
+  </div>
+  <!-- End .post -->
+
+  <!-- Begin #comments -->
+ 
+  <!-- End #comments -->
+
+
+
+    
+  <h2 class="date-header">2.4.2005</h2>
+  
+  
+     
+  <!-- Begin .post -->
+  <div class="post"><a name="110755820682986427"></a>
+     
+    
+    <h3 class="post-title">
+	 
+
+	 busier than an Ameritech customer service line...
+	 
+    </h3>
+    
+     
+    <div class="post-body">
+    <p>
+      Well, I am busy.  Amy, I don't know if you read my blog but remember when I said remind me never to be as busy as I was when we lived on Rosewood?  Well, I am that busy.  I don't know why, it seems like I have the same number of hours in class and work, but I guess I am practicing a little more and my schedule is a little different.  Dishes pile up, laundry is down to the ugly underwear, and my bathroom is freakin' dirty.  At least I managed to get groceries yesterday.  <br /><br />On the neurotic front, I have been doing better lately.  I've had a couple concerts lately and got anxious before but I am learning how to control it better.  And most days, I am fine.  It's just a problem sometimes when I have to do something new or if I am doing something I am afraid I won't do perfectly, and people will think I suck.  I know on one level that my thoughts are irrational but it is hard to control that other level!  The human brain is such a mysterious thing.<br /><br />Hey, here's a story:<br />I ordered some books from Amazon and they never came.  So I looked for their # on their website but no luck, only an e-mail address.  I e-mailed and never heard back.  So then I Googled "Amazone phone number" and found a <a href="http://www.clicheideas.com/amazon.htm">website</a> explaining that Amazon has cleverly hidden their customer service number to force people to use the e-mail service.  It has a bunch of horror stories from people who had to deal with Amazon customer service.  BUT, when I called the number, I only waited about 10 seconds to talk with a representative and they immediately shipped my order again, no questions asked.  So I just thought I'd put in a good word for them, even though they are being shady about their phone number (1-800-201-7575.)
+    </p>
+    </div>
+    
+    <p class="post-footer">
+
+      <em>posted by maelstromqueen at <a href="http://rmyoder.blogspot.com/2005/02/busier-than-ameritech-customer-service.html" title="permanent link">5:47 PM</a></em>
+       |
+         <a class="comment-link" href="http://rmyoder.blogspot.com/2005/02/busier-than-ameritech-customer-service.html#comments">1 comments</a>
+       
+    </p>
+  
+  </div>
+  <!-- End .post -->
+
+  <!-- Begin #comments -->
+ 
+  <!-- End #comments -->
+
+
+
+    
+  <h2 class="date-header">1.26.2005</h2>
+  
+  
+     
+  <!-- Begin .post -->
+  <div class="post"><a name="110676251635392244"></a>
+     
+    
+     
+    <div class="post-body">
+    <p>
+      How evil are you?  I am pretty innocent, it seems... darn my good conscience!<br /><br /><br /><b>The Dante's Inferno Test has sent you to <i>the First Level of Hell - Limbo!</i></b><br />Here is how you matched up against all the levels:<br /><table cellspacing="1" style="margin: 5px; background-color: #000000; border: none; font: 10pt arial, verdana, 'sans serif';"><tr style="font: bold 12pt arial, verdana, 'sans serif'; text-align: center; color: #ffffff; background-color: #333333;"><th><b>Level</b></th><th><b>Score</b></th></tr><tr style="background-color: #220033; color: #eeeeee;"><td style="padding: 4px;"><b><a href="http://www.4degreez.com/misc/dante-inferno-information.html#0" style="color: #ff3344; text-decoration: underline;">Purgatory</a></b> (Repenting Believers)</td><td style="color: #3344bb; background-color: #333333; padding: 4px;"><b>Very Low</b></td></tr><tr style="background-color: #110022; color: #eeeeee;"><td style="padding: 4px;"><b><a href="http://www.4degreez.com/misc/dante-inferno-information.html#1" style="color: #ff3344; text-decoration: underline;">Level 1 - Limbo</a></b> (Virtuous Non-Believers)</td><td style="color: #c40033; background-color: #333333; padding: 4px;"><b>Very High</b></td></tr><tr style="background-color: #220011; color: #eeeeee;"><td style="padding: 4px;"><b><a href="http://www.4degreez.com/misc/dante-inferno-information.html#2" style="color: #ff3344; text-decoration: underline;">Level 2</a></b> (Lustful)</td><td style="color: #aa33aa; background-color: #333333; padding: 4px;"><b>Moderate</b></td></tr><tr style="background-color: #330011; color: #eeeeee;"><td style="padding: 4px;"><b><a href="http://www.4degreez.com/misc/dante-inferno-information.html#3" style="color: #ff3344; text-decoration: underline;">Level 3</a></b> (Gluttonous)</td><td style="color: #4466dd; background-color: #333333; padding: 4px;"><b>Low</b></td></tr><tr style="background-color: #440011; color: #eeeeee;"><td style="padding: 4px;"><b><a href="http://www.4degreez.com/misc/dante-inferno-information.html#4" style="color: #ff3344; text-decoration: underline;">Level 4</a></b> (Prodigal and Avaricious)</td><td style="color: #aa33aa; background-color: #333333; padding: 4px;"><b>Moderate</b></td></tr><tr style="background-color: #550011; color: #eeeeee;"><td style="padding: 4px;"><b><a href="http://www.4degreez.com/misc/dante-inferno-information.html#5" style="color: #ff3344; text-decoration: underline;">Level 5</a></b> (Wrathful and Gloomy)</td><td style="color: #4466dd; background-color: #333333; padding: 4px;"><b>Low</b></td></tr><tr style="background-color: #660011; color: #eeeeee;"><td style="padding: 4px;"><b><a href="http://www.4degreez.com/misc/dante-inferno-information.html#6" style="color: #ff3344; text-decoration: underline;">Level 6 - The City of Dis</a></b> (Heretics)</td><td style="color: #4466dd; background-color: #333333; padding: 4px;"><b>Low</b></td></tr><tr style="background-color: #770011; color: #eeeeee;"><td style="padding: 4px;"><b><a href="http://www.4degreez.com/misc/dante-inferno-information.html#7" style="color: #ff3344; text-decoration: underline;">Level 7</a></b> (Violent)</td><td style="color: #aa33aa; background-color: #333333; padding: 4px;"><b>Moderate</b></td></tr><tr style="background-color: #880011; color: #eeeeee;"><td style="padding: 4px;"><b><a href="http://www.4degreez.com/misc/dante-inferno-information.html#8" style="color: #ff3344; text-decoration: underline;">Level 8- the Malebolge</a></b> (Fraudulent, Malicious, Panderers)</td><td style="color: #aa33aa; background-color: #333333; padding: 4px;"><b>Moderate</b></td></tr><tr style="background-color: #990011; color: #eeeeee;"><td style="padding: 4px;"><b><a href="http://www.4degreez.com/misc/dante-inferno-information.html#9" style="color: #ff3344; text-decoration: underline;">Level 9 - Cocytus</a></b> (Treacherous)</td><td style="color: #4466dd; background-color: #333333; padding: 4px;"><b>Low</b></td></tr></table><br /><b>Take the <a href="http://www.4degreez.com/misc/dante-inferno-test.mv">Dante's" Inferno Hell Test</a></b><br />
+    </p>
+    </div>
+    
+    <p class="post-footer">
+
+      <em>posted by maelstromqueen at <a href="http://rmyoder.blogspot.com/2005/01/how-evil-are-you-i-am-pretty-innocent.html" title="permanent link">1:00 PM</a></em>
+       |
+         <a class="comment-link" href="http://rmyoder.blogspot.com/2005/01/how-evil-are-you-i-am-pretty-innocent.html#comments">2 comments</a>
+       
+    </p>
+  
+  </div>
+  <!-- End .post -->
+
+  <!-- Begin #comments -->
+ 
+  <!-- End #comments -->
+
+
+
+    
+  <h2 class="date-header">1.21.2005</h2>
+  
+  
+     
+  <!-- Begin .post -->
+  <div class="post"><a name="110634857739166171"></a>
+     
+    
+    <h3 class="post-title">
+	 
+
+	 issues...
+	 
+    </h3>
+    
+     
+    <div class="post-body">
+    <p>
+      well, it's been awhile since I wrote anything real - but lots of real things have been going on.  200-car pileup in Lansing, tsunami, MLK day, inaugurdamnation, I dreamed Jenna died, and I have social anxiety disorder.  HAH!  Summaries:<br /><br />200-car pileup was insane!  Fog was the culprit.  It started on one side of the highway, and spread to the other side due to rubbernecking.<br /><br />Tsunami.  Sucks, but lots of people die from AIDS and hunger eavery day and they need money too.<br /><br />MLK Jr.  A kid I know wrote a letter to the MSU State News about how MLK day makes him sick, and he doesn't see what all the fuss is about, and it's stupid that every city has a street named after him.  I really couldn't dignify it with a response, figured he'd get enough hate mail as it was and was just looking for attention like the 8-year-old he is inside.  Thanks, Martin Luther King Jr., for fighting for equal rights.  Most of us appreciate it.<br /><br />Bush is renewed like a library book.  An evil, greedy, library book that couldn't even read itself because of its poor language skills.  If that book was in my library I would burn it.  I wanted to protest but I didn't have time.  Lame.<br /><br />Jenna died in my dream.  Worst. Dream. Ever.<br /><br />SAD.  I have been experiencing high levels of anxiety lately, sometimes for no apparent reason.  I went to the counseling center here and they told me I had social anxiety disorder and so I am going every other week to talk to this dude.  I guess I have always been a little on the anxious side - but very laid back at the same time.  It is a strange combination.  Anyways, recently (past couple months) I have been getting anxious in situations where it is not normal - worrying about performances days/weeks before they occur, finding my heart beating fast and losing appetite.  I've lost like 7 pounds from my normal weight that I've been at for about 4 years.  I guess it makes me think of something Ava said a long time ago, about how she is scared of people until she gets to know them.  I always understood what she meant.  But I can be scared of people I know, too.  Even you!  Just worried about being liked, I guess.  Most of the time though, I feel fine and confident, but these weird spells are annoying and self-defeating.  So the reason I mention it on yardbird, even though I was nervous about doing so (!)  is to keep myself honest and let y'all know what's going on, if yer interested.  Maybe I will note my progress here - my self-help book is due to arrive any day now! <br />
+    </p>
+    </div>
+    
+    <p class="post-footer">
+
+      <em>posted by maelstromqueen at <a href="http://rmyoder.blogspot.com/2005/01/issues.html" title="permanent link">4:53 PM</a></em>
+       |
+         <a class="comment-link" href="http://rmyoder.blogspot.com/2005/01/issues.html#comments">2 comments</a>
+       
+    </p>
+  
+  </div>
+  <!-- End .post -->
+
+  <!-- Begin #comments -->
+ 
+  <!-- End #comments -->
+
+
+</div></div>
+<!-- End #main -->
+
+
+
+
+
+<!-- Begin #sidebar -->
+<div id="sidebar"><div id="sidebar2">
+
+  
+  
+  <!-- Begin #profile-container -->
+   
+            <div id="profile-container"> <h2 class="sidebar-title">About Me</h2> <dl class="profile-datablock">   <dt class="profile-img"> <a href="http://www.blogger.com/profile/3856495"> <img width="65" alt="My Photo" height="80" src="http://photos1.blogger.com/img/16/1266/320/meWithGlasses.jpg"> </a> </dt>   <dd class="profile-data"> <strong>Name:</strong>maelstromqueen </dd>  <dd class="profile-data"> <strong>Location:</strong>Elkhart, Indiana, United States </dd>  </dl>  <p class="profile-link"> <a href="http://www.blogger.com/profile/3856495">View my complete profile</a> </p> </div>  
+   
+  <!-- End #profile -->
+
+  
+  <h2 class="sidebar-title">Previous Posts</h2>
+  
+  <ul id="recently">
+    
+        <li><a href="http://rmyoder.blogspot.com/2005/03/i-heart-spring-break.html">i heart spring break</a></li>
+     
+        <li><a href="http://rmyoder.blogspot.com/2005/03/thoughts-on-dawn-and-dusk.html">Thoughts on Dawn and Dusk</a></li>
+     
+        <li><a href="http://rmyoder.blogspot.com/2005/02/avoiding-traffic-control.html">Avoiding Traffic Control...</a></li>
+     
+        <li><a href="http://rmyoder.blogspot.com/2005/02/swamp-thing.html">Swamp Thing</a></li>
+     
+        <li><a href="http://rmyoder.blogspot.com/2005/02/busier-than-ameritech-customer-service.html">busier than an Ameritech customer service line...</a></li>
+     
+        <li><a href="http://rmyoder.blogspot.com/2005/01/how-evil-are-you-i-am-pretty-innocent.html">How evil are you?  I am pretty innocent, it seems....</a></li>
+     
+        <li><a href="http://rmyoder.blogspot.com/2005/01/issues.html">issues...</a></li>
+     
+        <li><a href="http://rmyoder.blogspot.com/2005/01/hey-did-i-ever-show-yall-my-accordion.html">Hey, did I ever show y'all my accordion?  </a></li>
+     
+        <li><a href="http://rmyoder.blogspot.com/2005/01/spa-night-with-mom.html">Spa night with mom </a></li>
+     
+        <li><a href="http://rmyoder.blogspot.com/2005/01/prize-for-lamest-blog-goes-to.html">Prize for Lamest Blog goes to...</a></li>
+     
+  </ul>
+  
+  
+
+  <h2 class="sidebar-title">Archives</h2>
+  
+  <ul class="archive-list">
+    
+    	<li><a href="http://rmyoder.blogspot.com/2004_07_01_rmyoder_archive.html">July 2004</a></li>
+	  
+    	<li><a href="http://rmyoder.blogspot.com/2004_08_01_rmyoder_archive.html">August 2004</a></li>
+	  
+    	<li><a href="http://rmyoder.blogspot.com/2004_09_01_rmyoder_archive.html">September 2004</a></li>
+	  
+    	<li><a href="http://rmyoder.blogspot.com/2004_10_01_rmyoder_archive.html">October 2004</a></li>
+	  
+    	<li><a href="http://rmyoder.blogspot.com/2004_11_01_rmyoder_archive.html">November 2004</a></li>
+	  
+    	<li><a href="http://rmyoder.blogspot.com/2004_12_01_rmyoder_archive.html">December 2004</a></li>
+	  
+    	<li><a href="http://rmyoder.blogspot.com/2005_01_01_rmyoder_archive.html">January 2005</a></li>
+	  
+    	<li><a href="http://rmyoder.blogspot.com/2005_02_01_rmyoder_archive.html">February 2005</a></li>
+	  
+    	<li><a href="http://rmyoder.blogspot.com/2005_03_01_rmyoder_archive.html">March 2005</a></li>
+	  
+  </ul>
+  
+  
+  
+  <p id="powered-by"><a href="http://www.blogger.com"><img src="http://buttons.blogger.com/bloggerbutton1.gif" alt="Powered by Blogger" /></a></p>
+
+  
+  <!--
+  <p>This is a paragraph of text that could go in the sidebar.</p>
+  -->
+ 
+<h6>Links</h6>
+<ul>
+   <li><a href="http://j-yo.blogspot.com">Jenna's Blog</a></li>
+   <li><a href="http://katieplanet.blogspot.com">Katie's Blog</a></li>
+   <li><a href="http://leslie43.blogspot.com">Leslie's Blog</a></li>
+ 
+</ul> 
+
+
+</div></div>
+<!-- End #sidebar -->
+
+
+<em class="clear">&nbsp;</em>
+</div>
+<!-- End #content -->
+
+
+
+
+
+</div></div>
+<!-- End wraps -->
+
+</body>
+</html>

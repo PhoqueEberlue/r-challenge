@@ -1,0 +1,491 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+
+
+<html>
+
+<!-- menu system passed:
+
+PC : ie4.01, ie5.0, ie6.0, ns4.08, ns4.6, ns4.76, ns6.1
+
+MAC: ie4.01, ie4.5, ie5.0, ns4.51, ns4.61, ns4.75, ns6.1-->
+
+<head>
+
+        <title>Allders Department Store UK - buy online brand name washing machines, dishwashers, beds, sofas, fridges, wedding lists, freezers, gifts, TV, DVD, video, cookers, furniture, cooking and home products</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="description" content="Allders Department Store offers online shopping of leading brand washing machines, dishwashers, beds, wedding lists, sofas, fridges, freezers, gifts, TV, DVD, video, cookers, furniture, cooking and home products">
+<meta name="keywords" content="Allders, Alders, Department Store, kitchen, dishwasher, fridges, freezers, washing machines, microwaves, ovens, wedding lists, tv, television, video, cookers, pans, cutlery, duvets, pillows, beds, mattresses, gifts, furniture, tables, chairs, leather, sofa, lighting, hi-fi, flat screen, DVD, kettles, irons, Bosch, Hotpoint, Whirlpool, Hoover, Sony, Hitachi, Smeg, Maytag, Toshiba, Panasonic, Morphy Richards, AEG, Siemens, Zanussi, Denon, Aiwa, Lec, Samsung, Liebherr, Dyson, Creda, Neff, Tefal, De Longhi, Aga, Belling, luggage, bathroom, experience">
+
+
+
+<!-- menu system passed:
+PC : ie4.01, ie5.0, ie6.0, ns4.08, ns4.6, ns4.76, ns6.1
+MAC: ie4.01, ie4.5, ie5.0, ns4.51, ns4.61, ns4.75, ns6.1-->
+
+<script language="javascript">
+<!--
+function getOS(){
+	this.os = navigator.userAgent.toLowerCase();
+	this.mac = (( this.os.indexOf( "ppc" ) !=-1 ) || (this.os.indexOf( "powerpc" ) !=-1 )) ? 1 : 0;
+
+return
+}
+os=new getOS();
+
+function getbw(){
+	this.mvn=navigator.appVersion;
+	this.svn=parseFloat(this.mvn);
+	this.dom=document.getElementById ? 1 : 0;
+
+	this.ie6=( this.dom && this.mvn.indexOf("MSIE 6") !=-1) ? 1 : 0;
+	this.ie5=( this.dom && this.mvn.indexOf("MSIE 5") !=-1) ? 1 : 0;
+	this.ie4=(!this.dom && document.all) ? 1 : 0;
+	
+	this.ns6=( this.dom && parseInt(this.mvn) >= 5) ? 1 : 0;
+	this.ns4=(!this.dom && document.layers && (this.svn > 4.05)) ? 1 : 0;
+return
+}
+bw=new getbw();
+
+	bw.ie5||bw.ie6? document.write("<scr"+"ipt language='javascript' src='/js/menu_ie5_2.0.js'></scr"+"ipt>") :
+	bw.ie4? document.write("<scr"+"ipt language='javascript' src='/js/menu_ie4_2.0.js'></scr"+"ipt>") :
+	bw.ns4? document.write("<scr"+"ipt language='javascript' src='/js/menu_ns4_2.0.js'></scr"+"ipt>") :
+	bw.ns6? document.write("<scr"+"ipt language='javascript' src='/js/menu_ns6_2.0.js'></scr"+"ipt>") : 0;
+	!(bw.ns4 && !os.mac)? document.write("<link rel=stylesheet href='/css/generic.css' type='text/css'>") :
+	document.write("<link rel=stylesheet href='/css/pcns4.css' type='text/css'>") ;
+
+function popUp(url)
+{
+    sealWin=window.open(url,"win",'toolbar=0,location=1,directories=0,status=1,menubar=1,scrollbars=1,resizable=1,width=500,height=450');
+    self.name="mainWin";
+}
+
+//--></script>
+
+<script language="Javascript">
+	window.name = "home_page";
+	window.focus();
+</script>
+
+
+</head>
+
+<script language="JavaScript">
+
+function checkCookie()
+{
+	var todaysDate; 	
+	var cookieExpired = "";
+
+	todaysDate = new Date();
+
+	cookieExpired += getCookie("AlldersPromo");
+
+	if (cookieExpired != "Displayed")
+	{		
+		setCookie ("AlldersPromo", "Displayed", getDate7Days(todaysDate), "", "", false);
+		var myWindow = window.open("/ViewTemplate.go?template_id=244", "PromoPage", 'toolbar=no,width=301,height=328')
+	}
+}
+
+function setCookie(name, value, expires, path, domain, secure)
+{
+    document.cookie=name + "=" + escape(value) +
+        ((expires) ? "; expires=" + expires.toGMTString() : "") +
+        ((path) ? "; path=" + path : "") +
+        ((domain) ? "; domain=" + domain : "") +
+        ((secure) ? "; secure" : "");
+}
+
+function getCookie(name) 
+{
+	var dc = document.cookie;
+	var prefix = name + "=";
+	var begin = dc.indexOf("; " + prefix);
+	if (begin == -1) 
+		{
+		begin = dc.indexOf(prefix);		
+		if (begin != 0) 
+			return "";
+		} 
+	else
+		begin += 2;
+	
+	var end = document.cookie.indexOf(";", begin);
+	
+	if (end == -1)
+		end = dc.length;
+	
+	return unescape(dc.substring(begin + prefix.length, end));
+}
+
+
+function getPromoCookie()
+{
+	return true;
+}
+
+
+function getDate7Days(date)
+{
+	var day = 0;
+	var month = 0;
+	var year = 0;
+
+	year += date.getYear();
+	month += date.getMonth();
+	day += date.getDate();
+
+	month++;
+
+	var monthDays;
+
+	if (month==2)
+		{
+		if (year%4 == 0)
+			monthDays = 29;
+		else
+			monthDays = 28;
+		}
+	else
+		{
+		if ((month==1) || (month==3) || (month==5) || (month==7) || (month==8) ||
+			(month==10) || (month==12))
+			monthDays = 31;		
+		else
+			monthDays = 30;
+		}
+
+	if ((day+7) > monthDays)
+		{
+		expiresDay = (day+7)-monthDays;
+		month += 1;
+		if (month>12)
+			{
+			month=1;
+			year+=1;
+			}
+		}
+	else 
+		expiresDay = day+7;
+	
+	return new Date(getMonthString(month) + " " + expiresDay + ", " + year)
+}
+
+function getMonthString(month)
+{
+	var monthStr="";
+
+	switch (month) 
+		{
+		case 1: monthStr="January"
+				break;
+		case 2: monthStr="February"
+				break;
+		case 3: monthStr="March"
+				break;
+		case 4: monthStr="April"
+				break;
+		case 5: monthStr="May"
+				break;
+		case 6: monthStr="June"
+				break;
+		case 7: monthStr="July"
+				break;
+		case 8: monthStr="August"
+				break;
+		case 9: monthStr="September"
+				break;
+		case 10: monthStr="October"
+				break;
+		case 11: monthStr="November"
+				break;
+		case 12: monthStr="December"			
+		}			
+	
+	return monthStr;
+}
+
+</script>
+
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff" onload="checkCookie()">
+
+
+
+<!--start allders header - with logo/search-->
+
+
+
+
+
+
+
+
+
+<script language="JavaScript" type="text/javascript">
+<!--
+submitCount = 0;
+setInterval("resetCount()", 5000);
+
+// Function to limit number of submissions
+function resetCount()
+{
+    submitCount = 0;
+}
+
+// Function to limit number of submissions
+function countSubmit()
+{
+    submitCount++;
+    return submitCount==1;
+}
+//-->
+</script>
+
+<table width="760" border="0" cellspacing="0" cellpadding="0">
+<form onSubmit="return countSubmit()" action="/ProductSearch.go" method="get" name="searchform" target="_top">
+<input type="hidden" name="link" value="search">
+<tr height="10"><td colspan="7"></td></tr>
+<tr>
+<td width="5">&nbsp;</td>
+        <td align="center"><a href="http://www.allders.com/Welcome.go;jsessionid=bM9Om7wKq7F7" target="_top"><img src="/images/logo.gif" width="102" height="27" border="0" alt="Allders Department Stores"></a></td>
+        <td><img src="/images/px.gif" width="100" height="2" border="0" alt=""></td>
+        <td align="right"><img src="/images/top_include/page_header_im_product_search.gif" width="118" height="24" border="0" alt="Product Search"></td>
+        <td valign="middle" width="185">&nbsp;<input type="text" name="search_text" class="qsearchinput" size="30" maxlength="30" ></td>
+        <td><input name="Submit" onSubmit="return countSubmit()" value="Submit" type="image" src="/images/top_include/page_header_bt_go.gif" width="30" height="24" border="0" alt="Submit search"></td>
+        <td align="right"><a href="http://www.allders.com/useful_info.jsp;jsessionid=bM9Om7wKq7F7"><img src="/images/top_include/page_header_bt_help.gif" width="56" height="24" border="0" alt="Help"></a></td>
+        <td><img src="/images/px.gif" width="14" height="2" border="0" alt=""></td>
+</tr></form>
+<tr height="8"><td colspan="6"></td></tr>
+</table>
+<!--stop logo/search-->
+
+<!--start blue bar action nav-->
+<table width="760" border="0" cellspacing="0" cellpadding="0" bgcolor="#365DBA">
+<tr><td colspan="3" height="5" valign="middle" bgcolor="#FFFFFF"><img src="/images/top_include/page_header_im_grey_bar.gif" height="3" width="760"></td></tr>
+<tr>
+        <td width="520" valign="middle" class="actionnav">
+        &nbsp;&nbsp;
+        <a class="actionnav" href="http://www.allders.com/link-home/Welcome.go;jsessionid=bM9Om7wKq7F7" target="_top">&nbsp;&nbsp;Home&nbsp;&nbsp;</a>
+
+        <span class="verticalbar">&#124;</span>
+
+        <a class="actionnav" href="http://www.allders.com/pages/corporate/store_locator_frameset.jsp;jsessionid=bM9Om7wKq7F7?new=true" target="Resource Window">&nbsp;&nbsp;Stores&nbsp;&nbsp;</a>
+
+        <span class="verticalbar">&#124;</span>
+
+        <a class="actionnav" href="http://www.allders.com/delivery.jsp;jsessionid=bM9Om7wKq7F7" target="_top">&nbsp;&nbsp;Delivery&nbsp;&nbsp;</a>
+
+        <span class="verticalbar">&#124;</span>
+
+        <a class="actionnav" href="http://www.allders.com/useful_info.jsp;jsessionid=bM9Om7wKq7F7" target="_top">&nbsp;&nbsp;Contact Us&nbsp;&nbsp;</a>
+
+        <span class="verticalbar">&#124;</span>
+
+        <a href="http://www.allders.com/template_id-144/ViewTemplate.go;jsessionid=bM9Om7wKq7F7" target="_top" class="actionnav">&nbsp;&nbsp;Account Card&nbsp;&nbsp;</a>
+
+        <span class="verticalbar">&#124;</span>
+
+        <a class="actionnav" href="http://www.allders.com/site_map.jsp;jsessionid=bM9Om7wKq7F7" target="_top">&nbsp;&nbsp;Site Map&nbsp;&nbsp;</a>
+
+        <span class="verticalbar">&#124;</span>
+
+        </td>
+
+        <td width="195" valign="middle" align="right" class="actionnav"><a class="actionnav" href="http://www.allders.com/link-disp_basket/DisplayBasket.go;jsessionid=bM9Om7wKq7F7" target="_top">Shopping Basket </a>
+        <span class="basketstatus"><!-- start shopping basket quantity -->
+        
+        is empty<!-- end shopping basket quantity --></span></td>
+
+        <td width="45" align="middle"><a href="http://www.allders.com/link-disp_basket_img/DisplayBasket.go;jsessionid=bM9Om7wKq7F7" target="_top"><img src="/images/i_basket.gif" width="38" height="23" border="0" alt=""></a></td>
+</tr>
+</table>
+<!--end allders header-->
+
+
+
+
+
+
+<!--start colored department nav-->
+<table width="760" border="0" cellspacing="0" cellpadding="0">
+<tr height="1"><td colspan="10"></td></tr>
+<tr>
+        <td><img src="/images/px.gif" width="1" height="0" border="0" alt=""></td>
+        <td><a href="http://www.allders.com/template_id-104/link-cooking/ViewTemplate.go;jsessionid=bM9Om7wKq7F7" target="_top"><img src="/images/top_include/top_nav_bt_kitchen.gif" width="83" height="32" border="0" alt="Kitchen, cookers, ovens, microwaves, knives, pans, kettles"></a></td>
+        <td><a href="http://www.allders.com/template_id-124/link-giving/ViewTemplate.go;jsessionid=bM9Om7wKq7F7" target="_top"><img src="/images/top_include/top_nav_bt_gifts_toys.gif" width="85" height="32" border="0" alt="Gifts, gadgets, clocks, bags, shavers, hairdryers, toys"></a></td>
+        <td><a href="http://www.allders.com/template_id-125/link-living/ViewTemplate.go;jsessionid=bM9Om7wKq7F7" target="_top"><img src="/images/top_include/top_nav_bt_living.gif" width="83" height="32" border="0" alt="Beds, plates, luggage, lights, cushions, cutlery"></a></td>
+        <td><a href="http://www.allders.com/template_id-126/link-sleep/ViewTemplate.go;jsessionid=bM9Om7wKq7F7" target="_top"><img src="/images/top_include/top_nav_bt_bedroom.gif" width="83" height="32" border="0" alt="Beds, duvets, pillows, mattresses, bedsteads, bedroom"></a></td>
+        <td><a href="http://www.allders.com/template_id-127/cat_id-70/link-electric/CategoryNavigation.go;jsessionid=bM9Om7wKq7F7" target="_top"><img src="/images/top_include/top_nav_bt_electrical.gif" width="83" height="32" border="0" alt="Washing machines, dishwashers, microwaves, fridges, freezers, hoovers, cookers"></a></td>
+        <td><a href="http://www.allders.com/template_id-246/link-entertain/ViewTemplate.go;jsessionid=bM9Om7wKq7F7" target="_top"><img src="/images/top_include/top_nav_bt_audio_tv.gif" width="83" height="32" border="0" alt="television, radio, hi-fi, stereo"></a></td>
+        <td><a href="http://www.allders.com/fashion.jsp;jsessionid=bM9Om7wKq7F7" target="_top"><img src="/images/top_include/top_nav_bt_fashion.gif" width="84" height="32" border="0" alt="Fashion"></a></td>
+        <!--<td><a href="http://www.allders.com/template_id-85/ViewTemplate.go;jsessionid=bM9Om7wKq7F7" target="_top"><img src="/images/top_include/top_nav_bt_sale.gif" width="84" height="32" border="0" alt="Sale, offers, promotions"></a></td>-->
+        <td><a href="http://www.allders.com/template_id-129/link-furniture/ViewTemplate.go;jsessionid=bM9Om7wKq7F7" target="_top"><img src="/images/top_include/top_nav_bt_furniture.gif" width="83" height="32" border="0" alt="Furniture, sofas, tables, chairs, home office, beds"></a></td>
+        <td><a href="http://www.allders.com/weddings/index.htm;jsessionid=bM9Om7wKq7F7" target="_blank"><img src="/images/top_include/top_nav_bt_weddings.gif" width="83" height="32" border="0" alt="Allders Wedding Gifts Service"></a></td>
+</tr>
+</table>
+<!--stop colored department nav-->
+
+
+
+
+
+<!--start content-->
+
+<table width="739" border="0" cellspacing="0" cellpadding="0">
+
+<tr>
+
+
+        <td><img src="/images/px.gif" width="36" height="52" border="0" alt=""></td>
+
+    <td colspan="9"><a href=" /cat_id-561/ProductList.go;jsessionid=bM9Om7wKq7F7"><img src="/GetImage.go?id=57027" height="40" border="0" alt=""></a></td>
+
+        <td colspan="2">&nbsp;</td>
+
+
+
+</tr>
+</table>
+
+<table width="739" border="0" cellspacing="0" cellpadding="0">
+<tr>
+
+        <td>&nbsp;</td>
+
+        <td><a href="/link-cooking_img/template_id-104/ViewTemplate.go;jsessionid=bM9Om7wKq7F7"><img src="/GetImage.go?id=45976" width="102" height="105" border="0" alt="Kitchen, cookers, ovens, microwaves, knives, pans, kettles"></a></td>
+
+        <td><img src="/images/px.gif" width="20" height="1" border="0" alt=""></td>
+
+        <td><a href="/link-giving_img/template_id-124/ViewTemplate.go;jsessionid=bM9Om7wKq7F7"><img src="/GetImage.go?id=46097" width="102" height="105" border="0" alt="Gifts, gadgets, clocks, bags, shavers, hairdryers, toys"></a></td>
+
+        <td><img src="/images/px.gif" width="20" height="1" border="0" alt=""></td>
+
+        <td><a href="/link-living_img/template_id-125/ViewTemplate.go;jsessionid=bM9Om7wKq7F7"><img src="/GetImage.go?id=45978" width="102" height="105" border="0" alt="Beds, plates, luggage, lights, cushions, cutlery"></a></td>
+
+        <td><img src="/images/px.gif" width="20" height="1" border="0" alt=""></td>
+
+        <td><a href="/link-sleep_img/template_id-126/ViewTemplate.go;jsessionid=bM9Om7wKq7F7"><img src="/GetImage.go?id=45979" width="102" height="105" border="0" alt="Beds, duvets, pillows, mattresses, bedsteads, bedroom"></a></td>
+
+        <td><img src="/images/px.gif" width="20" height="1" border="0" alt=""></td>
+
+        <td><a href="/link-rhs_img/id-4492/Product.go;jsessionid=bM9Om7wKq7F7"><img src="/GetImage.go?id=57306" width="200" height="105" border="0" alt="Promotion, special offer, sale, discount, reduced"></a></td>
+
+</tr>
+
+<tr>
+
+        <td colspan="10"><img src="/images/px.gif" width="1" height="10" border="0" alt=""></td>
+
+</tr>
+
+<tr>
+
+        <td>&nbsp;</td>
+
+        <td><a href="/link-electric_img/template_id-127/cat_id-70/CategoryNavigation.go;jsessionid=bM9Om7wKq7F7"><img src="/GetImage.go?id=45980" width="102" height="105" border="0" alt="Washing machines, dishwashers, microwaves, fridges, freezers, hoovers, cookers"></a></td>
+
+        <td>&nbsp;</td>
+
+        <td><a href="/link-entertain_img/template_id-246/ViewTemplate.go;jsessionid=bM9Om7wKq7F7"><img src="/GetImage.go?id=45981" width="102" height="105" border="0" alt="TV, video, DVD, hi-fi, widescreen, digital, CD players, radio"></a></td>
+
+        <td>&nbsp;</td>
+
+        <td><a href="/fashion.jsp;jsessionid=bM9Om7wKq7F7"><img src="/GetImage.go?id=56535" width="102" height="105" border="0" alt="Fashion"></a></td>
+
+        <td>&nbsp;</td>
+
+        <td><a href="/link-furniture_img/template_id-129/ViewTemplate.go;jsessionid=bM9Om7wKq7F7"><img src="/GetImage.go?id=45983" width="102" height="105" border="0" alt="Furniture, sofas, tables, chairs, home office, beds"></a></td>
+        <td>&nbsp;</td>
+        <td><a href="/id-6152/Product.go;jsessionid=bM9Om7wKq7F7"><img src="/GetImage.go?id=57029" width="200" height="105" border="0" alt="Promotion, special offer, sale, discount, reduced"></a></td>
+
+</tr>
+
+<tr>
+        <td colspan="10"><img src="/images/px.gif"  width="1" height="13" border="0" alt=""></td>
+</tr>
+<tr>
+        <td><img src="/images/px.gif" width="36" border="0" alt=""></td>
+        <td colspan="9" valign="bottom">
+<! subscribe form -->
+<form action="/Subscribe.go" method="post">
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+  <td colspan="3"><img src="/images/footer_include/page_footer_im_join.gif" height="19" width="292"</td>
+</tr>
+<tr>
+  <td><input type="text" name="email" size="40" maxlength="70">&nbsp;</td>
+  <td ><input name="Submit" value="Submit" type="image" src="/images/footer_include/page_footer_bt_join.gif" width="38" height="24" border="0" alt="Subscribe to mailing list">&nbsp;</td>
+  <td><a href="/privacy.jsp"><img src="/images/footer_include/page_footer_bt_privacy.gif" width="96" height="24" border="0" alt="Privacy Policy"></a></td>
+  <td></td>
+</tr>
+</table>
+</form></td>
+</tr>
+<tr>
+        <td><img src="/images/px.gif" width="36" height="30" border="0" alt=""></td>
+        <td colspan="9" valign="bottom" class="explainatorytxt">  
+
+
+            
+
+   <A href="http://www.allders.com/template_id-85/ViewTemplate.go" target="_top"><IMG src="/GetImage.go?id=57198" border="0" alt="Allders Half Price Sale"></A>
+
+<BR><BR>
+
+<CENTER>To find <B>THE STORE NEAREST YOU</B> <A href="/pages/corporate/store_locator_frameset.jsp?new=true" target="Resource Window">click here!</A><BR><BR></CENTER>
+
+
+<BR>
+
+</td>
+</tr>
+
+
+</table>
+
+<!--stop content-->
+
+
+
+<!--footer--> <img src="/images/footer.gif" width="681" height="52" border="0" alt="" usemap="#footer">
+<a href="javascript:popUp('https://servicecenter.verisign.com/cgi-bin/Xquery.exe?Template=authCertByIssuer&remote_host=https://digitalid.trustwise.com/secureServer/cgi-bin/haydn.exe&form_file=../fdf/authCertByIssuer.fdf&issuerSerial=352c8158a89d95abad48ca1928869f5b')"><img src="/images/verisign/siteseal.gif" width="60" height="63" border="0"></a>
+<map name="footer"> 
+  <area shape="rect" coords="38,43,113,50" href="http://www.tradedoubler.com/pan/program_info?program_id=1329" target="_blank" alt="Become an Affiliate" title="Become an Affiliate">
+</map>
+<!--footer-->
+<div id="m1_0" class="zeroed"></div>
+<div id="m1_1" class="zeroed"></div>
+<div id="m1_2" class="zeroed"></div>
+<div id="m1_3" class="zeroed"></div>
+
+<div id="m2_0" class="zeroed"></div>
+<div id="m2_1" class="zeroed"></div>
+<div id="m2_2" class="zeroed"></div>
+<div id="m2_3" class="zeroed"></div>
+
+<div id="m3_0" class="zeroed"></div>
+<div id="m3_1" class="zeroed"></div>
+<div id="m3_2" class="zeroed"></div>
+<div id="m3_3" class="zeroed"></div>
+
+
+  
+
+
+</body>
+
+</html>
+

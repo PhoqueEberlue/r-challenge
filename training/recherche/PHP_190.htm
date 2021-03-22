@@ -1,0 +1,389 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0027)http://mainak.netfirms.com/ -->
+<HTML><HEAD><TITLE>Mainak Welcomes You</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META http-equiv=Content-Language content=en-us>
+<META content="MSHTML 6.00.2800.1400" name=GENERATOR>
+<META content=FrontPage.Editor.Document name=ProgId>
+<META content="Mainak Das of Durgapur Welcomes You" name=description>
+<META 
+content="Mainak, Das, mainak, das, durgapur, kalyani, information, technology" 
+name=keywords><!--mstheme--><LINK href="35_files/netw1111.css" type=text/css 
+rel=stylesheet>
+<META content="network 1111, default" name="Microsoft Theme">
+<META content="tlb, default" name="Microsoft Border"></HEAD>
+<BODY>
+<TABLE cellSpacing=0 cellPadding=1 width=728 align=center bgColor=#000000 
+border=0>
+  <TBODY>
+  <TR>
+    <TD width="100%">
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" bgColor=#e7e7e7 
+      background=35_files/nf_back.gif border=0>
+        <TBODY>
+        <TR>
+          <TD width="10%"><A href="http://www.netfirms.com/"><IMG height=24 
+            alt="Free Web Hosting by Netfirms" src="35_files/Freewebhosting.gif" 
+            width=184 align=absMiddle border=0></A><BR></TD>
+          <TD width="90%"><A href="http://www.netfirms.com/"><FONT size=2><A 
+            href="http://www.netfirms.com/">This site is hosted by 
+            <B>Netfirms</B> Web Hosting</A></FONT></A> 
+  </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=1 width=728 align=center border=0>
+  <TBODY>
+  <TR>
+    <TD width="100%"><IMG height=3 src="" width=1><BR><!-- Creative for 728 x 90 format from Google -->
+      <SCRIPT language=JavaScript type=text/javascript>  
+<!--  
+         google_ad_client = 'netfirms_728x90';  
+         google_ad_width = 728;  
+         google_ad_height = 90;  
+         google_ad_format = '728x90_pas_abgnc';  
+         google_safe = 'high';  
+// -->  
+</SCRIPT>
+
+      <SCRIPT language=JavaScript src="35_files/show_ads.js" 
+      type=text/javascript></SCRIPT>
+      <NOSCRIPT><IMG height=1 src="35_files/imp.gif" width=1 border=0> 
+      </NOSCRIPT><!-- End Creative for 728 x 90 format from Google --></TD></TR></TBODY></TABLE>
+<SCRIPT language=JavaScript>
+dCol='000000';//date colour.
+fCol='000000';//face colour.
+sCol='000000';//seconds colour.
+mCol='000000';//minutes colour.
+hCol='000000';//hours colour.
+ClockHeight=40;
+ClockWidth=40;
+ClockFromMouseY=0;
+ClockFromMouseX=100;
+
+//Alter nothing below! Alignments will be lost!
+
+d=new Array("SUNDAY","MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY","SATURDAY");
+m=new Array("JANUARY","FEBRUARY","MARCH","APRIL","MAY","JUNE","JULY","AUGUST","SEPTEMBER","OCTOBER","NOVEMBER","DECEMBER");
+date=new Date();
+day=date.getDate();
+year=date.getYear();
+if (year < 2000) year=year+1900; 
+TodaysDate=" "+d[date.getDay()]+" "+day+" "+m[date.getMonth()]+" "+year;
+D=TodaysDate.split('');
+H='...';
+H=H.split('');
+M='....';
+M=M.split('');
+S='.....';
+S=S.split('');
+Face='1 2 3 4 5 6 7 8 9 10 11 12';
+font='Arial';
+size=1;
+speed=0.6;
+ns=(document.layers);
+ie=(document.all);
+Face=Face.split(' ');
+n=Face.length; 
+a=size*10;
+ymouse=0;
+xmouse=0;
+scrll=0;
+props="<font face="+font+" size="+size+" color="+fCol+"><B>";
+props2="<font face="+font+" size="+size+" color="+dCol+"><B>";
+Split=360/n;
+Dsplit=360/D.length;
+HandHeight=ClockHeight/4.5
+HandWidth=ClockWidth/4.5
+HandY=-7;
+HandX=-2.5;
+scrll=0;
+step=0.06;
+currStep=0;
+y=new Array();x=new Array();Y=new Array();X=new Array();
+for (i=0; i < n; i++){y[i]=0;x[i]=0;Y[i]=0;X[i]=0}
+Dy=new Array();Dx=new Array();DY=new Array();DX=new Array();
+for (i=0; i < D.length; i++){Dy[i]=0;Dx[i]=0;DY[i]=0;DX[i]=0}
+if (ns){
+for (i=0; i < D.length; i++)
+document.write('<layer name="nsDate'+i+'" top=0 left=0 height='+a+' width='+a+'><center>'+props2+D[i]+'</font></center></layer>');
+for (i=0; i < n; i++)
+document.write('<layer name="nsFace'+i+'" top=0 left=0 height='+a+' width='+a+'><center>'+props+Face[i]+'</font></center></layer>');
+for (i=0; i < S.length; i++)
+document.write('<layer name=nsSeconds'+i+' top=0 left=0 width=15 height=15><font face=Arial size=3 color='+sCol+'><center><b>'+S[i]+'</b></center></font></layer>');
+for (i=0; i < M.length; i++)
+document.write('<layer name=nsMinutes'+i+' top=0 left=0 width=15 height=15><font face=Arial size=3 color='+mCol+'><center><b>'+M[i]+'</b></center></font></layer>');
+for (i=0; i < H.length; i++)
+document.write('<layer name=nsHours'+i+' top=0 left=0 width=15 height=15><font face=Arial size=3 color='+hCol+'><center><b>'+H[i]+'</b></center></font></layer>');
+}
+if (ie){
+document.write('<div id="Od" style="position:absolute;top:0px;left:0px"><div style="position:relative">');
+for (i=0; i < D.length; i++)
+document.write('<div id="ieDate" style="position:absolute;top:0px;left:0;height:'+a+';width:'+a+';text-align:center">'+props2+D[i]+'</B></font></div>');
+document.write('</div></div>');
+document.write('<div id="Of" style="position:absolute;top:0px;left:0px"><div style="position:relative">');
+for (i=0; i < n; i++)
+document.write('<div id="ieFace" style="position:absolute;top:0px;left:0;height:'+a+';width:'+a+';text-align:center">'+props+Face[i]+'</B></font></div>');
+document.write('</div></div>');
+document.write('<div id="Oh" style="position:absolute;top:0px;left:0px"><div style="position:relative">');
+for (i=0; i < H.length; i++)
+document.write('<div id="ieHours" style="position:absolute;width:16px;height:16px;font-family:Arial;font-size:16px;color:'+hCol+';text-align:center;font-weight:bold">'+H[i]+'</div>');
+document.write('</div></div>');
+document.write('<div id="Om" style="position:absolute;top:0px;left:0px"><div style="position:relative">');
+for (i=0; i < M.length; i++)
+document.write('<div id="ieMinutes" style="position:absolute;width:16px;height:16px;font-family:Arial;font-size:16px;color:'+mCol+';text-align:center;font-weight:bold">'+M[i]+'</div>');
+document.write('</div></div>')
+document.write('<div id="Os" style="position:absolute;top:0px;left:0px"><div style="position:relative">');
+for (i=0; i < S.length; i++)
+document.write('<div id="ieSeconds" style="position:absolute;width:16px;height:16px;font-family:Arial;font-size:16px;color:'+sCol+';text-align:center;font-weight:bold">'+S[i]+'</div>');
+document.write('</div></div>')
+}
+(ns)?window.captureEvents(Event.MOUSEMOVE):0;
+function Mouse(evnt){
+ymouse = (ns)?evnt.pageY+ClockFromMouseY-(window.pageYOffset):event.y+ClockFromMouseY;
+xmouse = (ns)?evnt.pageX+ClockFromMouseX:event.x+ClockFromMouseX;
+}
+(ns)?window.onMouseMove=Mouse:document.onmousemove=Mouse;
+function ClockAndAssign(){
+time = new Date ();
+secs = time.getSeconds();
+sec = -1.57 + Math.PI * secs/30;
+mins = time.getMinutes();
+min = -1.57 + Math.PI * mins/30;
+hr = time.getHours();
+hrs = -1.575 + Math.PI * hr/6+Math.PI*parseInt(time.getMinutes())/360;
+if (ie){
+Od.style.top=window.document.body.scrollTop;
+Of.style.top=window.document.body.scrollTop;
+Oh.style.top=window.document.body.scrollTop;
+Om.style.top=window.document.body.scrollTop;
+Os.style.top=window.document.body.scrollTop;
+}
+for (i=0; i < n; i++){
+ var F=(ns)?document.layers['nsFace'+i]:ieFace[i].style; 
+ F.top=y[i] + ClockHeight*Math.sin(-1.0471 + i*Split*Math.PI/180)+scrll;
+ F.left=x[i] + ClockWidth*Math.cos(-1.0471 + i*Split*Math.PI/180);
+ }
+for (i=0; i < H.length; i++){
+ var HL=(ns)?document.layers['nsHours'+i]:ieHours[i].style;
+ HL.top=y[i]+HandY+(i*HandHeight)*Math.sin(hrs)+scrll;
+ HL.left=x[i]+HandX+(i*HandWidth)*Math.cos(hrs);
+ }
+for (i=0; i < M.length; i++){
+ var ML=(ns)?document.layers['nsMinutes'+i]:ieMinutes[i].style;
+ ML.top=y[i]+HandY+(i*HandHeight)*Math.sin(min)+scrll;
+ ML.left=x[i]+HandX+(i*HandWidth)*Math.cos(min);
+ }
+for (i=0; i < S.length; i++){
+ var SL=(ns)?document.layers['nsSeconds'+i]:ieSeconds[i].style;
+ SL.top=y[i]+HandY+(i*HandHeight)*Math.sin(sec)+scrll;
+ SL.left=x[i]+HandX+(i*HandWidth)*Math.cos(sec);
+ }
+for (i=0; i < D.length; i++){
+ var DL=(ns)?document.layers['nsDate'+i]:ieDate[i].style; 
+ DL.top=Dy[i] + ClockHeight*1.5*Math.sin(currStep+i*Dsplit*Math.PI/180)+scrll;
+ DL.left=Dx[i] + ClockWidth*1.5*Math.cos(currStep+i*Dsplit*Math.PI/180);
+ }
+currStep-=step;
+}
+function Delay(){
+scrll=(ns)?window.pageYOffset:0;
+Dy[0]=Math.round(DY[0]+=((ymouse)-DY[0])*speed);
+Dx[0]=Math.round(DX[0]+=((xmouse)-DX[0])*speed);
+for (i=1; i < D.length; i++){
+Dy[i]=Math.round(DY[i]+=(Dy[i-1]-DY[i])*speed);
+Dx[i]=Math.round(DX[i]+=(Dx[i-1]-DX[i])*speed);
+}
+y[0]=Math.round(Y[0]+=((ymouse)-Y[0])*speed);
+x[0]=Math.round(X[0]+=((xmouse)-X[0])*speed);
+for (i=1; i < n; i++){
+y[i]=Math.round(Y[i]+=(y[i-1]-Y[i])*speed);
+x[i]=Math.round(X[i]+=(x[i-1]-X[i])*speed);
+}
+ClockAndAssign();
+setTimeout('Delay()',20);
+}
+if (ns||ie)window.onload=Delay;
+</SCRIPT>
+<!--msnavigation-->
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <P><IMG height=75 src="35_files/image002.gif" width=273 border=0> </P>
+      <P><A href="http://mainak.netfirms.com/index.htm"><IMG height=20 alt=Home 
+      src="35_files/home_cmp_network110_gbtn.gif" width=95 align=middle 
+      border=0></A> <A href="http://mainak.netfirms.com/feedback.htm"><IMG 
+      height=20 alt=Feedback src="35_files/feedback.htm_cmp_network110_gbtn.gif" 
+      width=95 align=middle border=0></A> <A 
+      href="http://mainak.netfirms.com/toc.htm"><IMG height=20 alt=Contents 
+      src="35_files/toc.htm_cmp_network110_gbtn.gif" width=95 align=middle 
+      border=0></A> <A href="http://mainak.netfirms.com/search.htm"><IMG 
+      height=20 alt=Search src="35_files/search.htm_cmp_network110_gbtn.gif" 
+      width=95 align=middle 
+      border=0></A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      <IMG 
+      src="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      </P>
+      <P><IMG height=141 alt="Its My Life ...!" 
+      src="35_files/its_my_life____!.htm_cmp_network110_bnr.gif" width=598 
+      border=0> 
+      <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <SCRIPT language=JavaScript><!--
+MSFPhover = 
+  (((navigator.appName == "Netscape") && 
+  (parseInt(navigator.appVersion) >= 3 )) || 
+  ((navigator.appName == "Microsoft Internet Explorer") && 
+  (parseInt(navigator.appVersion) >= 4 ))); 
+function MSFPpreload(img) 
+{
+  var a=new Image(); a.src=img; return a; 
+}
+// --></SCRIPT>
+
+      <SCRIPT language=JavaScript><!--
+if(MSFPhover) { MSFPnav1n=MSFPpreload("_derived/serv01.htm_cmp_network110_hbtn.gif"); MSFPnav1h=MSFPpreload("_derived/serv01.htm_cmp_network110_hbtn_a.gif"); }
+// --></SCRIPT>
+       <A language=JavaScript 
+      onmouseover="if(MSFPhover) document['MSFPnav1'].src=MSFPnav1h.src" 
+      onmouseout="if(MSFPhover) document['MSFPnav1'].src=MSFPnav1n.src" 
+      href="http://pub8.bravenet.com/guestbook/show.php?usernum=669811620"><IMG 
+      height=24 alt=Guestbook src="35_files/serv01.htm_cmp_network110_hbtn.gif" 
+      width=140 align=middle border=0 name=MSFPnav1></A>
+      <SCRIPT language=JavaScript><!--
+if(MSFPhover) { MSFPnav2n=MSFPpreload("_derived/serv02.htm_cmp_network110_hbtn.gif"); MSFPnav2h=MSFPpreload("_derived/serv02.htm_cmp_network110_hbtn_a.gif"); }
+// --></SCRIPT>
+       <A language=JavaScript 
+      onmouseover="if(MSFPhover) document['MSFPnav2'].src=MSFPnav2h.src" 
+      onmouseout="if(MSFPhover) document['MSFPnav2'].src=MSFPnav2n.src" 
+      href="http://groups.yahoo.com/group/iffmd"><IMG height=24 alt="My Club" 
+      src="35_files/serv02.htm_cmp_network110_hbtn.gif" width=140 align=middle 
+      border=0 name=MSFPnav2></A>
+      <SCRIPT language=JavaScript><!--
+if(MSFPhover) { MSFPnav3n=MSFPpreload("_derived/serv03.htm_cmp_network110_hbtn.gif"); MSFPnav3h=MSFPpreload("_derived/serv03.htm_cmp_network110_hbtn_a.gif"); }
+// --></SCRIPT>
+       <A language=JavaScript 
+      onmouseover="if(MSFPhover) document['MSFPnav3'].src=MSFPnav3h.src" 
+      onmouseout="if(MSFPhover) document['MSFPnav3'].src=MSFPnav3n.src" 
+      href="http://mainak.zzn.com/"><IMG height=24 alt=Email 
+      src="35_files/serv03.htm_cmp_network110_hbtn.gif" width=140 align=middle 
+      border=0 name=MSFPnav3></A></P>
+      <P>&nbsp;</P></TD></TR><!--msnavigation--></TBODY></TABLE><!--msnavigation-->
+<TABLE dir=ltr cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=top width="1%">
+      <P>
+      <SCRIPT language=JavaScript><!--
+if(MSFPhover) { MSFPnav4n=MSFPpreload("_derived/news.htm_cmp_network110_vbtn.gif"); MSFPnav4h=MSFPpreload("_derived/news.htm_cmp_network110_vbtn_a.gif"); }
+// --></SCRIPT>
+      <A language=JavaScript 
+      onmouseover="if(MSFPhover) document['MSFPnav4'].src=MSFPnav4h.src" 
+      onmouseout="if(MSFPhover) document['MSFPnav4'].src=MSFPnav4n.src" 
+      href="http://mainak.netfirms.com/news.htm"><IMG height=24 
+      alt="Serious Fun" src="35_files/news.htm_cmp_network110_vbtn.gif" 
+      width=140 border=0 name=MSFPnav4></A><BR>
+      <SCRIPT language=JavaScript><!--
+if(MSFPhover) { MSFPnav5n=MSFPpreload("_derived/products.htm_cmp_network110_vbtn.gif"); MSFPnav5h=MSFPpreload("_derived/products.htm_cmp_network110_vbtn_a.gif"); }
+// --></SCRIPT>
+      <A language=JavaScript 
+      onmouseover="if(MSFPhover) document['MSFPnav5'].src=MSFPnav5h.src" 
+      onmouseout="if(MSFPhover) document['MSFPnav5'].src=MSFPnav5n.src" 
+      href="http://mainak.netfirms.com/products.htm"><IMG height=24 
+      alt="Know About" src="35_files/products.htm_cmp_network110_vbtn.gif" 
+      width=140 border=0 name=MSFPnav5></A><BR>
+      <SCRIPT language=JavaScript><!--
+if(MSFPhover) { MSFPnav6n=MSFPpreload("_derived/services.htm_cmp_network110_vbtn.gif"); MSFPnav6h=MSFPpreload("_derived/services.htm_cmp_network110_vbtn_a.gif"); }
+// --></SCRIPT>
+      <A language=JavaScript 
+      onmouseover="if(MSFPhover) document['MSFPnav6'].src=MSFPnav6h.src" 
+      onmouseout="if(MSFPhover) document['MSFPnav6'].src=MSFPnav6n.src" 
+      href="http://mainak.netfirms.com/services.htm"><IMG height=24 
+      alt="Lets Interact" src="35_files/services.htm_cmp_network110_vbtn.gif" 
+      width=140 border=0 name=MSFPnav6></A> </P></TD>
+    <TD vAlign=top width=24></TD><!--msnavigation-->
+    <TD vAlign=top>
+      <P><B><FONT face="Trebuchet MS">Welcome to my Web site! </FONT></B></P>
+      <P><FONT face="Trebuchet MS">I, Mainak Das, heartily welcome you. Just<B> 
+      </B>rest assured that by the time you end up exploring my web site,whole 
+      of your techno-cum-personal outlook will undergo a sea change.<B> </B>So, 
+      come in to my ever happening world!!</FONT></P>
+      <P><!--webbot bot="PurpleText"
+preview="Write an introductory paragraph for your home page here. This is like the front door to your home on the Internet. Invite visitors to step in and have a look around. " --></P>
+      <P></P>
+      <HR>
+
+      <P></P>
+      <H2>Who Am I ??&nbsp; </H2>
+      <P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      <B><FONT face="Trebuchet MS"><A title=Picture,Profile,Resume,Diary 
+      href="http://mainak.netfirms.com/prod01.htm">MAINAK DAS 
+      !!</A></FONT></B></P>
+      <P>I was born on 2nd April, 1981 in <A 
+      href="http://mainak.netfirms.com/my_city_durgapur.htm">Durgapur</A>, West 
+      Bengal, India. My father, Mr.Nishikanta Das, is Senior Manager in <A 
+      href="http://www.sail.co.in/plants/durgapur.htm">D.S.P.</A>, and my 
+      mother, Mrs Aparajita Das is Librarian in <A 
+      href="http://mainak.netfirms.com/dwc.htm">Durgapur Women's College</A>. My 
+      younger brother, Manarshi Das, is doing&nbsp; B.Tech. in Biotechnology 
+      from <A href="http://bcetdgp.org/">BCET</A>, Durgapur. As of me, I did my 
+      schooling in Benachity High School and did plus two from D.A.V. Model 
+      School all in Durgapur. Spent one year in Siliguri Institute Of Technology 
+      doing B. Tech in computer science. After that I changed my college and am 
+      now doing B.Tech in IT from<A href="http://www.kgec.org/"> Kalyani 
+      Government Engineering College.</A></P>
+      <P><!--webbot bot="PurpleText"
+preview="Write one or two short sentences that describe your company's philosophy and ambitions. Something like, 'To become the leading provider of ...'." --></P>
+      <P></P>
+      <HR>
+
+      <P></P>
+      <H2>Mission Impossible ??</H2>
+      <P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      <B><FONT face="Trebuchet MS">B/R/M ?!</FONT></B></P>
+      <P>About my dream its to be in any of the premier institutes one day. I 
+      wish I could be smart enough to win b/r/m !! Anyway lets see whats in my 
+      future. <BR>&nbsp;</P>
+      <P><!--webbot bot="PurpleText"
+preview="Describe who you are, and how you provide value to your customers." --></P>
+      <P><!--webbot bot="PurpleText"
+preview="If you belong to any industry associations, list them here." --></P>
+      <P><!--webbot bot="PurpleText"
+preview="What do other people say about your company? Try using some quotes from satisfied customers." --></P>
+      <P><!--webbot bot="PurpleText"
+preview="Who are the people in your company? You might want to include a message from your president or the biographies of your founders." --></P>
+      <P></P>
+      <HR>
+
+      <P></P>
+      <H2>Contact Information</H2>
+      <P><!--webbot bot="PurpleText"
+preview="Tell readers how to get in touch with you. Remember that people can connect to your web from anywhere in the world; so provide international versions of telephone and fax numbers. It's also customary to provide e-mail addresses for key contact points, such as sales and customer support. " --></P>
+      <DL>
+        <DT><STRONG>Telephone</STRONG> 
+        <DD><!--webbot bot="Substitution" s-variable="CompanyPhone" startspan -->+91 
+        0343 2568729<!--webbot bot="Substitution" i-checksum="26793" endspan --> 
+
+        <DT><STRONG>Postal address</STRONG> 
+        <DD><!--webbot bot="Substitution" s-variable="CompanyAddress" startspan -->Block 
+        - 40, Flat - 1, Ananda Vihar, Durgapur-713204, West Bengal, India<!--webbot bot="Substitution" i-checksum="55657" endspan --> 
+        <DT><STRONG>Electronic mail</STRONG> 
+        <DD>General Information: <A href="mailto:contact@mainak.zzn.com"><!--webbot
+        bot="Substitution" s-variable="CompanyEmail" startspan -->contact@mainak.zzn.com<!--webbot bot="Substitution" i-checksum="53746" endspan --></A><BR>Webmaster: 
+        <A href="mailto:webmaster@mainak.zzn.com"><!--webbot
+        bot="Substitution" s-variable="CompanyWebmaster" startspan -->webmaster@mainak.zzn.com<!--webbot bot="Substitution" i-checksum="14809" endspan --></A> 
+        </DD></DL><!--msnavigation--></TD></TR><!--msnavigation--></TBODY></TABLE><!--msnavigation-->
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <P>&nbsp;</P>
+      <P><NOBR>[&nbsp;Home&nbsp;]</NOBR> <NOBR>[&nbsp;<A 
+      href="http://mainak.netfirms.com/news.htm" 
+      target="">Serious&nbsp;Fun</A>&nbsp;]</NOBR> <NOBR>[&nbsp;<A 
+      href="http://mainak.netfirms.com/products.htm" 
+      target="">Know&nbsp;About</A>&nbsp;]</NOBR> <NOBR>[&nbsp;<A 
+      href="http://mainak.netfirms.com/services.htm" 
+      target="">Lets&nbsp;Interact</A>&nbsp;]</NOBR></P>
+      <H5>Send mail to <A 
+      href="mailto:webmaster@mainak.zzn.com">webmaster@mainak.zzn.com</A> with 
+      questions or comments about this web site.<BR>Copyright © 2003 Mainak 
+      Das<BR>Last modified: 06/03/03 
+</H5></TD></TR><!--msnavigation--></TBODY></TABLE></BODY></HTML>

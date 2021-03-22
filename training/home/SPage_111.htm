@@ -1,0 +1,26 @@
+<html>
+<head><title>Noago, a hybrid between a portal and a search engine.</title>
+<link rel='stylesheet' type='text/css' href='../styles/search.css'>
+</head>
+<body onLoad="document.forms.srch.query.focus()">
+<div align=center>
+<form method=post action="/cgi-bin/index" name=srch>
+<input type=hidden name=db VALUE="db">
+<table border=0>
+<tr>
+	<td colspan=2 align=center valign=top height=120><img src="images/logo.gif" width=230 height=90 border=0 alt=""></td>
+</tr>
+<tr>
+	<td colspan=2>Enter your query:</td>
+</tr>
+<tr>
+	<td><input type=text size=35 name=query value=""></td>
+	<td><input type=image width=70 height=25 border=0 src="images/search.gif" name="www" alt="Search All Categories" onmouseover="window.status='Search All Categories';return true;" onmouseout="window.status='';return true;"></td>
+</tr>
+</table>
+</form>
+<br><br>
+<SPAN class=kb><a href="http://www.noago.com/about/" onmouseover="window.status='About Us';return true;" onmouseout="window.status='';return true;">About</a> | <a href="http://www.noago.com/add/" onmouseover="window.status='Add A Site';return true;" onmouseout="window.status='';return true;">Add Site</a> | <a href="http://www.noago.com/contact/" onmouseover="window.status='Contact Us';return true;" onmouseout="window.status='';return true;">Contact Us</a></span><BR><BR><SPAN class=mt> &copy; 2001 Noago<BR><BR></SPAN>
+</div>
+</body>
+</html>

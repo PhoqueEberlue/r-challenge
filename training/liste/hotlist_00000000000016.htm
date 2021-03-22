@@ -1,0 +1,560 @@
+<html>
+
+	<head>
+		<title>Bret Pettichord's Software Testing Hotlist</title>
+		<base href="http://www.io.com/~wazmo/qa/">
+		<meta name="description" content="Resources for Professional Software Testers">
+		<meta name="KEYWORDS" content="Software Testing, Test Automation">
+	</head>
+
+	<body bgcolor="white" text="black" link="#00008b" vlink="#708090">
+		<font size="6" color="#006699"><a name="top"></a><!--HEADER-->
+		Software Testing Hotlist</font><br>
+		<font size="6" color="#696969">Resources for Professional Software Testers</font> 
+		<p><a href="http://www.pettichord.com"><font size="4">Bret Pettichord</font></a><font size="4"> , editor <br>
+		<i>Updated&nbsp;7 August 2001</i> </font></p>
+		<p><table border="0" cellpadding="5" cellspacing="0">
+			<tr>
+				<td bgcolor="#006699"><font size="5" color="white">Contents</font></td>
+			</tr>
+			<tr>
+				<td bgcolor="silver">
+					<ul>
+						<li><a href="#test_automation"><font face="Arial,Helvetica,sans-serif">Test Automation</font></a><font face="Arial,Helvetica,sans-serif"> </font>
+						<li><a href="#test_tools"><font face="Arial,Helvetica,sans-serif">Test Tools</font></a><font face="Arial,Helvetica,sans-serif"> </font>
+						<li><a href="#using_silk"><font face="Arial,Helvetica,sans-serif">Using Silk</font></a><font face="Arial,Helvetica,sans-serif"> </font>
+						<li><a href="#general_issues"><font face="Arial,Helvetica,sans-serif">Testing Strategy</font></a><font face="Arial,Helvetica,sans-serif"> </font>
+						<li><a href="#risk_analysis"><font face="Arial,Helvetica,sans-serif">Risk-Based Testing</font></a><font face="Arial,Helvetica,sans-serif"> </font>
+						<li><a href="#reporting_defects"><font face="Arial,Helvetica,sans-serif">Reporting and Tracking Defects</font></a><font face="Arial,Helvetica,sans-serif"> </font>
+						<li><a href="#code_coverage"><font face="Arial,Helvetica,sans-serif">Code Coverage</font></a><font face="Arial,Helvetica,sans-serif"> </font>
+						<li><a href="#exploratory"><font face="Arial,Helvetica,sans-serif">Exploratory Testing</font></a><font face="Arial,Helvetica,sans-serif"> </font>
+						<li><a href="#software_testability"><font face="Arial,Helvetica,sans-serif">Software Testability</font></a><font face="Arial,Helvetica,sans-serif"> </font>
+						<li><a href="#developers"><font face="Arial,Helvetica,sans-serif">Working with Developers</font></a><font face="Arial,Helvetica,sans-serif"> </font>
+						<li><a href="#using_expect"><font face="Arial,Helvetica,sans-serif">Using Expect</font></a><font face="Arial,Helvetica,sans-serif"> </font>
+						<li><a href="#notorious_bugs"><font face="Arial,Helvetica,sans-serif">Notorious Bugs</font></a><font face="Arial,Helvetica,sans-serif"> </font>
+						<li><a href="#news"><font face="Arial,Helvetica,sans-serif">In the News</font></a><font face="Arial,Helvetica,sans-serif"> </font>
+						<li><a href="#testing_and_qa"><font face="Arial,Helvetica,sans-serif">Testing and Quality Assurance</font></a><font face="Arial,Helvetica,sans-serif"> </font>
+						<li><a href="#career"><font face="Arial,Helvetica,sans-serif">A Career in Software Testing</font></a><font face="Arial,Helvetica,sans-serif"> </font>
+						<li><a href="#software_process"><font face="Arial,Helvetica,sans-serif">Software Process</font></a><font face="Arial,Helvetica,sans-serif"> </font>
+						<li><a href="#forums"><font face="Arial,Helvetica,sans-serif">Forums</font></a><font face="Arial,Helvetica,sans-serif"> </font>
+						<li><a href="#interesting_sites"><font face="Arial,Helvetica,sans-serif">Interesting Sites</font></a><font face="Arial,Helvetica,sans-serif"> </font>
+						<li><a href="#books"><font face="Arial,Helvetica,sans-serif">Recommended Books</font></a><font face="Arial,Helvetica,sans-serif"> </font>
+						<li><a href="#bio"><font face="Arial,Helvetica,sans-serif">About the Editor</font></a><font face="Arial,Helvetica,sans-serif"> </font>
+					</ul>
+				</td>
+			</tr>
+		</table></p>
+		<p>
+		<hr>
+		</p>
+		<h3><a name="test_automation"></a><font size="4">Test Automation </font></h3>
+		<p><i>Techniques and ideas for automating software testing.</i></p>
+		<dl>
+			<dt><a href="http://members.aol.com/sascanagl/FRAMESDataDrivenTestAutomationFrameworks.htm">Test Automation Frameworks</a>, Carl Nagle 
+			<dd>A solid description of the design, purpose and options for data driven testing frameworks. This is part of a <a href="http://members.aol.com/sascanagl/Default.htm">larger project </a>to place framework code in the public domain. 
+			<dt><a href="http://www.stickyminds.com/sitewide.asp?ObjectId=2326&amp;ObjectType=COL&amp;Function=edetail">Hey Vendors, Give Us Real Scripting Languages</a>, Bret Pettichord 
+			<dd>Why you'd want a standard scripting language with your test tool, instead of a vendorscript. (February 2001) 
+			<dt><a href="http://www.stickyminds.com/sitewide.asp?ObjectId=2246&amp;ObjectType=COL&amp;Function=edetail">Getting a Late Start on Test Automation</a>, Bret Pettichord 
+			<dd>What can you do if you don't start test automation early? (January 2001) 
+			<dt><a href="http://www.stickyminds.com/sitewide.asp?ObjectId=2084&amp;ObjectType=COL&amp;Function=edetail">Three Keys to Test Automation</a>, Bret Pettichord 
+			<dd>How can you get your test automation project off on the right foot? (December 2000) 
+			<dt><a href="http://www.sdmagazine.com/articles/1999/9904/9904c/9904c.htm">A UML Testing Framework</a>, Martin Fowler, Software Development, April 1999 
+			<dd>Uses UML to describe the JUnit test harness. 
+			<dt><a href="http://www.geocities.com/harry_robinson_testing/Intelligent_Test_Automation.htm">Intelligent Test Automation</a>, Harry Robinson, STQE Magazine, September 2000. 
+			<dd>Describes how to create state models for software and use them to generate tests. Accessible introduction to the technique. 
+			<dt><a href="http://belmont-shores.ics.uci.edu/TestTalk/ASE99DocSymNew-Final.pdf">TestTalk, A Comprehensive Testing Language</a>, Chang Liu 
+			<dd>Describes a syntax for test description that can be compiled into various test execution languages. Part of <a href="http://belmont-shores.ics.uci.edu/TestTalk/">research program</a> . 
+			<dt><a href="../papers/seven_steps.html">Seven Steps to Test Automation Success</a>, by Bret Pettichord 
+			<dd>Important steps for planning and running a test automation project. Cites pitfalls of GUI test automation. 
+			<dt><a href="http://www.stqemagazine.com/webinfo_detail.asp?id=102">Automating Testing</a>, by Brian Marick 
+			<dd>Describes the evolution of test tools. 
+			<dt><a href="http://www.mactech.com/articles/mactech/Vol.13/13.10/SoftwareTestAutomation/">Software Test Automation and the Product Life Cycle</a>, by Dave Kelly 
+			<dd>Advice on test automation focusing on when to start automating. 
+			<dt><a href="http://www.stickyminds.com/sitewide.asp?ObjectId=1802&ObjectType=ART&Function=edetail">Lessons in Test Automation</a>, by Elfrieda Dustin 
+			<dd>Test managers often can find themselves surprised at the difficulty of test automation. This article collects lessons learned on various projects after they started using automated tools. Corrective actions are suggested. <!--
+  <dt><a href="http://stqe.net/file_download.asp?file=Heuristc%2Epdf&mode=1&msgid=129">
+    Heuristic Test Oracles: 
+    The Balance between Exhaustive Comparison and No Comparison at All</a>,
+    by Douglas Hoffman</dt>
+  <dd>A serious examination of practical strategies for verifying test 
+   results. (PDF format)</dt>
+-->
+			<dt><a href="http://www.testing.com/writings/automate.pdf">When Should a Test be Automated?</a>, by Brian Marick 
+			<dd>Considers relevant factors in deciding which tests to automate. 
+			<dt><a href="http://www.sdmagazine.com/breakrm/features/s992f2.shtml">Integrated, Effective Test Design and Automation</a>, by Ed Kit 
+			<dd>Describes &quot;third generation&quot; table-driven test automation. Includes spreadsheet templates. 
+			<dt><a href="http://www.imbus.de/html/GUI/AQUIS-full_paper-1.3.html">How to Automate Testing of Graphical User Interfaces</a>, by Tilo Linz and Matthias Daigl 
+			<dd>Describes important considerations in the development of test procedure libraries. 
+			<dt><a href="http://www.sqa-test.com/w_paper1.html">Totally Data-Driven Automated Testing</a>, by Keith Zambelich 
+			<dd>Evaluates two useful architectures for test automation. 
+			<dt><a href="http://www.data-dimensions.com/testersnet/docs/jimauto1.htm">When to Automate Testing: A Cost-Benefit Analysis</a>, by James Hancock 
+			<dd>Common sense about what tests should be automated. 
+			<dt><a href="http://www.data-dimensions.com/testersnet/docs/auto_style1.htm">Styles for Making Test Automation Work</a>, by Mike Powers 
+			<dd>Coding standards and techniques for test automation. 
+			<dt><a href="http://www.kaner.com/lawst1.htm">Improving the Maintainability of Automated Test Suites</a>, by Cem Kaner 
+			<dd>Descriptions of the pitfalls and challenges of automated testing. 
+			<dt><a href="http://www.testing.com/writings/classic/mistakes.html">Classic Testing Mistakes</a>, by Brian Marick 
+			<dd>A litany of mistakes made in testing, including a section on test automation mistakes. 
+			<dt><a href="http://www.satisfice.com/articles/test_automation_snake_oil.pdf">Test Automation Snake Oil</a>, by James Bach 
+			<dd>An argument against some of the naive claims made for test automation by someone who has been burned many times. A <a href="http://www.satisfice.com/articles/test_automation_snake_oil.pdf">newer version</a> of article is available in PDF. <!-- 
+  <dt><a href="http://www.data-dimensions.com/testersnet/docs/tpfeat.htm">
+    Test Automation System Checklist</a>,
+    by James Bach </dt>
+  <dd>Advise on features to include in a test automation system. </dd>
+-->
+			<dt><a href="http://www.io.com/~wazmo/succpap.htm">Success with Test Automation</a>, by Bret Pettichord 
+			<dd>Description of the development of test automation that used a table-driven approach. 
+			<dt><a href="http://www.crl.com/~zallar/autotest.html">Automated Software Testing - A Perspective</a>, by Kerry Zallar 
+		</dl>
+		<p><i>Other listings of articles on test automation.</i></p>
+		<dl>
+			<dt><a href="http://www.sqa-test.com/articles.html">Papers on Automated Testing</a>, from Automated Testing Specialists 
+			<dt><a href="http://www.casq.org/autotest/aupa.html">Papers for Automated Testing</a>, from the Chinese Association for Software Quality 
+		</dl>
+		<div align="right">
+			<p><a href="#top"><font face="Arial,Helvetica,sans-serif" size="1"><b>BACK TO TOP</b></font></a></p>
+		</div>
+		<p>
+		<hr>
+		</p>
+		<h3><a name="test_tools"></a><font size="4">Test Tools</font></h3>
+		<p><i>Comparing and selecting various test tools.</i></p>
+		<dl>
+			<dt><a href="http://www.automationexpertise.com/Files/SilkWrFeatures.pdf">SilkTest and WinRunner Feature Descriptions,</a> by Horwath, Green &amp; Lawler, 2000 
+			<dd>Report describing the differences between these two test tools by independent test automation consultants. Focuses on detailed comparisons of specific features; avoids any kind of general recommendations. 
+			<dt><a href="http://www.grove.co.uk/Tool_Information/Choosing_Tools.html">Choosing a Test Tool</a>, Mark Fewster and Dorothy Graham. 
+			<dd>Short sharp advice about how to choose a testing tool. 
+			<dt><a href="http://www.qualitytree.com/feature/mtrc.pdf">Making the Right Choice: The Features you Need in a GUI Test Automation Tool</a>, by Elisabeth Hendrickson 
+			<dd>An excellent guide to selecting a GUI test tool. (PDF format) 
+			<dt><a href="http://www.stickyminds.com/sitewide.asp?ObjectId=1798&amp;ObjectType=ART&amp;Function=edetail">Evaluating Tools</a>, Elizabeth Hendrickson. 
+			<dd>A tool selection process to help with selecting a tool for your team. 
+		</dl>
+		<div align="right">
+			<p><a href="#top"><font face="Arial,Helvetica,sans-serif" size="1"><b>BACK TO TOP</b></font></a></p>
+		</div>
+		<p>
+		<hr>
+		</p>
+		<h3><a name="using_silk"></a><font size="4">Using Silk </font></h3>
+		<p><i>Silk is a tool for automating GUI test execution, developed and published by <a href="http://www.segue.com">Segue Software</a>. Earlier versions of the tool have been called called QA Partner, SilkTest, or QualityWorks. It uses a proprietary language called 4Test.</i></p>
+		<dl>
+			<dt><a href="http://customers.segue.com/protected/bronze/s_newsletter/9912/s_qa_insider.htm">4test Web Spider,</a> by John Moore, 1999 
+			<dt><a href="http://customers.segue.com/protected/bronze/s_newsletter/9910/AJ_Alhait/s_1AJ_Alhait_toc.htm">Installation Testing,</a> by A.J. Alhait, 1999. 
+			<dd>Describes how to write tests to drive an InstallShield installer. 
+			<dt><a href="http://customers.segue.com/protected/bronze/s_newsletter/9910/andrew_issaenko/s_1a_issaenko_toc.htm">Processing Lists of Records for SilkTest,</a> by Andrew Issaenko, 1999 
+			<dd>Describes functions for sorting lists of records in 4test. 
+			<dt><a href="http://customers.segue.com/protected/bronze/s_newsletter/9909/jeff_hemsley/s_1jeff_hemsley_toc.htm">Classes, Objects, Dynamic Instantiation and Constructors</a> by Jeff Hemsley, 1999 
+			<dd>If you've used Silk's 4test language much, you've noticed that it has some object-oriented capabilities. But the only objects allowed are window objects, and even these may only be defined at compile time using window declarations. Or so you might think. Actually general purpose objects can be created during runtime using some clever, previously undocumented techniques. These were discovered and developed by Jeff Hemsley of Autodesk. He describes them in this paper published at Segue's website. (Access requires Segue customer account.) 
+			<dt><a href="http://customers.segue.com/protected/bronze/s_newsletter/9903/articles/s_1sadler_article_toc.htm">Using Object Oriented Design for Testing Custom Tree Controls</a>, Cynthia Sadler, 1999 
+			<dd>(Access requires Segue customer account.) <br>
+			Describes how rich support was provided for a custom control. 
+			<dt><a href="http://customers.segue.com/protected/bronze/s_newsletter/9902/articles/s_1gerrylyon_article_toc.htm">How to Create an Expert System from the Recovery System</a>, by Gerry Lyon, 1999 
+			<dd>(Access requires Segue customer account.)<br>
+			Describes an expert system for software verification. <!--  <dt><A href="ftp://ftp.icus.com/pub/ASUG/OORecover.zip">Applying the Object-Oriented
+    Paradigm to the QualityWorks Recovery System</A>, Andrew 
+  Townley, 1999? (zipped word doc) 
+  <dd>Explains an architecture that allows a recovery 
+  system to be quickly configured to support different applications or different 
+  test logging policies. 
+  -->
+			<dt><a href="http://www.sqa-test.com/mr_cluey/resource.html">Parsing Resource Files to Create and Maintain an Automation Test Library</a>, Amy Groves, 1998? 
+			<dd>Describes a method for automatically generating window declarations for Visual Basic or C++ applications. 
+			<dt><a href="http://www.iris.com/web/irisdevs.nsf/00000000000000000000000000000000/21115feb40f3769a8525673700560703?OpenDocument">Easy to use GUI generates QA Partner scripts</a>, Tony Venditti, 1998 
+			<dd>Describes his <a href="http://www.iris.com/web/irisdevs.nsf/85255db800470aa485255d8b004e349a/c74d4a1a5788a44a852566c1006ed74a?OpenDocument">Script Wizard</a>, a tool which facilitates the maintenance and developed of Silk testscripts. The Script Wizard is available for download. 
+			<dt><a href="http://www.qualitytree.com/autotest/qapartner.htm">Automated Testing with Segue's QualityWorks</a>, Elisabeth Hendrickson, 1998 
+			<dd>Suggests a high-level outline for using Silk on a project. 
+			<dt><a href="http://www.sqa-test.com/mr_cluey/associativearrays.html">Implementing Associative Arrays</a>, Richard Weth, 1997 
+			<dd>Documents his Dictionary Class, a rich supporting persistent associative arrays. The class library is available for download. 
+		</dl>
+		<p><i>Other sites featuring information about Silk.</i></p>
+		<dl>
+			<dt><a href="http://www.automationexpertise.com/resources.asp">Automation Expertise</a> 
+			<dd>John Green's web site contains sample code, tips, and an FAQ. 
+			<dt><a href="http://www.quickplace.com/silkpage">Tony Venditti's Silk Automation Page</a> 
+			<dd>Includes source code and the archives of QAPUSER and SILKTEST 
+			<dt><a href="http://www.iris.com/web/irisdevs.nsf/c404f3f7c0cc20458525618c00633c15/f41c9c2b9b8dc4508525666700747f56?OpenDocument">Tony Venditti's Silk/QA Partner Automation Home Page</a> 
+			<dd>Features his Script Wizard, a tool for assisting with testscript development. 
+			<dt><a href="http://www.aimnet.com/~dcreed/qap/main.html">David Reed's QA Partner Page</a> 
+			<dd>4Test code and tips. 
+			<dt><a href="http://testmap.home.mindspring.com/">Charlie Hedstrom's TestMap Extensions</a> 
+			<dd>Describes a commercial add-on to Silk. Also includes tips and 4test code for download. 
+			<dt><a href="http://www.sqa-test.com/mr_cluey.html">Mr. Cluey's Kludge Page</a> 
+			<dd>A handy collection of tips and libraries. 
+		</dl>
+		<p><i>Forums for Silk Users</i></p>
+		<dl>
+			<dt><a href="http://www.qaforums.com/cgi-bin/boards/forumdisplay.cgi?action=topics&amp;forum=SilkTest&amp;number=1&amp;DaysPrune=100&amp;LastLogin=">BetaSoft SilkTest Forum</a> 
+			<dt><a href="http://www.onelist.com/viewarchive.cgi?listname=silktest">Silktest mailing list</a> 
+		</dl>
+		<div align="right">
+			<p><a href="#top"><font face="Arial,Helvetica,sans-serif" size="1"><b>BACK TO TOP</b></font></a></p>
+		</div>
+		<p>
+		<hr>
+		</p>
+		<h3><a name="general_issues"></a><font size="4">Testing Strategy</font></h3>
+		<dl>
+			<dt><a href="http://www.kaner.com/qualcost.htm">Quality Cost Analysis: Benefits and Risks</a>, Cem Kaner 
+			<dd>Does testing save your company money or is it just another expense? Quality cost analysis describes the metrics you need to find out. 
+			<dt><a href="http://www.jrothman.com/Papers/ItDepends.html">It Depends: Deciding on the Correct Ratio of Developers to Testers,</a> by Johanna Rothman. 
+			<dd>It would be nice if we could calculate the size of the required testing staff based on the number of developers on the team. This paper discusses the relevant factors to be considered by discussing several case studies. 
+			<dt><a href="http://www.computer.org/software/so2000/pdf/s1070.pdf">What Is Software Testing? And Why Is It So Hard?</a> by James A. Whittaker 
+			<dd>An excellent overview of software testing with solid examples. 
+			<dt><a href="http://www.aet-usa.com/people/aaj/WhySoftwareFails.htm">Why Software Fails</a>, James Whittaker and Alan Jorgensen 
+			<dd>Provides an novel classification for software bugs. 
+			<dt><a href="http://www.testing.com/writings/purpose-of-testing.htm">The Testing Team's Motto</a>, by Brian Marick 
+			<dd>A testing team's mission is to reduce the uncertainty regarding the quality of the software. 
+			<dt><a href="http://www.chillarege.com/authwork/TestingBestPractice.pdf">Software Testing Best Practices</a>, by Ram Chillarege 
+			<dd>This consise report describes 28 best practices for software testing listed in order of implementation. 
+			<dt><a href="http://www.kaner.com/negotiate.htm">Negotiating Testing Resources: A Collaborative Approach</a>, by Cem Kaner 
+			<dt><a href="http://www.agcs.com/supportv2/techpapers/patterns/papers/systestp.htm">System Test Pattern Language</a>, by David DeLano and Linda Rising 
+		</dl>
+		<div align="right">
+			<p><a href="#top"><font face="Arial,Helvetica,sans-serif" size="1"><b>BACK TO TOP</b></font></a></p>
+		</div>
+		<p>
+		<hr>
+		</p>
+		<div align="left">
+			<h3><a name="risk_analysis"></a><font size="4">Risk Analysis</font></h3>
+		</div>
+		<dl>
+			<dt><a href="http://www.stickyminds.com/sitewide.asp?ObjectId=1800&amp;ObjectType=ART&amp;Function=edetail">Risk-Based Testing</a>, James Bach 
+			<dd>Describes several methods for using information about risk to help direct testing. 
+			<dt><a href="http://www.data-dimensions.com/testersnet/docs/riskbase.htm">Risk-Based Testing</a>, Keith McMahon 
+		</dl>
+		<div align="right">
+			<p><a href="#top"><font face="Arial,Helvetica,sans-serif" size="1"><b>BACK TO TOP</b></font></a></p>
+		</div>
+		<p>
+		<hr>
+		</p>
+		<h3><a name="reporting_defects"></a><font size="4">Reporting and Tracking Defects</font></h3>
+		<dl>
+			<dt><a href="http://www.testingcraft.com/failure-improvement.html">Failure Improvement</a>, by Brian Marick 
+			<dd>A list of things to look for when analyzing a software failure and writing up a defect report. 
+			<dt><a href="http://www.rstcorp.com/~faught/papers/iworks98/defect_isol.pdf">Software Defect Isolation</a>, by Prathibha Tammana and Danny Faught 
+			<dd>Discusses techniques for isolating, reproducing and reporting defects. 
+			<dt><a href="http://church.computer.org/software/so1997/html/s3135.htm">Gauging Software Readiness with Defect Tracking</a>, by Steve McConnell 
+			<dd>A brief list of techniques for estimating defects. 
+		</dl>
+		<div align="right">
+			<p><a href="#top"><font face="Arial,Helvetica,sans-serif" size="1"><b>BACK TO TOP</b></font></a></p>
+		</div>
+		<p>
+		<hr>
+		</p>
+		<h3><a name="code_coverage"></a><font size="4">Code Coverage</font></h3>
+		<dl>
+			<dt><a href="http://www.testing.com/writings/coverage.pdf">How to Misuse Code Coverage</a>, by Brian Marick 
+			<dd>Common ways to misuse code coverage tools, by the author of the GCT coverage tool. 
+			<dt><a href="http://www.kaner.com/coverage.htm">Software Negligence and Testing Coverage</a>, by Cem Kaner 
+			<dd>How many different ways can you assess testing coverage? What are you legally required to do? 
+			<dt><a href="http://www.bullseye.com/webCoverage.html">Code Coverage Analysis,</a> by Steve Cornett 
+			<dd>Good description of the different categories of code coverage measurements (statement, condition, path...). 
+			<dt><a href="http://www.testworks.com/News/Editorials/coverage.html">Incomplete Tests are Worse Than None At All,</a> by Edward Miller 
+			<dd>Essay argues for the necessity of module and call-pair coverage. 
+			<dt><a href="http://www.testing.com/writings/experience.pdf">Experience with the Cost of Different Coverage Goals for Testing</a>, by Brian Marick 
+			<dd>Describes experiences at Motorola of using code coverage measures of unit tests. 
+		</dl>
+		<div align="right">
+			<p><a href="#top"><font face="Arial,Helvetica,sans-serif" size="1"><b>BACK TO TOP</b></font></a></p>
+		</div>
+		<p>
+		<hr>
+		</p>
+		<h3><a name="exploratory"></a><font size="4">Exploratory Testing</font></h3>
+		<dl>
+			<dt><a href="http://www.stickyminds.com/sitewide.asp?ObjectId=2255&amp;ObjectType=COL&amp;Function=edetail">What Is Exploratory Testing?</a>, by James Bach 
+			<dt>
+			<dd>A nice description of a test approach that high-performing teams have been using for years. 
+			<dt><a href="http://www.satisfice.com/tools/procedure.pdf">General Functionality and Stability Test Procedure</a>, by James Bach 
+			<dd>An exploratory testing methodology used for Windows 2000 application certification. 
+			<dt><a href="http://www.testingcraft.com/exploratory-robinson.html">Exploratory Modeling</a>, Harry Robinson 
+			<dd>Describes the purpose and context for exploratory testing. 
+			<dt><a href="http://www.testingcraft.com/exploratory-pettichord.html">An Exploratory Testing Workshop Report</a>, by Bret Pettichord. 
+			<dd>Report describing exploratory techniques reviewed at a workshop. 
+		</dl>
+		<div align="right">
+			<p><a href="#top"><font face="Arial,Helvetica,sans-serif" size="1"><b>BACK TO TOP</b></font></a></p>
+		</div>
+		<p>
+		<hr>
+		</p>
+		<h3><a name="software_testability"></a><font size="4">Software Testability</font></h3>
+		<dl>
+			<dt><a href="http://itmanagement.earthweb.com/appdev/qa/article/0,,12202_622831,00.html">I Want My Test API</a>, Linda Hayes 
+			<dd>Suggests that a bit of added code to software can greatly facilitate automated testing; argues against feeble objections to doing this. (Datamation, Dec 2000) 
+			<dt><a href="http://www.io.com/~wazmo/papers/software_letters_1997_11.html">Do Tool Criteria Tie Tester's Hands?</a>, Joel Maslyn &amp; Bret Pettichord 
+			<dd>Notices that a purportedly comprehensive article on requirements for GUI development tools made absolutely no mention of testability concerns. (IEEE Software, Nov 1997) 
+			<dt><a href="http://www.testingcraft.com/wv-case-study/test-support-example.html">Adding Test Support Code</a>, by Brian Marick 
+			<dd>A case study for making small changes to a program to improve its testability. 
+			<dt><a href="http://www.data-dimensions.com/testersnet/docs/testability.htm">Improving Software Testability</a>, by Joy Shafer 
+			<dd>Indentifies factors affecting the ability to test software 
+		</dl>
+		<div align="right">
+			<p><a href="#top"><font face="Arial,Helvetica,sans-serif" size="1"><b>BACK TO TOP</b></font></a></p>
+		</div>
+		<p>
+		<hr>
+		</p>
+		<h3><a name="developers"></a><font size="4">Working with Developers</font></h3>
+		<dl>
+			<dt><a href="http://www.JoelOnSoftware.com/stories/storyReader$99">Top Five (Wrong) Reasons You Don't Have Testers,</a> Joel Spolsky 
+			<dd>A developer argues for hiring more testers, revealing some common (wrong) attitudes in the process. 
+			<dt><a href="http://www.stickyminds.com/swtest.asp?ObjectId=2360&amp;ObjectType=ART&amp;Function=edetail">Testers and Developers</a>, by Bret Pettichord and Carol Dekkers. 
+			<dt>
+			<dd>Radio interview discussion of the different ways that testers think. (February 2000) 
+			<dt><a href="http://www.stickyminds.com/sitewide.asp?ObjectId=1934&amp;ObjectType=COL&amp;Function=edetail">Taking the Heat</a>, by Bret Pettichord. 
+			<dd>Is it the testers' job to take some of the heat off of developers? (Stickyminds.com, October 2000) 
+			<dt><a href="http://www.io.com/~wazmo/papers/testers_and_developers.pdf">Testers and Developers Think Differently</a>, by Bret Pettichord. 
+			<dd>Describes different perspectives that testers and developers bring to the team. (STQE Magazine, January 2000) 
+		</dl>
+		<div align="right">
+			<p><a href="#top"><font face="Arial,Helvetica,sans-serif" size="1"><b>BACK TO TOP</b></font></a></p>
+		</div>
+		<p>
+		<hr>
+		</p>
+		<h3><a name="using_expect"></a><a href="http://www.io.com/~wazmo/expect.htm"><font size="4">Using Expect</font></a></h3>
+		<p><i>Expect is a Unix tool for testing command line interfaces. </i></p>
+		<div align="right">
+			<p><a href="#top"><font face="Arial,Helvetica,sans-serif" size="1"><b>BACK TO TOP</b></font></a></p>
+		</div>
+		<p>
+		<hr>
+		</p>
+		<h3><a name="notorious_bugs"></a><font size="4">Notorious Bugs</font></h3>
+		<dl>
+			<dt><a href="http://www.softwareqatest.com/qatfaq1.html#FAQ1_3">Are there still major computer system failures caused by software bugs?</a> 
+			<dd>A long list of software failures from the Software QA/Test Resource Center. 
+			<dt><a href="http://www.cnet.com/Content/Features/Dlife/Bugs/ss05.html">10 Great Bugs of History</a>, by Cnet. 
+			<dd>Part of a <a href="http://www.cnet.com/Content/Features/Dlife/Bugs/?dd">special series </a>on bugs. 
+		</dl>
+		<p><b>Ariane 5, June 1996.</b> The maiden launch of the Ariane 5 rocket blew up 40 seconds from liftoff. The rocket and it's four satellites were uninsured and worth $500 million. The proximate cause of the crash was an overflow error due to an attempt to convert a 64 bit floating point value into a 16 bit integer. This error occurred in code that was non-functional after liftoff, when the error occurred. The <a href="http://www.esrin.esa.it/htdocs/tidc/Press/Press96/ariane5rep.html">Inquiry Board report</a> provides details regarding the software failure and the design policies that lead to it. A <a href="http://catless.ncl.ac.uk/Risks/18.24.html#subj2">note</a> in the Risks Digest indicates that a complete system test would have found the problem but was vetoed for budgetary reasons. </p>
+		<p><b>Therac-25, June 1985 - January 1987.</b> The Therac-25 medical linear accelerator was responsible for six accidents involving massive overdoses of radiation, three of which lead to deaths. The proximate causes of the accidents were eventually attributed to two separate and hard-to-reproduce faults caused by race conditions in the data entry system. IEEE Computer published a <a href="http://ei.cs.vt.edu/~cs3604/lib/Therac_25/Therac_1.html">summary report</a> by Nancy Leveson and Clark Turner. Nancy Leveson also published a <a href="http://www.cs.washington.edu/research/projects/safety/www/papers/therac.ps">detailed account</a> as a chapter in her book <i>Safeware: System Safety and Computers</i>.</p>
+		<p><b>Boris Beizer's List</b>. Boris Beizer has said, &quot;Remember that the most notorious bugs in the history of software development were all unit bugs -- bugs that would have been found by proper unit testing.&quot; (Letter to swtest-discuss, 10 June 1997). Here is his list: </p>
+		<ol>
+			<li>The Voyager bug (sent the probe into the sun). 
+			<li>The AT&amp;T bug that took out 1/3 of US telephones. 
+			<li>The DCS bug that took out the other 1/3 a few months later. 
+			<li>The Intel Pentium chip bug (it was software, not hardware). 
+			<li>The Ariane V bug. 
+		</ol>
+		<p>In a later letter, he agreed that the Therac 25 bug was also notorious, but not really a unit bug. </p>
+		<p>John Shore <a href="http://www.ozemail.com.au/~sphampel/Fun/Computer/famous.bug.txt">collected</a> a number of reports, often apocryphal, of famous bugs. </p>
+		<div align="right">
+			<p><a href="#top"><font facilborial,Helvetica,sans-serif" size="1"><b>BACK TO TOP</b></font></a></p>
+		</div>
+		<p>
+		<hr>
+		</p>
+		<h3><a name="news"></a><font size="4">In the News</font></h3>
+		<p><i>Software defects and testing discussed in the news.</i></p>
+		<dl>
+			<dt><a href="http://www.salon.com/tech/feature/2000/12/06/bad_computers/index.html">High tech's missionaries of sloppiness</a>, by Cheryll Aimee Barron, Salon.com, Dec 2000. 
+			<dd>Discusses how buggy software is the consequence of business strategies that focus on innovation over reliability. Good quotes. 
+			<dt><a href="http://dispatches.azstarnet.com/joe/2000/0223-951333276.htm">Your Call is Important to Us</a>, Joe Salkowski, Feb 2000. 
+			<dd>Software nowadays is so unreliable that internet companies can avoid potentially embarrassing consequences of call avoidance strategies by claiming to be victims of &quot;insignificant&quot; software bugs. 
+			<dt><a href="http://www.informationweek.com/793/testing.htm">Software Testing Gets New Respect</a>, Billie Shea, Information Week, July 3, 2000 
+			<dd>Suggests that internet companies have recently been more successful at justifying the expense of automated testing. 
+		</dl>
+		<div align="right">
+			<p><a href="#top"><font face="Arial,Helvetica,sans-serif" size="1"><b>BACK TO TOP</b></font></a></p>
+		</div>
+		<p>
+		<hr>
+		</p>
+		<h3><a name="testing_and_qa"></a><font size="4">Testing and Quality Assurance</font></h3>
+		<p><i>Notes on the difference between software testing and software quality assurance.</i></p>
+		<dl>
+			<dt><a href="http://www.softwareqatest.com/qatfaq1.html#FAQ1_1">What is Software Quality Assurance and What is Software Testing?</a>, from the Software QA/Test Resource Center 
+		</dl>
+		<div align="right">
+			<p><a href="#top"><font face="Arial,Helvetica,sans-serif" size="1"><b>BACK TO TOP</b></font></a></p>
+		</div>
+		<p>
+		<hr>
+		</p>
+		<h3><a name="career"></a><font size="4">A Career in Software Testing</font></h3>
+		<dl>
+			<dt><a href="http://www.computer.org/software/so2000/s2076abs.htm">Clearing a Career Path for Software Testers</a>, by Elaine J. Weyuker et al. 
+			<dd>Defines steps AT&amp;T is taking to define a career path for testers and encourage certification. (requires subscription) 
+			<dt><a href="http://www.ondaweb.com/sti/salary.htm">Software Tester Salaries</a>, by the Software Testing Institute 
+		</dl>
+		<div align="right">
+			<p><a href="#top"><font face="Arial,Helvetica,sans-serif" size="1"><b>BACK TO TOP</b></font></a></p>
+		</div>
+		<p>
+		<hr>
+		</p>
+		<h3><a name="software_process"></a><font size="4">Software Process</font></h3>
+		<p><i>Ideas on how to organize software development. </i></p>
+		<dl>
+			<dt><a href="http://www.data-dimensions.com/testersnet/docs/good.htm">The Challenge of &quot;Good Enough&quot; Software, by James Bach</a> 
+			<dd>This article describes an alternate discipline for delivering quality products in a timely fashion. 
+			<dt><a href="http://www.satisfice.com/articles/cmm.htm">The Immaturity of the CMM, by James Bach</a> 
+			<dd>This article criticizes the Capability Maturity Model as a useful methodology for organizing software development. 
+		</dl>
+		<div align="right">
+			<p><a href="#top"><font face="Arial,Helvetica,sans-serif" size="1"><b>BACK TO TOP</b></font></a></p>
+		</div>
+		<p>
+		<hr>
+		</p>
+		<h3><a name="forums"></a><font size="4">Forums </font></h3>
+		<p><i>Discussing testing and bugs. </i></p>
+		<dl>
+			<dt><a href="http://www.qaforums.com">QA Forums</a> 
+			<dd>Lively discussions of automated testing and other testing topics. 
+			<dt><a href="http://www.bugnet.com/">BugNet</a> 
+			<dd>This newsletter tracks bugs in commercial PC software. Can you find problems like these <i>before</i> your product ships? 
+			<dt><a href="http://www.stqemagazine.com/">Software Testing and Quality Engineering</a>, formerly Software QA Magazine. 
+			<dd>A magazine for the professional tester. The articles are written by experienced professionals. I get all kinds of ideas from this. 
+			<p>The moderated newsgroup <a href="news:comp.risks">comp.risks </a>contains concise and technically precise descriptions of software failures, especially when loss of life is involved. This is an excellent place to learn about the kinds of systemic problems that plague software. </p>
+			<p>The newsgroup <a href="news:comp.software.testing">comp.software.testing</a> has lively debates on topics such as the proper relationship between testers and developers. This is a place where testers and testing managers go to for advice when they get squeezed particularly hard. Many experienced and helpful software testers frequent this newsgroup. The group's list of <a href="http://www.cigital.com/c.s.t.faq.html">frequently asked questions </a>contains much useful information.</p>
+			<dt><a href="http://www3.dundee.net/scripts/lyris.pl?enter=sqa-suite-users">SQA Suite Users Mailing List</a> 
+		</dl>
+		<div align="right">
+			<p><a href="#top"><font face="Arial,Helvetica,sans-serif" size="1"><b>BACK TO TOP</b></font></a></p>
+		</div>
+		<p>
+		<hr>
+		</p>
+		<h3><a name="interesting_sites"></a><font size="4">Interesting Sites</font></h3>
+		<p><i>Sites with essays, articles or lists of general interest.</i> </p>
+		<dl>
+			<dt><a href="http://www.softwaredioxide.com">Software Dioxide</a> 
+			<dd>A portal for information about software engineering and quality assurance 
+			<dt><a href="http://www.qacity.com">QA City</a> 
+			<dd>Hung Nguyen's collection of links and articles. Like the Software Testing Hotlist, only easier on the eyes. 
+			<dt><a href="http://www.automated-testing.com/">Automated Testing</a> 
+			<dd>Herb Isenberg's site contains several papers on automated testing. 
+			<dt><a href="http://BDOnline.sqe.com/">BD Online</a> 
+			<dd>This website is a case study 1402eb software testing. It contains a sample test plan and requirements document. 
+			<dt><a href="http://www.aphids.com/bughunter/">The Bug Hunter</a> 
+			<dd>A weblog on software quality assurance by Stan Taylor. 
+			<dt><a href="http://www.stickyminds.com">Stickyminds.com</a> 
+			<dd>Website features weekly columns, archives of papers, and other current information on software testing and quality assurance. 
+			<dt><a href="http://conference.dkl.com/stp/">Data Kinetics Software Testing Conference</a> 
+			<dd>Online conference featuring <a href="http://conference.dkl.com/stp/seminars/index.html">online presentations</a> and <a href="http://conference.dkl.com/stp/answers/index.html">links to resources</a>. 
+			<dt><a href="http://www.rexblackconsulting.com/Pages/publications.htm">Rex Black's Publications</a> 
+			<dd>Several papers on testing and test management. 
+			<dt><a href="http://www.egroups.com/messages/testing-paper-announce">Testing Papers Announce</a> 
+			<dt>
+			<dd>A listing of software testing papers recently published on the web. A primary reference used by this hotlist. 
+			<dt><a href="http://www.martinig.ch/mt/index.html">Methods &amp; Tools</a> 
+			<dd>A quarterly newsletter covering software testing and other software development topics. 
+			<dt><a href="http://www.sqatester.com/index.htm">SQATester.com</a> 
+			<dd>Eugene Vinsky's grab bag of information about software testing 
+			<dt><a href="http://www.grove.co.uk/">Grove Consultants</a> 
+			<dt><a href="http://www.sqa-test.com/">Automated Testing Specialists</a> 
+			<dd>Includes <a href="http://www.sqa-test.com/articles.html">index</a> to articles on automated testing and other testing topics 
+			<dt><a href="../papers">Bret Pettichord</a> 
+			<dd>Features papers on test automation and other testing topics. <!--
+<dt><a href="http://se.fit.edu/papers.htm">
+Center for Software Engineering Research at the Florida Institute of
+Technology.</a> 
+<dd>
+Features papers by James Whittaker, the center's 
+  director. 
+-->
+			<dt><a href="http://www.cigital.com/~faught/">Danny Faught</a> 
+			<dd>Includes FAQ's on software testing as well as articles on testing, Unix and Perl. 
+			<dt><a href="http://www.satisfice.com/">Satisfice, James Bach's consulting company </a>
+			<dd>Includes many of Bach's <a href="http://www.satisfice.com/articles.htm">articles</a> on software testing and process. 
+			<dt><a href="http://www.soft.com/">Software Research, Inc.</a>, a test tool vendor. 
+			<dd>Includes <a href="http://www.testworks.com/News/TTN-Online/index.html">Quality Techniques Newsletter</a> (formerly Testing Techniques Newsletter) and <a href="http://www.testworks.com/Institute/HotList/">Software Quality HotList</a>. 
+			<dt><a href="http://www.centerline.com/">CenterLine Software</a>, a test tool vendor. 
+			<dt><a href="http://www.rational.com">Rational</a>, a test tool vendor that gobbled up Pure, Atria and MS test. 
+			<dd>Includes dozens of <a href="http://www.rational.com/support/techpapers/">technical papers</a>, including <a href="http://www.rational.com/support/techpapers/quality_on_time/index.html">Quality on Time</a>, by Aki Fujimura, an interesting article on scheduling development and testing. 
+			<dt><a href="http://www.data-dimensions.com/">Data Dimensions</a>, consulting and contracting company. 
+			<dd>Includes a collections of <a href="http://www.data-dimensions.com/testersnet/archive.htm">articles</a> from their newsletter, The Testers Network 
+			<dt><a href="http://www.testing.com/writings.html">Brian Marick's writings</a> 
+			<dd>Includes many of his papers and essays. 
+			<dt><a href="http://www.rbsc.com/">RBSC Corporation.</a>, consulting, training and contracting. 
+			<dd>Includes lots of information about object-oriented testing: <a href="http://www.rbsc.com/pages/onlineix.html">articles</a> by Bob Binder, a <a href="http://www.rbsc.com/pages/ootbib.html">bibliography</a>, and a <a href="http://www.rbsc.com/pages/neatpage.html">list of resources</a>. 
+			<dt><a href="http://www.cigital.com">Cigital, Inc. (formerly Reliable Software Technologies)</a>, consulting and research in software risk management 
+			<dd>Includes a few hundred <a href="http://www.cigital.com/papers/">papers</a> documenting original research and the <a href="http://www.cigital.com/hotlist/">Software Risk Management Hotlist</a>. 
+			<dt><a href="http://www.kaner.com">Cem Kaner</a>, Testing Consultant, Attorney at Law, and Professor of Computer Science 
+			<dd>Includes papers on <a href="http://www.kaner.com/writing.htm">software testing </a>and <a href="http://www.badsoftware.com/qindex.htm">the law of software quality</a>. 
+			<dt><a href="http://www.testingstuff.com">Software Testing Stuff,</a> by Kerry Zallar 
+			<dd>This web site also includes links to other QA resources. 
+			<dt><a href="http://www.jrothman.com/">Johanna Rothman</a> 
+			<dd>Includes papers on software testing and risk management 
+			<dt><a href="http://www.riceconsulting.com">Rice Consulting Services</a> 
+			<dd>Includes a couple <a href="http://www.riceconsulting.com/articles.htm">articles</a>. 
+			<dt><a href="http://www.evolutif.co.uk">Systeme Evolutif</a> 
+			<dd>Includes testing resources, available to registered visitors. 
+			<dt><a href="http://www.sqe.com/">Software Quality Engineering</a> 
+			<dd><a href="http://www.sqe.com/single/single.htm">Online catalog of software quality books</a>, David Gelperin 
+			<dt><a href="http://www.4qa.com/">4QA</a>, also known as SVP. 
+			<dd>Includes <a href="ftp://ftp.4qa.com/ftp/qapuser/">sample test code </a>for QA Partner. 
+			<dt><a href="http://www.ondaweb.com/sti/">Software Testing Institute</a> 
+			<dd>Includes a <a href="http://www.ondaweb.com/sti/salary.htm">salary survey</a> 
+			<dt><a href="http://.com/~hsf/thoughts/technical/">Technical Thoughts</a>, by Howard Fear 
+			<dd>Short essays on software engineering and testing. 
+			<dt><a href="http://www.qualitytree.com/">Quality Tree Consulting</a> 
+			<dd><a href="http://www.qualitytree.com/feature/feature.htm">Articles </a>and short essays (&quot;<a href="http://www.qualitytree.com/ruminate/archives.htm">ruminations</a>&quot;) on software quality and testing by Elisabeth Hendrickson. 
+			<dt><a href="http://se.fit.edu/">The Center for Software Engineering Research at Florida Tech</a> 
+			<dt><a href="http://www.model-based-testing.org">Harry Robinson's Model-Based Testing home page</a> 
+			<dd>Contains a comprehensive index to papers on using state models to generate software tests. 
+			<dt><a href="http://www.geocities.com/harry_robinson_testing/">Harry Robinson's papers</a> 
+			<dd>Includes papers on model-based testing and international testing. 
+			<dt><a href="http://www.casq.org/">Chinese Association for Software Quality (CASQ)</a> 
+			<dd>A comprehensive web site. Includes excellent linked bibliographies. <a href="http://www.casq.org/autotest/">Automated Software Testing</a>. 
+			<dt><a href="http://www.aptest.com/">Aptest</a>, providing test automation services 
+			<dd>Includes <a href="http://www.aptest.com/resources.html">Software Testing Resources</a> 
+			<dt><a href="http://www.betasoft.com/">BetaSoft</a>, providing test automation services 
+			<dd>Includes forums and downloads for popular test tools. Also contains a job board. 
+			<dt><a href="http://www.tantara.ab.ca/">Tantara Management Services</a>, software process improvement and quality assurance consulting. 
+			<dd>Includes a <a href="http://www.tantara.ab.ca/info.htm">hotlist</a> of reources. 
+		</dl>
+		<h3>Other Commercial Sites</h3>
+		<p><em>Note: The Software Testing Hotlist no longer lists commercial websites unless they contain articles or other information of interest to the industry.</em> </p>
+		<ul>
+			<li><a href="http://www.yahoo.com/Business_and_Economy/Companies/Computers/Software/Programming_Tools/Testing/">Yahoo's directory of software testing companies</a> 
+			<li><a href="http://www.softwareqatest.com">Software QA/Test Resource Center</a> 
+			<li><a href="http://www.methods-tools.com/tools/testing.html">Software Methods and Tools listing of test and test management tools</a> 
+		</ul>
+		<div align="right">
+			<p><a href="#top"><font face="Arial,Helvetica,sans-serif" size="1"><b>BACK TO TOP</b></font></a></p>
+		</div>
+		<p>
+		<hr>
+		</p>
+		<h3><a name="books"></a><font size="4">Recommended Books</font></h3>
+		<p><i>I most frequently find myself recommending the following books to people who are new to software testing.</i> </p>
+		<h4>Testing Computer Software, by Kaner, Falk &amp; Nguyen </h4>
+		<p>If you read only one book on software testing, read this book. Many books will tell you how to test when you have enough time and cooperation. This book tells you what to do when the schedule is tight, the specification is missing, and the developers are tired of your focus on problems. It has sound advice and is a pleasure to read. I keep coming back to it. Feel like you have an impossible job? Read this book. </p>
+		<div align="right">
+			<p><a href="#top"><font face="Arial,Helvetica,sans-serif" size="1"><b>BACK TO TOP</b></font></a></p>
+		</div>
+		<p>
+		<hr>
+		</p>
+		<h3><a name="bio"></a>About the Editor </h3>
+		<p>Bret Pettichord is a speaker, writer and consultant with <a href="http://www.pettichord.com">Pettichord Consulting</a>, specializing in software testing and test automation.&nbsp;Familiar with many test technologies, he develops test automation strategies, tools and test suites. He specializes in GUI test automation, scripting languages and test methodology. Since 1992, he has developed automated tests for such companies as Interleaf, Segue, BMC Software, IBM/Tivoli, Netpliance and WhisperWire. As an consulting affiliate with <a href="http://www.satisfice.com">Satisfice</a>, his clients have included Rational Software and Texas Instruments. </p>
+		<p>Bret is the founder and editor of the <a href="http://www.io.com/~wazmo/qa/">Software Testing Hotlist</a> and frequently delivers <a href="http://www.io.com/~wazmo/papers/">papers and presentations</a>. He is the founder of the Austin Workshop on Test Automation and a founding participant in the <a href="http://www.kaner.com/lawst.htm">Los Altos Workshop for Software Testing</a>. He sits on the advisory board of <a href="http://www.stqemagazine.com">Software Testing and Quality Engineering magazine</a> and is <a href="http://www.asq.org/standcert/certification/csqe1.html">certified in software quality engineering</a> by the <a href="http://www.asq.org">American Society of Quality.</a> (However, he is not licensed to practice engineering by the State of Texas.) He is also a member of the IEEE Computer Society. He has a bachelor's degree in philosophy and mathematics from <a href="http://131.247.152.8/index.html">New College</a> of the University of South Florida. </p>
+		<p>He lives in Austin, Texas, with his wife and two children. He has previously lived and worked in Massachusetts, California, North Carolina, Florida and New York.</p>
+		<center>
+			<p><b>Please send updates and comments to the editor at <a href="mailto:bret@pettichord.com">bret@pettichord.com</a></b></p>
+		</center>
+		<p><font size="6" color="#006699"><!--FOOTER-->
+		</font><table border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tr>
+				<td align="right" valign="top"><a href="#top"><font face="Arial,Helvetica,sans-serif" size="1"><b>BACK TO TOP</b></font></a></td>
+			</tr>
+			<tr>
+				<td align="left" valign="top"><i>
+					<hr>
+					</i></td>
+			</tr>
+			<tr>
+				<td align="left" valign="top"><i>www.testinghotlist.com</i> &nbsp; | &nbsp; <i>Software Testing Hotlist, Copyright &copy; 1995 - 2001 Bret Pettichord</i></td>
+			</tr>
+		</table></p>
+		<p>&nbsp;
+	</body>
+
+</html>

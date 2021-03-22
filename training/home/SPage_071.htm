@@ -1,0 +1,403 @@
+<HTML lang="en-gb">
+<HEAD><TITLE>Ixquick Metasearch</TITLE><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META HTTP-EQUIV="Content-Language" CONTENT=en-gb>
+<META name="Keywords" content="metasearch, dogpile, metacrawler, meta search, meta search engine, ixquick, google, meta, search engine, search, art image, web search, news, free mp3, music, mp3, pictures, mp3 download, image, images, pics, free pics, google search">
+<META name="Description" content="Ixquick submits your search to the major search engines and finds sites that are universally ranked in the top ten!">
+<LINK REL="SHORTCUT ICON" HREF="http://ixquick.com/favicon.ico">
+<STYLE type="text/css">
+<!--
+a {color: #3777E3; text-decoration: none; font-family: Verdana;}
+a:hover {  color: #FFFFFF; text-decoration: underline;}
+a.startpage {color: #CC0000; text-decoration: none; font-family: Verdana;}
+a.startpage:hover {  color: #4585E7; text-decoration: underline;}
+td.button{background-image:url('http://ixquick.com/graphics/blue-bg.gif'); cursor:pointer; cursor:hand; text-align:center; width:100px; height:23px; font-family:Verdana;font-size: 10px; color: #13047D; height:22px; width:70px; font-weight: bold; border-top: 1px solid #006699;border-bottom: 1px solid #006699;border-left: 1px solid #006699;border-right: 1px solid #006699; margin-bottom:1px;left-padding:6px;right-padding:6px;}
+.button_on{background-image:url('http://ixquick.com/graphics/blue-bg_on.gif'); cursor:pointer; cursor:hand; text-align:center; width:100px; height:23px; font-family:Verdana;font-size: 10px; color: #13047D; height:22px; width:70px; font-weight: bold; border-top: 1px solid #006699;border-bottom: 1px solid #006699;border-left: 1px solid #006699;border-right: 1px solid #006699; margin-bottom:1px;left-padding:6px;right-padding:6px;}
+.button_click{background-image:url('http://ixquick.com/graphics/blue-bg_click.gif'); cursor:pointer; cursor:hand; text-align:center; width:100px; height:23px; font-family:Verdana;font-size: 10px; color: #13047D; height:22px; width:70px; font-weight: bold; border-top: 1px solid #006699;border-bottom: 1px solid #006699;border-left: 1px solid #006699;border-right: 1px solid #006699; margin-bottom:1px;left-padding:6px;right-padding:6px;}
+a.linkback {color: #B3CCF8; text-decoration: none; font-family: Verdana;}
+a.linkback:hover {  color: #FFFFFF; text-decoration: underline;}
+input.button {font-family:Verdana; background: url('http://ixquick.com/graphics/blue_bg.gif'); font-size: 10px; color: #13047D; height:22px; width:70px; font-weight: bold; border-top: 1px solid #006699;border-bottom: 1px solid #006699;border-left: 1px solid #006699;border-right: 1px solid #006699; margin-bottom:1px;}
+input.TEXT {font-family:Verdana; color: #000000; height:20px; border: none; font-size:14px; width:260px; padding-left:2px;}
+#inlinetable {font-family: Verdana; font-size: 10px; line-height: 16px; border:none;letter-spacing:-1px;}
+-->
+</STYLE>
+<script language="javascript">
+function makeHomePage (obj, page_url) {
+    if (window.external) {
+         obj.style.behavior="url(#default#homepage)";
+         obj.setHomePage(page_url);
+    } else {
+         var agentname = navigator.userAgent;
+         if (agentname.toLowerCase().indexOf('firefox') != -1) {
+         var nWin = window.open('', 'newname' , 'directories=no,location=no,scrollbars=yes,status=no,toolbar=no,menubar=no,height=100,width=650');
+         nWin.document.open();
+         var out_str = '<html><head><title></title></head>';
+         out_str += '<body bgcolor="#BCD3F5"><br><font face="Verdana" size="2" color="#140B74">';
+         out_str += 'Mozilla Firefox does not support this feature. To set your homepage in Firefox, select<br>"Options" from the "Tools" menu at the top of your page. In the box labeled "Homepage<br>Location(s)" type in http://ixquick.com/uk/. Thanks for visiting.</font><br></body></html>';
+         nWin.document.write(out_str);
+         nWin.document.close();
+         }
+     }
+}
+function newImage(arg) {
+    if (document.images) {
+        rslt = new Image();
+        rslt.src = arg;
+        return rslt;
+    }
+}
+function preloadImages() {
+	if (document.images) {
+        pic1 = new Image();
+        pic1.src = "http://ixquick.com/graphics/radio_U.gif";
+        pic2 = new Image();
+        pic2.src = "http://ixquick.com/graphics/radio_C.gif";
+        on = newImage('http://ixquick.com/graphics/blue-bg.gif');
+        off = newImage('http://ixquick.com/graphics/blue-bg_click.gif');
+		bg = newImage('http://ixquick.com/graphics/blue-bg_on.gif');
+		spacer = newImage('http://ixquick.com/graphics/spacer.gif');
+        jia = newImage('http://ixquick.com/graphics/jia/languagename_white_link.gif');
+        nih = newImage('http://ixquick.com/graphics/nih/languagename_white_link.gif');
+        fan = newImage('http://ixquick.com/graphics/fan/languagename_white_link.gif');
+        han = newImage('http://ixquick.com/graphics/han/languagename_white_link.gif');
+ }
+}
+preloadImages();
+
+function changeImages() {
+	if (document.images) {
+	var selected = "";
+		for (var i=0; i<changeImages.arguments.length; i+=2) {
+			document[changeImages.arguments[i]].src = changeImages.arguments[i+1];
+			var intext = document[changeImages.arguments[i]].name + "_span";
+			document.getElementById(intext).style.color = "#CC0000";
+ 			document.blah.cat.value=document[changeImages.arguments[i]].name;
+		}
+	}
+}
+
+function selectCategory () {
+    var url = self.location.href;
+    var offset = url.indexOf("cat=");
+    if (offset != -1) {
+        var category = url.substring(offset + 4);
+        var id = category.indexOf("&");
+        if (id == -1) {
+          category = category.substring(0);
+        } else {
+          category = category.substring(0, id);
+        }
+        if (category == "pics") {
+           changeImages('web', 'http://ixquick.com/graphics/radio_U.gif');
+           document.getElementById('web_span').style.color = '#2254C1';
+           changeImages('pics', 'http://ixquick.com/graphics/radio_C.gif');
+        }
+    } else {
+    }
+    var queryOffset = url.indexOf("query=");
+    if (queryOffset != -1) {
+        var query = url.substring(queryOffset + 6);
+        var queryLastPos = query.indexOf("&");
+        if (queryLastPos == -1) {
+          query = query.substring(0);
+        } else {
+          query = query.substring(0, queryLastPos);
+        }
+        if (query != "") {
+           document.blah.query.value = unescape(query);
+        }
+    }
+}
+function MM_swapImgRestore() {
+var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_findObj(n, d) {
+var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+function MM_swapImage() {
+var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script></HEAD>
+<BODY bgcolor="#000033" text="#5681D6" link="#2C5CC5" vlink="#2C5CC5" leftmargin="0" topmargin="0" alink="#2C5CC5"><TABLE WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="0" HEIGHT="100%">
+  <TR ALIGN="center" VALIGN="middle">
+    <TD>
+<script language="JavaScript">
+ imagetop=newImage('http://ixquick.com/graphics/eng/metasearch_top.gif');
+imagemid=newImage('http://ixquick.com/graphics/eng/metasearch_middle.gif');
+imagebot=newImage('http://ixquick.com/graphics/eng/metasearch_bot.gif');
+</script><table width="100%" border="0" cellspacing="0" cellpadding="0" height="60">
+   <tr>
+      <td align="center"><img src="http://ixquick.com/graphics/spacer.gif" width="1" height="60"></td>
+   </tr>
+</table>
+ <TABLE WIDTH="541" BORDER="0" CELLSPACING="0" CELLPADDING="0"  ALIGN="center" height="203">
+<FORM ACTION="http://ixquick.com/do/metasearch.pl" METHOD=GET AUTOCOMPLETE="off" NAME=blah onSubmit="return convertQuery();">
+<tr>
+<td height="138" valign="top" style="background-image:url('http://ixquick.com/graphics/eng/metasearch_top.gif'); background-repeat:no-repeat;">
+<table border="0" cellspacing="0" cellpadding="0" width="100%" align="center" height="80">
+   <tr> 
+     <td width="135" rowspan="3" style="width:135px"><img src="http://ixquick.com/graphics/spacer.gif" height="140" width="135"></td>
+     <td height="95" nowrap align="left" colspan="2">     <table border="0" cellspacing="0" cellpadding="0" width="100%" align="center"><tbody><tr>     <td nowrap align="left" width="108" style="width:108px; height:78px;" valign="bottom"><img src="http://ixquick.com/graphics/spacer.gif" height="105" width="108"></td>
+     <td nowrap align="left" valign="bottom">
+<font face="Verdana, Arial, Helvetica, sans-serif" size="1"><b><table border="0" cellspacing="0" cellpadding="0" height="76" width="100%">
+<tr><td colspan="3"><img  name="web" value="web" src="http://ixquick.com/graphics/radio_C.gif" onClick="uncheckall('web','phone','shop','pics'); changeImages('web', 'http://ixquick.com/graphics/radio_C.gif'); return true;" width="19" height="19" align="top"><span id="web_span" style="font-size:11px; font-weight:bold; cursor:pointer; cursor:hand; color: #cc0000;" onMouseOver="if (!((this.style.color == '#cc0000') || (this.style.color == 'rgb(204, 0, 0)'))){ this.style.color = '#FFFFFF';}" onMouseOut="if (!((this.style.color == '#cc0000') || (this.style.color == 'rgb(204, 0, 0)'))) { this.style.color = '';}" onClick="uncheckall('web','phone','shop','pics'); changeImages('web', 'http://ixquick.com/graphics/radio_C.gif'); return true;">WEB</span></td></tr>
+<tr><td colspan="3"><img  name="phone" value="phone" src="http://ixquick.com/graphics/radio_U.gif" onClick="loadUrl('http://ixquick.com/uk/phone.html'); uncheckall('web','phone','shop','pics'); changeImages('phone', 'http://ixquick.com/graphics/radio_C.gif'); return true;" width="19" height="19" align="top"><span id="phone_span" style="font-size:11px; font-weight:bold; cursor:pointer; cursor:hand;" onMouseOver="if (!((this.style.color == '#cc0000') || (this.style.color == 'rgb(204, 0, 0)'))){ this.style.color = '#FFFFFF';}" onMouseOut="if (!((this.style.color == '#cc0000') || (this.style.color == 'rgb(204, 0, 0)'))) { this.style.color = '';}" onClick="loadUrl('http://ixquick.com/uk/phone.html'); uncheckall('web','phone','shop','pics'); changeImages('phone', 'http://ixquick.com/graphics/radio_C.gif'); return true;">INTERNATIONAL PHONE DIRECTORY</span></td></tr>
+<tr><td colspan="3"><img  name="shop" value="shop" src="http://ixquick.com/graphics/radio_U.gif" onClick="loadUrl('http://ixquick.com/uk/lowestprice.html'); uncheckall('web','phone','shop','pics'); changeImages('shop', 'http://ixquick.com/graphics/radio_C.gif'); return true;" width="19" height="19" align="top"><span id="shop_span" style="font-size:11px; font-weight:bold; cursor:pointer; cursor:hand;" onMouseOver="if (!((this.style.color == '#cc0000') || (this.style.color == 'rgb(204, 0, 0)'))){ this.style.color = '#FFFFFF';}" onMouseOut="if (!((this.style.color == '#cc0000') || (this.style.color == 'rgb(204, 0, 0)'))) { this.style.color = '';}" onClick="loadUrl('http://ixquick.com/uk/lowestprice.html'); uncheckall('web','phone','shop','pics'); changeImages('shop', 'http://ixquick.com/graphics/radio_C.gif'); return true;">LOWEST PRICE</span></td></tr>
+<tr><td width="148"><img  name="pics" value="pics" src="http://ixquick.com/graphics/radio_U.gif" onClick="uncheckall('web','phone','shop','pics'); changeImages('pics', 'http://ixquick.com/graphics/radio_C.gif'); return true;" width="19" height="19" align="top"><span id="pics_span" style="font-size:11px; font-weight:bold; cursor:pointer; cursor:hand;" onMouseOver="if (!((this.style.color == '#cc0000') || (this.style.color == 'rgb(204, 0, 0)'))){ this.style.color = '#FFFFFF';}" onMouseOut="if (!((this.style.color == '#cc0000') || (this.style.color == 'rgb(204, 0, 0)'))) { this.style.color = '';}" onClick="uncheckall('web','phone','shop','pics'); changeImages('pics', 'http://ixquick.com/graphics/radio_C.gif'); return true;">PICTURES</span></td><td valign="bottom" nowrap align="center" width="80" rowspan="2" style="padding-right:1px;"><span style="font-family:Verdana, Arial, Helvetica, sans-serif;font-size:9px; font-weight:bold;"><a href='http://ixquick.com/uk/power_search.html' class='linkback' title="Experience the Power Search homepage">Power Search</a></span></td><td valign="bottom" align="center" width="61" style="padding-left:3px" rowspan="2"><img src="http://ixquick.com/graphics/spacer.gif" width="60" height="8"></td>
+</tr><tr><td width="159" height="1"><img src="http://ixquick.com/graphics/spacer.gif" width="159" height="1"></td></tr><input name="cat" type=hidden value="web"></table>
+</b></font></td>
+</tr>
+</tbody></table></td>
+</tr>
+<tr>
+  <input type=hidden name=cmd value="process_search">  <input type=hidden name=language value="english_uk">  <input type=hidden name=utf_query value="">  <td colspan="2" height="30">
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td width="150" valign="middle">
+  <input name=query type=text size=32 value="" class="TEXT"></td><td valign="middle" width="10"><img src="http://ixquick.com/graphics/spacer.gif" width="10" height="32"></td><td valign="middle"> 
+  <table border="0" cellspacing="0" cellpadding="0"><tr><td class="button" onMouseOver="this.className='button_on';" onMouseOut="this.className='button';" onClick="this.className='button_click';if (convertQuery()) {blah.submit();}">SEARCH</td></tr></table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<script language="javascript">
+document.blah.query.select();
+document.blah.query.focus();
+	selectCategory();
+</script>
+<tr>
+  <td valign="middle">
+<img src="http://ixquick.com/graphics/spacer.gif" width="110" height="20"></td><td valign="top" width="300" align="left" nowrap>
+<a href="http://ixquick.com/uk/#" class=startpage onClick="makeHomePage(this, 'http://ixquick.com/uk/');"><FONT FACE="Verdana, Arial, Helvetica, sans-serif"><span style="font-size:11px; font-weight:bold;">MAKE IXQUICK YOUR START PAGE</span></FONT></a>
+<img src="http://ixquick.com/graphics/spacer.gif" width="1" height="15"> </td>
+</tr>
+</table>
+</td>
+</tr>
+ <tr>
+    <td valign="top" style="background-image:url('http://ixquick.com/graphics/eng/metasearch_bot.gif'); background-repeat:no-repeat;" height="32" align=right><img src="http://ixquick.com/graphics/spacer.gif" width=1 height="32" ></td>
+ </tr>
+</form>
+</table>
+<table WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="0">
+   <tr><td><img src="http://ixquick.com/graphics/spacer.gif" width=1 height="20"></td></tr>
+   <tr VALIGN="middle">
+    <td align="center">
+	<center>
+   <table width="541" height="110" border="0" cellspacing="0" cellpadding="0" align="center" id="inlinetable">
+   <tr>
+    <td valign="top" width="245" rowspan="8">
+    <img src="http://ixquick.com/graphics/spacer.gif" width="246" height="20">
+    </td>
+ <td valign="top"><font size="1" face="Verdana, Arial, Helvetica, sans-serif" style="font-size:11px;"><a href="javascript:passQuery('http://ixquick.com/dan/');">Dansk</a>&nbsp;- <a href="javascript:passQuery('http://ixquick.com/deu/');">Deutsch</a>&nbsp;- <a href="javascript:passQuery('http://ixquick.com/eng/');">English</a>&nbsp;- <FONT color="#7F97BF">English UK</FONT>&nbsp;- <a href="javascript:passQuery('http://ixquick.com/esp/');">Espa&ntilde;ol</a></td>
+</tr>
+<tr>
+ <td valign="top"><font size="1" face="Verdana, Arial, Helvetica, sans-serif" style="font-size:11px;"><a href="javascript:passQuery('http://ixquick.com/fra/');">Fran&ccedil;ais</a>&nbsp;- <a href="javascript:passQuery('http://ixquick.com/ita/');">Italiano</a>&nbsp;- <a href="javascript:passQuery('http://ixquick.com/ned/');">Nederlands</a>&nbsp;- <a href="javascript:passQuery('http://ixquick.com/nor/');">Norsk</a>&nbsp;- <a href="javascript:passQuery('http://ixquick.com/pol/');">Polski</a></td>
+</tr>
+<tr>
+ <td valign="top"><font size="1" face="Verdana, Arial, Helvetica, sans-serif" style="font-size:11px;"><a href="javascript:passQuery('http://ixquick.com/por/');">Portugu&ecirc;s</a>&nbsp;- <a href="javascript:passQuery('http://ixquick.com/suo/');">Suomi</a>&nbsp;- <a href="javascript:passQuery('http://ixquick.com/sve/');">Svenska</a>&nbsp;- <a href="javascript:passQuery('http://ixquick.com/tur/');">T&uuml;rk&ccedil;e</a></font><tr>
+<td valign="top" height="5"> </td>
+</tr>
+<tr><td>
+<a href="javascript:passQuery('http://ixquick.com/jia/');" onMouseOver="change('jia', 'http://ixquick.com/graphics/jia/languagename_white_link.gif');" onMouseOut="change('jia', 'http://ixquick.com/graphics/jia/languagename_lightblue_link_home.gif');"><IMG id=jia name=jia BORDER=0 HEIGHT=15 WIDTH=28 ALT="Simplified Chinese" title="Simplified Chinese" SRC="http://ixquick.com/graphics/jia/languagename_lightblue_link_home.gif" align="absmiddle"></a>&nbsp;- <a href="javascript:passQuery('http://ixquick.com/fan/');" onMouseOver="change('fan', 'http://ixquick.com/graphics/fan/languagename_white_link.gif');" onMouseOut="change('fan', 'http://ixquick.com/graphics/fan/languagename_lightblue_link_home.gif');"><IMG id=fan name=fan BORDER=0 HEIGHT=15 WIDTH=56 ALT="Traditional Chinese" title="Traditional Chinese" SRC="http://ixquick.com/graphics/fan/languagename_lightblue_link_home.gif" align="absmiddle"></a>&nbsp;- <a href="javascript:passQuery('http://ixquick.com/han/');" onMouseOver="change('han', 'http://ixquick.com/graphics/han/languagename_white_link.gif');" onMouseOut="change('han', 'http://ixquick.com/graphics/han/languagename_lightblue_link_home.gif');"><IMG id=han name=han BORDER=0 HEIGHT=15 WIDTH=28 ALT="Korean" title="Korean" SRC="http://ixquick.com/graphics/han/languagename_lightblue_link_home.gif" align="absmiddle"></a>&nbsp;- <a href="javascript:passQuery('http://ixquick.com/nih/');" onMouseOver="change('nih', 'http://ixquick.com/graphics/nih/languagename_white_link.gif');" onMouseOut="change('nih', 'http://ixquick.com/graphics/nih/languagename_lightblue_link_home.gif');"><IMG id=nih name=nih BORDER=0 HEIGHT=15 WIDTH=49 ALT="Japanese" title="Japanese" SRC="http://ixquick.com/graphics/nih/languagename_lightblue_link_home.gif" align="absmiddle"></a>
+</td></tr>
+   <tr><td><img src="http://ixquick.com/graphics/spacer.gif" width=1 height="10"></td></tr>
+<TR><TD valign="top"><FONT SIZE="1" FACE="Arial, Helvetica, sans-serif"><img src="http://ixquick.com/graphics/spacer.gif" width=1 height="17"><font face="Verdana, Arial, Helvetica, sans-serif" style="font-size:10px; letter-spacing:0.3px;"><A HREF="http://ixquick.com/uk/aboutixquick/" alt="Learn more about Ixquick's unique search advantages" title="Learn more about Ixquick's unique search advantages">about ixquick</A>&nbsp;- </font>
+<img src="http://ixquick.com/graphics/spacer.gif" width=1 height="17"><font face="Verdana, Arial, Helvetica, sans-serif" style="font-size:10px; letter-spacing:0.3px;"><A HREF="http://ixquick.com/do/preferences.pl?language_ui=english_uk" alt="Customize ixquick to your own taste" title="Customize ixquick to your own taste">my settings</A>&nbsp;- </font>
+<img src="http://ixquick.com/graphics/spacer.gif" width=1 height="17"><font face="Verdana, Arial, Helvetica, sans-serif" style="font-size:10px; letter-spacing:0.3px;"><A HREF="http://ixquick.com/uk/press_center.html" >press</A></font>
+</FONT></TD>
+</TR>
+<tr>
+  <td valign="top" height="5"></td>
+</tr>
+</table>
+    </center>
+</td>
+  </tr>
+<tr VALIGN="middle"><td> &nbsp;</td></tr> <tr ALIGN="center" VALIGN="top">
+      <td>&nbsp;</td>
+</tr>
+</table>
+  </td>
+ </tr>
+</table>
+<SCRIPT LANGUAGE=JAVASCRIPT>
+function convertQuery () {
+    var orig_query = document.blah.query.value;
+    if (orig_query == "") {
+        return false;
+    }
+    var utf_q = encodeURI(orig_query);
+    document.blah.utf_query.value = utf_q;
+    return true;
+}
+function loadUrl (url) {
+   location.href = url;
+}
+
+function change (image_id, image_url) {
+   document.getElementById(image_id).src = image_url;
+   return true;
+}
+
+function uncheckall() {
+	var selected = "";
+	var intext = "";
+		for (var i=0; i<uncheckall.arguments.length; i+=1) {
+			document[uncheckall.arguments[i]].src="http://ixquick.com/graphics/radio_U.gif";
+			intext = document[uncheckall.arguments[i]].name + "_span";
+			document.getElementById(intext).style.color = "";
+		}
+}
+
+function passQuery(url) {
+   url += "?cat=" + document.blah.cat.value;
+   url += "&query=" + escape(document.blah.query.value);
+   location.href = url;
+}
+
+function changeCategoryColor() {
+   if (this.style.color != '#cc0000') {
+      this.style.color = '#FFFFFF';
+ }
+}
+
+</SCRIPT>
+</BODY></HTML><SCRIPT LANGUAGE=JAVASCRIPT>
+<!-- // (hide from old browsers)
+
+var or_val = GetCookie("originalreferer");
+var or_string = escape(or_val);
+
+
+function getCookieVal (offset) {
+  var endstr = document.cookie.indexOf (";", offset);
+  if (endstr == -1)
+    endstr = document.cookie.length;
+  return unescape(document.cookie.substring(offset, endstr));
+}
+
+function GetCookie (name) {
+  var arg = name + "=";
+  var alen = arg.length;
+  var clen = document.cookie.length;
+  var i = 0;
+  while (i < clen) {
+    var j = i + alen;
+    if (document.cookie.substring(i, j) == arg)
+      return getCookieVal (j);
+    i = document.cookie.indexOf(" ", i) + 1;
+    if (i == 0) break;
+  }
+  return null;
+
+}
+
+function FixCookieDate (date) {
+  var base = new Date(0);
+  var skew = base.getTime(); 
+  if (0 < skew)  
+    date.setTime (date.getTime() - skew);
+}
+
+function SetCookie (name,thevalue,expires,path,domain,secure) {
+  var value = new String(thevalue);
+  var ev = escape (value);
+  var nv = name + "=" + escape(value);
+  var ex = ((expires) ? ";EXPIRES=" + expires.toGMTString() : "");
+  var pa = ((path) ? ";PATH=" + path : "");
+  var dom = ((domain) ? ";DOMAIN=" + domain : "");
+  var se = ((secure) ? ";SECURE" : "");
+  var dc = nv + ex + pa + dom + se;
+
+  document.cookie = dc;
+}
+
+function DeleteCookie (name,path,domain) {  
+  if (GetCookie(name)) {
+      document.cookie = name + "=" +      
+      ((path) ? "; path=" + path : "") +
+      ((domain) ? "; domain=" + domain : "") +
+      "; expires=Thu, 01-Jan-70 00:00:01 GMT";  
+  }
+}      
+
+function strip_newlines (origtext) {
+  // Elim newlines %0D %0A %0M
+  var esc_string = escape(origtext);
+  esc_string = replaceString("%0D", "", esc_string);
+  esc_string = replaceString("%0A", "", esc_string);
+  var new_string = unescape(esc_string);
+  return new_string;
+}
+
+function replaceString(oldS,newS,fullS) {
+  // Replaces oldS with newS in the string fullS
+  var old_string_length = oldS.length;
+  for (var i=0; (i<(fullS.length-old_string_length+1)); i++) {      
+    if (fullS.substring(i,i+old_string_length) == oldS) {
+         fullS = fullS.substring(0,i)+newS+fullS.substring(i+oldS.length,fullS.length)     
+    }
+  }
+  return fullS
+}
+
+
+var expdate = new Date ();
+FixCookieDate (expdate);
+expdate.setTime(expdate.getTime() + (365*24*60*60*1000));
+
+
+var fixeddate = new Date (1970, 1, 1);
+
+var todaydate = new Date ();
+FixCookieDate (todaydate);
+todaydate.setTime(todaydate.getTime());
+var todaydatestring = Math.floor((todaydate - fixeddate) / 1000);
+
+if (GetCookie("originalreferer")) {
+  var doc_referer = GetCookie("originalreferer");
+  var new_referer = strip_newlines(doc_referer);
+  if (new_referer != doc_referer) {
+    SetCookie ("originalreferer", new_referer, expdate, "/");
+  }
+}
+
+if (!GetCookie("id")) {
+  // Elim newlines %0D %0A %0M
+  var orig_referer = document.referrer;
+  if (typeof(orig_referer) == "undefined") {orig_referer = "";}
+  var orig_referer = strip_newlines(orig_referer);
+
+  var id = todaydatestring + "R" + Math.floor(Math.random()*1000);
+  SetCookie ("id", id, expdate, "/");
+  SetCookie ("visits", 1, expdate, "/");
+  SetCookie ("firstvisit", todaydatestring, expdate, "/");
+  SetCookie ("lastvisit", todaydatestring, expdate, "/");
+  SetCookie ("totalpages", "1", expdate, "/");
+  SetCookie ("originalreferer", orig_referer, expdate, "/");
+  SetCookie ("sessionpages", "1", false, "/");
+}
+else {
+  var totalpages = GetCookie("totalpages");
+  if (0 < totalpages) {} else { totalpages = 1;}
+  SetCookie ("totalpages", totalpages + 1, false, "/");
+  if (!GetCookie("sessionpages")) {
+    var visits = GetCookie("visits")*1;
+    if (0 < visits) {} else {visits = 1;}
+    SetCookie ("visits", visits + 1, expdate, "/");
+    SetCookie ("sessionpages", "1", false, "/");
+    SetCookie ("lastvisit", todaydatestring, expdate, "/");
+  }
+  else {
+    var sessionpages = GetCookie("sessionpages");
+    if (0 < sessionpages) {} else { sessionpages = 1;}
+    SetCookie ("sessionpages", sessionpages + 1, false, "/");
+  }
+}
+// stop hiding -->
+</SCRIPT>
+

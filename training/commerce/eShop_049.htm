@@ -1,0 +1,511 @@
+
+<html>
+<link href="common.css" rel="stylesheet" type="text/css">
+ 
+<script language=javascript> 
+
+<!--
+/////////////////////////////////////////////////
+// Coalesys WebMenu for ASP IE5/6 DHTML script
+// Build 71 COPYRIGHT 2000-2003 Coalesys, Inc.
+/////////////////////////////////////////////////
+var cswmDetectedBrowser = 'IE6DHTML';var cswmMBZ=false;var cswmCSDS=false;var cswmOM="document.all.";var cswmBgCo=".style.backgroundColor";var cswmCo=".style.color";var cswmDi=".style.display";var cswmTI="";var cswmClkd=-1;var cswmPI=new Array();var cswmPx=new Array();var cswmPy=new Array();var cswmNH=new Array();var cswmPW=0;var cswmPH=0;var cswmSPnt="";var cswmDir="";var cswmMB=0;var cswmSI="";var cswmSE=new Object();var cswmSEL=0;var cswmSET=0;var cswmSEH=0;var cswmSEW=0;var cswmBW=0;var cswmBH=0;var cswmAR=0;var cswmAB=0;var cswmSLA=0;var cswmSTA=0;var cswmExIS=new Image();cswmExIS.src="./images/arrow-black.gif";var cswmExdIS=new Image();cswmExdIS.src="./images/arrow-white.gif";var cswmCTH=true;var cswmXOff=0;var cswmYOff=0;var cswmFP=0;var cswmSH=false;var cswmSTI=0;var cswmSdw = new Array();var cswmTS=0;var cswmTL=0;var cswmTTI="";var cswmPR="";var cswmSA=0;var cswmSIP=0;var cswmSS=0;function cswmT(ms){if(ms!="off"){if(cswmCTH!=0){cswmTI=setTimeout("cswmHP(0);cswmTS=0;",ms);}}else{clearTimeout(cswmTI);}}function cswmST(l,g,i){if(i){cswmSTI = setTimeout("cswmHP("+l+");cswmSP("+g+",'"+i+"');",350);}else if(l){cswmSTI = setTimeout("cswmHP("+l+");",350);}else{clearTimeout(cswmSTI);}}function cswmShow(id,srcid,relpos,offsetX,offsetY,fixedpos){clearTimeout(cswmTI);if(cswmClkd!=id){cswmHP(0);cswmSI=srcid;cswmSPnt=relpos;cswmClkd=id;cswmDir="right";if(document.all["cswmPopup"+id]){if(offsetX)cswmXOff=offsetX;if(offsetY)cswmYOff=offsetY;if(fixedpos)cswmFP=fixedpos;cswmSP(id);}}}function cswmHide(){cswmTI=setTimeout("cswmHP(0);cswmTS=0;", 350);}function cswmHideNow(){cswmHP(0);}function cswmHiI(id,l){var d;d=document;var item=d.all['cswmItem'+id];if(!item){return;}else{item=d.all['cswmItem'+id];var expand=d.all['cswmExpand'+id];var expandIc=d.all['cswmExpandIc'+id];var icoOn=d.all['cswmIcoOn'+id];}var bgco;try{bgco=item.getAttribute('cswmSelColor');}catch(e){bgco = false;}if(icoOn){d.all['cswmIco'+id].style.display='none';icoOn.style.display='inline';}item.style.color='#ffffff';expand.style.color='#ffffff';if(bgco){item.style.backgroundColor=bgco;expand.style.backgroundColor=bgco;}else{item.style.backgroundColor='#CC0000';expand.style.backgroundColor='#CC0000';}if(expandIc){expandIc.src=cswmExdIS.src;}cswmNHM(id,l);cswmNH[l-1]=id;}function cswmNHM(id,l){if(cswmNH[l-1]!=id){var count=l-1;for(count=l-1;count<cswmNH.length;count++){cswmDiI(cswmNH[count]);}cswmNH.length=l;}}function cswmDiI(id){var d;d=document;var item=d.all['cswmItem'+id];if(!item){return;}else{item=d.all['cswmItem'+id];var expand=d.all['cswmExpand'+id];var expandIc=d.all['cswmExpandIc'+id];var icoOn=d.all['cswmIcoOn'+id];}var bgco;try{bgco=item.getAttribute('cswmUnSelColor');}catch(e){bgco = false;}if(icoOn){d.all['cswmIco'+id].style.display='inline';icoOn.style.display='none';}item.style.color='#000000';expand.style.color='#000000';if(bgco){item.style.backgroundColor=bgco;expand.style.backgroundColor=bgco;}else{item.style.backgroundColor='#E7ECF2';expand.style.backgroundColor='#E7ECF2';}if(expandIc){expandIc.src=cswmExIS.src;}}function cswmHideSelectBox(boolHide,arrSelectList){}function cswmSP(id,itemid){if(!itemid){if(cswmFP){cswmSEL=cswmXOff;cswmSET=cswmYOff;cswmSEH=1;cswmSEW=1;cswmFP=0;}else{if(!document.all[cswmSI]){return;}cswmSE=new Object(document.all[cswmSI]);var cswmPrO=cswmSE;var cswmPrT="";cswmSEL=cswmSE.offsetLeft+cswmXOff;cswmSET=cswmSE.offsetTop+cswmYOff;cswmSEH=cswmSE.offsetHeight;cswmSEW=cswmSE.offsetWidth;while(cswmPrT!="BODY"){cswmPrO=cswmPrO.offsetParent;if(cswmPrO.style.position=='absolute'){break;}cswmSEL+=cswmPrO.offsetLeft;cswmSET+=cswmPrO.offsetTop;cswmPrT=cswmPrO.tagName;}}document.all["cswmPopup"+id].style.display="block";cswmPW=document.all["cswmPopup"+id].clientWidth;cswmPH=document.all["cswmPopup"+id].clientHeight;cswmBW=document.body.clientWidth;cswmBH=document.body.clientHeight;cswmSLA=document.body.scrollLeft;cswmSTA=document.body.scrollTop;switch(cswmSPnt){case "above":cswmPx[cswmPx.length]=cswmSEL;cswmPy[cswmPy.length]=cswmSET-cswmPH;cswmCA();cswmCR();break;case "below":cswmPx[cswmPx.length]=cswmSEL;cswmPy[cswmPy.length]=cswmSET+cswmSEH;cswmCB();cswmCR();break;case "right":cswmPx[cswmPx.length]=cswmSEL+cswmSEW;cswmPy[cswmPy.length]=cswmSET;cswmCR();cswmCB();break;case "left":cswmPx[cswmPx.length]=cswmSEL-cswmPW;cswmPy[cswmPy.length]=cswmSET;cswmCL();cswmCB();cswmDir="left";break;}cswmXOff=0;cswmYOff=0;document.all["cswmPopup"+id].style.left=cswmPx[cswmPx.length-1];document.all["cswmPopup"+id].style.top=cswmPy[cswmPy.length-1];cswmPI[cswmPI.length]=id;document.all["cswmPopup"+id].style.clip="rect(auto)";if(cswmTS==0){cswmPR=new Object(document.all["cswmPopup"+id]);cswmSA=true;switch(cswmSPnt){case "below":cswmSIP=cswmPy[cswmPy.length-1];cswmSS=cswmPH/4;cswmScI(cswmPH);cswmTS=1;break;case "right":cswmSIP=cswmPx[cswmPy.length-1];cswmSS=cswmPW/4;cswmScI(cswmPW);cswmTS=1;break;case "above":cswmSIP=cswmPy[cswmPy.length-1];cswmSS=cswmPH/4;cswmScI(cswmPH);cswmTS=1;break;case "left":cswmSIP=cswmPx[cswmPy.length-1];cswmSS=cswmPW/4;cswmScI(cswmPW);cswmTS=1;break;}}}else{var d;d=document;if(cswmSA==true){return;}cswmPx[cswmPx.length]=document.all["cswmPopup"+cswmPI[cswmPI.length-1]].clientWidth+cswmPx[cswmPx.length-1]-4;var szPrE="";if(d.all["cswmItem"+itemid].parentElement.offsetTop==0){if(navigator.platform=="MacPPC"){var szPrE="parentElement.parentElement.";}else if(d.all["cswmItem"+itemid].parentElement.parentElement.parentElement.parentElement.className!="cswmPopupBox"){var szPrE="parentElement.parentElement.parentElement.";}}cswmPy[cswmPy.length]=eval("d.all[\"cswmItem"+itemid+"\"].parentElement."+szPrE+"offsetTop")+cswmPy[cswmPy.length-1];document.all["cswmPopup"+id].style.display="block";cswmPW=document.all["cswmPopup"+id].clientWidth;cswmPH=document.all["cswmPopup"+id].clientHeight;var cswmPrW=document.all["cswmPopup"+cswmPI[cswmPI.length-1]].clientWidth;cswmAR=cswmBW-cswmPx[cswmPx.length-1]+cswmSLA;cswmAB=cswmBH-cswmPy[cswmPy.length-1]+cswmSTA;if(cswmPx[cswmPx.length-2]==cswmSLA){cswmDir="right";}if((cswmAR<cswmPW)||(cswmDir=="left")){cswmMB=(cswmPx[cswmPx.length-1]-cswmPW-cswmPrW)+8;if((cswmMB>=0)&&(cswmMB>cswmSLA)){cswmDir="left";}else{cswmMB=cswmSLA;}cswmPx[cswmPx.length-1]=cswmMB;}if(cswmAB<cswmPH){cswmMB=cswmPy[cswmPy.length-1]-(cswmPH-cswmAB);if(cswmMB<cswmSTA){cswmMB=cswmSTA;}cswmPy[cswmPy.length-1]=cswmMB;}document.all["cswmPopup"+id].style.left=cswmPx[cswmPx.length-1];document.all["cswmPopup"+id].style.top=cswmPy[cswmPy.length-1];cswmPI[cswmPI.length]=id;}if(navigator.platform!="MacPPC"){cswmMS(id,cswmPx[cswmPx.length-1],cswmPy[cswmPy.length-1],cswmPW,cswmPH);}if(navigator.platform!='MacPPC'){if(navigator.userAgent.indexOf('MSIE 5.0')<=0){cswmIFSH(id);}}}function cswmHP(level){if(cswmClkd==-1){return false;}else if(level==0){clearTimeout(cswmSTI);cswmClkd=-1;var id = cswmPI[0];var count=0;for(count=0;count<cswmNH.length;count++){cswmDiI(cswmNH[count]);}cswmNH.length=0;}var count=level;for(count=level;count<cswmPI.length;count++){document.all["cswmPopup"+cswmPI[count]].style.display="none";if(document.all['cswmIFrame'+cswmPI[count]]){document.all['cswmIFrame'+cswmPI[count]].style.display='none';}}cswmPI.length=level;cswmPx.length=level;cswmPy.length=level;if(navigator.platform!="MacPPC"){cswmDS(level);}}function cswmIFSH(id){if(document.readyState!='complete'){return false;}var ifr;if(!document.all['cswmIFrame'+id]){ifr="<iframe src=\"javascript:false;\" id=\"cswmIFrame" + id + "\" scrolling=\"no\" frameborder=\"0\" style=\"position:absolute;top:0x;left:0px;z-index:998;display:none\"></iframe>";document.all['cswmPopup'+cswmPI[cswmPI.length-1]].insertAdjacentHTML('beforeBegin',ifr);}if(document.all['cswmIFrame'+id]){ifr=document.all['cswmIFrame'+id].style;ifr.top=cswmPy[cswmPy.length-1];ifr.left=cswmPx[cswmPx.length-1];ifr.width=cswmPW;ifr.height=cswmPH;ifr.filter='progid:DXImageTransform.Microsoft.Alpha(style=0,opacity=0)';ifr.display='block';}}function cswmCR(){cswmAR=(cswmBW+cswmSLA)-cswmPx[cswmPx.length-1];if(cswmAR<cswmPW+4){if(cswmSPnt=="below"||cswmSPnt=="above"){cswmMB=cswmPx[cswmPx.length-1]-(cswmPW-cswmAR)-4;if(cswmMB<0||cswmMB<cswmSLA){cswmMB=cswmSLA;}cswmPx[cswmPx.length-1]=cswmMB;}else{cswmMB=cswmSEL-cswmPW;if(cswmMB>=0){cswmPx[cswmPx.length-1]=cswmMB;}}}}function cswmCL(){if(cswmPx[cswmPx.length-1]<(cswmSLA)){cswmPx[cswmPx.length-1]=cswmSEL+cswmSEW;cswmCR();}}function cswmCB(){cswmAB=(cswmBH+cswmSTA)-cswmPy[cswmPy.length-1];if(cswmAB<cswmPH){if(cswmSPnt=="below"){cswmMB=cswmPy[cswmPy.length-1]-cswmPH-cswmSEH;if(cswmMB>=0){cswmPy[cswmPy.length-1]=cswmMB;}}else{cswmMB=cswmPy[cswmPy.length-1]-(cswmPH-cswmAB);if(cswmMB<0||cswmMB<cswmSTA){cswmMB=cswmSTA;}cswmPy[cswmPy.length-1]=cswmMB;}}}function cswmCA(){if(cswmPy[cswmPy.length-1]<(cswmSTA)){cswmPy[cswmPy.length-1]=cswmSET+cswmSEH;cswmCB();}}function cswmScI(level){cswmTL=level;switch(cswmSPnt){case "above":if(level>=0){cswmPR.style.clip="rect(" + level + " " + (cswmPW - level) + " " + cswmPH + " 0)";setTimeout("cswmScI(cswmTL-cswmSS);",50);}else{cswmDiS();cswmPR.style.clip="rect(0 " + cswmPW + " " + cswmPH + " 0)";cswmSA=false;}break;case "left":if(level>=0){cswmPR.style.clip="rect(0 " + cswmPW + " " + (cswmPH - level) + " " + level + ")";setTimeout("cswmScI(cswmTL-cswmSS);",50);}else{cswmDiS();cswmPR.style.clip="rect(0 " + cswmPW + " " + cswmPH + " 0)";cswmSA=false;}break;case "below":case "right":if(level>=0){cswmPR.style.clip="rect(0 " + (cswmPW - level) + " " + (cswmPH - level) + " 0)";setTimeout("cswmScI(cswmTL-cswmSS);",50);}else{cswmDiS();cswmPR.style.clip="rect(0 " + cswmPW + " " + cswmPH + " 0)";cswmSA=false;}break;}}function cswmMS(id,x,y,w,h){var rt;var rs;var i;for (i=0;i<4;i++){rt=document.createElement("div");rs=rt.style;rs.display='none';rs.position="absolute";rs.zIndex=1999;rs.left=(x+i)+(4);rs.top=((y+3)-i)+(4);if(cswmPW>8){rs.width=w-(i*2);}if(cswmPH>8){rs.height=(h-6)+(i*2);}rs.backgroundColor="#000000";rs.filter="alpha(opacity=6)";document.all["cswmPopup"+cswmPI[cswmPI.length-1]].insertAdjacentElement("beforeBegin",rt);cswmSdw[cswmSdw.length]=rt;if(cswmSA==0){rs.display='block';}}}function cswmDiS(){if(navigator.platform=='MacPPC'){return;}var i;for(i=0;i<4;i++){if(cswmSdw[i]){cswmSdw[i].style.display='block';}}}function cswmDS(level){var i;var Keep=level*4;for(i=Keep;i<cswmSdw.length;i++){cswmSdw[i].style.display='none';cswmSdw[i].removeNode(true);}cswmSdw.length=Keep;}function cswmShowInFrame(MenuID,x,y){x+=document.body.scrollLeft;y+=document.body.scrollTop;cswmShow(MenuID,'','below',x,y,1);}function cswmRefresh(){}function cswmMenuBarInit(){}
+//-->
+
+
+
+function startUp() { // Added function to be called at startup
+
+cswmMenuBarInit();
+MM_preloadImages('images/buttons/bt_CatJacketsON.gif','images/buttons/bt_CatFleeceON.gif','images/buttons/bt_CatFootwearON.gif','images/buttons/bt_CatKnitwearON.gif','images/buttons/bt_CatLoungewearON.gif','images/buttons/bt_CatRuggersON.gif','images/buttons/bt_CatShirtsON.gif','images/buttons/bt_CatShortsON.gif','images/buttons/bt_CatSkirtsON.gif','images/buttons/bt_CatTrousersON.gif','images/buttons/bt_CatUnderwearON.gif','images/buttons/bt_HdHomeON.gif','images/buttons/bt_HdCataloguesON.gif','images/buttons/bt_HdShopsON.gif','images/buttons/bt_HdOurStoryON.gif','images/buttons/bt_HdTeamwearON.gif','images/buttons/bt_HdHelpON.gif');	
+
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v6.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.length > 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+  	
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) 
+		if ((img = MM_findObj(args[i])) != null) {
+		
+			//alert(img.name);
+			cswmShow(img.name, img.name, 'right'); // Added to show the menu group
+			
+			if (!img.MM_up) img.MM_up = img.src;
+				img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+				nbArr[nbArr.length] = img;
+		}
+  } else if (event == "out" ) {
+	
+	cswmHide(); // Added to hide on the menu when mouseout from the main menu
+    for (i=0; i < document.MM_nbOver.length; i++) {
+       img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up;
+      }
+  } else if (event == "down") {
+    nbArr = document[grpName];
+    if (nbArr)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+      nbArr[nbArr.length] = img;
+  } }
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script><head><LINK REL="SHORTCUT ICON" HREF="favicon.ico"><title>Cotton Traders</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"><meta http-equiv="cache-control" content="private"><META HTTP-EQUIV="Pragma" CONTENT="no-cache"><META HTTP-EQUIV="Expires" CONTENT="-1"><link href="common.css" rel="stylesheet" type="text/css"><link href="cshop.css" rel="stylesheet" type="text/css"><style type="text/css">
+.cswmItem {font-family:"MS Sans Serif", Arial, Helvetica, Tahoma, sans-serif; font-size:11px; font-weight:normal; font-style:normal; color:#000000; text-decoration:none; padding:3 10 3 5}
+.cswmItemOn {font-family:"MS Sans Serif", Arial, Helvetica, Tahoma, sans-serif; font-size:11px; font-weight:normal; font-style:normal; color:#ffffff; text-decoration:none; padding:3 10 3 5}
+.cswmExpand {cursor:default}
+.cswmPopupBox {cursor:default; position:absolute; left:-500; display:none; z-index:1999}
+.cswmDisabled {color:#808080}
+</style></head><body onLoad="startUp()" onResize="cswmRefresh()" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<!-- Coalesys WebMenu for ASP -->
+<!-- WebMenu HTML Structure COPYRIGHT 2000-2003 Coalesys, Inc. -->
+<div id="cswmPopupCatTeesPiques" class="cswmPopupBox" onselectstart="return false;"><table border=0 cellpadding=0 cellspacing=0><tr><td><div style="border-style:solid; border-width: 1px; border-color:#c0c0c0 #808080 #808080 #c0c0c0"><div style="border-style:solid; border-width: 1px; border-color:#ffffff #c0c0c0 #c0c0c0 #ffffff"><table border=0 cellpadding=0 cellspacing=0><tr onmouseover="cswmT('off');cswmHiI('CatTeesPiques_0',1);cswmST(1);" onmouseout="cswmT(350);cswmST();" onClick="cswmHP(0);location.href='/ProductList.asp?CatID1=29&CatID2=4';"><td unselectable="on" nowrap bgcolor="#E7ECF2" id="cswmItemCatTeesPiques_0" class="cswmItem">Menswear</td><td unselectable="on" bgcolor="#E7ECF2" id="cswmExpandCatTeesPiques_0" class="cswmExpand"></td></tr><tr onmouseover="cswmT('off');cswmHiI('CatTeesPiques_1',1);cswmST(1);" onmouseout="cswmT(350);cswmST();" onClick="cswmHP(0);location.href='/ProductList.asp?CatID1=29&CatID2=6';"><td unselectable="on" nowrap bgcolor="#E7ECF2" id="cswmItemCatTeesPiques_1" class="cswmItem">Womenswear</td><td unselectable="on" bgcolor="#E7ECF2" id="cswmExpandCatTeesPiques_1" class="cswmExpand"></td></tr></table></div></div></td></tr></table></div><div id="cswmPopupCatShirtsBlouses" class="cswmPopupBox" onselectstart="return false;"><table border=0 cellpadding=0 cellspacing=0><tr><td><div style="border-style:solid; border-width: 1px; border-color:#c0c0c0 #808080 #808080 #c0c0c0"><div style="border-style:solid; border-width: 1px; border-color:#ffffff #c0c0c0 #c0c0c0 #ffffff"><table border=0 cellpadding=0 cellspacing=0><tr onmouseover="cswmT('off');cswmHiI('CatShirtsBlouses_0',1);cswmST(1);" onmouseout="cswmT(350);cswmST();" onClick="cswmHP(0);location.href='/ProductList.asp?CatID1=30&CatID2=4';"><td unselectable="on" nowrap bgcolor="#E7ECF2" id="cswmItemCatShirtsBlouses_0" class="cswmItem">Menswear</td><td unselectable="on" bgcolor="#E7ECF2" id="cswmExpandCatShirtsBlouses_0" class="cswmExpand"></td></tr><tr onmouseover="cswmT('off');cswmHiI('CatShirtsBlouses_1',1);cswmST(1);" onmouseout="cswmT(350);cswmST();" onClick="cswmHP(0);location.href='/ProductList.asp?CatID1=30&CatID2=6';"><td unselectable="on" nowrap bgcolor="#E7ECF2" id="cswmItemCatShirtsBlouses_1" class="cswmItem">Womenswear</td><td unselectable="on" bgcolor="#E7ECF2" id="cswmExpandCatShirtsBlouses_1" class="cswmExpand"></td></tr></table></div></div></td></tr></table></div><div id="cswmPopupCatSweatersJerseys" class="cswmPopupBox" onselectstart="return false;"><table border=0 cellpadding=0 cellspacing=0><tr><td><div style="border-style:solid; border-width: 1px; border-color:#c0c0c0 #808080 #808080 #c0c0c0"><div style="border-style:solid; border-width: 1px; border-color:#ffffff #c0c0c0 #c0c0c0 #ffffff"><table border=0 cellpadding=0 cellspacing=0><tr onmouseover="cswmT('off');cswmHiI('CatSweatersJerseys_0',1);cswmST(1);" onmouseout="cswmT(350);cswmST();" onClick="cswmHP(0);location.href='/ProductList.asp?CatID1=31&CatID2=4';"><td unselectable="on" nowrap bgcolor="#E7ECF2" id="cswmItemCatSweatersJerseys_0" class="cswmItem">Menswear</td><td unselectable="on" bgcolor="#E7ECF2" id="cswmExpandCatSweatersJerseys_0" class="cswmExpand"></td></tr><tr onmouseover="cswmT('off');cswmHiI('CatSweatersJerseys_1',1);cswmST(1);" onmouseout="cswmT(350);cswmST();" onClick="cswmHP(0);location.href='/ProductList.asp?CatID1=31&CatID2=6';"><td unselectable="on" nowrap bgcolor="#E7ECF2" id="cswmItemCatSweatersJerseys_1" class="cswmItem">Womenswear</td><td unselectable="on" bgcolor="#E7ECF2" id="cswmExpandCatSweatersJerseys_1" class="cswmExpand"></td></tr><tr onmouseover="cswmT('off');cswmHiI('CatSweatersJerseys_2',1);cswmST(1);" onmouseout="cswmT(350);cswmST();" onClick="cswmHP(0);location.href='/ProductList.asp?CatID1=31&CatID2=2';"><td unselectable="on" nowrap bgcolor="#E7ECF2" id="cswmItemCatSweatersJerseys_2" class="cswmItem">Childrenswear</td><td unselectable="on" bgcolor="#E7ECF2" id="cswmExpandCatSweatersJerseys_2" class="cswmExpand"></td></tr></table></div></div></td></tr></table></div><div id="cswmPopupCatCoatsJackets" class="cswmPopupBox" onselectstart="return false;"><table border=0 cellpadding=0 cellspacing=0><tr><td><div style="border-style:solid; border-width: 1px; border-color:#c0c0c0 #808080 #808080 #c0c0c0"><div style="border-style:solid; border-width: 1px; border-color:#ffffff #c0c0c0 #c0c0c0 #ffffff"><table border=0 cellpadding=0 cellspacing=0><tr onmouseover="cswmT('off');cswmHiI('CatCoatsJackets_0',1);cswmST(1);" onmouseout="cswmT(350);cswmST();" onClick="cswmHP(0);location.href='/ProductList.asp?CatID1=32&CatID2=4';"><td unselectable="on" nowrap bgcolor="#E7ECF2" id="cswmItemCatCoatsJackets_0" class="cswmItem">Menswear</td><td unselectable="on" bgcolor="#E7ECF2" id="cswmExpandCatCoatsJackets_0" class="cswmExpand"></td></tr><tr onmouseover="cswmT('off');cswmHiI('CatCoatsJackets_1',1);cswmST(1);" onmouseout="cswmT(350);cswmST();" onClick="cswmHP(0);location.href='/ProductList.asp?CatID1=32&CatID2=6';"><td unselectable="on" nowrap bgcolor="#E7ECF2" id="cswmItemCatCoatsJackets_1" class="cswmItem">Womenswear</td><td unselectable="on" bgcolor="#E7ECF2" id="cswmExpandCatCoatsJackets_1" class="cswmExpand"></td></tr></table></div></div></td></tr></table></div><div id="cswmPopupCatShortsTrousers" class="cswmPopupBox" onselectstart="return false;"><table border=0 cellpadding=0 cellspacing=0><tr><td><div style="border-style:solid; border-width: 1px; border-color:#c0c0c0 #808080 #808080 #c0c0c0"><div style="border-style:solid; border-width: 1px; border-color:#ffffff #c0c0c0 #c0c0c0 #ffffff"><table border=0 cellpadding=0 cellspacing=0><tr onmouseover="cswmT('off');cswmHiI('CatShortsTrousers_0',1);cswmST(1);" onmouseout="cswmT(350);cswmST();" onClick="cswmHP(0);location.href='/ProductList.asp?CatID1=33&CatID2=4';"><td unselectable="on" nowrap bgcolor="#E7ECF2" id="cswmItemCatShortsTrousers_0" class="cswmItem">Menswear</td><td unselectable="on" bgcolor="#E7ECF2" id="cswmExpandCatShortsTrousers_0" class="cswmExpand"></td></tr><tr onmouseover="cswmT('off');cswmHiI('CatShortsTrousers_1',1);cswmST(1);" onmouseout="cswmT(350);cswmST();" onClick="cswmHP(0);location.href='/ProductList.asp?CatID1=33&CatID2=6';"><td unselectable="on" nowrap bgcolor="#E7ECF2" id="cswmItemCatShortsTrousers_1" class="cswmItem">Womenswear</td><td unselectable="on" bgcolor="#E7ECF2" id="cswmExpandCatShortsTrousers_1" class="cswmExpand"></td></tr></table></div></div></td></tr></table></div><div id="cswmPopupCatBootsShoes" class="cswmPopupBox" onselectstart="return false;"><table border=0 cellpadding=0 cellspacing=0><tr><td><div style="border-style:solid; border-width: 1px; border-color:#c0c0c0 #808080 #808080 #c0c0c0"><div style="border-style:solid; border-width: 1px; border-color:#ffffff #c0c0c0 #c0c0c0 #ffffff"><table border=0 cellpadding=0 cellspacing=0><tr onmouseover="cswmT('off');cswmHiI('CatBootsShoes_0',1);cswmST(1);" onmouseout="cswmT(350);cswmST();" onClick="cswmHP(0);location.href='/ProductList.asp?CatID1=34&CatID2=4';"><td unselectable="on" nowrap bgcolor="#E7ECF2" id="cswmItemCatBootsShoes_0" class="cswmItem">Menswear</td><td unselectable="on" bgcolor="#E7ECF2" id="cswmExpandCatBootsShoes_0" class="cswmExpand"></td></tr><tr onmouseover="cswmT('off');cswmHiI('CatBootsShoes_1',1);cswmST(1);" onmouseout="cswmT(350);cswmST();" onClick="cswmHP(0);location.href='/ProductList.asp?CatID1=34&CatID2=6';"><td unselectable="on" nowrap bgcolor="#E7ECF2" id="cswmItemCatBootsShoes_1" class="cswmItem">Womenswear</td><td unselectable="on" bgcolor="#E7ECF2" id="cswmExpandCatBootsShoes_1" class="cswmExpand"></td></tr></table></div></div></td></tr></table></div><div id="cswmPopupCatSkirtsDresses" class="cswmPopupBox" onselectstart="return false;"><table border=0 cellpadding=0 cellspacing=0><tr><td><div style="border-style:solid; border-width: 1px; border-color:#c0c0c0 #808080 #808080 #c0c0c0"><div style="border-style:solid; border-width: 1px; border-color:#ffffff #c0c0c0 #c0c0c0 #ffffff"><table border=0 cellpadding=0 cellspacing=0><tr onmouseover="cswmT('off');cswmHiI('CatSkirtsDresses_0',1);cswmST(1);" onmouseout="cswmT(350);cswmST();" onClick="cswmHP(0);location.href='/ProductList.asp?CatID1=35&CatID2=6';"><td unselectable="on" nowrap bgcolor="#E7ECF2" id="cswmItemCatSkirtsDresses_0" class="cswmItem">Womenswear</td><td unselectable="on" bgcolor="#E7ECF2" id="cswmExpandCatSkirtsDresses_0" class="cswmExpand"></td></tr></table></div></div></td></tr></table></div><div id="cswmPopupCatLoungeUnderwear" class="cswmPopupBox" onselectstart="return false;"><table border=0 cellpadding=0 cellspacing=0><tr><td><div style="border-style:solid; border-width: 1px; border-color:#c0c0c0 #808080 #808080 #c0c0c0"><div style="border-style:solid; border-width: 1px; border-color:#ffffff #c0c0c0 #c0c0c0 #ffffff"><table border=0 cellpadding=0 cellspacing=0><tr onmouseover="cswmT('off');cswmHiI('CatLoungeUnderwear_0',1);cswmST(1);" onmouseout="cswmT(350);cswmST();" onClick="cswmHP(0);location.href='/ProductList.asp?CatID1=36&CatID2=4';"><td unselectable="on" nowrap bgcolor="#E7ECF2" id="cswmItemCatLoungeUnderwear_0" class="cswmItem">Menswear</td><td unselectable="on" bgcolor="#E7ECF2" id="cswmExpandCatLoungeUnderwear_0" class="cswmExpand"></td></tr><tr onmouseover="cswmT('off');cswmHiI('CatLoungeUnderwear_1',1);cswmST(1);" onmouseout="cswmT(350);cswmST();" onClick="cswmHP(0);location.href='/ProductList.asp?CatID1=36&CatID2=6';"><td unselectable="on" nowrap bgcolor="#E7ECF2" id="cswmItemCatLoungeUnderwear_1" class="cswmItem">Womenswear</td><td unselectable="on" bgcolor="#E7ECF2" id="cswmExpandCatLoungeUnderwear_1" class="cswmExpand"></td></tr></table></div></div></td></tr></table></div><div id="cswmPopupCatFleece" class="cswmPopupBox" onselectstart="return false;"><table border=0 cellpadding=0 cellspacing=0><tr><td><div style="border-style:solid; border-width: 1px; border-color:#c0c0c0 #808080 #808080 #c0c0c0"><div style="border-style:solid; border-width: 1px; border-color:#ffffff #c0c0c0 #c0c0c0 #ffffff"><table border=0 cellpadding=0 cellspacing=0><tr onmouseover="cswmT('off');cswmHiI('CatFleece_0',1);cswmST(1);" onmouseout="cswmT(350);cswmST();" onClick="cswmHP(0);location.href='/ProductList.asp?CatID1=9&CatID2=4';"><td unselectable="on" nowrap bgcolor="#E7ECF2" id="cswmItemCatFleece_0" class="cswmItem">Menswear</td><td unselectable="on" bgcolor="#E7ECF2" id="cswmExpandCatFleece_0" class="cswmExpand"></td></tr><tr onmouseover="cswmT('off');cswmHiI('CatFleece_1',1);cswmST(1);" onmouseout="cswmT(350);cswmST();" onClick="cswmHP(0);location.href='/ProductList.asp?CatID1=9&CatID2=6';"><td unselectable="on" nowrap bgcolor="#E7ECF2" id="cswmItemCatFleece_1" class="cswmItem">Womenswear</td><td unselectable="on" bgcolor="#E7ECF2" id="cswmExpandCatFleece_1" class="cswmExpand"></td></tr></table></div></div></td></tr></table></div><div id="cswmPopupCatRuggers" class="cswmPopupBox" onselectstart="return false;"><table border=0 cellpadding=0 cellspacing=0><tr><td><div style="border-style:solid; border-width: 1px; border-color:#c0c0c0 #808080 #808080 #c0c0c0"><div style="border-style:solid; border-width: 1px; border-color:#ffffff #c0c0c0 #c0c0c0 #ffffff"><table border=0 cellpadding=0 cellspacing=0><tr onmouseover="cswmT('off');cswmHiI('CatRuggers_0',1);cswmST(1);" onmouseout="cswmT(350);cswmST();" onClick="cswmHP(0);location.href='/ProductList.asp?CatID1=37&CatID2=4';"><td unselectable="on" nowrap bgcolor="#E7ECF2" id="cswmItemCatRuggers_0" class="cswmItem">Menswear</td><td unselectable="on" bgcolor="#E7ECF2" id="cswmExpandCatRuggers_0" class="cswmExpand"></td></tr><tr onmouseover="cswmT('off');cswmHiI('CatRuggers_1',1);cswmST(1);" onmouseout="cswmT(350);cswmST();" onClick="cswmHP(0);location.href='/ProductList.asp?CatID1=37&CatID2=6';"><td unselectable="on" nowrap bgcolor="#E7ECF2" id="cswmItemCatRuggers_1" class="cswmItem">Womenswear</td><td unselectable="on" bgcolor="#E7ECF2" id="cswmExpandCatRuggers_1" class="cswmExpand"></td></tr><tr onmouseover="cswmT('off');cswmHiI('CatRuggers_2',1);cswmST(1);" onmouseout="cswmT(350);cswmST();" onClick="cswmHP(0);location.href='/ProductList.asp?CatID1=37&CatID2=2';"><td unselectable="on" nowrap bgcolor="#E7ECF2" id="cswmItemCatRuggers_2" class="cswmItem">Childrenswear</td><td unselectable="on" bgcolor="#E7ECF2" id="cswmExpandCatRuggers_2" class="cswmExpand"></td></tr></table></div></div></td></tr></table></div><div id="cswmPopupCatLicensedProduct" class="cswmPopupBox" onselectstart="return false;"><table border=0 cellpadding=0 cellspacing=0><tr><td><div style="border-style:solid; border-width: 1px; border-color:#c0c0c0 #808080 #808080 #c0c0c0"><div style="border-style:solid; border-width: 1px; border-color:#ffffff #c0c0c0 #c0c0c0 #ffffff"><table border=0 cellpadding=0 cellspacing=0><tr onmouseover="cswmT('off');cswmHiI('CatLicensedProduct_0',1);cswmST(1);" onmouseout="cswmT(350);cswmST();" onClick="cswmHP(0);location.href='/ProductList.asp?CatID1=38&CatID2=40';"><td unselectable="on" nowrap bgcolor="#E7ECF2" id="cswmItemCatLicensedProduct_0" class="cswmItem">RBS 6 Nations</td><td unselectable="on" bgcolor="#E7ECF2" id="cswmExpandCatLicensedProduct_0" class="cswmExpand"></td></tr><tr onmouseover="cswmT('off');cswmHiI('CatLicensedProduct_1',1);cswmST(1);" onmouseout="cswmT(350);cswmST();" onClick="cswmHP(0);location.href='/ProductList.asp?CatID1=38&CatID2=41';"><td unselectable="on" nowrap bgcolor="#E7ECF2" id="cswmItemCatLicensedProduct_1" class="cswmItem">Guinness</td><td unselectable="on" bgcolor="#E7ECF2" id="cswmExpandCatLicensedProduct_1" class="cswmExpand"></td></tr><tr onmouseover="cswmT('off');cswmHiI('CatLicensedProduct_2',1);cswmST(1);" onmouseout="cswmT(350);cswmST();" onClick="cswmHP(0);location.href='/ProductList.asp?CatID1=38&CatID2=42';"><td unselectable="on" nowrap bgcolor="#E7ECF2" id="cswmItemCatLicensedProduct_2" class="cswmItem">Other</td><td unselectable="on" bgcolor="#E7ECF2" id="cswmExpandCatLicensedProduct_2" class="cswmExpand"></td></tr></table></div></div></td></tr></table></div><div id="cswmPopupPreview" class="cswmPopupBox" onselectstart="return false;"><table border=0 cellpadding=0 cellspacing=0><tr><td><div style="border-style:solid; border-width: 1px; border-color:#c0c0c0 #808080 #808080 #c0c0c0"><div style="border-style:solid; border-width: 1px; border-color:#ffffff #c0c0c0 #c0c0c0 #ffffff"><table border=0 cellpadding=0 cellspacing=0><tr onmouseover="cswmT('off');cswmHiI('Preview_0',1);cswmST(1);" onmouseout="cswmT(350);cswmST();" onClick="cswmHP(0);location.href='/PreviewList.asp?CatID1=28&CatID2=29';"><td unselectable="on" nowrap bgcolor="#DACAA3" id="cswmItemPreview_0" class="cswmItem" cswmUnSelColor="#DACAA3">Tees & Piques</td><td unselectable="on" bgcolor="#DACAA3" id="cswmExpandPreview_0" class="cswmExpand"></td></tr><tr onmouseover="cswmT('off');cswmHiI('Preview_1',1);cswmST(1);" onmouseout="cswmT(350);cswmST();" onClick="cswmHP(0);location.href='/PreviewList.asp?CatID1=28&CatID2=30';"><td unselectable="on" nowrap bgcolor="#DACAA3" id="cswmItemPreview_1" class="cswmItem" cswmUnSelColor="#DACAA3">Shirts & Blouses</td><td unselectable="on" bgcolor="#DACAA3" id="cswmExpandPreview_1" class="cswmExpand"></td></tr><tr onmouseover="cswmT('off');cswmHiI('Preview_2',1);cswmST(1);" onmouseout="cswmT(350);cswmST();" onClick="cswmHP(0);location.href='/PreviewList.asp?CatID1=28&CatID2=31';"><td unselectable="on" nowrap bgcolor="#DACAA3" id="cswmItemPreview_2" class="cswmItem" cswmUnSelColor="#DACAA3">Sweaters & Jerseys</td><td unselectable="on" bgcolor="#DACAA3" id="cswmExpandPreview_2" class="cswmExpand"></td></tr><tr onmouseover="cswmT('off');cswmHiI('Preview_3',1);cswmST(1);" onmouseout="cswmT(350);cswmST();" onClick="cswmHP(0);location.href='/PreviewList.asp?CatID1=28&CatID2=32';"><td unselectable="on" nowrap bgcolor="#DACAA3" id="cswmItemPreview_3" class="cswmItem" cswmUnSelColor="#DACAA3">Coats & Jackets</td><td unselectable="on" bgcolor="#DACAA3" id="cswmExpandPreview_3" class="cswmExpand"></td></tr><tr onmouseover="cswmT('off');cswmHiI('Preview_4',1);cswmST(1);" onmouseout="cswmT(350);cswmST();" onClick="cswmHP(0);location.href='/PreviewList.asp?CatID1=28&CatID2=33';"><td unselectable="on" nowrap bgcolor="#DACAA3" id="cswmItemPreview_4" class="cswmItem" cswmUnSelColor="#DACAA3">Shorts & Trousers</td><td unselectable="on" bgcolor="#DACAA3" id="cswmExpandPreview_4" class="cswmExpand"></td></tr><tr onmouseover="cswmT('off');cswmHiI('Preview_5',1);cswmST(1);" onmouseout="cswmT(350);cswmST();" onClick="cswmHP(0);location.href='/PreviewList.asp?CatID1=28&CatID2=34';"><td unselectable="on" nowrap bgcolor="#DACAA3" id="cswmItemPreview_5" class="cswmItem" cswmUnSelColor="#DACAA3">Boots & Shoes</td><td unselectable="on" bgcolor="#DACAA3" id="cswmExpandPreview_5" class="cswmExpand"></td></tr><tr onmouseover="cswmT('off');cswmHiI('Preview_6',1);cswmST(1);" onmouseout="cswmT(350);cswmST();" onClick="cswmHP(0);location.href='/PreviewList.asp?CatID1=28&CatID2=35';"><td unselectable="on" nowrap bgcolor="#DACAA3" id="cswmItemPreview_6" class="cswmItem" cswmUnSelColor="#DACAA3">Skirts & Dresses</td><td unselectable="on" bgcolor="#DACAA3" id="cswmExpandPreview_6" class="cswmExpand"></td></tr><tr onmouseover="cswmT('off');cswmHiI('Preview_7',1);cswmST(1);" onmouseout="cswmT(350);cswmST();" onClick="cswmHP(0);location.href='/PreviewList.asp?CatID1=28&CatID2=36';"><td unselectable="on" nowrap bgcolor="#DACAA3" id="cswmItemPreview_7" class="cswmItem" cswmUnSelColor="#DACAA3">Loungewear & Underwear</td><td unselectable="on" bgcolor="#DACAA3" id="cswmExpandPreview_7" class="cswmExpand"></td></tr><tr onmouseover="cswmT('off');cswmHiI('Preview_8',1);cswmST(1);" onmouseout="cswmT(350);cswmST();" onClick="cswmHP(0);location.href='/PreviewList.asp?CatID1=28&CatID2=38';"><td unselectable="on" nowrap bgcolor="#DACAA3" id="cswmItemPreview_8" class="cswmItem" cswmUnSelColor="#DACAA3">Licenced Products</td><td unselectable="on" bgcolor="#DACAA3" id="cswmExpandPreview_8" class="cswmExpand"></td></tr><tr onmouseover="cswmT('off');cswmHiI('Preview_9',1);cswmST(1);" onmouseout="cswmT(350);cswmST();" onClick="cswmHP(0);location.href='/PreviewList.asp?CatID1=28&CatID2=9';"><td unselectable="on" nowrap bgcolor="#DACAA3" id="cswmItemPreview_9" class="cswmItem" cswmUnSelColor="#DACAA3">Fleece</td><td unselectable="on" bgcolor="#DACAA3" id="cswmExpandPreview_9" class="cswmExpand"></td></tr><tr onmouseover="cswmT('off');cswmHiI('Preview_10',1);cswmST(1);" onmouseout="cswmT(350);cswmST();" onClick="cswmHP(0);location.href='/PreviewList.asp?CatID1=28&CatID2=37';"><td unselectable="on" nowrap bgcolor="#DACAA3" id="cswmItemPreview_10" class="cswmItem" cswmUnSelColor="#DACAA3">Rugger</td><td unselectable="on" bgcolor="#DACAA3" id="cswmExpandPreview_10" class="cswmExpand"></td></tr></table></div></div></td></tr></table></div>
+<!-- End WebMenu HTML -->
+
+
+<script language=javascript>
+function popUp(URL,width,height,scroll) {
+	var settings
+	settings = "width="+width+",height="+height+",scrollbars="+scroll+",toolbar=no";
+	popwin = window.open(URL,"CTraders",settings);
+	popwin.focus();
+}
+</script><!-- Top Navigation table -->
+<body>
+<table border="0" cellpadding="0" cellspacing="0" width="775" align="center">
+  <tr>
+    <td valign="top"><!-- saved from url=(0022)http://internet.e-mail -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+<body onLoad="MM_preloadImages('images/buttons/bt_HdHomeON.gif','images/buttons/bt_HdCataloguesON.gif','images/buttons/bt_HdShopsON.gif','images/buttons/bt_HdOurStoryON.gif','images/buttons/bt_HdTeamwearON.gif','images/buttons/bt_HdInformationON.gif')"><table width="775" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr> 
+    <td width="5" height="80">&nbsp;</td>
+    <td width="127" height="80" align="right" valign="middle"><img src="images/structure/1px.gif" width="1" height="2"><br><a href="../Default.asp"><img src="images/content/logo_HdCT.gif" alt="Cotton Traders - www.cottontraders.co.uk" width="100" height="54" border="0"></a></td>
+    <td width="643" align="center" valign="middle"><img src="images/structure/1px.gif" width="1" height="13"><br><a href="../ct/cataloguesDtl.asp?Cat=sl&Page=01-68"><img src="/images/content/home_Banner/GetSetForSummer.gif" alt="Big Choice, Big Value & even Bigger Sizes" width="262" height="26" border="0">
+	</a></td>
+  </tr>
+  <tr> 
+    <td width="5" height="30">&nbsp;</td>
+    <td height="30" colspan="2" background="images/structure/bg_HdLinks.gif"> 
+<a href="/default.asp" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Home','','images/buttons/bt_HdHomeON.gif',1)"><img src="images/buttons/bt_HdHome.gif" alt="Home" name="Home" width="80" height="30" border="0"></a><a href="/ct/catalogues.asp" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Catalogues','','images/buttons/bt_HdCataloguesON.gif',1)"><img src="images/buttons/bt_HdCatalogues.gif" alt="Catalogues" name="Catalogues" width="116" height="30" border="0"></a><a href="/ct/shops2004.asp" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Shops','','images/buttons/bt_HdShopsON.gif',1)"><img src="images/buttons/bt_HdShops.gif" alt="Shops" name="Shops" width="87" height="30" border="0"></a><a href="/ct/our_story.asp" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('OurStory','','images/buttons/bt_HdOurStoryON.gif',1)"><img src="images/buttons/bt_HdOurStory.gif" alt="Our Story" name="OurStory" width="100" height="30" border="0"></a><a href="/teamwear/index.asp" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('TeamWear','','images/buttons/bt_HdTeamwearON.gif',1)"><img src="images/buttons/bt_HdTeamwear.gif" alt="Team Wear" name="TeamWear" width="127" height="30" border="0"></a><a href="/ct/information.asp" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Help','','images/buttons/bt_HdInformationON.gif',1)"><img src="images/buttons/bt_HdInformation.gif" alt="Information" name="Help" width="115" height="30" border="0"></a></td>
+  </tr>
+  <tr> 
+    <td width="5" height="5"><img src="images/structure/1px.gif" width="1" height="1"></td>
+    <td height="5" colspan="2" bgcolor="#CC0000"><img src="images/structure/1px.gif" width="1" height="1"></td>
+  </tr>
+</table>
+</td>
+  </tr>
+</table><!-- Start Centre Content table -->
+<table border="0" cellpadding="0" cellspacing="0" width="775" align="center">
+  <tr><!-- Left navigation Cell -->
+    <td width="125" valign="top" height="100%"><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- Begin embeded Left Navbar source --><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=unicode">
+</script>
+
+<meta content="MSHTML 6.00.2716.2200" name="GENERATOR"></head>
+<body>
+<table width="128" border="0" align="center" cellpadding="0" cellspacing="0" height="100%">
+  <tr> 
+    <td width="6">&nbsp;</td>
+    <td width="127" align="middle" valign="top" bgcolor="#88a1bd"><img height="5" src="images/structure/1px.gif" width="1"><br>
+<table width="112" border="0" cellpadding="0" cellspacing="0" background="images/structure/bg_LfSearch.gif">
+        <tr> 
+          <td><img height="36" src="images/content/obj_LfSearchIcon.gif" width="43"></td>
+          <td align="right" valign="bottom"><img height="36" src="images/content/obj_LfSearchText.gif" width="68"></td>
+        </tr>
+      </table>
+      <table width="112" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="1" bgcolor="#00234c"><img height="1" src="images/structure/1px.gif" width="1"></td>
+          <td bgcolor="#e7ecf2"><table width="100%" border="0" cellspacing="0" cellpadding="4">
+              <tr> 
+                <form name="form1" method="post" action="/ProductList.asp">
+                  <td><div align="center"> 
+                      <span class="txtLeft"><b>Code or Product</b><br>eg. B283A or Jeans</span><br><img height="5" src="images/structure/1px.gif" width="1"><br>
+                        <input name="SearchString" class="txtSmall" size="8">
+                        <input name="CatID1" type="hidden" value="0">
+                        <input name="CatID2" type="hidden" value="0">
+                        <input name="Submit" type="submit" class="txtSmall" value="Go">
+                    </div></td>
+                </form>
+              </tr>
+            </table></td>
+          <td width="1" bgcolor="#00234c"><img height="1" src="images/structure/1px.gif" width="1"><img height="1" src="images/structure/1px.gif" width="1"></td>
+        </tr>
+      </table>
+      <table width="112" border="0" cellpadding="0" cellspacing="0" background="images/structure/bg_LfSearchBTLine.gif">
+        <tr> 
+          <td><img height="11" src="images/structure/bg_LfSearchBTCorner.gif" width="10"></td>
+          <td align="right"><img height="11" src="images/structure/bg_LfSearchBTRtLine.gif" width="1"></td>
+        </tr>
+      </table>
+	  <img height="10" src="images/structure/1px.gif" width="1"><br>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2" bgcolor="#88a1bd" width="132">
+      <table width="130" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td valign="top"><p>
+		  <a onmouseover="MM_nbGroup('over','CatTeesPiques','images/buttons/bt_CatTeesPiquesON.gif','',1)" onclick="MM_nbGroup('down','group1','CatTeesPiques','images/buttons/bt_CatTeesPiquesON.gif',1)" onmouseout="MM_nbGroup('out')" href="/ProductList.asp?CatID1=29&amp;CatID2=0" target="_top"><img id="CatTeesPiques" height="39" alt="Tees And Piques" src="images/buttons/bt_CatTeesPiques.gif" width="130" onload border="0" name="CatTeesPiques"></a><br><img height="3" src="images/structure/bg_Lf.gif" width="130" border="0"><br>
+		  <a onmouseover="MM_nbGroup('over','CatShirtsBlouses','images/buttons/bt_CatShirtsBlousesON.gif','',1)" onclick="MM_nbGroup('down','group1','CatShirtsBlouses','images/buttons/bt_CatShirtsBlousesON.gif',1)" onmouseout="MM_nbGroup('out')" href="/ProductList.asp?CatID1=30&amp;CatID2=0" target="_top"><img height="39" alt="Shirts And Blouses" src="images/buttons/bt_CatShirtsBlouses.gif" width="130" onload border="0" name="CatShirtsBlouses"></a><br><img height="3" src="images/structure/bg_Lf.gif" width="130" border="0"><br>
+		  <a onmouseover="MM_nbGroup('over','CatSweatersJerseys','images/buttons/bt_CatSweatersJerseysON.gif','',1)" onclick="MM_nbGroup('down','group1','CatSweatersJerseys','images/buttons/bt_CatSweatersJerseysON.gif',1)" onmouseout="MM_nbGroup('out');" href="/ProductList.asp?CatID1=31&amp;CatID2=0" target="_top"><img height="39" alt="Sweaters And Jerseys" src="images/buttons/bt_CatSweatersJerseys.gif" width="130" onload border="0" name="CatSweatersJerseys"></a><br><img height="3" src="images/structure/bg_Lf.gif" width="130" border="0"><br>
+		  <a onmouseover="MM_nbGroup('over','CatCoatsJackets','images/buttons/bt_CatCoatsJacketsON.gif','',1)" onclick="MM_nbGroup('down','group1','CatCoatsJackets','images/buttons/bt_CatCoatsJacketsON.gif',1)" onmouseout="MM_nbGroup('out')" href="/ProductList.asp?CatID1=32&amp;CatID2=0" target="_top"><img height="39" alt="Coats And Jackets" src="images/buttons/bt_CatCoatsJackets.gif" width="130" onload border="0" name="CatCoatsJackets"></a><br><img height="3" src="images/structure/bg_Lf.gif" width="130" border="0"><br>
+		  <a onmouseover="MM_nbGroup('over','CatShortsTrousers','images/buttons/bt_CatShortsTrousersON.gif','',1)" onclick="MM_nbGroup('down','group1','CatShortsTrousers','images/buttons/bt_CatShortsTrousersON.gif',1)" onmouseout="MM_nbGroup('out')" href="/ProductList.asp?CatID1=33&amp;CatID2=0" target="_top"><img height="39" alt="Shorts And Trousers" src="images/buttons/bt_CatShortsTrousers.gif" width="130" onload border="0" name="CatShortsTrousers"></a><br><img height="3" src="images/structure/bg_Lf.gif" width="130" border="0"><br>
+		  <a onmouseover="MM_nbGroup('over','CatBootsShoes','images/buttons/bt_CatBootsShoesON.gif','',1)" onclick="MM_nbGroup('down','group1','CatBootsShoes','images/buttons/bt_CatBootsShoesON.gif',1)" onmouseout="MM_nbGroup('out')" href="/ProductList.asp?CatID1=34&amp;CatID2=0" target="_top"><img height="39" alt="Boots And Shoes" src="images/buttons/bt_CatBootsShoes.gif" width="130" onload border="0" name="CatBootsShoes"></a><br><img height="3" src="images/structure/bg_Lf.gif" width="130" border="0"><br>
+		  <a onmouseover="MM_nbGroup('over','CatSkirtsDresses','images/buttons/bt_CatSkirtsDressesON.gif','',1)" onclick="MM_nbGroup('down','group1','CatSkirtsDresses','images/buttons/bt_CatSkirtsDressesON.gif',1)" onmouseout="MM_nbGroup('out')" href="/ProductList.asp?CatID1=35&amp;CatID2=0" target="_top"><img height="39" alt="Skirts And Dresses" src="images/buttons/bt_CatSkirtsDresses.gif" width="130" onload border="0" name="CatSkirtsDresses"></a><br><img height="3" src="images/structure/bg_Lf.gif" width="130" border="0"><br>
+		  <a onmouseover="MM_nbGroup('over','CatLoungeUnderwear','images/buttons/bt_CatLoungeUnderwearON.gif','',1)" onclick="MM_nbGroup('down','group1','CatLoungeUnderwear','images/buttons/bt_CatLoungeUnderwearON.gif',1)" onmouseout="MM_nbGroup('out')" href="/ProductList.asp?CatID1=36&amp;CatID2=0" target="_top"><img height="39" alt="Lounge And Underwear" src="images/buttons/bt_CatLoungeUnderwear.gif" width="130" onload border="0" name="CatLoungeUnderwear"></a><br><img height="3" src="images/structure/bg_Lf.gif" width="130" border="0"><br>
+		  <a onmouseover="MM_nbGroup('over','CatLicensedProduct','images/buttons/bt_CatLicensedProductON.gif','',1)" onclick="MM_nbGroup('down','group1','CatLicensedProduct','images/buttons/bt_CatLicensedProductON.gif',1)" onmouseout="MM_nbGroup('out')" href="/ProductList.asp?CatID1=38&amp;CatID2=0" target="_top"><img height="39" alt="Licensed Products" src="images/buttons/bt_CatLicensedProduct.gif" width="130" onload border="0" name="CatLicensedProduct"></a><br><img height="3" src="images/structure/bg_Lf.gif" width="130" border="0"><br>
+		  <a onmouseover="MM_nbGroup('over','CatFleece','images/buttons/bt_CatFleeceON.gif','',1)" onclick="MM_nbGroup('down','group1','CatFleece','images/buttons/bt_CatFleeceON.gif',1)" onmouseout="MM_nbGroup('out')" href="/ProductList.asp?CatID1=9&amp;CatID2=0" target="_top"><img height="29" alt="Fleece" src="images/buttons/bt_CatFleece.gif" width="130" onload border="0" name="CatFleece"></a><br><img height="3" src="images/structure/bg_Lf.gif" width="130" border="0"><br>
+		  <a onmouseover="MM_nbGroup('over','CatRuggers','images/buttons/bt_CatRuggersON.gif','',1)" onclick="MM_nbGroup('down','group1','CatRuggers','images/buttons/bt_CatRuggersON.gif',1)" onmouseout="MM_nbGroup('out')" href="/ProductList.asp?CatID1=37&amp;CatID2=0" target="_top"><img height="29" alt="Ruggers" src="images/buttons/bt_CatRuggers.gif" width="130" onload border="0" name="CatRuggers"></a><br><img height="3" src="images/structure/bg_Lf.gif" width="130" border="0"><br>
+		  <a onmouseover="MM_nbGroup('over','CatHousehold','images/buttons/bt_CatHouseholdON.gif','',1)" onclick="MM_nbGroup('down','group1','CatHousehold','images/buttons/bt_CatHouseholdON.gif',1)" onmouseout="MM_nbGroup('out')" href="/ProductList.asp?CatID1=25&amp;CatID2=0" target="_top"><img height="29" alt="Household" src="images/buttons/bt_CatHousehold.gif" width="130" onload border="0" name="CatHousehold"></a><br><img height="3" src="images/structure/bg_Lf.gif" width="130" border="0"><br>
+          <img height="20" src="images/structure/bg_Lf.gif" width="130" border="0"></p>
+          </td>
+        </tr>
+      </table> </td>
+  </tr>
+  <tr> 
+    <td width="6">&nbsp;</td>
+    <td width="124" align="middle" bgcolor="#88a1bd" height="100%" valign="top"><img height="10" src="images/structure/1px.gif" width="1"><br>
+<table width="112" border="0" cellpadding="0" cellspacing="0" background="images/structure/bg_LfPrizeTopLine.gif">
+        <tr> 
+          <td><img height="28" src="images/content/obj_LfPrizeIcon.gif" width="35"></td>
+          <td align="right" valign="bottom"><img height="23" src="images/content/obj_LfPrizeText.gif" width="75"></td>
+        </tr>
+      </table>
+      <table width="112" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="1" bgcolor="#00234c"><img height="1" src="images/structure/1px.gif" width="1"></td>
+          <td bgcolor="#e7ecf2"><table width="100%" border="0" cellspacing="0" cellpadding="4">
+              <tr> 
+            
+                  <td><div align="center"> 
+                      <span class="txtMainBold">WIN 
+                        £20,000!</span><br>
+                    <span class="txtLeft"> <a href="javascript:popUp('/ct/prizedraw.asp',420,350,'yes');">Click 
+                    here for your chance to win!</a></span><img height="5" src="images/structure/1px.gif" width="1">&nbsp; 
+                  </div></td>
+            
+              </tr>
+            </table></td>
+          <td width="1" bgcolor="#00234c"><img height="1" src="images/structure/1px.gif" width="1"><img height="1" src="images/structure/1px.gif" width="1"></td>
+        </tr>
+      </table>
+      <table width="112" border="0" cellpadding="0" cellspacing="0" background="images/structure/bg_LfSearchBTLine.gif">
+        <tr> 
+          <td><img height="11" src="images/structure/bg_LfSearchBTCorner.gif" width="10"></td>
+          <td align="right"><img height="11" src="images/structure/bg_LfSearchBTRtLine.gif" width="1"></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td height="30"><img src="images/structure/1px.gif" width="1" height="1"></td>
+        </tr>
+        <tr>
+          <td align="center"><a href="http://www.thawte.com" target="_new"><img src="images/thawte.gif" border="0" width="87" height="73"></a></td>
+        </tr>
+        <tr>
+          <td height="25"><img src="images/structure/1px.gif" width="1" height="1"></td>
+        </tr>
+        <tr>
+          <td align="center"><a href="http://www.cshop.info" target="_new"><img height="76" alt src="images/powered_by.gif" width="60" border="0"></a></td>
+        </tr>
+        <tr>
+          <td height="25"><img src="images/structure/1px.gif" width="1" height="1"></td>
+        </tr>
+        <tr>
+          <td align="right"><a href="http://isis.imrg.org/screens/VerifyMerchantFrame.asp?guid=91949A34-9838-4924-8E3F-81A859768D36" target="_blank"><img border="0" src="images/isis.gif" width="124" height="64"></a></td>
+        </tr>
+        <tr>
+          <td height="15"><img src="images/structure/1px.gif" width="1" height="1"></td>
+        </tr>
+      </table>
+      <p><br>
+        <img height="10" src="images/structure/1px.gif" width="1"></p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p></td>
+  </tr>
+</table><!-- End embeded Left Navbar source --></body></html>
+</td><!-- Middle Content Cell -->
+    <td valign="top" width="500"><!-- Page heading cell -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr> 
+<td bgcolor="#e7ecf2"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="15" rowspan="8" class="txtMainBold">&nbsp;</td>
+    <td width="465" height="15" class="txtMainBold"><img src="images/structure/1px.gif" width="1" height="1"></td>
+    <td width="15" rowspan="8" class="txtMainBold">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="465" class="txtMainBold"><p class="txtPageHeaderAdmin"> <img src="images/content/txt_HeadWelcome.gif" alt="Welcome..." width="131" height="22"> </p>
+    </td>
+  </tr>
+  <tr>
+    <td height="10" class="txtMainBold"><img src="images/structure/1px.gif" width="1" height="1"></td>
+  </tr>
+  <tr>
+    <td class="txtMainBold"><p class=textMain>First time with us at Cotton Traders Online?<br>If you are already a customer and know your customer number <a href="javascript:popUp('login.asp',250,250,'no')">click here</a> to login..
+    </td>
+  </tr>
+  <tr>
+    <td class="txtMainBold">&nbsp;</td>
+  </tr>
+</table></td>
+</tr>
+<tr> 
+<td align="right"><img height="9" src="images/structure/bg_BdTRCurve.gif" width="9"></td>
+</tr>
+</table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="10">
+        <tr> 
+          <td align="center">
+            <table width="464" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td><a href="productdetail.asp?productcatalogue=a837awww"><img src="images/content/home_Main/Piques/images/chops_top.gif" alt="Half Price Short Sleeve Pique - Was £12.99 Now £6.49" width="464" height="3" border="0"></a></td>
+              </tr>
+            </table>
+            <TABLE WIDTH=464 BORDER=0 CELLPADDING=0 CELLSPACING=0>
+            <TR>
+              <TD ROWSPAN=3> <a href="productdetail.asp?productcatalogue=a837awww"><IMG SRC="images/content/home_Main/Piques/images/chops_01.gif" ALT="Half Price Short Sleeve Pique - Was £12.99 Now £6.49" WIDTH=188 HEIGHT=157 border="0"></a></TD>
+              <TD COLSPAN=5> <a href="productdetail.asp?productcatalogue=a837awww"><IMG SRC="images/content/home_Main/Piques/images/chops_02.jpg" ALT="Half Price Short Sleeve Pique - Was £12.99 Now £6.49" WIDTH=276 HEIGHT=30 border="0"></a></TD>
+              <TD> <IMG SRC="images/spacer.gif" WIDTH=1 HEIGHT=30 ALT=""></TD>
+            </TR>
+            <TR>
+              <TD> <a href="productdetail.asp?productcatalogue=a837awww"><IMG SRC="images/content/home_Main/Piques/images/chops_03.jpg" ALT="Half Price Short Sleeve Pique - Was £12.99 Now £6.49" WIDTH=73 HEIGHT=64 border="0"></a></TD>
+              <TD> <a href="productdetail.asp?productcatalogue=a837awww"><IMG SRC="images/content/home_Main/Piques/images/chops_04.jpg" ALT="Half Price Short Sleeve Pique - Was £12.99 Now £6.49" WIDTH=35 HEIGHT=64 border="0"></a></TD>
+              <TD> <a href="productdetail.asp?productcatalogue=a837awww"><IMG SRC="images/content/home_Main/Piques/images/chops_05.jpg" ALT="Half Price Short Sleeve Pique - Was £12.99 Now £6.49" WIDTH=43 HEIGHT=64 border="0"></a></TD>
+              <TD> <a href="productdetail.asp?productcatalogue=a837awww"><IMG SRC="images/content/home_Main/Piques/images/chops_06.jpg" ALT="Half Price Short Sleeve Pique - Was £12.99 Now £6.49" WIDTH=48 HEIGHT=64 border="0"></a></TD>
+              <TD> <a href="productdetail.asp?productcatalogue=a837awww"><IMG SRC="images/content/home_Main/Piques/images/chops_07.jpg" ALT="Half Price Short Sleeve Pique - Was £12.99 Now £6.49" WIDTH=77 HEIGHT=64 border="0"></a></TD>
+              <TD> <IMG SRC="images/spacer.gif" WIDTH=1 HEIGHT=64 ALT=""></TD>
+            </TR>
+            <TR>
+              <TD COLSPAN=5 ROWSPAN=3> <a href="productdetail.asp?productcatalogue=a837awww"><IMG SRC="images/content/home_Main/Piques/images/chops_08.jpg" ALT="Half Price Short Sleeve Pique - Was £12.99 Now £6.49" WIDTH=276 HEIGHT=162 border="0"></a></TD>
+              <TD> <IMG SRC="images/spacer.gif" WIDTH=1 HEIGHT=63 ALT=""></TD>
+            </TR>
+            <TR>
+              <TD> <a href="productdetail.asp?productcatalogue=a837awww"><IMG SRC="images/content/home_Main/Piques/images/chops_09.gif" ALT="Half Price Short Sleeve Pique - Was £12.99 Now £6.49" WIDTH=188 HEIGHT=20 border="0"></a></TD>
+              <TD> <IMG SRC="images/spacer.gif" WIDTH=1 HEIGHT=20 ALT=""></TD>
+            </TR>
+            <TR>
+              <TD> <a href="productdetail.asp?productcatalogue=a837awww"><IMG SRC="images/content/home_Main/Piques/images/chops_10.jpg" ALT="Half Price Short Sleeve Pique - Was £12.99 Now £6.49" WIDTH=188 HEIGHT=79 border="0"></a></TD>
+              <TD> <IMG SRC="images/spacer.gif" WIDTH=1 HEIGHT=79 ALT=""></TD>
+            </TR>
+          </TABLE>
+		  <div align="center"> 
+              <table width="470" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td height="15" colspan="2"><img src="images/structure/1px.gif" width="1" height="1"></td>
+                </tr>
+                <tr>
+                  <td height="10" colspan="2"><img src="images/structure/line_HomeDotHR.gif" width="462" height="1"></td>
+                </tr>
+                <tr>
+                  <td width="51%"><span class="txtSmall"><a href="ct/cataloguesDtl.asp?Cat=su&Page=01-40">Summer
+                        Sale 2004
+                        40 Page Catalogue</a></span></td>
+                  <td width="49%"><span class="txtSmall"><a href="ct/browse_Chinos.asp">His
+                        'n' Hers Chinos - HALF PRICE</a></span></td>
+                </tr>
+                <tr>
+                  <td height="5" colspan="2"><img src="images/structure/1px.gif" width="1" height="1"></td>
+                </tr>
+                <tr>
+                  <td><a href="ct/cataloguesDtl.asp?Cat=su&Page=01-40"><img src="images/content/home_Sub/cat_SummerSale2004.gif" width="221" height="115" border="0"></a></td>
+                  <td><a href="ct/browse_Chinos.asp"><img src="images/content/home_Sub/sub_Chinos.gif" width="221" height="115" border="0"></a></td>
+                </tr>
+                <tr>
+                  <td height="10" colspan="2"><img src="images/structure/1px.gif" width="1" height="1"></td>
+                </tr>
+                <tr>
+                  <td height="10" colspan="2"><img src="images/structure/line_HomeDotHR.gif" width="462" height="1"></td>
+                </tr>
+                <tr>
+                  <td><span class="txtSmall"><a href="ct/cataloguesDtl.asp?Cat=3t&Page=01-24">Holiday
+                  2004 24 Page Catalogue</a></span></td>
+                  <td><span class="txtSmall"><a href="productdetail.asp?productcatalogue=q171zwww ">Suede
+                        Slip-ons -
+                        HALF PRICE</a></span></td>
+                </tr>
+                <tr>
+                  <td height="5" colspan="2"><img src="images/structure/1px.gif" width="1" height="1"></td>
+                </tr>
+                <tr>
+                  <td><a href="ct/cataloguesDtl.asp?Cat=3t&Page=01-24"><img src="images/content/home_Sub/cat_HolidayDiscover2004.gif" width="221" height="115" border="0"></a></td>
+                  <td><a href="productdetail.asp?productcatalogue=q171zwww "><img src="images/content/home_Sub/sub_SuedeSlipOns1.jpg" width="125" height="115" border="0"></a><a href="productdetail.asp?productcatalogue=q171zwww "><img src="images/content/home_Sub/sub_SuedeSlipOns2.gif" width="96" height="115" border="0"></a></td>
+                </tr>
+                <tr>
+                  <td height="10" colspan="2"><img src="images/structure/1px.gif" width="1" height="1"></td>
+                </tr>
+                <tr>
+                  <td height="10" colspan="2"><img src="images/structure/line_HomeDotHR.gif" width="462" height="1"></td>
+                </tr>
+                <tr>
+                  <td><span class="txtSmall"><a href="ct/cataloguesDtl.asp?Cat=st&Page=01-52">Holiday
+                        2004 52 Page Catalogue</a></span></td>
+                  <td><span class="txtSmall"><a href="productdetail.asp?productcatalogue=b302awww">Cord
+                  Weekender - HALF PRICE</a></span></td>
+                </tr>
+                <tr>
+                  <td height="5" colspan="2"><img src="images/structure/1px.gif" width="1" height="1"></td>
+                </tr>
+                <tr>
+                  <td><span class="txtSmall"><a href="ct/cataloguesDtl.asp?Cat=st&Page=01-52"><img src="images/content/home_Sub/cat_HolidayMain2004.gif" width="221" height="115" border="0"></a></span></td>
+                  <td><a href="productdetail.asp?productcatalogue=b302awww"><img src="images/content/home_Sub/sub_CordWeekender1.jpg" width="125" height="115" border="0"></a><a href="productdetail.asp?productcatalogue=b302awww"><img src="images/content/home_Sub/sub_CordWeekender2.gif" width="96" height="115" border="0"></a></td>
+                </tr>
+                <tr>
+                  <td height="10" colspan="2"><img src="images/structure/1px.gif" width="1" height="1"></td>
+                </tr>
+				                <tr>
+                  <td height="10" colspan="2"><img src="images/structure/line_HomeDotHR.gif" width="462" height="1"></td>
+                </tr>
+				                <tr>
+				                  <td height="10" colspan="2"><img src="images/structure/1px.gif" width="1" height="1"></td>
+                </tr>
+				                <tr>
+				                  <td height="10"><table width="221" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                      <td width="3"><img src="images/content/home_SubSmall/subSmall_STRUCTLeft.gif" width="3" height="52"></td>
+                                      <td width="97"><a href="ct/browse_Letters.asp"><img src="images/content/home_SubSmall/subSmall_Letters.gif" width="97" height="52" border="0"></a></td>
+                                      <td align="center" valign="middle" bgcolor="#E7ECF2"><a href="ct/browse_Letters.asp" class="txtSmallSub">Letter<br>
+                                        of the
+                                        Month
+                                      </a></td>
+                                      <td width="4"> <img src="images/content/home_SubSmall/subSmall_STRUCTRight.gif" width="4" height="52"></td>
+                                    </tr>
+                                  </table></td>
+                                  <td height="10"><table width="221" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                      <td width="3"><img src="images/content/home_SubSmall/subSmall_STRUCTLeft.gif" width="3" height="52"></td>
+                                      <td width="97"><a href="ct/browse_StoryBargains.asp?s=Bargains&sav=true"><img src="images/content/home_SubSmall/subSmall_Bargains.gif" width="97" height="52" border="0"></a></td>
+                                      <td align="center" valign="middle" bgcolor="#E7ECF2"><a href="ct/browse_StoryBargains.asp?s=Bargains&sav=true" class="txtSmallSub">Big
+                                          Savings<br>
+                                          as always!
+                                      </a></td>
+                                      <td width="4"> <img src="images/content/home_SubSmall/subSmall_STRUCTRight.gif" width="4" height="52"></td>
+                                    </tr>
+                                  </table></td>
+                </tr>
+								                <tr>
+				                  <td height="10" colspan="2"><img src="images/structure/1px.gif" width="1" height="1"></td>
+                </tr>
+				<tr>
+				                  <td height="10"><table width="221" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                      <td width="3"><img src="images/content/home_SubSmall/subSmall_STRUCTLeft.gif" width="3" height="52"></td>
+                                      <td width="97"><a href="ct/browse_StoryTrousers.asp?s=worldoftrousers&sav=true"><img src="images/content/home_SubSmall/subSmall_WorldOfTrousers.gif" width="97" height="52" border="0"></a></td>
+                                      <td align="center" valign="middle" bgcolor="#E7ECF2"><a href="ct/browse_StoryTrousers.asp?s=worldoftrousers&sav=true" class="txtSmallSub">World
+                                          of Trousers</a></td>
+                                      <td width="4"> <img src="images/content/home_SubSmall/subSmall_STRUCTRight.gif" width="4" height="52"></td>
+                                    </tr>
+                                  </table></td>
+                                  <td height="10"><table width="221" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                      <td width="3"><img src="images/content/home_SubSmall/subSmall_STRUCTLeft.gif" width="3" height="52"></td>
+                                      <td width="97"><a href="ct/browse_Story.asp?s=classics"><img src="images/content/home_SubSmall/subSmall_Classics.jpg" width="97" height="52" border="0"></a></td>
+                                      <td align="center" valign="middle" bgcolor="#E7ECF2"><a href="ct/browse_Story.asp?s=classics" class="txtSmallSub">Classic
+                                          Ruggers</a></td>
+                                      <td width="4"> <img src="images/content/home_SubSmall/subSmall_STRUCTRight.gif" width="4" height="52"></td>
+                                    </tr>
+                                  </table></td>
+				</tr>
+              </table>
+          </div></td>
+        </tr>
+        <tr> 
+          <td>&nbsp;</td>
+        </tr>
+      </table>
+      <!-- End Page heading Cell -->
+    </td>
+    <!-- Right Content Cell -->
+<td width="150" align="center" valign="top" bgcolor="#E7ECF2">
+<br><table width="139" border="0" cellpadding="0" cellspacing="0">  <tr>     <td colspan="3" bgcolor="#F7F8FA"><p><img src=images/structure/bg_RtYoursFree.gif border=0></p></td>  </tr>  <tr bgcolor="#F7F8FA">     <td>&nbsp;</td>    <td><table cellpadding=1 cellspacing=0 border=0 class=Summary><tr><td align=center valign=top colspan=2><img src=/images/clearpixel.gif width=100 height=7></td></tr><tr><td align=center valign=top colspan=2><p><a href="javascript:popUp('/SomethingDifferent.asp',400,400,'no')" class=txtMainBold>Expecting an offer?</a></td></tr><tr><td align=center valign=top colspan=2><img src=/images/clearpixel.gif width=100 height=7></td></tr></table>  </td>    <td>&nbsp;</td>  </tr>  <tr>     <td colspan="3" bgcolor="#F7F8FA"><a href="javascript:popUp('/SomethingDifferent.asp',400,400,'no')"><img src="images/structure/Promotion_footer.gif" border=0></a></td>  </tr>  <tr>     <td colspan="3">&nbsp;</td>  </tr></table><table width="139" border="0" cellpadding="0" cellspacing="0">  <tr>     <td colspan="3" bgcolor="#F7F8FA"><img src="images/structure/bg_RtTopCurve.gif" border=0></td>  </tr>  <tr bgcolor="#F7F8FA">     <td>&nbsp;</td>    <td><p><img src=images/content/txt_MoreToLookAt.gif width=118 height=11 border=0></p><Table width="100%"><tr><td colspan=4><hr class=ProductList></td></tr><tr><td class=ProductList valign=top width=100 align=center><a href=/ProductArray.asp?ProductLast=&ProductID=1821 target=><img src=/ProdImg/A837A_ThM.jpg border=0></a></td></tr><tr><td class=ProductList valign=top colspan=2 align=center><b>Short Sleeve Pique</a></td></tr><tr><td valign=top align=center><b>£6.49&nbsp;   </b><a href=/ProductArray.asp?ProductLast=?ProductID=1821 target=></a></td></tr><tr><td colspan=4><hr class=ProductList></td></tr><tr><td class=ProductList valign=top width=100 align=center><a href=/ProductArray.asp?ProductLast=&ProductID=1797 target=><img src=/ProdImg/A821A_ThM.jpg border=0></a></td></tr><tr><td class=ProductList valign=top colspan=2 align=center><b>Short-sleeve Lace-up Top</a></td></tr><tr><td valign=top align=center><b>£6.49&nbsp;   </b><a href=/ProductArray.asp?ProductLast=?ProductID=1797 target=></a></td></tr><tr><td colspan=4><hr class=ProductList></td></tr><tr><td class=ProductList valign=top width=100 align=center><a href=/ProductArray.asp?ProductLast=&ProductID=1926 target=><img src=/ProdImg/A840A_ThM.jpg border=0></a></td></tr><tr><td class=ProductList valign=top colspan=2 align=center><b>Roundneck T-shirt</a></td></tr><tr><td valign=top align=center><b>£5.99&nbsp;   </b><a href=/ProductArray.asp?ProductLast=?ProductID=1926 target=></a></td></tr><tr><td colspan=4><hr class=ProductList></td></tr><tr><td class=ProductList valign=top width=100 align=center><a href=/ProductArray.asp?ProductLast=&ProductID=1956 target=><img src=/ProdImg/Q254Z_ThM.jpg border=0></a></td></tr><tr><td class=ProductList valign=top colspan=2 align=center><b>Unisex Sports Sandal</a></td></tr><tr><td valign=top align=center><b>£14.99&nbsp;   </b><a href=/ProductArray.asp?ProductLast=?ProductID=1956 target=></a></td></tr><tr><td colspan=4><hr class=ProductList></td></tr><tr><td class=ProductList valign=top width=100 align=center><a href=/ProductArray.asp?ProductLast=&ProductID=1858 target=><img src=/ProdImg/F293A_ThM.jpg border=0></a></td></tr><tr><td class=ProductList valign=top colspan=2 align=center><b>Wrinkle-Free Walkshorts (Flat Front)</a></td></tr><tr><td valign=top align=center><b>£8.49&nbsp;   </b><a href=/ProductArray.asp?ProductLast=?ProductID=1858 target=></a></td></tr><tr><td colspan=4><hr class=ProductList></td></tr><tr><td class=ProductList valign=top width=100 align=center><a href=/ProductArray.asp?ProductLast=&ProductID=449 target=><img src=/ProdImg/C285A_ThM.jpg border=0></a></td></tr><tr><td class=ProductList valign=top colspan=2 align=center><b>Elasticated Waist Trousers (29'' inside leg)</a></td></tr><tr><td valign=top align=center><b>£9.99&nbsp;   </b><a href=/ProductArray.asp?ProductLast=?ProductID=449 target=></a></td></tr></table>  </td>    <td>&nbsp;</td>  </tr>  <tr>     <td colspan="3" bgcolor="#F7F8FA"><img src="images/structure/bg_RtBotCurve.gif" border=0></td>  </tr>  <tr>     <td colspan="3">&nbsp;</td>  </tr></table>
+    </td>
+  </tr>
+</table><!-- End Centre Content table --><!-- Bottom Content navigation Cell -->
+<table border="0" cellpadding="0" cellspacing="0" width="775" align="center">
+  <tr>
+    <td valign="top"><table width="775" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr> 
+    <td width="6" height="5"><img src="images/structure/1px.gif" width="1" height="1"></td>
+    <td height="5" bgcolor="#CC0000"><img src="images/structure/1px.gif" width="1" height="1"></td>
+  </tr>
+  <tr> 
+    <td width="6" height="24">&nbsp;</td>
+    <td height="24" align="center" bgcolor="#00234C"><a href="../ct/info_Terms.asp"><img src="images/content/txt_FtCopyright.gif" alt="Copyright © Cotton Traders 2004.  All Rights Reserved.  Terms and Conditions." width="385" height="12" border="0"></a><img src="images/structure/1px.gif" width="10" height="1"><a href="../ct/info_PrivacyStatement.asp"><img src="/images/content/txt_FtPrivacy.gif" alt="Privacy Policy" width="69" height="12" border="0"></a></td>
+  </tr>
+</table>
+</td>
+  </tr>
+</table>
+
+
+
+
+
+
+
+</body>
+</html>

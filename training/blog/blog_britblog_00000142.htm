@@ -1,0 +1,726 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>NeXus/FleXus</title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta name="generator" content="Blogger" />
+<link rel="alternate" type="application/atom+xml" title="NeXus/FleXus" href="http://nexusflexus.blogspot.com/atom.xml" />
+<link rel="service.post" type="application/atom+xml" title="NeXus/FleXus" href="http://www.blogger.com/atom/11451877" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.blogger.com/rsd.g?blogID=11451877" />
+<style type="text/css">
+@import url("http://www.blogger.com/css/blog_controls.css");
+@import url("http://www.blogger.com/dyn-css/authorization.css?blogID=11451877");
+</style>
+
+
+  <style type="text/css">
+/*
+-----------------------------------------------
+Blogger Template Style
+Name:     Minima Black
+Designer: Douglas Bowman
+URL:      www.stopdesign.com
+Date:     26 Feb 2004
+----------------------------------------------- */
+
+
+body {
+  background:#000;
+  margin:0;
+  padding:40px 20px;
+  font:x-small "Trebuchet MS",Trebuchet,Verdana,Sans-Serif;
+  text-align:center;
+  color:#ccc;
+  font-size/* */:/**/small;
+  font-size: /**/small;
+  }
+a:link {
+  color:#9ad;
+  text-decoration:none;
+  }
+a:visited {
+  color:#a7a;
+  text-decoration:none;
+  }
+a:hover {
+  color:#ad9;
+  text-decoration:underline;
+  }
+a img {
+  border-width:0;
+  }
+
+
+/* Header
+----------------------------------------------- */
+#header {
+  width:660px;
+  margin:0 auto 10px;
+  border:1px solid #333;
+  }
+#blog-title {
+  margin:5px 5px 0;
+  padding:20px 20px .25em;
+  border:1px solid #222;
+  border-width:1px 1px 0;
+  font-size:200%;
+  line-height:1.2em;
+  color:#ccc;
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  }
+#blog-title a {
+  color:#ccc;
+  text-decoration:none;
+  }
+#blog-title a:hover {
+  color:#ad9;
+  }
+#description {
+  margin:0 5px 5px;
+  padding:0 20px 20px;
+  border:1px solid #222;
+  border-width:0 1px 1px;
+  font:78%/1.4em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  color:#777;
+  }
+
+
+/* Content
+----------------------------------------------- */
+#content {
+  width:660px;
+  margin:0 auto;
+  padding:0;
+  text-align:left;
+  }
+#main {
+  width:410px;
+  float:left;
+  }
+#sidebar {
+  width:220px;
+  float:right;
+  }
+
+
+/* Headings
+----------------------------------------------- */
+h2 {
+  margin:1.5em 0 .75em;
+  font:bold 78%/1.4em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  color:#777;
+  }
+
+
+/* Posts
+----------------------------------------------- */
+.date-header {
+  margin:1.5em 0 .5em;
+  }
+.post {
+  margin:.5em 0 1.5em;
+  border-bottom:1px dotted #444;
+  padding-bottom:1.5em;
+  }
+.post-title {
+  margin:.25em 0 0;
+  padding:0 0 4px;
+  font-size:140%;
+  line-height:1.4em;
+  color:#ad9;
+  }
+.post-title a {
+  text-decoration:none;
+  color:#ad9;
+  }
+.post-title a:hover {
+  color:#fff;
+  }
+.post div {
+  margin:0 0 .75em;
+  line-height:1.6em;
+  }
+p.post-footer {
+  margin:-.25em 0 0;
+  color:#333;
+  }
+.post-footer em, .comment-link {
+  font:78%/1.4em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  }
+.post-footer em {
+  font-style:normal;
+  color:#777;
+  margin-right:.6em;
+  }
+.comment-link {
+  margin-left:.6em;
+  }
+.post img {
+  padding:4px;
+  border:1px solid #222;
+  }
+.post blockquote {
+  margin:1em 20px;
+  }
+.post blockquote p {
+  margin:.75em 0;
+  }
+
+
+/* Comments
+----------------------------------------------- */
+#comments h4 {
+  margin:1em 0;
+  font:bold 78%/1.6em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  color:#999;
+  }
+#comments h4 strong {
+  font-size:130%;
+  }
+#comments-block {
+  margin:1em 0 1.5em;
+  line-height:1.6em;
+  }
+#comments-block dt {
+  margin:.5em 0;
+  }
+#comments-block dd {
+  margin:.25em 0 0;
+  }
+#comments-block dd.comment-timestamp {
+  margin:-.25em 0 2em;
+  font:78%/1.4em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  }
+#comments-block dd p {
+  margin:0 0 .75em;
+  }
+.deleted-comment {
+  font-style:italic;
+  color:gray;
+  }
+
+
+/* Sidebar Content
+----------------------------------------------- */
+#sidebar ul {
+  margin:0 0 1.5em;
+  padding:0 0 1.5em;
+  border-bottom:1px dotted #444;
+  list-style:none;
+  }
+#sidebar li {
+  margin:0;
+  padding:0 0 .25em 15px;
+  text-indent:-15px;
+  line-height:1.5em;
+  }
+#sidebar p {
+  color:#999;
+  line-height:1.5em;
+  }
+
+
+/* Profile
+----------------------------------------------- */
+#profile-container {
+  margin:0 0 1.5em;
+  border-bottom:1px dotted #444;
+  padding-bottom:1.5em;
+  }
+.profile-datablock {
+  margin:.5em 0 .5em;
+  }
+.profile-img {
+  display:inline;
+  }
+.profile-img img {
+  float:left;
+  padding:4px;
+  border:1px solid #222;
+  margin:0 8px 3px 0;
+  }
+.profile-data {
+  margin:0;
+  font:bold 78%/1.6em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  }
+.profile-data strong {
+  display:none;
+  }
+.profile-textblock {
+  margin:0 0 .5em;
+  }
+.profile-link {
+  margin:0;
+  font:78%/1.4em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  }
+
+
+/* Footer
+----------------------------------------------- */
+#footer {
+  width:660px;
+  clear:both;
+  margin:0 auto;
+  }
+#footer hr {
+  display:none;
+  }
+#footer p {
+  margin:0;
+  padding-top:15px;
+  font:78%/1.6em "Trebuchet MS",Trebuchet,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  }
+  </style>
+
+<!-- --><style type="text/css">@import url(http://www.blogger.com/css/navbar/main.css);
+@import url(http://www.blogger.com/css/navbar/3.css);
+</style>
+
+</head>
+
+<body><!-- --><div id="b-navbar"><a href="http://www.blogger.com/" id="b-logo" title="Go to Blogger.com"><img src="http://www.blogger.com/img/navbar/3/logobar.gif" alt="Blogger" width="80" height="24" /></a><form id="b-search" action="http://www.google.com/search"><div id="b-more"><a href="http://www.blogger.com/" id="b-getorpost"><img src="http://www.blogger.com/img/navbar/3/btn_getblog.gif" alt="Get your own blog" width="112" height="15" /></a><a href="http://www.blogger.com/redirect/next_blog.pyra?navBar=true" id="b-next"><img src="http://www.blogger.com/img/navbar/3/btn_nextblog.gif" alt="Next blog" width="72" height="15" /></a></div><div id="b-this"><input type="text" id="b-query" name="q" /><input type="hidden" name="ie" value="UTF-8" /><input type="hidden" name="sitesearch" value="nexusflexus.blogspot.com" /><input type="image" src="http://www.blogger.com/img/navbar/3/btn_search.gif" alt="Search" value="Search" id="b-searchbtn" title="Search this blog with Google" /><a href="javascript:BlogThis();" id="b-blogthis">BlogThis!</a></div></form></div><script type="text/javascript"><!--
+
+function BlogThis() {Q='';x=document;y=window;if(x.selection) {Q=x.selection.createRange().text;} else if (y.getSelection) { Q=y.getSelection();} else if (x.getSelection) { Q=x.getSelection();}popw = y.open('http://www.blogger.com/blog_this.pyra?t=' + escape(Q) + '&u=' + escape(location.href) + '&n=' + escape(document.title),'bloggerForm','scrollbars=no,width=475,height=300,top=175,left=75,status=yes,resizable=yes');void(0);}
+
+ --></script><div id="space-for-ie"></div>
+
+<div id="header">
+
+  <h1 id="blog-title">
+    
+	NeXus/FleXus
+	
+  </h1>
+  <p id="description">Seeking some Yin to all that Yang...</p>
+
+</div>
+
+<!-- Begin #content -->
+<div id="content">
+
+
+<!-- Begin #main -->
+<div id="main"><div id="main2">
+
+
+
+    
+  <h2 class="date-header">Tuesday, March 15, 2005</h2>
+  
+
+  
+     
+  <!-- Begin .post -->
+  <div class="post"><a name="111090339964454799"></a>
+         
+    <h3 class="post-title">
+	 
+	 Anonymity
+	 
+    </h3>
+    
+
+	         <div class="post-body">
+	<div>
+      <p class="mobile-post">I strongly suspect that many people who blog maintain two distinct<br />sites - a public blog that is digestible by<br />friends/acquaintances/family, and a private blog that allows them to<br />cater more to the vanity and banality of the human condition.</p><p class="mobile-post">Of course, since my degree reads other than Psychology - this could be<br />mere hyperbole and speculation (one really can never tell these days<br />;-)</p>
+    </div>
+    </div>
+    
+    <p class="post-footer">
+      <em>posted by Fever at <a href="http://nexusflexus.blogspot.com/2005/03/anonymity.html" title="permanent link">11:16 AM</a></em>
+      
+
+         <a class="comment-link" href="http://www.blogger.com/comment.g?blogID=11451877&amp;postID=111090339964454799"location.href=http://www.blogger.com/comment.g?blogID=11451877&amp;postID=111090339964454799;>2 comments</a>
+        <span class="item-control admin-1900360159 pid-76536679"><a style="border:none;" href="http://www.blogger.com/post-edit.g?blogID=11451877&amp;postID=111090339964454799&amp;quickEdit=true" title="Edit Post"><span class="quick-edit-icon">&nbsp;</span></a></span>
+    </p>
+  
+  </div>
+  <!-- End .post -->
+  
+  
+  
+  <!-- Begin #comments -->
+ 
+
+  <!-- End #comments -->
+
+
+
+    
+
+  
+     
+  <!-- Begin .post -->
+  <div class="post"><a name="111089417867388873"></a>
+         
+    <h3 class="post-title">
+	 
+	 Blogging = crack
+	 
+    </h3>
+    
+
+	         <div class="post-body">
+	<div>
+      Ok, there is some kind of bizarrely addictive and highly narcissistic element to blogging that I seem to only just now have been made aware of.  Some kind of - here's my story and I don't care that I'm a mote of dust floating in sandstorm the important thing is that I'm here - self importance, that both acknowledges and refutes our reality as insignificant in the grand scheme of things.<br /><br />Meh.<br /><br />Anyhow - I called in sick this morning.  Got the usual response.  Now I'm going to crash some more before finding some overburdened walk in clinic (staff health services said: "there's NO way you can see a doctor today" and "YOU DON'T have a family doctor in the city?"  Yeah, me and half the people in town - health care is broken - get over it.<br /><br />K.  Back to bed.
+    </div>
+    </div>
+    
+    <p class="post-footer">
+      <em>posted by Fever at <a href="http://nexusflexus.blogspot.com/2005/03/blogging-crack.html" title="permanent link">8:36 AM</a></em>
+      
+
+         <a class="comment-link" href="http://www.blogger.com/comment.g?blogID=11451877&amp;postID=111089417867388873"location.href=http://www.blogger.com/comment.g?blogID=11451877&amp;postID=111089417867388873;>1 comments</a>
+        <span class="item-control admin-1900360159 pid-76536679"><a style="border:none;" href="http://www.blogger.com/post-edit.g?blogID=11451877&amp;postID=111089417867388873&amp;quickEdit=true" title="Edit Post"><span class="quick-edit-icon">&nbsp;</span></a></span>
+    </p>
+  
+  </div>
+  <!-- End .post -->
+  
+  
+  
+  <!-- Begin #comments -->
+ 
+
+  <!-- End #comments -->
+
+
+
+    
+
+  
+     
+  <!-- Begin .post -->
+  <div class="post"><a name="111087385937033624"></a>
+         
+    <h3 class="post-title">
+	 
+	 hmmm
+	 
+    </h3>
+    
+
+	         <div class="post-body">
+	<div>
+      Ok...just emailed in two posts that don't seem to be showing up. BUUUT at least I was able to get the images to load pretty easily with Picasa & Hello.  Now I've realized that it is like 3 am, and I'm exhuasted and sick with this cold.<br /><br />So Adiu my adoring fans!  Sleep must overtake me now. <br /><br />And Jigga, let me know whats yous bees tinking and such.  <br /><br />p.s. digicam in my future fo snizzal now...
+    </div>
+    </div>
+    
+    <p class="post-footer">
+      <em>posted by Fever at <a href="http://nexusflexus.blogspot.com/2005/03/hmmm.html" title="permanent link">3:02 AM</a></em>
+      
+
+         <a class="comment-link" href="http://www.blogger.com/comment.g?blogID=11451877&amp;postID=111087385937033624"location.href=http://www.blogger.com/comment.g?blogID=11451877&amp;postID=111087385937033624;>0 comments</a>
+        <span class="item-control admin-1900360159 pid-76536679"><a style="border:none;" href="http://www.blogger.com/post-edit.g?blogID=11451877&amp;postID=111087385937033624&amp;quickEdit=true" title="Edit Post"><span class="quick-edit-icon">&nbsp;</span></a></span>
+    </p>
+  
+  </div>
+  <!-- End .post -->
+  
+  
+  
+  <!-- Begin #comments -->
+ 
+
+  <!-- End #comments -->
+
+
+
+    
+
+  
+     
+  <!-- Begin .post -->
+  <div class="post"><a name="111087286353506733"></a>
+         
+
+	         <div class="post-body">
+	<div>
+      <a href='http://photos1.blogger.com/img/247/4134/640/c452974a.jpg'><img border='0' style='border:1px solid #000000; margin:2px' src='http://photos1.blogger.com/img/247/4134/320/c452974a.jpg'></a><br />sweeeet...definitely going to have to put in a mac mini...&nbsp;<a href='http://www.hello.com/' target='ext'><img src='http://photos1.blogger.com/pbh.gif' alt='Posted by Hello' border='0' style='border:0px;padding:0px;background:transparent;' align='absmiddle'></a>
+    </div>
+    </div>
+    
+    <p class="post-footer">
+      <em>posted by Fever at <a href="http://nexusflexus.blogspot.com/2005/03/sweeeet.html" title="permanent link">2:47 AM</a></em>
+      
+
+         <a class="comment-link" href="http://www.blogger.com/comment.g?blogID=11451877&amp;postID=111087286353506733"location.href=http://www.blogger.com/comment.g?blogID=11451877&amp;postID=111087286353506733;>0 comments</a>
+        <span class="item-control admin-1900360159 pid-76536679"><a style="border:none;" href="http://www.blogger.com/post-edit.g?blogID=11451877&amp;postID=111087286353506733&amp;quickEdit=true" title="Edit Post"><span class="quick-edit-icon">&nbsp;</span></a></span>
+    </p>
+  
+  </div>
+  <!-- End .post -->
+  
+  
+  
+  <!-- Begin #comments -->
+ 
+
+  <!-- End #comments -->
+
+
+
+    
+
+  
+     
+  <!-- Begin .post -->
+  <div class="post"><a name="111087283305907189"></a>
+         
+
+	         <div class="post-body">
+	<div>
+      <a href='http://photos1.blogger.com/img/247/4134/640/civic concept.jpg'><img border='0' style='border:1px solid #000000; margin:2px' src='http://photos1.blogger.com/img/247/4134/320/civic concept.jpg'></a><br />My new ride?&nbsp;<a href='http://www.hello.com/' target='ext'><img src='http://photos1.blogger.com/pbh.gif' alt='Posted by Hello' border='0' style='border:0px;padding:0px;background:transparent;' align='absmiddle'></a>
+    </div>
+    </div>
+    
+    <p class="post-footer">
+      <em>posted by Fever at <a href="http://nexusflexus.blogspot.com/2005/03/my-new-ride.html" title="permanent link">2:47 AM</a></em>
+      
+
+         <a class="comment-link" href="http://www.blogger.com/comment.g?blogID=11451877&amp;postID=111087283305907189"location.href=http://www.blogger.com/comment.g?blogID=11451877&amp;postID=111087283305907189;>0 comments</a>
+        <span class="item-control admin-1900360159 pid-76536679"><a style="border:none;" href="http://www.blogger.com/post-edit.g?blogID=11451877&amp;postID=111087283305907189&amp;quickEdit=true" title="Edit Post"><span class="quick-edit-icon">&nbsp;</span></a></span>
+    </p>
+  
+  </div>
+  <!-- End .post -->
+  
+  
+  
+  <!-- Begin #comments -->
+ 
+
+  <!-- End #comments -->
+
+
+
+    
+
+  
+     
+  <!-- Begin .post -->
+  <div class="post"><a name="111086990725069284"></a>
+         
+    <h3 class="post-title">
+	 
+	 Still no sleep
+	 
+    </h3>
+    
+
+	         <div class="post-body">
+	<div>
+      <p class="mobile-post">10 minutes later.  Still no sleep.  Maybe my laptop isn't helping...</p>
+    </div>
+    </div>
+    
+    <p class="post-footer">
+      <em>posted by Fever at <a href="http://nexusflexus.blogspot.com/2005/03/still-no-sleep.html" title="permanent link">1:58 AM</a></em>
+      
+
+         <a class="comment-link" href="http://www.blogger.com/comment.g?blogID=11451877&amp;postID=111086990725069284"location.href=http://www.blogger.com/comment.g?blogID=11451877&amp;postID=111086990725069284;>0 comments</a>
+        <span class="item-control admin-1900360159 pid-76536679"><a style="border:none;" href="http://www.blogger.com/post-edit.g?blogID=11451877&amp;postID=111086990725069284&amp;quickEdit=true" title="Edit Post"><span class="quick-edit-icon">&nbsp;</span></a></span>
+    </p>
+  
+  </div>
+  <!-- End .post -->
+  
+  
+  
+  <!-- Begin #comments -->
+ 
+
+  <!-- End #comments -->
+
+
+
+    
+
+  
+     
+  <!-- Begin .post -->
+  <div class="post"><a name="111086948849144648"></a>
+         
+    <h3 class="post-title">
+	 
+	 Wack
+	 
+    </h3>
+    
+
+	         <div class="post-body">
+	<div>
+      Ok...so here its, fully like 1:49 am - can't sleep AND I'm fully pining over my ex-gf. Like WTF.  it's almost like I have emotions or something.  I can't even really put my finger on when exactly I went from being a normal run of the mill would rather-play-x-box guy to a sensitive "can't believe I walked out on the love of my life"  kind of guy.  <br /><br />Well,..maybe love of my life is pushing it....but it damn sure could've been.
+    </div>
+    </div>
+    
+    <p class="post-footer">
+      <em>posted by Fever at <a href="http://nexusflexus.blogspot.com/2005/03/wack.html" title="permanent link">1:48 AM</a></em>
+      
+
+         <a class="comment-link" href="http://www.blogger.com/comment.g?blogID=11451877&amp;postID=111086948849144648"location.href=http://www.blogger.com/comment.g?blogID=11451877&amp;postID=111086948849144648;>1 comments</a>
+        <span class="item-control admin-1900360159 pid-76536679"><a style="border:none;" href="http://www.blogger.com/post-edit.g?blogID=11451877&amp;postID=111086948849144648&amp;quickEdit=true" title="Edit Post"><span class="quick-edit-icon">&nbsp;</span></a></span>
+    </p>
+  
+  </div>
+  <!-- End .post -->
+  
+  
+  
+  <!-- Begin #comments -->
+ 
+
+  <!-- End #comments -->
+
+
+
+    
+  <h2 class="date-header">Monday, March 14, 2005</h2>
+  
+
+  
+     
+  <!-- Begin .post -->
+  <div class="post"><a name="111084966438576733"></a>
+         
+    <h3 class="post-title">
+	 
+	 Wow
+	 
+    </h3>
+    
+
+	         <div class="post-body">
+	<div>
+      So this is progress huh?  I wonder how this experiment will turn out...
+    </div>
+    </div>
+    
+    <p class="post-footer">
+      <em>posted by Fever at <a href="http://nexusflexus.blogspot.com/2005/03/wow.html" title="permanent link">8:20 PM</a></em>
+      
+
+         <a class="comment-link" href="http://www.blogger.com/comment.g?blogID=11451877&amp;postID=111084966438576733"location.href=http://www.blogger.com/comment.g?blogID=11451877&amp;postID=111084966438576733;>0 comments</a>
+        <span class="item-control admin-1900360159 pid-76536679"><a style="border:none;" href="http://www.blogger.com/post-edit.g?blogID=11451877&amp;postID=111084966438576733&amp;quickEdit=true" title="Edit Post"><span class="quick-edit-icon">&nbsp;</span></a></span>
+    </p>
+  
+  </div>
+  <!-- End .post -->
+  
+  
+  
+  <!-- Begin #comments -->
+ 
+
+  <!-- End #comments -->
+
+
+</div></div>
+<!-- End #main -->
+
+
+
+
+
+
+
+<!-- Begin #sidebar -->
+<div id="sidebar"><div id="sidebar2">
+  
+  
+  <!-- Begin #profile-container -->
+
+            <div id="profile-container"> <h2 class="sidebar-title">About Me</h2> <dl class="profile-datablock">    <dd class="profile-data"> <strong>Name:</strong>Fever </dd>  </dl>  <p class="profile-link"> <a href="http://www.blogger.com/profile/7620270">View my complete profile</a> </p> </div>  
+   
+  <!-- End #profile -->
+    
+        
+  <h2 class="sidebar-title">Links</h2>
+    <ul>
+    	<li><a href="http://news.google.com/">Google News</a></li>
+    	<li><a href="http://www.aldaily.com/">Arts & Letters Daily</a></li>
+       <li><a href="http://www.dropzone.com">Dropzone.com</a></li>
+    	<li><a href="http://www.gizmodo.com">Gizmodo (yeah yeah)</a></li>
+  </ul>
+  
+
+  
+  <h2 class="sidebar-title">Previous Posts</h2>
+    <ul id="recently">
+    
+        <li><a href="http://nexusflexus.blogspot.com/2005/03/anonymity.html">Anonymity</a></li>
+     
+        <li><a href="http://nexusflexus.blogspot.com/2005/03/blogging-crack.html">Blogging = crack</a></li>
+     
+        <li><a href="http://nexusflexus.blogspot.com/2005/03/hmmm.html">hmmm</a></li>
+     
+        <li><a href="http://nexusflexus.blogspot.com/2005/03/sweeeet.html">sweeeet...definitely going to have to put in a mac...</a></li>
+     
+        <li><a href="http://nexusflexus.blogspot.com/2005/03/my-new-ride.html">My new ride?</a></li>
+     
+        <li><a href="http://nexusflexus.blogspot.com/2005/03/still-no-sleep.html">Still no sleep</a></li>
+     
+        <li><a href="http://nexusflexus.blogspot.com/2005/03/wack.html">Wack</a></li>
+     
+        <li><a href="http://nexusflexus.blogspot.com/2005/03/wow.html">Wow</a></li>
+     
+  </ul>
+    
+
+  <h2 class="sidebar-title">Archives</h2>
+    <ul class="archive-list">
+   	  
+    	<li><a href="http://nexusflexus.blogspot.com/2005_03_01_nexusflexus_archive.html">March 2005</a></li>
+	  
+
+  </ul>
+  
+
+      <p id="powered-by"><a href="http://www.blogger.com"><img src="http://buttons.blogger.com/bloggerbutton1.gif" alt="Powered by Blogger" /></a></p>
+  
+  <!--
+  <p>This is a paragraph of text that could go in the sidebar.</p>
+  -->
+  
+
+
+</div></div>
+<!-- End #sidebar -->
+
+
+</div>
+<!-- End #content -->
+
+
+
+<!-- Begin #footer -->
+<div id="footer"><hr />
+  <p><!--This is an optional footer. If you want text here, place it inside these tags, and remove this comment. -->&nbsp;</p>
+
+</div>
+<!-- End #footer -->
+
+
+
+</body>
+</html>

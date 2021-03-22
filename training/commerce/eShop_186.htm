@@ -1,0 +1,894 @@
+<html>
+<head>
+<title>Virility Health Ltd. The Online Store For All Complementary and Alternative Health Supplements.</title>
+<meta name="keywords" content="health, vitamin, vitamins, mineral, minerals, supplement, supplements, healthy, complementary, complimentary, nutrition, treatment, alternatives, alternative, antioxidants, allergies, sexual health, sleep, stress, beauty, hair, hair loss, aging, weight, weight loss, diet">
+<meta name="description" content="Health and Nutritional products including Vitamins, Minerals and Supplements. Our products can make you feel better and look better.">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="../../../style_vh.css" type="text/css">
+<SCRIPT language="JavaScript">
+
+<!--
+
+function MM_swapImgRestore() { //v2.0
+
+  if (document.MM_swapImgData != null)
+
+    for (var i=0; i<(document.MM_swapImgData.length-1); i+=2)
+
+      document.MM_swapImgData[i].src = document.MM_swapImgData[i+1];
+
+}
+
+
+
+function MM_preloadImages() { //v2.0
+
+  if (document.images) {
+
+    var imgFiles = MM_preloadImages.arguments;
+
+    if (document.preloadArray==null) document.preloadArray = new Array();
+
+    var i = document.preloadArray.length;
+
+    with (document) for (var j=0; j<imgFiles.length; j++) if (imgFiles[j].charAt(0)!="#"){
+
+      preloadArray[i] = new Image;
+
+      preloadArray[i++].src = imgFiles[j];
+
+  } }
+
+}
+
+
+
+function MM_swapImage() { //v2.0
+
+  var i,j=0,objStr,obj,swapArray=new Array,oldArray=document.MM_swapImgData;
+
+  for (i=0; i < (MM_swapImage.arguments.length-2); i+=3) {
+
+    objStr = MM_swapImage.arguments[(navigator.appName == 'Netscape')?i:i+1];
+
+    if ((objStr.indexOf('document.layers[')==0 && document.layers==null) ||
+
+        (objStr.indexOf('document.all[')   ==0 && document.all   ==null))
+
+      objStr = 'document'+objStr.substring(objStr.lastIndexOf('.'),objStr.length);
+
+    obj = eval(objStr);
+
+    if (obj != null) {
+
+      swapArray[j++] = obj;
+
+      swapArray[j++] = (oldArray==null || oldArray[j-1]!=obj)?obj.src:oldArray[j];
+
+      obj.src = MM_swapImage.arguments[i+2];
+
+  } }
+
+  document.MM_swapImgData = swapArray; //used for restore
+
+}
+
+//-->
+
+</SCRIPT>
+
+<script language="JavaScript">
+
+//  ===============================================================
+
+//  All rights reserved.  Copyright 1999 The Floyd Consultancy Ltd.
+
+//  Shop@ssistant by Rodney Myers                      Version 3.51
+
+//  ===============================================================
+
+// This function demonstrates the loading on demand of Shop@ssistant's
+
+// system/index.html beneath a page for use if that page is accessed
+
+// directly e.g. from a search engine.
+
+
+
+function start_shop(){
+
+// browser tests
+
+// BROWSER TEST is applied to prevent losing customers using NN2
+
+// users, who are left on the page they have found, like those without js.
+
+var nappN=navigator.appName;var nappV=navigator.appVersion;
+
+var NN=(nappN=="Netscape"&&parseInt(nappV.substring(0,1))>=3);
+
+var IE=(nappN=="Microsoft Internet Explorer"&&parseInt(nappV.substring(0,1))>=2);
+
+var jsok=(NN||IE);
+
+var INSASS=false;
+
+// NN2 users refused entry
+
+if(!jsok){alert("Sorry, your browser is not supported");}
+
+else
+
+ {
+
+ if (!top.INSASS)
+
+   {
+
+     // STEP 1
+
+     //        Leave a note to tell Shop@ssistant's system/index.html
+
+     //        to load THIS page in place of the regular entrance
+
+     //        Make sure that this page provides navigation
+
+     //        to the rest of your site!
+
+        document.cookie = "LOADTHISPAGENOW" + "=" +
+
+                escape(window.location.href)+"; path=/"
+
+
+
+     // STEP 2
+
+     //        Load Shop@ssistant's system/index.html
+
+     // This example assumes that THIS PAGE is in a directory/folder
+
+     // /pages/subfolder
+
+top.location.href = "../products/shop/system/index.html"
+
+
+
+
+
+   } // if
+
+ }  //else
+
+}  // end of function
+
+
+
+function nosass(){ // invoked if 'buy' attempted when shopsys not loaded
+
+if(confirm("The Shopping software will now load and return to this page.\nIf you have clicked on the 'Add to Basket' to load\nthe software please click on 'Add to Basket' once more to add this product.\nClick on 'OK' to continue."))
+
+{ start_shop(); }
+
+else
+
+{return(' ');}
+
+}
+
+
+
+// For loading outside system
+
+function wMCP(V){if(V==Math.floor(V)){V+=".00";}else if(10*V==Math.floor(10*V)){V+="0";}document.write("£"+V);}
+
+function wCMCP(V){wMCP(V);}
+
+function newchoice()    { nosass(); }
+
+function ToLobby()      { nosass(); }
+
+function reviewbasket() { nosass(); }
+
+function loadsoftware() { nosass(); }
+
+function terms()        { nosass(); }
+
+function checkout()     { nosass(); }
+
+function qty_fix()      { nosass(); }
+
+function revQfix()      { return('')}
+
+function listtext()     { return(nosass()); }
+
+function listvalue()    { return(nosass()); }
+
+</script>
+</head>
+<body text="#000000" leftmargin="50" topmargin="0" link="#FFFFFF" bgcolor="#FFFFFF">
+<table width="94%" border="0" cellspacing="0" cellpadding="0" height="457">
+  <tr> 
+    <td colspan="2" align="left" valign="top" height="71"> <!-- #BeginLibraryItem "/Library/gen_banner_nav.lbi" -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td width="23%" height="30" rowspan="2"><img src="../../../images/vhlogo-new-small.gif" width="140" height="60"></td>
+    <td width="48%" height="30" rowspan="2" align="center" valign="top"> 
+      <table width="99%" border="1" cellspacing="0" cellpadding="0" bordercolor="#3366CC">
+        <tr> 
+          <td><a href="http://www.virilityhealth.co.uk/promotions/ru21promotion.html"><img src="../../../promotions/images/ru-21promo468x60.gif" width="468" height="60" border="0"></a></td>
+        </tr>
+      </table>
+    </td>
+    <td align="left" valign="top" height="15"> 
+      <div align="right"> </div>
+      <div align="left"> <!-- #BeginLibraryItem "/Library/top_right_nav.lbi" --><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr> 
+                  
+    <td class="smalltext" align="center" valign="top" width="7%"><img src="../../../images/vhsymbol.gif" width="15" height="22" alt="VH Logo"></td>
+                  <td class="smalltext" width="18%"><a href="../../../../index.htm"><font color="#0066CC">Home</font></a></td>
+                  
+    <td class="smalltext" align="center" valign="top" width="9%"><img src="../../../images/vhsymbol.gif" width="15" height="22" alt="VH Logo"></td>
+                  <td class="smalltext" width="27%"><a href="../../../about_us.html"><font color="#0066CC">Abouts 
+                    Us </font></a></td>
+                  
+    <td class="smalltext" align="center" valign="top" width="10%"><img src="../../../images/vhsymbol.gif" width="15" height="22" alt="VH Logo"></td>
+                  <td class="smalltext" width="29%"><a href="../../../contact_us.html"><font color="#0066CC">Contact 
+                    Us</font></a></td>
+                </tr>
+              </table><!-- #EndLibraryItem --></div>
+    </td>
+  </tr>
+  <tr> 
+    <td align="right" valign="middle" height="2" class="headlinesmall"> 
+      <table width="60%" border="0" cellspacing="0" cellpadding="0">
+        <tr align="center" valign="middle"> 
+          <td height="27"><a href="javascript:top.loadsoftware()"><img src="../../../products/shop/images/loadshopsoftware.gif" width="86" height="29" border="0" alt="Start Shopping"></a></td>
+          <td height="27">&nbsp;</td>
+          <td height="27"><a href="javascript:top.reviewbasket()"><img src="../../../products/shop/images/review-off.gif" width="86" height="29" border="0" alt="Review Basket"></a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="3" height="17"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="26%"><b> 
+            <script language="Javascript">
+<!--
+/*
+Today's date script
+Visit java-scripts.net or 
+http://wsabstract.com for this script
+*/
+
+ var dayName = new Array ("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday")
+
+ var monName = new Array ("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")
+
+ var now = new Date
+
+ document.write(dayName[now.getDay()] + ", " + monName[now.getMonth()] + " "+now.getDate() + " "+now.getYear() +".")
+//-->
+</script>
+            </b></td>
+          <td width="74%"> 
+            <script language="JavaScript1.2">
+
+/*
+Cross browser Marquee script- © Dynamic Drive (www.dynamicdrive.com)
+For full source code, 100's more DHTML scripts, and Terms Of Use, visit http://www.dynamicdrive.com
+Credit MUST stay intact
+*/
+
+//Specify the marquee's width (in pixels)
+var marqueewidth="500px"
+//Specify the marquee's height
+var marqueeheight="18px"
+//Specify the marquee's marquee speed (larger is faster 1-10)
+var marqueespeed=2
+//configure background color:
+var marqueebgcolor="#FFFFF"
+//Pause marquee onMousever (0=no. 1=yes)?
+var pauseit=1
+
+//Specify the marquee's content (don't delete <nobr> tag)
+//Keep all content on ONE line, and backslash any single quotations (ie: that\'s great):
+
+var marqueecontent='<nobr><b><font face="Tahoma"><font color="#FF6600">5% discount when you spend over £50 - 10% discount when you spend over £100</font></b></nobr>'
+
+
+////NO NEED TO EDIT BELOW THIS LINE////////////
+marqueespeed=(document.all)? marqueespeed : Math.max(1, marqueespeed-1) //slow speed down by 1 for NS
+var copyspeed=marqueespeed
+var pausespeed=(pauseit==0)? copyspeed: 0
+var iedom=document.all||document.getElementById
+if (iedom)
+document.write('<span id="temp" style="visibility:hidden;position:absolute;top:-100px;left:-9000px">'+marqueecontent+'</span>')
+var actualwidth=''
+var cross_marquee, ns_marquee
+
+function populate(){
+if (iedom){
+cross_marquee=document.getElementById? document.getElementById("iemarquee") : document.all.iemarquee
+cross_marquee.style.left=parseInt(marqueewidth)+8+"px"
+cross_marquee.innerHTML=marqueecontent
+actualwidth=document.all? temp.offsetWidth : document.getElementById("temp").offsetWidth
+}
+else if (document.layers){
+ns_marquee=document.ns_marquee.document.ns_marquee2
+ns_marquee.left=parseInt(marqueewidth)+8
+ns_marquee.document.write(marqueecontent)
+ns_marquee.document.close()
+actualwidth=ns_marquee.document.width
+}
+lefttime=setInterval("scrollmarquee()",20)
+}
+window.onload=populate
+
+function scrollmarquee(){
+if (iedom){
+if (parseInt(cross_marquee.style.left)>(actualwidth*(-1)+8))
+cross_marquee.style.left=parseInt(cross_marquee.style.left)-copyspeed+"px"
+else
+cross_marquee.style.left=parseInt(marqueewidth)+8+"px"
+
+}
+else if (document.layers){
+if (ns_marquee.left>(actualwidth*(-1)+8))
+ns_marquee.left-=copyspeed
+else
+ns_marquee.left=parseInt(marqueewidth)+8
+}
+}
+
+if (iedom||document.layers){
+with (document){
+document.write('<table border="0" cellspacing="0" cellpadding="0"><td>')
+if (iedom){
+write('<div style="position:relative;width:'+marqueewidth+';height:'+marqueeheight+';overflow:hidden">')
+write('<div style="position:absolute;width:'+marqueewidth+';height:'+marqueeheight+';background-color:'+marqueebgcolor+'" onMouseover="copyspeed=pausespeed" onMouseout="copyspeed=marqueespeed">')
+write('<div id="iemarquee" style="position:absolute;left:0px;top:0px"></div>')
+write('</div></div>')
+}
+else if (document.layers){
+write('<ilayer width='+marqueewidth+' height='+marqueeheight+' name="ns_marquee" bgColor='+marqueebgcolor+'>')
+write('<layer name="ns_marquee2" left=0 top=0 onMouseover="copyspeed=pausespeed" onMouseout="copyspeed=marqueespeed"></layer>')
+write('</ilayer>')
+}
+document.write('</td></table>')
+}
+}
+</script>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- #EndLibraryItem --></td>
+  </tr>
+  <tr> 
+    <td colspan="2" bgcolor="#FFFFFF"> <!-- #BeginLibraryItem "/Library/top_nav.lbi" --><table width="100%" border="0" cellspacing="0" cellpadding="0" height="22">
+  <tr> 
+    <td width="1%" height="6" align="right" valign="top"><img src="../../../images/curve_04.gif" width="20" height="20"></td>
+    <td width="19%" align="center" valign="middle" height="34" bgcolor="#FF6600" class="topnav" rowspan="2"><a href="../../../../product_categories/health_beauty.html"><font color="#FFFFFF">Health</font></a></td>
+    <td width="19%" align="center" valign="middle" height="34" bgcolor="#FF6600" class="topnav" rowspan="2"><a href="../../../../product_categories/love_life.html"><font color="#FFFFFF">Love 
+      Life</font></a></td>
+    <td width="19%" align="center" valign="middle" height="34" bgcolor="#FF6600" class="topnav" rowspan="2"><a href="../../../../product_categories/anti_ageing.html"><font color="#FFFFFF">Anit-Ageing</font></a></td>
+    <td width="19%" align="center" valign="middle" height="34" bgcolor="#FF6600" class="topnav" rowspan="2"><a href="../../../../sitemap.html"><font color="#FFFFFF">Full 
+      Product List</font></a></td>
+    <td width="22%" align="center" valign="middle" height="34" bgcolor="#FF6600" class="topnav" rowspan="2"><a href="../../../../find_it_for_me.html"><font color="#FFFFFF">Find 
+      It For Me!</font></a></td>
+    <td height="34" align="right" valign="top" width="1%" rowspan="2"><img src="../../../images/curve_01.gif" width="14" height="34"></td>
+  </tr>
+  <tr>
+    <td width="1%" height="2" align="right" valign="top" bgcolor="#FF6600">&nbsp;</td>
+  </tr>
+</table>
+<!-- #EndLibraryItem --></td>
+  </tr>
+  <tr> 
+    <td align="left" valign="top" width="14%" height="762"> <!-- #BeginLibraryItem "/Library/left_nav.lbi" --> 
+<table width="100%" border="0" cellspacing="0" cellpadding="0" height="153">
+  <tr> 
+    <td width="9" bgcolor="#FF6600">&nbsp;</td>
+    <td bgcolor="#FF6600" align="left" valign="middle" width="959"><b><font color="#FFFFFF"><img src="file:///C|/Web%20Sites/Virility%20Health%20UK/images/bluespace.gif" width="100%" height="2"></font></b></td>
+    <td width="10" align="left" valign="top"><img src="../../../images/curve.gif" width="15" height="15"></td>
+  </tr>
+  <tr> 
+    <td width="9" bgcolor="#FF6600">&nbsp;</td>
+    <td bgcolor="#FF6600" valign="middle" align="left" width="959"><b><a href="../../../index.html"><font color="#FFFFFF">Home</font></a></b></td>
+    <td width="10">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="9" bgcolor="#FF6600">&nbsp;</td>
+    <td bgcolor="#FF6600" align="left" valign="middle" width="959"><b><font color="#FFFFFF"><img src="file:///C|/Web%20Sites/Virility%20Health%20UK/images/bluespace.gif" width="100%" height="2"></font></b></td>
+    <td width="10">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="9" bgcolor="#FF6600">&nbsp;</td>
+    <td bgcolor="#FF6600" align="left" valign="middle" width="959"><a href="../../../product_categories/health_beauty.html"><font color="#FFFFFF"><b>Health 
+      &amp; Beauty</b></font></a></td>
+    <td width="10">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="9" bgcolor="#FF6600">&nbsp;</td>
+    <td bgcolor="#FF6600" align="left" valign="middle" width="959"><b><font color="#FFFFFF"><img src="file:///C|/Web%20Sites/Virility%20Health%20UK/images/bluespace.gif" width="100%" height="2"></font></b></td>
+    <td width="10">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="9" bgcolor="#FF6600">&nbsp;</td>
+    <td bgcolor="#FF6600" align="left" valign="middle" width="959"><a href="../../../product_categories/hair_treatments.html"><font color="#FFFFFF"><b>Hair 
+      Treatments</b></font></a></td>
+    <td width="10">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="9" bgcolor="#FF6600">&nbsp;</td>
+    <td bgcolor="#FF6600" align="left" valign="middle" width="959"><b><font color="#FFFFFF"><img src="file:///C|/Web%20Sites/Virility%20Health%20UK/images/bluespace.gif" width="100%" height="2"></font></b></td>
+    <td width="10">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="9" bgcolor="#FF6600">&nbsp;</td>
+    <td bgcolor="#FF6600" align="left" valign="middle" width="959"><a href="../../../product_categories/diet_weight_loss.html"><font color="#FFFFFF"><b>Diet 
+      &amp; Weight Loss</b></font></a></td>
+    <td width="10">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="9" bgcolor="#FF6600">&nbsp;</td>
+    <td bgcolor="#FF6600" align="left" valign="middle" width="959"><b><font color="#FFFFFF"><img src="file:///C|/Web%20Sites/Virility%20Health%20UK/images/bluespace.gif" width="100%" height="2"></font></b></td>
+    <td width="10">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="9" bgcolor="#FF6600">&nbsp;</td>
+    <td bgcolor="#FF6600" align="left" valign="middle" width="959"><a href="../../../product_categories/sleep_stress.html"><font color="#FFFFFF"><b>Sleep 
+      &amp; Stress Relief</b></font></a></td>
+    <td width="10">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="9" bgcolor="#FF6600">&nbsp;</td>
+    <td bgcolor="#FF6600" align="left" valign="middle" width="959"><b><font color="#FFFFFF"><img src="file:///C|/Web%20Sites/Virility%20Health%20UK/images/bluespace.gif" width="100%" height="2"></font></b></td>
+    <td width="10">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="9" bgcolor="#FF6600" height="2">&nbsp;</td>
+    <td bgcolor="#FF6600" height="2" align="left" valign="middle" width="959"> 
+      <p><a href="../../../product_categories/love_life.html"><font color="#FFFFFF"><b>Enhance 
+        Your Love Life</b></font></a></p>
+    </td>
+    <td width="10" height="2">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="9" bgcolor="#FF6600">&nbsp;</td>
+    <td bgcolor="#FF6600" align="left" valign="middle" width="959"><b><font color="#FFFFFF"><img src="file:///C|/Web%20Sites/Virility%20Health%20UK/images/bluespace.gif" width="100%" height="2"></font></b></td>
+    <td width="10">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="9" bgcolor="#FF6600">&nbsp;</td>
+    <td bgcolor="#FF6600" align="left" valign="middle" width="959"><a href="../../../product_categories/pheromones.html"><b><font color="#FFFFFF">Pheromones</font></b></a></td>
+    <td width="10">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="9" bgcolor="#FF6600">&nbsp;</td>
+    <td bgcolor="#FF6600" align="left" valign="middle" width="959"><b><font color="#FFFFFF"><img src="file:///C|/Web%20Sites/Virility%20Health%20UK/images/bluespace.gif" width="100%" height="2"></font></b></td>
+    <td width="10">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="9" bgcolor="#FF6600">&nbsp;</td>
+    <td bgcolor="#FF6600" align="left" valign="middle" width="959"><a href="../../../product_categories/alternative_remedies.html"><font color="#FFFFFF"><b>Alternative 
+      Remedies</b></font></a></td>
+    <td width="10">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="9" bgcolor="#FF6600">&nbsp;</td>
+    <td bgcolor="#FF6600" align="left" valign="middle" width="959"><b><font color="#FFFFFF"><img src="file:///C|/Web%20Sites/Virility%20Health%20UK/images/bluespace.gif" width="100%" height="2"></font></b></td>
+    <td width="10">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="9" bgcolor="#FF6600">&nbsp;</td>
+    <td bgcolor="#FF6600" align="left" valign="middle" width="959"><a href="../../../product_categories/muscle_builders.html"><font color="#FFFFFF"><b>Muscle 
+      Builders</b></font></a></td>
+    <td width="10">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="9" bgcolor="#FF6600">&nbsp;</td>
+    <td bgcolor="#FF6600" align="left" valign="middle" width="959"><b><font color="#FFFFFF"><img src="file:///C|/Web%20Sites/Virility%20Health%20UK/images/bluespace.gif" width="100%" height="2"></font></b></td>
+    <td width="10">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="9" bgcolor="#FF6600">&nbsp;</td>
+    <td bgcolor="#FF6600" align="left" valign="middle" width="959"><a href="../../../product_categories/anti_ageing.html"><font color="#FFFFFF"><b>Anti-Ageing</b></font></a></td>
+    <td width="10">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="9" bgcolor="#FF6600">&nbsp;</td>
+    <td bgcolor="#FF6600" align="left" valign="middle" width="959"><b><font color="#FFFFFF"><img src="file:///C|/Web%20Sites/Virility%20Health%20UK/images/bluespace.gif" width="100%" height="2"></font></b></td>
+    <td width="10">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="9" bgcolor="#FF6600" height="18">&nbsp;</td>
+    <td bgcolor="#FF6600" height="18" align="left" valign="middle" width="959"><a href="../../../product_categories/prostate_health.html"><font color="#FFFFFF"><b>Prostate 
+      Health</b></font></a></td>
+    <td width="10" height="18">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="9" bgcolor="#FF6600">&nbsp;</td>
+    <td bgcolor="#FF6600" align="left" valign="middle" width="959"><b><font color="#FFFFFF"><img src="file:///C|/Web%20Sites/Virility%20Health%20UK/images/bluespace.gif" width="100%" height="2"></font></b></td>
+    <td width="10">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="9" bgcolor="#FF6600">&nbsp;</td>
+    <td bgcolor="#FF6600" valign="middle" align="left" width="959"><a href="../../../product_categories/antioxidants.html"><font color="#FFFFFF"><b>Antioxidants</b></font></a></td>
+    <td width="10">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="9" bgcolor="#FF6600">&nbsp;</td>
+    <td bgcolor="#FF6600" align="left" valign="middle" width="959"><b><font color="#FFFFFF"><img src="file:///C|/Web%20Sites/Virility%20Health%20UK/images/bluespace.gif" width="100%" height="2"></font></b></td>
+    <td width="10">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="9" bgcolor="#FF6600">&nbsp;</td>
+    <td bgcolor="#ff6600" height="19" width="959"><a href="../../../products/ru21.html"><font color="#FFFFFF"><b>Regulate 
+      Alcohol Metabolism</b></font></a></td>
+    <td height="19" width="10">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="9" bgcolor="#FF6600">&nbsp;</td>
+    <td bgcolor="#FF6600" align="left" valign="middle" width="959"><b><font color="#FFFFFF"><img src="file:///C|/Web%20Sites/Virility%20Health%20UK/images/bluespace.gif" width="100%" height="2"></font></b></td>
+    <td width="10">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="9" bgcolor="#FF6600">&nbsp;</td>
+    <td bgcolor="#FF6600" align="left" valign="middle" width="959"><a href="../../../product_categories/safety_products.html"><font color="#FFFFFF"><b>Safety 
+      Products</b></font></a></td>
+    <td width="10">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="9" bgcolor="#FF6600">&nbsp;</td>
+    <td bgcolor="#FF6600" align="left" valign="middle" width="959"><b><font color="#FFFFFF"><img src="file:///C|/Web%20Sites/Virility%20Health%20UK/images/bluespace.gif" width="100%" height="2"></font></b></td>
+    <td width="10">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="9" bgcolor="#FF6600">&nbsp;</td>
+    <td bgcolor="#FF6600" align="left" valign="middle" width="959"><a href="../../../product_categories/miscellaneous.html"><font color="#FFFFFF"><b>Miscellaneous</b></font></a></td>
+    <td width="10">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="9" bgcolor="#FF6600">&nbsp;</td>
+    <td bgcolor="#FF6600" align="left" valign="middle" width="959"><b><font color="#FFFFFF"><img src="file:///C|/Web%20Sites/Virility%20Health%20UK/images/bluespace.gif" width="100%" height="2"></font></b></td>
+    <td width="10">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="9" bgcolor="#ff6600" height="2">&nbsp;</td>
+    <td height="2" align="left" valign="top" width="959"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" height="8">
+        <tr> 
+          <td width="99%" bgcolor="#ff6600" height="2">&nbsp;</td>
+          <td align="right" valign="top" width="1%" height="2"><img src="../../../images/curve_06.gif" width="20" height="20"></td>
+        </tr>
+      </table>
+    </td>
+    <td width="10" height="2">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="9" height="2">&nbsp;</td>
+    <td height="2" align="left" valign="top" width="959">&nbsp;</td>
+    <td width="10" height="2">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="9" height="2" bgcolor="#3399FF">&nbsp;</td>
+    <td height="2" align="left" valign="top" width="959" bgcolor="#3399FF"> <font color="#FFFFFF"><b>Using 
+      our shopping system</b></font></td>
+    <td width="10" height="2">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="9" height="18" bgcolor="#3399FF">&nbsp;</td>
+    <td height="18" align="left" valign="top" width="959" bgcolor="#3399FF"><font color="#FFFFFF">To 
+      start shopping please click</font></td>
+    <td width="10" height="18">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="9" height="2" bgcolor="#3399FF">&nbsp;</td>
+    <td height="2" align="left" valign="top" width="959" bgcolor="#3399FF">&nbsp;</td>
+    <td width="10" height="2">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="9" height="2" bgcolor="#3399FF">&nbsp;</td>
+    <td height="2" align="left" valign="top" width="959" bgcolor="#3399FF"><a href="javascript:top.loadsoftware()"><img src="../../../products/shop/images/loadshopsoftware_01.gif" width="86" height="29" border="0" alt="Start Shopping"></a></td>
+    <td width="10" height="2">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="9" height="2" bgcolor="#3399FF">&nbsp;</td>
+    <td height="2" align="left" valign="top" width="959" bgcolor="#3399FF">&nbsp;</td>
+    <td width="10" height="2">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="9" height="2" bgcolor="#3399FF">&nbsp;</td>
+    <td height="2" align="left" valign="top" width="959" bgcolor="#3399FF"><font color="#FFFFFF"> 
+      This will load the shopping software. For more detail about our shopping 
+      software and secure payments please </font><a href="../../../secureshopping.html"><font color="#FFFFFF">CLICK HERE</font></a></td>
+    <td width="10" height="2">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="9" height="2" bgcolor="#3399FF">&nbsp;</td>
+    <td height="2" align="left" valign="top" width="959" bgcolor="#3399FF">&nbsp;</td>
+    <td width="10" height="2">&nbsp;</td>
+  </tr>
+</table>
+<!-- #EndLibraryItem --></td>
+    <td align="left" valign="top" height="762"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF" height="636">
+        <tr> 
+          <td width="82%">&nbsp;</td>
+          <td width="18%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td height="630" align="left" valign="top" width="82%"> 
+            <h1>Welcome to Virility Health</h1>
+            <p>Every products offered on this site have been source from reputable 
+              suppliers. These suppliers are governed under strict manufacturing 
+              and testing legislation within their country of origin or have been 
+              stringently tested within the UK. This is why you will not see the 
+              '<i>latest craze</i>' products offered for sale on this site. </p>
+            <p>We believe that the products we offer are of the highest quality 
+              and excellent value for money. We aim to provide you with a fast, 
+              efficient and friendly service.</p>
+            <p><b>Fast Despatch Policy</b><br>
+              If we receive your order by 4.00pm we will despatch your parcel 
+              the same day by First Class Mail in the UK.</p>
+            
+            <h2>Best Selling Products</h2>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td width="1%" height="15">&nbsp;</td>
+                <td width="97%">&nbsp;</td>
+                <td width="2%" height="15">&nbsp;</td>
+              </tr>
+              <tr> 
+                <td width="1%" height="251"><img src="../../../images/transparent.gif" width="1" height="1"></td>
+                <td width="97%" align="left" valign="top" height="251"> 
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr> 
+                      <td width="2%" height="106">&nbsp;</td>
+                      <td width="22%" align="center" valign="top" height="106"><a href="../../../products/ru21.html"><img src="../../../productpicssmall/ru_21_s.jpg" width="100" height="74" alt="RU-21" border="0"></a></td>
+                      <td width="2%" height="106">&nbsp;</td>
+                      <td width="22%" align="center" valign="top" height="106"><a href="../../../products/purelogical_collagen_velvet_firming_serum.html"><img src="../../../productpicssmall/purelogical_serum_s.jpg" width="62" height="100" border="0" alt="PureLogical Collagen Velvet Firming Serum"></a></td>
+                      <td width="2%" height="106">&nbsp;</td>
+                      <td width="22%" align="center" valign="top" height="106"><a href="../../../products/snorebgone.html"><img src="../../../productpicssmall/snorebegone_s.jpg" width="50" height="100" alt="SnoreBegone Spray" border="0"></a></td>
+                      <td width="2%" height="106">&nbsp;</td>
+                      <td width="22%" td align="center" valign="top" height="106"><a href="../../../products/nisim_extract.html"><img src="../../../productpicssmall/nisim_extract_s.gif" width="50" height="100" border="0" alt="Nisim Hair Stimulating Extract"></a></td>
+                      <td width="2%" height="106">&nbsp;</td>
+                    </tr>
+                    <tr> 
+                      <td width="2%" height="96"><img src="../../../images/transparent.gif" width="1" height="1"></td>
+                      <td width="22%" align="center" valign="top" height="96"> 
+                        <h3>RU-21</h3>
+                        <p align="left">RU-21 is an all-natural supplement that 
+                          has been clinically proven to regulate alcohol metabolism 
+                          in order to prevent alcohol-related damage to the vital 
+                          organs of the body...</p>
+                      </td>
+                      <td width="2%" height="96" align="center" valign="top"><img src="../../../images/transparent.gif" width="1" height="1"></td>
+                      <td width="22%" align="center" valign="top" height="96"> 
+                        <p><b>PureLogical Collagen Velvet Firming Serum</b> </p>
+                        <p align="left">The Serum has an excellent sunscreen protector 
+                          to help against the ageing process, plus Azulene, which 
+                          is anti-inflammatory and very..</p>
+                      </td>
+                      <td width="2%" height="96" align="center" valign="top"><img src="../../../images/transparent.gif" width="1" height="1"></td>
+                      <td width="22%" align="center" valign="top" height="96"> 
+                        <h3> SnoreBegone Spray</h3>
+                        <p align="left">Isn't it time you and your loved ones 
+                          enjoyed a quiet, restful night's sleep? <br>
+                          SnoreBgone eliminates 97% of the noise associated with 
+                          snoring...</p>
+                        <p align="left">&nbsp;</p>
+                      </td>
+                      <td width="2%" height="96" align="center" valign="top"><img src="../../../images/transparent.gif" width="1" height="1"></td>
+                      <td width="22%" td align="center" valign="top" height="96"> 
+                        <h3>Nisim Scalp Cleansing Shampoo </h3>
+                        <p align="left">Specially formulated to maximize a clean 
+                          and nutrient rich environment for healthy hair growth. 
+                          Many customers begin to see a difference within only 
+                          one week!...</p>
+                      </td>
+                      <td width="2%" height="96">&nbsp;</td>
+                    </tr>
+                    <tr> 
+                      <td width="2%" height="2">&nbsp;</td>
+                      <td width="22%" align="left" valign="top" height="19"> 
+                        <p><a href="../../../products/ru21.html"><font color="#FF6600">CLICK 
+                          HERE</font></a> for more details</p>
+                      </td>
+                      <td width="2%" height="19" align="left" valign="top">&nbsp;</td>
+                      <td width="22%" align="left" valign="top" height="19"> 
+                        <p><a href="../../../products/purelogical_collagen_velvet_firming_serum.html"><font color="#FF6600">CLICK 
+                          HERE</font></a> for more details</p>
+                      </td>
+                      <td width="2%" height="19" align="left" valign="top">&nbsp;</td>
+                      <td width="22%" align="left" valign="top" height="19"> 
+                        <p><a href="../../../products/snorebgone.html"><font color="#FF6600">CLICK 
+                          HERE</font></a> for more details</p>
+                      </td>
+                      <td width="2%" height="19" align="left" valign="top">&nbsp;</td>
+                      <td width="22%" td align="left" valign="top" height="19"> 
+                        <p><a href="../../../products/nisim_extract.html"><font color="#FF6600">CLICK 
+                          HERE</font></a> for more details</p>
+                      </td>
+                      <td width="2%" height="2">&nbsp;</td>
+                    </tr>
+                    <tr> 
+                      <td colspan="9" height="17" align="left" valign="middle"><img src="../../../images/bluespace.gif" width="100%" height="2"></td>
+                    </tr>
+                    <tr> 
+                      <td width="2%" height="19">&nbsp;</td>
+                      <td width="22%" align="left" valign="top" height="19" class="smalltextoffer">RU-21 
+                        (40 tablets)<br>
+                        <b> &pound;6.00 </b>(excluding VAT)</td>
+                      <td width="2%" height="19" align="left" valign="middle">&nbsp;</td>
+                      <td width="22%" align="left" valign="top" height="7" class="smalltextoffer">PureLogical 
+                        Collagen Velvet Firming Serum<br>
+                        <b>&pound;39.99</b> (ex VAT) </td>
+                      <td width="2%" height="19" align="left" valign="middle">&nbsp;</td>
+                      <td width="22%" align="left" valign="top" height="19" class="smalltextoffer">SnoreBgone 
+                        Spray (2 oz)<br>
+                        <b>&pound;15.85</b> (ex VAT)</td>
+                      <td width="2%" height="19" align="left" valign="middle">&nbsp;</td>
+                      <td width="22%" align="left" valign="top" height="2" class="smalltextoffer">Nisim 
+                        <st2:personname><st1:givenname>Hair Stimulating Extract</st1:givenname></st2:personname><br>
+                        <b>&pound;34.25</b> (ex VAT)</td>
+                      <td width="2%" height="19">&nbsp;</td>
+                    </tr>
+                    <tr> 
+                      <td width="2%" height="19">&nbsp;</td>
+                      <td width="22%" align="left" valign="middle" height="19"><a href="javascript:top.newchoice('RU-21 - Special Offer','','40 tablets ','',6.00,1,0.2,1)"><img src="../../../products/shop/images/addto_off_s.gif" width="59" height="20" border="0" alt="Add to Basket"></a></td>
+                      <td width="2%" height="19" align="left" valign="middle">&nbsp;</td>
+                      <td width="22%" align="left" valign="top" height="7" class="smalltextoffer"><a href="javascript:top.newchoice('PureLogical Collagen Velvet Firming Serum','','30ml','',39.99,1,0.2,1)"><img src="../../../products/shop/images/addto_off_s.gif" width="59" height="20" border="0" alt="Add to Basket"></a></td>
+                      <td width="2%" height="19" align="left" valign="middle">&nbsp;</td>
+                      <td width="22%" align="left" valign="top" height="19"><a href="javascript:top.newchoice('SnoreBgone Spray','','2 oz bottle.','',15.85,1,0.2,1)"><img src="../../../products/shop/images/addto_off_s.gif" width="59" height="20" border="0" alt="Add to Basket"></a></td>
+                      <td width="2%" height="19" align="left" valign="middle">&nbsp;</td>
+                      <td width="22%" align="left" valign="top" height="2"><a href="javascript:top.newchoice('Nisim Hair Stimulating Extract','','240ml','',34.25,1,0.35,1)"><img src="../../../products/shop/images/addto_off_s.gif" width="59" height="20" border="0" alt="Add to Basket"></a></td>
+                      <td width="2%" height="19">&nbsp;</td>
+                    </tr>
+                  </table>
+                </td>
+                <td width="2%" height="251"><img src="../../../images/transparent.gif" width="1" height="1"></td>
+              </tr>
+              <tr> 
+                <td width="1%" height="2">&nbsp;</td>
+                <td height="17" align="left" valign="middle" width="97%"><img src="../../../images/bluespace.gif" width="100%" height="2"></td>
+                <td width="2%" height="2">&nbsp;</td>
+              </tr>
+            </table>
+            <p>If you cannot find the product you are looking for please use our 
+              '<a href="../../../find_it_for_me.html"><font color="#FF6600">Find 
+              It For Me</font></a>' form and we will try to find it for you.</p>
+            <p>Warm regards,</p>
+            <p>Customer Service Department<br>
+              <b>Virility Health Ltd.</b></p>
+            </td>
+          <td height="630" align="left" valign="top" width="18%"> <!-- #BeginLibraryItem "/Library/gen_right_nav.lbi" -->
+<table width="100%" border="1" cellspacing="0" cellpadding="0" bordercolor="#3366CC">
+  <tr> 
+                <td align="left" valign="top" height="623"> 
+                  
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" height="153">
+        <tr> 
+          <td width="10">&nbsp;</td>
+          <td> 
+            <h2>Latest Releases</h2>
+          </td>
+        </tr>
+        <tr> 
+          <td width="10" height="7">&nbsp;</td>
+          <td height="7" align="center" valign="top"> 
+            <p><a href="../../../products/ru21.html"><img src="../../../productpicssmall/ru_21_s.jpg" width="100" height="74" alt="RU-21" border="0"></a></p>
+          </td>
+        </tr>
+        <tr> 
+          <td width="10" height="2">&nbsp;</td>
+          <td class="smalltext" height="2" align="left" valign="top"> <b>RU-21.</b> 
+            As seen on the Richard &amp; Judy programme. Tried, Tested - Worked 
+            (16th Feb. 2004).<br>
+            Only <b>&pound;6.00</b> for 2 packs<br>
+            <a href="../../../products/ru21.html"><font color="#FF6600">CLICK HERE</font></a> 
+          </td>
+        </tr>
+        <tr>
+          <td width="10">&nbsp;</td>
+          <td class="smalltext" align="left" valign="top">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="10">&nbsp;</td>
+          <td class="smalltext" align="left" valign="top">To see the latest winners 
+            of the RU-21 promotion <a href="http://www.virilityhealth.co.uk/promotions/ru21promotion_winners.html"><font color="#FF6600">CLICK 
+            HERE</font></a></td>
+        </tr>
+        <tr> 
+          <td width="10">&nbsp;</td>
+          <td><font color="#FFFFFF"></font></td>
+        </tr>
+        <tr> 
+          <td width="10" height="7">&nbsp;</td>
+          <td height="7"> 
+            <h2>Best Sellers</h2>
+          </td>
+        </tr>
+        <tr> 
+          <td width="10">&nbsp;</td>
+          <td align="center" valign="top"><a href="../../../products/retinol.html"><img src="../../../productpicssmall/retinol_s.jpg" width="100" height="108" border="0" alt="Retinol-A Rejuvenator Wrinkle Cream"></a></td>
+        </tr>
+        <tr> 
+          <td width="10" height="83">&nbsp;</td>
+          <td class="smalltext" height="83" align="left" valign="top"><b>Retinol-A 
+            Rejuvenator Wrinkle Cream.</b> We believe this is the only non-prescription 
+            face cream which genuinely diminishes fine lines and wrinkles. <br>
+            <a href="../../../products/retinol.html"><font color="#FF6600">CLICK HERE</font></a></td>
+        </tr>
+        <tr> 
+          <td width="10">&nbsp;</td>
+          <td><font color="#FFFFFF"></font></td>
+        </tr>
+        <tr> 
+          <td width="10">&nbsp;</td>
+          <td> 
+            <h2>Newsletter</h2>
+          </td>
+        </tr>
+        <tr> 
+          <td width="10" height="64">&nbsp;</td>
+          <td height="64" align="center" valign="top"><a href="../../../newsletter.html"><img src="../../../images/newsletter.jpg" width="110" height="66" border="0" alt="newsletter"></a></td>
+        </tr>
+        <tr> 
+          <td width="10" height="7">&nbsp;</td>
+          <td height="7"> 
+            <p class="smalltext">Subscribe to our newsletter and we will send 
+              you information about the latest offers, and products...<br>
+              <a href="../../../newsletter.html"><font color="#FF6600">CLICK HERE</font></a> 
+            </p>
+          </td>
+        </tr>
+        <tr> 
+          <td width="10">&nbsp;</td>
+          <td><a href="http://www.adobe.com/products/acrobat/readstep2.html" target="_blank" onClick="exit=false"></a></td>
+        </tr>
+      </table>
+                </td>
+              </tr>
+            </table><!-- #EndLibraryItem --></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+    <td colspan="2" height="32"> <!-- #BeginLibraryItem "/htdocs/Library/footer.lbi" --><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td height="17" align="left" valign="middle"><img src="../../../images/bluespace.gif" width="100%" height="2"></td>
+  </tr>
+  <tr> 
+    <td align="left" valign="top"> 
+      <p><b>Customer Service<br>
+        </b>We believe that the products we offer are of the highest quality and 
+        excellent value for money. We aim to provide you with a fast, efficient 
+        and friendly service.</p>
+      <p><b>Fast Despatch Policy</b><br>
+        If we receive your order by 4.00pm we will despatch your parcel the same 
+        day by First Class Mail in the UK.</p>
+    </td>
+  </tr>
+  <tr>
+    <td height="17" align="left" valign="middle"><img src="../../../images/bluespace.gif" width="100%" height="2"></td>
+  </tr>
+</table>
+<p align="right" class="smalltext"><b>Marketing &amp; Sales Dept</b><br>
+  Virility Health Ltd. 3 Leigh Court Close, Cobham, Surrey KT11 2HT<br>
+  Telephone 0800 081 0850 <br>
+  International Calls +44 (0)1932 863275 <br>
+  Fax 0870 762 1381 <br>
+  Email:<a href="mailto:info@virilityhealth.com"><font color="#FF6600">info@virilityhealth.com</font></a><br>
+  Designed, Marketed and Managed by <a href="http://www.kewleyconsultants.co.uk" target="_blank"><font color="#FF6600">Kewley 
+  Consultants Ltd</font></a></p>
+<!-- #EndLibraryItem --></td>
+  
+</table>
+</body>
+</html>

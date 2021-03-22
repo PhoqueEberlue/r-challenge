@@ -1,0 +1,1543 @@
+
+
+<html>
+
+<head>
+<title>Medicare.gov - Nursing Home Checklist</title>
+
+<meta name="Description" content="Provides a detailed checklist for rating different nursing homes visited based upon, Quality of Life, Quality of Care, Nutrition and Hydration, and Safety. The checklist also elaborates on how to use the information discovered through Nursing Home Compare when visiting nursing homes.">
+
+<LINK rel="stylesheet" type="text/css" href="/StyleSheets/mcg.css">
+
+<Style type="text/css">
+<!--
+	OL UL {FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; font-size: 12pt }
+	OL UL LI {list-style: disc}
+	OL LI {list-style: upper-roman}
+	OL OL LI{list-style: decimal}
+	OL OL UL LI {list-style: disc}
+-->
+</style>
+
+</head>
+
+<body bgcolor="#FFFFFF" link="#660000" vlink="#660000">
+<SCRIPT type="text/javascript" LANGUAGE="JavaScript">
+<!--
+
+//Expire a cookie one month after it is created
+function GetExpiryDate(){
+			var expires = new Date();
+			expires.setTime(expires.getTime() + 6*60*60*1000);
+			return expires;
+		
+}
+
+
+// name - name of the cookie
+// value - value of the cookie
+// [expires] - expiration date of the cookie (defaults to end of current session)
+// [path] - path for which the cookie is valid (defaults to path of calling document)
+// [domain] - domain for which the cookie is valid (defaults to domain of calling document)
+// [secure] - Boolean value indicating if the cookie transmission requires a secure transmission
+// * an argument defaults when it is assigned null as a placeholder
+// * a null placeholder is not required for trailing omitted arguments
+function setCookie(name, value, expires, path, domain, secure) {
+  var curCookie = name + "=" + escape(value) +
+     /* ((expires) ? "; expires=" + expires.toGMTString() : "") +*/   /*make the cookie expire at the end of the current session */
+      /*((path) ? "; path=" + path : "") +*/
+      /*make the cookie valid for the entire domain - changed by Danny 8-16-2001*/
+      "; path=/ " + 
+      ((domain) ? "; domain=" + domain : "") +
+      ((secure) ? "; secure" : "");
+     
+  document.cookie = curCookie;
+}
+
+// name - name of the desired cookie
+// * return string containing value of specified cookie or null if cookie does not exist
+function getCookie(name) {
+  var dc = document.cookie;
+  var prefix = name + "=";
+  var begin = dc.indexOf("; " + prefix);
+  if (begin == -1) {
+    begin = dc.indexOf(prefix);
+    if (begin != 0) return null;
+  } else
+    begin += 2;
+  var end = document.cookie.indexOf(";", begin);
+  if (end == -1)
+    end = dc.length;
+  return unescape(dc.substring(begin + prefix.length, end));
+}
+
+// name - name of the cookie
+// [path] - path of the cookie (must be same as path used to create cookie)
+// [domain] - domain of the cookie (must be same as domain used to create cookie)
+// * path and domain default if assigned null or omitted if no explicit argument proceeds
+function deleteCookie(name, path, domain) {
+  if (getCookie(name)) {
+    document.cookie = name + "=" + 
+    ((path) ? "; path=" + path : "") +
+    ((domain) ? "; domain=" + domain : "") +
+    "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+  }
+}
+
+// date - any instance of the Date object
+// * hand all instances of the Date object to this function for "repairs"
+function fixDate(date) {
+  var base = new Date(0);
+  var skew = base.getTime();
+  if (skew > 0)
+    date.setTime(date.getTime() - skew);
+}
+
+// -->
+</SCRIPT>
+
+
+<!--Top of the page anchor.  Please keep them inside <P> tag. -->
+<!--This style is meant to make the element virtually disappear -->
+<p style="MARGIN: 0; COLOR: white; LINE-HEIGHT: 0; FONT-SIZE: 1pt; FONT-WEIGHT: normal;">
+	<a name="Top"></a>
+</p>
+<!-- The link below enables Google to return FAQ searches, but is not displayed on the page - TPW -->
+<p style="display: none;"><a href="/faqsearch/default.asp">Search Frequently Asked Questions</a></p>	
+
+
+
+<script type="text/javascript" LANGUAGE="JavaScript">
+
+function navigateTo(sLink, bprint){
+	document.frmNavigate.action = sLink;
+	if (bprint == true) document.frmNavigate.PrinterFriendly.value = 'True';
+	else document.frmNavigate.PrinterFriendly.value = 'False';
+	document.frmNavigate.submit();
+	}
+	
+/* This is a generic select all function, that is called onclick for a select all button
+   for a set of check boxes.  You must pass the function references to the check box 
+   item and the name of the submit button */
+function selectAllOnClick(chkCheckBoxRef, btnSubmitRef)
+{
+	// if there is more than 1 check box, loop through them, selecting each one
+	if (chkCheckBoxRef.length) {
+		for (i=0; i < chkCheckBoxRef.length; i++){
+		chkCheckBoxRef[i].checked = true;
+		}
+	}
+	else {
+		chkCheckBoxRef.checked = true;
+	}
+    
+    btnSubmitRef.click();
+}
+
+</script>
+
+<SCRIPT type="text/javascript" LANGUAGE="JavaScript">
+
+function WriteJavaScriptDetectionCookie (){
+	/*This function uses JavaScript to write a cookie*/
+	/*The existence of this cookie implies that JavaScript is on */
+	/*The absence of this cookie implies that either JavaScript is off or cookies are off*/
+	/*Cookies exist for an entire session*/
+	/*If you have JS on and turn it off, the cookie will remain and it will appear like JS is on */
+	/*If you have JS off and turn it on, everything will work fine*/
+	var sCookieValueBefore;
+	var sCookieValueAfter;
+	sCookieValueBefore = getCookie("JavaScriptOn");
+	/*document.write ("CookieValueBefore : |" + sCookieValueBefore+ "|");*/
+	 /*Check for a missing Javascript cookie.  This should only happen on first page */
+	if (sCookieValueBefore == null) {
+		/*document.write ("No JS Cookie Found..writing cookie");*/
+		setCookie("JavaScriptOn", "TRUE");
+		sCookieValueAfter = getCookie("JavaScriptOn");
+		/*Are cookies enabled?.  If the cookie has not changed, then cookies are disabled*/
+		if (sCookieValueBefore != sCookieValueAfter) {
+			window.location.reload(); /*This line causes problems when Javascript is on but cookies are off*/			
+		}
+	}
+	
+	return true;
+}
+
+WriteJavaScriptDetectionCookie();
+
+</SCRIPT>
+
+<script type="text/javascript" LANGUAGE="JavaScript">
+
+function addHiddenParamToForm(frmTo, sName, sValue) {
+	/*This function is used to add/modify a hidden parameter client-side to a form*/
+	/*It can be used to persist a parameter client-side into a form such as frmNavigate or frmTabs*/
+	
+	var objTempNode;
+	var objThisElement;
+	var bFound;
+	var i;
+	
+	bFound = false;
+		
+	if(frmTo) {
+		for (i=0; i < frmTo.elements.length; i++) {
+			objThisElement = frmTo.elements[i];
+			if (objThisElement.name == sName) {
+				objThisElement.value = sValue;		
+				bFound = true;				
+				break;
+			}		
+				
+		}//for loop
+	
+		if (!(bFound)) {
+			objTempNode = document.createElement("input");
+			objTempNode.setAttribute("type","hidden");
+			objTempNode.setAttribute("name", sName);
+			objTempNode.setAttribute("value", sValue);
+			frmTo.appendChild(objTempNode);			
+		} //if !(bfound)
+	} //if frmTo
+}
+
+</script>
+
+<script language="JavaScript">
+<!--
+function mmLoadMenus() {
+  if (window.mm_menu_0513141417_0) return;
+	//Help menu - English
+	window.mm_menu_0513141417_0 = new Menu("root",150,20,null,12,"#ffffff","#3366cc","#3366cc","#ffffff","left","middle",3,0,500,-5,7,true,true,true,0,true,true);
+	mm_menu_0513141417_0.addMenuItem("Overview","location='/Help/Overview.asp'");
+	mm_menu_0513141417_0.addMenuItem("Site&nbsp;Viewing&nbsp;Tips","location='/Help/SiteHelp.asp'");
+	mm_menu_0513141417_0.addMenuItem("Search&nbsp;Help","location='/SearchTools/SearchTips.asp'");
+	mm_menu_0513141417_0.addMenuItem("Comments","location='/comments.asp?refer=http://www.medicare.gov/nursing/checklist.asp'");
+	mm_menu_0513141417_0.addMenuItem("Awards","location='/FAQs/WebsiteAwards.asp'");
+	mm_menu_0513141417_0.addMenuItem("Website&nbsp;Accessibility","location='http://cms.hhs.gov/siteinfo/access.asp'");
+	mm_menu_0513141417_0.addMenuItem("Website&nbsp;Privacy","location='http://cms.hhs.gov/siteinfo/privacy.asp'");
+	mm_menu_0513141417_0.hideOnMouseOut=true;
+	mm_menu_0513141417_0.menuBorder=1;
+	mm_menu_0513141417_0.menuLiteBgColor='#ffffff';
+	mm_menu_0513141417_0.menuBorderBgColor='#666666';
+	mm_menu_0513141417_0.bgColor='#333333';
+    //Help menu - Spanish
+	window.mm_menu_span_help = new Menu("root",230,20,null,12,"#ffffff","#3366cc","#3366cc","#ffffff","left","middle",3,0,500,-5,7,true,true,true,0,true,true);
+	mm_menu_span_help.addMenuItem("Descripción","location='/Help/Overview.asp'");
+	mm_menu_span_help.addMenuItem("Consejos&nbsp;sobre&nbsp;el&nbsp;sitio&nbsp;web","location='/Help/SiteHelp.asp'");
+	mm_menu_span_help.addMenuItem("Consejos&nbsp;para&nbsp;la&nbsp;búsqueda","location='/SearchTools/SearchTips.asp'");
+	mm_menu_span_help.addMenuItem("Comentarios","location='/comments.asp?refer=http://www.medicare.gov/nursing/checklist.asp'");
+	mm_menu_span_help.addMenuItem("Menciones","location='/FAQs/WebsiteAwards.asp'");
+	mm_menu_span_help.addMenuItem("Accesibilidad&nbsp;del&nbsp;sitio&nbsp;de&nbsp;internet","location='http://cms.hhs.gov/siteinfo/access.asp'");
+	mm_menu_span_help.addMenuItem("Privacidad&nbsp;del&nbsp;sitio&nbsp;de&nbsp;internet","location='http://cms.hhs.gov/siteinfo/privacy.asp'");
+	mm_menu_span_help.hideOnMouseOut=true;
+	mm_menu_span_help.menuBorder=1;
+	mm_menu_span_help.menuLiteBgColor='#ffffff';
+	mm_menu_span_help.menuBorderBgColor='#666666';
+	mm_menu_span_help.bgColor='#333333';
+    //Medicare Enrollment menu - English
+	window.mm_menu_0506103234_0 = new Menu("root",180,20,"Verdana, Arial, Helvetica, sans-serif",12,"#660000","#ffffff","#ffffcc","#3366cc","left","middle",3,0,500,-5,7,true,true,true,0,true,true);
+	mm_menu_0506103234_0.addMenuItem("Overview","location='/Basics/Overview.asp'");
+	mm_menu_0506103234_0.addMenuItem("Eligibilty","location='/Basics/Eligibility.asp'");
+	mm_menu_0506103234_0.addMenuItem("Enrollment","location='/Basics/HowToEnroll.asp'");
+	mm_menu_0506103234_0.addMenuItem("Initial&nbsp;Enrollment&nbsp;Package","location='/Basics/EnrollmentPackage.asp'");
+	mm_menu_0506103234_0.addMenuItem("Medicare&nbsp;Card","location='/Basics/ymc.asp'");
+	mm_menu_0506103234_0.addMenuItem("Basic&nbsp;Information","location='/Publications/Search/View/ViewPubList.asp?Language=English#Basic+Medicare+Information'");
+	mm_menu_0506103234_0.hideOnMouseOut=true;
+	mm_menu_0506103234_0.menuBorder=1;
+	mm_menu_0506103234_0.menuLiteBgColor='#ffffff';
+	mm_menu_0506103234_0.menuBorderBgColor='#555555';
+	mm_menu_0506103234_0.bgColor='#333333';
+	//Medicare Billing menu - English
+	window.mm_menu_0506103800_1 = new Menu("root",170,20,"Verdana, Arial, Helvetica, sans-serif",12,"#660000","#ffffff","#ffffcc","#3366cc","left","middle",3,0,500,-5,7,true,true,true,0,true,true);
+	mm_menu_0506103800_1.addMenuItem("Overview","location='/Basics/ClaimsOverview.asp'");
+	mm_menu_0506103800_1.addMenuItem("File&nbsp;a&nbsp;Claim","location='/Basics/FAC.asp'");
+	mm_menu_0506103800_1.addMenuItem("Claims&nbsp;Forms","location='http://cms.hhs.gov/providers/edi/edi5.asp'");
+	mm_menu_0506103800_1.addMenuItem("Summary&nbsp;Notice","location='/Basics/SummaryNotice.asp'");
+	mm_menu_0506103800_1.addMenuItem("Fraud","location='/FraudAbuse/Overview.asp'");
+	mm_menu_0506103800_1.hideOnMouseOut=true;
+	mm_menu_0506103800_1.menuBorder=1;
+	mm_menu_0506103800_1.menuLiteBgColor='#ffffff';
+	mm_menu_0506103800_1.menuBorderBgColor='#555555';
+	mm_menu_0506103800_1.bgColor='#333333';
+	//Medicare Appeals menu - English
+	window.mm_menu_01302004_1 = new Menu("root",175,20,"Verdana, Arial, Helvetica, sans-serif",12,"#660000","#ffffff","#ffffcc","#3366cc","left","middle",3,0,500,-5,7,true,true,true,0,true,true);
+	mm_menu_01302004_1.addMenuItem("Overview","location='/Basics/appealsoverview.asp'");
+	mm_menu_01302004_1.addMenuItem("Appeals&nbsp;and&nbsp;Grievances","location='/publications/pubs/nonpdf/appeals.asp'");
+	mm_menu_01302004_1.addMenuItem("Appeals&nbsp;Forms","location='/Basics/forms/default.asp'");
+	mm_menu_01302004_1.addMenuItem("Appeals&nbsp;of&nbsp;LCDs","location='/coverage/static/appeals.asp'");
+	mm_menu_01302004_1.hideOnMouseOut=true;
+	mm_menu_01302004_1.menuBorder=1;
+	mm_menu_01302004_1.menuLiteBgColor='#ffffff';
+	mm_menu_01302004_1.menuBorderBgColor='#555555';
+	mm_menu_01302004_1.bgColor='#333333';
+	//Long Term Care menu - English
+	window.mm_menu_0506104224_2 = new Menu("root",175,18,"Verdana, Arial, Helvetica, sans-serif",12,"#660000","#ffffff","#ffffcc","#3366cc","left","middle",3,0,500,-5,7,true,true,true,0,true,true);
+		window.mm_menu_0506104224_2 = new Menu("root",245,18,"Verdana, Arial, Helvetica, sans-serif",12,"#660000","#ffffff","#ffffcc","#3366cc","left","middle",3,0,500,-5,7,true,true,true,0,true,true);
+	mm_menu_0506104224_2.addMenuItem("What is Long-Term Care?","location='/LongTermCare/Static/Home.asp'");
+	mm_menu_0506104224_2.addMenuItem("Steps to Choosing Long-Term Care","location='/LongTermCare/Static/StepsOverview.asp'");
+	mm_menu_0506104224_2.addMenuItem("Types of Long Term Care","location='/LongTermCare/Static/TypesOverview.asp'");
+	mm_menu_0506104224_2.addMenuItem("Paying for Long-Term Care","location='/LongTermCare/Static/Medicare.asp'");
+	mm_menu_0506104224_2.addMenuItem("Resources","location='/LongTermCare/Static/Counseling.asp'");
+	mm_menu_0506104224_2.hideOnMouseOut=true;
+	mm_menu_0506104224_2.menuBorder=1;
+	mm_menu_0506104224_2.menuLiteBgColor='#ffffff';
+	mm_menu_0506104224_2.menuBorderBgColor='#555555';
+	mm_menu_0506104224_2.bgColor='#333333';
+	//Plan Choices menu - English
+	window.mm_menu_0506110521_3 = new Menu("root",240,18,"Verdana, Arial, Helvetica, sans-serif",12,"#660000","#ffffff","#ffffcc","#3366cc","left","middle",3,0,500,-5,7,true,true,true,0,true,true);
+	mm_menu_0506110521_3.addMenuItem("Medicare Advantage","location='/Choices/Overview.asp'");
+	mm_menu_0506110521_3.addMenuItem("Medigap (Supplemental Insurance)","location='/medigap/default.asp'");
+	mm_menu_0506110521_3.addMenuItem("Employer&nbsp;Coverage","location='/Choices/Employer.asp'");
+	mm_menu_0506110521_3.addMenuItem("PACE","location='/Nursing/Alternatives/Pace.asp'");
+	mm_menu_0506110521_3.hideOnMouseOut=true;
+	mm_menu_0506110521_3.menuBorder=1;
+	mm_menu_0506110521_3.menuLiteBgColor='#ffffff';
+	mm_menu_0506110521_3.menuBorderBgColor='#555555';
+	mm_menu_0506110521_3.bgColor='#333333';
+	//Stay Healthy menu - English
+	window.mm_menu_0506131400_4 = new Menu("root",320,18,"Verdana, Arial, Helvetica, sans-serif",12,"#660000","#ffffff","#ffffcc","#3366cc","left","middle",3,0,500,-5,7,true,true,true,0,true,true);
+	mm_menu_0506131400_4.addMenuItem("Overview","location='/Health/Overview.asp'");
+	mm_menu_0506131400_4.addMenuItem("Physical&nbsp;Exam","location='/Health/physicalexam.asp'");
+	mm_menu_0506131400_4.addMenuItem("Cardiovascular&nbsp;Screening","location='/Health/cardio.asp'");
+	mm_menu_0506131400_4.addMenuItem("Cancer","location='/Health/cancer.asp'");
+	mm_menu_0506131400_4.addMenuItem("Shots","location='/Health/shots.asp'");
+	mm_menu_0506131400_4.addMenuItem("Bone&nbsp;Mass&nbsp;Measurements","location='/Health/osteoporosis.asp'");
+	mm_menu_0506131400_4.addMenuItem("Diabetes","location='/Health/Diabetes.asp'");
+	mm_menu_0506131400_4.addMenuItem("Glaucoma","location='/Health/glaucoma.asp'");
+	mm_menu_0506131400_4.addMenuItem("Other&nbsp;Health&nbsp;Information","location='/Health/otherhealth.asp'");
+	mm_menu_0506131400_4.hideOnMouseOut=true;
+	mm_menu_0506131400_4.menuBorder=1;
+	mm_menu_0506131400_4.menuLiteBgColor='#ffffff';
+	mm_menu_0506131400_4.menuBorderBgColor='#555555';
+	mm_menu_0506131400_4.bgColor='#333333';
+	//Search Tools menu - English
+	window.mm_menu_0506132152_5 = new Menu("root",335,18,"Verdana, Arial, Helvetica, sans-serif",12,"#660000","#ffffff","#ffffcc","#3366cc","left","middle",3,0,500,-5,7,true,true,true,0,true,true);
+	mm_menu_0506132152_5.addMenuItem("Dialysis&nbsp;Facilty&nbsp;Compare","location='/Dialysis/Home.asp'");
+	mm_menu_0506132152_5.addMenuItem("Helpful&nbsp;Contacts","location='/Contacts/Home.asp'");
+	mm_menu_0506132152_5.addMenuItem("Home&nbsp;Health&nbsp;Compare","location='/HHCompare/Home.asp'");	
+	mm_menu_0506132152_5.addMenuItem("Medicare Eligibility Tool", "location='/MedicareEligibility/Home.asp'");
+	mm_menu_0506132152_5.addMenuItem("Medicare&nbsp;Personal&nbsp;Plan&nbsp;Finder","location='/MPPF/home.asp'");
+	mm_menu_0506132152_5.addMenuItem("Nursing&nbsp;Home&nbsp;Compare","location='/NHCompare/home.asp'");
+	mm_menu_0506132152_5.addMenuItem("Participating&nbsp;Physician&nbsp;Directory","location='/Physician/Home.asp'");
+	mm_menu_0506132152_5.addMenuItem("Prescription&nbsp;Drug&nbsp;and&nbsp;Other&nbsp;Assistance&nbsp;Programs","location='/AssistancePrograms/Home.asp'");
+	mm_menu_0506132152_5.addMenuItem("Publications","location='/Publications/home.asp'");
+	mm_menu_0506132152_5.addMenuItem("Supplier&nbsp;Directory","location='/Supplier/Home.asp'");
+	mm_menu_0506132152_5.addMenuItem("Your&nbsp;Medicare&nbsp;Coverage","location='/Coverage/Home.asp'");
+//	mm_menu_0506132152_5.addMenuItem("Assistance&nbsp;Programs","location='/AssistancePrograms/Home.asp'");
+//	mm_menu_0506132152_5.addMenuItem("Medicare&nbsp;Health&nbsp;Plan&nbsp;Compare","location='/MPHCompare/Home.asp'");
+//	mm_menu_0506132152_5.addMenuItem("Medigap&nbsp;Compare","location='/MGCompare/Home.asp'");
+	mm_menu_0506132152_5.hideOnMouseOut=true;
+	mm_menu_0506132152_5.menuBorder=1;
+	mm_menu_0506132152_5.menuLiteBgColor='#ffffff';
+	mm_menu_0506132152_5.menuBorderBgColor='#555555';
+	mm_menu_0506132152_5.bgColor='#333333';
+    
+    mm_menu_0506132152_5.writeMenus(); //this line is needed so all menus get written to the browser
+    
+} // mmLoadMenus()
+
+//-->
+</script>
+
+<script language="JavaScript1.2" src="/library/javascript/menu.js"></script>
+
+
+	<script language="JavaScript1.2">mmLoadMenus();</script>
+
+<!--
+<script type="text/Javascript" language="Javascript" src="http://www.msisurvey.com/v03041/pages_intercept.js"></script>
+-->
+<!-- MCGPageCount: 1 -->	
+				
+			<!-- d link for visually impaired users -->
+			<!--This style is meant to make the element virtually disappear -->
+			<p style="MARGIN: 0; COLOR: white; LINE-HEIGHT: 0; FONT-SIZE: 1pt; FONT-WEIGHT: normal;">
+				<!--This style is meant to make the element virtually disappear -->
+				<a style="MARGIN: 0; COLOR: white; LINE-HEIGHT: 0; FONT-SIZE: 1pt; FONT-WEIGHT: normal;" href="#d">d</a>
+			</p>
+			
+			<!--Start Top toolbar -->
+				
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color:#3366cc">
+						<tr>
+						
+							<td valign='top' width="20%" rowspan="6"><a href="/default.asp"><img src="/images/flagmed2.gif" WIDTH="212" HEIGHT="110" border="0" alt="Medicare.gov site Flag Logo"></a></td>
+						
+						<td width="3%" rowspan="6">&nbsp;</td>
+									  
+						<td class="TopToolBar" width="100%" height="25" align="left">
+							<a class="TopToolBar" href="/default.asp">Home</a>&nbsp;|&nbsp;
+						
+							
+								<a class="TopToolBar" href="/default.asp?ScreenReaderOn=True">Screen Reader Version</a>&nbsp;|&nbsp;
+							<a href="#" class="TopToolBar" language="JavaScript" onclick="navigateTo('/Nursing/Checklist.asp', true);return false;">Printable-Version</a>
+							&nbsp;|&nbsp
+							
+							<a class="TopToolBar" href="/Spanish/Overview.asp"><span lang="es">Español</span></a>&nbsp;
+						</td>
+					</tr>
+					
+					<tr>
+						<td width="100%" height="100%" align="left" class="TopToolBar">
+							<span class="Tagline">
+								The Official U.S. Government Site for People with Medicare
+							</span>
+
+						</td>
+					</tr>
+					<tr>
+						<td width="100%" height="25" align="left" class="TopToolBar" style="font-family: Verdana; font-size: 10pt; font-weight: normal; color: White;">
+							<a style="font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10pt; font-weight: bold; color: #ffffff; text-decoration: none;" name="nextGen_LHTB_r2_c17" id="nextGen_LHTB_r2_c17" href="/Help/Overview.asp" onMouseOver="this.style.color='red';MM_showMenu(window.mm_menu_0513141417_0,-9,26,null,'nextGen_LHTB_r2_c17');" onMouseOut="this.style.color='white';MM_startTimeout();">Help </a><img src="/images/MenuDownArrow.gif" alt="" href="/Help/Overview.asp" onMouseOver="this.style.color='red';MM_showMenu(window.mm_menu_0513141417_0,-9,26,null,'nextGen_LHTB_r2_c17');" onMouseOut="this.style.color='white';MM_startTimeout();"/>&nbsp;&nbsp;|&nbsp;
+							<a class="TopToolBar" href="http://questions.medicare.gov/cgi-bin/medicare.cfg/php/enduser/std_alp.php">Frequently Asked Questions</a>
+							&nbsp;|&nbsp;
+							<!--<a class="TopToolBar" href="/Subscription/default.asp"><img src="/images/mail.gif" width="16" height="11" alt="Mailing List" border="0"></a>&nbsp;-->
+							<a class="TopToolBar" href="/Subscription/default.asp">Mailing List</a>
+							&nbsp;|&nbsp;
+							<a class="TopToolBar" href="/default.asp#stool">Search Tools</a>
+						</td>
+					</tr>			
+					
+		</table>
+
+			<!-- End Top Toolbar -->
+			
+			<!-- Start Top Search Toolbar -->
+									
+				<table width="100%" border="0" cellpadding="10" cellspacing="0" bgcolor="#FFFFCC" style="border: 0px;border-top-width: 0px;border-left-width: 0px;border-bottom-width: 0px;border-right-width:1px">
+					<tr>
+						<td width="99%">&nbsp;</td>
+						<td valign="top" nowrap="nowrap">
+							
+							<form name="gs" method="get" action="http://search.medicare.gov/search" style="margin-bottom: 0px;">
+								
+								<!-- *** Zip Code locator removed 9/8/2004 *** -->
+								<!--<a class="SearchToolBar" href="http://www.usps.com/zip4/" target="new" title="U.S. Postal Service Zip Code Locator">Zip Code Locator</a>-->
+								<!--<span class="SearchToolBar">&nbsp;&nbsp;|&nbsp;&nbsp;</span>-->
+								<!-- *** Zip Code locator removed 9/8/2004 *** -->
+
+								<!--Any more than 15 and the bar wraps in Netscape at 800X600 -bcd -->
+								<!--10-22-04: With the search bar changes, it does not wrap in NS at 800x600 -RAH -->
+								<input type="text" name="q" id="q" size="25" maxlength="75" value="Search Medicare.gov" onClick="document.getElementById('q').value='';" />
+								<label for="sa">
+								<input type="image" name="sa" id="sa" alt="Go Button" width="34" height="20" valign="top" src="/images/go_english.gif" />
+								</label>
+								<input type="hidden" name="restrict" value="medicare">
+								<input type="hidden" name="client" value="cms_search">
+								<input type="hidden" name="proxystylesheet" value="http://www.cms.hhs.gov/search/gsmed.xml">
+								<input type="hidden" name="output" value="xml_no_dtd">
+								<input type="hidden" name="numgm" value="5">
+								<input type="hidden" name="site" value="cms_search">
+							</form>
+							
+						</td>
+					</tr>
+				</table>
+						
+					
+
+			<!-- End Top Search Toolbar -->
+			
+			<a name="d"></a>			
+								<!-- Customized Content starts here -->
+		
+
+	<!-- No longer being displayed 3/14/2001  - AJ 
+	<noscript>
+		<p class="Emphatic">Warning! Your browser security settings are too high or it does not support scripting. Some pages may not behave as expected.  
+		We have provided 
+		<a href="/ScriptIssues.asp">information on what features may not work as expected</a>
+		, tips to use in navigating through the site and other options 
+		that are available.</p>
+	</noscript>
+	-->
+
+	<!--The following form is used by the javascript navigateto function -->
+	<form Name="frmNavigate" id="frmNavigate" method="GET" enctype="application/x-www-form-urlencoded" action="/Nursing/Checklist.asp">
+		
+		<input type="hidden" Name="PrinterFriendly" value="False">
+	</form>
+
+
+
+	<!-- Start of customized content -->
+
+	<h1>Nursing Homes</h1>
+	<h2>Nursing Home Checklist</h2>
+	
+	<table border=0>
+<tr>
+<td><a href='/Nursing/Checklist.asp?PrinterFriendly=true'>Printable-Version</a></td>
+<td><a href='/Nursing/Checklist.asp?PrinterFriendly=true'><IMG SRC='/images/PrinterEasyPrint.gif' alt='Printable-Version' title='Printable-Version' hspace='3' align='middle' border=0></a></td>
+</tr>
+</table>
+
+	<br><br><br>
+	<Form Name='GoBackMultiForm'><label for='Previous' title='Press Alt + P to return to the previous page.'><input type='button' accesskey='P' id='Previous' name='Previous' value='Return to Previous Page' language='JavaScript' onclick='history.back(1)'></label></form>
+	
+	
+	<p>
+	Checklists can help you evaluate the nursing homes that you call or visit.
+    Use a new checklist for each home you call or visit. Then, compare the scores.
+    This will help you select a nursing home that is a good choice for you
+    or your relative. 
+    <p>
+    Nursing Home Name:  _________________________________________
+    <p>
+    Date Visited:  __________________________
+    <p> 
+    Address:  ______________________________________________
+    
+    <OL>
+    <span class="SubTitle">
+    <li>
+		Basic Information</span> <!-- Outer -->
+		<P>
+		<ol>
+		
+			<li>Is the facility Medicare certified?:____(yes) _____(no) </li><p>
+
+			<li>Is the facility Medicaid certified?:____(yes) _____(no) </li><p>
+
+			<li>Is this a skilled nursing facility?:____(yes) _____(no)</li><p>			
+
+			<li>Is the facility accepting new patients?:____(yes) _____(no)</li><p> 
+
+			<li>Is there a waiting period for admission?:____(yes) _____(no)</li><p>
+
+			<li>Is a skilled bed available to you?:____(yes) _____(no)</li>
+		
+		</ol>
+	
+    
+		<p class="SubTitle">Useful Tips
+		<P>
+		<ul>
+			<li>Generally, skilled nursing care is available only for a short period
+			    of time after a hospitalization. Custodial care is for a much
+			    longer period of time. If a facility offers both types of care, learn
+			    if residents may transfer between levels of care within the nursing
+			    home without having to move from their old room or from the
+			    nursing home. </li><p>
+			<li>Nursing homes that only take Medicaid residents might offer
+			    longer term but less intensive levels of care. Nursing Homes that
+			    don't accept Medicaid payment may make a resident move when
+			    Medicare or the resident’s own money runs out. </li><p>
+			<li>An occupancy rate is the total number of residents currently living
+			    in a nursing home divided by the home’s total number of beds.
+			    Occupancy rates vary by area, depending on the overall number of
+			    available nursing home beds.</li>
+		</ul>
+	</li> <!-- /Outer -->
+	
+	
+	
+	<P>&nbsp;</P>
+    <span class="SubTitle"><li>
+		Nursing Home Information:</span>  <!-- Outer -->
+		<P>
+		<ol>
+			<li>Is the home and the current administrator licensed?:____(yes)
+				_____(no)</li><p>
+
+			<li>Does the home conduct background checks on all staff?:____(yes)
+			   _____(no)</li><p>
+
+			<li>Does the home have special services units?:____(yes) _____(no)</li><p>
+
+			<li>Does the home have abuse prevention training?:____(yes) _____(no)</li>
+		</ol>
+    
+		<p class="SubTitle">Useful Tips
+		<P>
+		<ul>
+			<li><B>LICENSURE</B>: The nursing home and its administrator should be
+		        licensed by the State to operate. </li><p>
+		    <li><B>BACKGROUND CHECKS</B>: Do the nursing home’s procedures to screen
+		        potential employees for a history of abuse meet your State’s
+		        requirements? Your State’s Ombudsman program might be able to
+		        help you with this information. </li><p>
+		    <li><B>SPECIAL SERVICES</B>: Some nursing homes have special service units 
+			like rehabilitation, Alzheimer's, and hospice.  Learn
+		        if there are separate waiting periods or facility guidelines for when
+		        residents would be moved on or off the special unit.</li><P>
+		    <li><B>STAFF TRAINING</B>: Do the nursing home’s training programs educate
+		        employees about how to recognize resident abuse and neglect,
+		        how to deal with aggressive or difficult residents, and how to deal
+		        with the stress of caring for so many needs? Are there clear
+		        procedures to identify events or trends that might lead to abuse
+		        and neglect, and on how to investigate, report, and resolve your
+		        complaints?  </li><p>
+		    <li><B>LOSS PREVENTION</B>: Are there policies or procedures to safeguard
+		        resident possessions? </li>
+		</ul>
+		<p>
+		For Sections III through VI, give the nursing home a grade from one to
+		five. One is worst, five is best.
+	</li> <!-- /Outer -->
+    
+    <P>&nbsp;</P>
+    
+    <span class="SubTitle"><li>Quality of Life:	</span><!-- Outer -->
+    <P>
+		
+		
+		<table cellpadding='2' cellspacing='0' border='0' width='98%'>
+<tr >
+
+					<th>&nbsp;</th>
+					<th align=right><b>Worst</b></th>
+					<th>&nbsp;</th>
+					<th>&nbsp;</th>
+					<th>&nbsp;</th>
+					<th align=center><b>Best</b></th>
+				</tr>
+<tr >
+<td  width=50%>
+1. Residents can make choices about
+				    their daily routine. Examples are
+				    when to go to bed or get up, when to
+				    bathe, or when to eat.<p>
+				    </td>
+<td  width=10% align=center valign=top >
+1</td>
+<td  width=10% align=center valign=top >
+2</td>
+<td  width=10% align=center valign=top >
+3</td>
+<td  width=10% align=center valign=top >
+4</td>
+<td  width=10% align=center valign=top >
+5</td>
+</tr>
+<tr >
+<td  width=50%>
+2. The interaction between staff and
+				               patient is warm and respectful.<p>
+				 </td>
+<td  width=10% align=center valign=top >
+1</td>
+<td  width=10% align=center valign=top >
+2</td>
+<td  width=10% align=center valign=top >
+3</td>
+<td  width=10% align=center valign=top >
+4</td>
+<td  width=10% align=center valign=top >
+5</td>
+</tr>
+<tr >
+<td  width=50%>
+3. The home is easy to visit for
+				               friends and family.<p>
+				 </td>
+<td  width=10% align=center valign=top >
+1</td>
+<td  width=10% align=center valign=top >
+2</td>
+<td  width=10% align=center valign=top >
+3</td>
+<td  width=10% align=center valign=top >
+4</td>
+<td  width=10% align=center valign=top >
+5</td>
+</tr>
+<tr >
+<td  width=50%>
+4. The nursing home meets your
+				               cultural, religious, or language
+				               needs.<p>
+				 </td>
+<td  width=10% align=center valign=top >
+1</td>
+<td  width=10% align=center valign=top >
+2</td>
+<td  width=10% align=center valign=top >
+3</td>
+<td  width=10% align=center valign=top >
+4</td>
+<td  width=10% align=center valign=top >
+5</td>
+</tr>
+<tr >
+<td  width=50%>
+ 5. The nursing home smells and
+				                 looks clean and has good lighting.<p>
+				  </td>
+<td  width=10% align=center valign=top >
+1</td>
+<td  width=10% align=center valign=top >
+2</td>
+<td  width=10% align=center valign=top >
+3</td>
+<td  width=10% align=center valign=top >
+4</td>
+<td  width=10% align=center valign=top >
+5</td>
+</tr>
+<tr >
+<td  width=50%>
+6. The home maintains comfortable
+				                temperatures.<p>
+				  </td>
+<td  width=10% align=center valign=top >
+1</td>
+<td  width=10% align=center valign=top >
+2</td>
+<td  width=10% align=center valign=top >
+3</td>
+<td  width=10% align=center valign=top >
+4</td>
+<td  width=10% align=center valign=top >
+5</td>
+</tr>
+<tr >
+<td  width=50%>
+7. The resident rooms have personal
+				                articles and furniture.<p>
+				  </td>
+<td  width=10% align=center valign=top >
+1</td>
+<td  width=10% align=center valign=top >
+2</td>
+<td  width=10% align=center valign=top >
+3</td>
+<td  width=10% align=center valign=top >
+4</td>
+<td  width=10% align=center valign=top >
+5</td>
+</tr>
+<tr >
+<td  width=50%>
+8. The public and resident rooms
+				                have comfortable furniture.<p>
+				  </td>
+<td  width=10% align=center valign=top >
+1</td>
+<td  width=10% align=center valign=top >
+2</td>
+<td  width=10% align=center valign=top >
+3</td>
+<td  width=10% align=center valign=top >
+4</td>
+<td  width=10% align=center valign=top >
+5</td>
+</tr>
+<tr >
+<td  width=50%>
+9. The nursing home and its dining
+				                room are generally quiet.<p>
+				  </td>
+<td  width=10% align=center valign=top >
+1</td>
+<td  width=10% align=center valign=top >
+2</td>
+<td  width=10% align=center valign=top >
+3</td>
+<td  width=10% align=center valign=top >
+4</td>
+<td  width=10% align=center valign=top >
+5</td>
+</tr>
+<tr >
+<td  width=50%>
+10. Residents may choose from a
+				                variety of activities that they like.<p>
+				  </td>
+<td  width=10% align=center valign=top >
+1</td>
+<td  width=10% align=center valign=top >
+2</td>
+<td  width=10% align=center valign=top >
+3</td>
+<td  width=10% align=center valign=top >
+4</td>
+<td  width=10% align=center valign=top >
+5</td>
+</tr>
+<tr >
+<td  width=50%>
+11. The nursing home has outside
+				                 volunteer groups.<p>
+				   </td>
+<td  width=10% align=center valign=top >
+1</td>
+<td  width=10% align=center valign=top >
+2</td>
+<td  width=10% align=center valign=top >
+3</td>
+<td  width=10% align=center valign=top >
+4</td>
+<td  width=10% align=center valign=top >
+5</td>
+</tr>
+<tr >
+<td  width=50%>
+12. The nursing home has outdoor
+				                     areas for resident use and helps
+				                     residents to get outside.<p>
+				   </td>
+<td  width=10% align=center valign=top >
+1</td>
+<td  width=10% align=center valign=top >
+2</td>
+<td  width=10% align=center valign=top >
+3</td>
+<td  width=10% align=center valign=top >
+4</td>
+<td  width=10% align=center valign=top >
+5</td>
+</tr>
+</table>
+
+		
+		
+		<p align=right>
+		<b>
+		TOTAL: _____________<br> 
+		(Best Possible Score: 60)</b>
+		</P>
+	</li>	<!-- /Outer -->
+	
+	<P>&nbsp;</P>
+	
+    <span class="SubTitle">
+    <li> Quality of Care:</span>
+    	<!--Outer-->
+		<p>
+		<table cellpadding=2 cellspacing=0 border=0 width=98%>
+<tr >
+
+		<th>&nbsp;</th><th align=right><b>Worst</b></th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th align=center><b>Best</b></th></tr>
+<td  width=50%>
+1. The facility corrected any Quality
+		              of Care deficiencies that were in the
+		              State inspection report.<p></td>
+<td  width=10% align=center valign=top >
+1</td>
+<td  width=10% align=center valign=top >
+2</td>
+<td  width=10% align=center valign=top >
+3</td>
+<td  width=10% align=center valign=top >
+4</td>
+<td  width=10% align=center valign=top >
+5</td>
+</tr>
+<tr >
+<td  width=50%>
+2. Residents may continue to see
+		              their personal physician.<p></td>
+<td  width=10% align=center valign=top >
+1</td>
+<td  width=10% align=center valign=top >
+2</td>
+<td  width=10% align=center valign=top >
+3</td>
+<td  width=10% align=center valign=top >
+4</td>
+<td  width=10% align=center valign=top >
+5</td>
+</tr>
+<tr >
+<td  width=50%>
+3. Residents are clean, appropriately
+			          dressed, and well groomed.<p> </td>
+<td  width=10% align=center valign=top >
+1</td>
+<td  width=10% align=center valign=top >
+2</td>
+<td  width=10% align=center valign=top >
+3</td>
+<td  width=10% align=center valign=top >
+4</td>
+<td  width=10% align=center valign=top >
+5</td>
+</tr>
+<tr >
+<td  width=50%>
+4. Nursing Home staff respond 
+			          quickly to requests for help.<p> </td>
+<td  width=10% align=center valign=top >
+1</td>
+<td  width=10% align=center valign=top >
+2</td>
+<td  width=10% align=center valign=top >
+3</td>
+<td  width=10% align=center valign=top >
+4</td>
+<td  width=10% align=center valign=top >
+5</td>
+</tr>
+<tr >
+<td  width=50%>
+5. The administrator and staff seem
+		              comfortable with each other and with
+		              the residents.<p></td>
+<td  width=10% align=center valign=top >
+1</td>
+<td  width=10% align=center valign=top >
+2</td>
+<td  width=10% align=center valign=top >
+3</td>
+<td  width=10% align=center valign=top >
+4</td>
+<td  width=10% align=center valign=top >
+5</td>
+</tr>
+<tr >
+<td  width=50%>
+6. Residents have the same care
+		               givers on a daily basis.<p></td>
+<td  width=10% align=center valign=top >
+1</td>
+<td  width=10% align=center valign=top >
+2</td>
+<td  width=10% align=center valign=top >
+3</td>
+<td  width=10% align=center valign=top >
+4</td>
+<td  width=10% align=center valign=top >
+5</td>
+</tr>
+<tr >
+<td  width=50%>
+7. There are enough staff at night
+		                and on week-ends or holidays to care
+		                for each resident.<p></td>
+<td  width=10% align=center valign=top >
+1</td>
+<td  width=10% align=center valign=top >
+2</td>
+<td  width=10% align=center valign=top >
+3</td>
+<td  width=10% align=center valign=top >
+4</td>
+<td  width=10% align=center valign=top >
+5</td>
+</tr>
+<tr >
+<td  width=50%>
+8. The home has an arrangement for
+		                emergency situations with a nearby
+		                hospital.	<p></td>
+<td  width=10% align=center valign=top >
+1</td>
+<td  width=10% align=center valign=top >
+2</td>
+<td  width=10% align=center valign=top >
+3</td>
+<td  width=10% align=center valign=top >
+4</td>
+<td  width=10% align=center valign=top >
+5</td>
+</tr>
+<tr >
+<td  width=50%>
+9. The family and residents councils
+		                are independent from the nursing
+		                home's management.<p></td>
+<td  width=10% align=center valign=top >
+1</td>
+<td  width=10% align=center valign=top >
+2</td>
+<td  width=10% align=center valign=top >
+3</td>
+<td  width=10% align=center valign=top >
+4</td>
+<td  width=10% align=center valign=top >
+5</td>
+</tr>
+<tr >
+<td  width=50%>
+10. Care plan meetings are held at
+		                times that are easy for residents and
+		                their family members to attend.<p></td>
+<td  width=10% align=center valign=top >
+1</td>
+<td  width=10% align=center valign=top >
+2</td>
+<td  width=10% align=center valign=top >
+3</td>
+<td  width=10% align=center valign=top >
+4</td>
+<td  width=10% align=center valign=top >
+5</td>
+</tr>
+</table>
+ 
+		  <p align=right>
+		<b>
+		TOTAL: _____________<br> 
+		(Best Possible Score: 50)</b>
+		<p class="SubTitle">Useful Tips
+		<P>
+		<ul>
+			<li>Good care plans are essential to good care. They should be put
+		        together by a team of providers and family and updated as often
+		        as necessary. </li><p>
+		 </ul>
+     </li>	<!--/Outer-->
+     
+     <P>&nbsp;</P>
+     
+    <span class="SubTitle"><li> Nutrition and Hydration (Diet and Fluids): </span><!--Outer-->
+		 <p>
+		 <table cellpadding=2 cellspacing=0 border=0 width=98%>
+<tr >
+
+		<th>&nbsp;</th><th align=right><b>Worst</b></th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th align=center><b>Best</b></th></tr>
+<tr >
+<td  width=50%>
+1. The home corrected any
+		              deficiencies in these areas that were
+		              on the recent state inspection report. <p></td>
+<td  width=10% align=center valign=top >
+1</td>
+<td  width=10% align=center valign=top >
+2</td>
+<td  width=10% align=center valign=top >
+3</td>
+<td  width=10% align=center valign=top >
+4</td>
+<td  width=10% align=center valign=top >
+5</td>
+</tr>
+<tr >
+<td  width=50%>
+2. There are enough staff to assist
+		              each resident who requires help with
+		              eating.<p></td>
+<td  width=10% align=center valign=top >
+1</td>
+<td  width=10% align=center valign=top >
+2</td>
+<td  width=10% align=center valign=top >
+3</td>
+<td  width=10% align=center valign=top >
+4</td>
+<td  width=10% align=center valign=top >
+5</td>
+</tr>
+<tr >
+<td  width=50%>
+3. The food smells and looks good
+		              and is served at proper
+		              temperatures.<p></td>
+<td  width=10% align=center valign=top >
+1</td>
+<td  width=10% align=center valign=top >
+2</td>
+<td  width=10% align=center valign=top >
+3</td>
+<td  width=10% align=center valign=top >
+4</td>
+<td  width=10% align=center valign=top >
+5</td>
+</tr>
+<tr >
+<td  width=50%>
+4. Residents are offered choices of
+		              food at mealtimes.<p> </td>
+<td  width=10% align=center valign=top >
+1</td>
+<td  width=10% align=center valign=top >
+2</td>
+<td  width=10% align=center valign=top >
+3</td>
+<td  width=10% align=center valign=top >
+4</td>
+<td  width=10% align=center valign=top >
+5</td>
+</tr>
+<tr >
+<td  width=50%>
+5. Residents’ weight is routinely
+		              monitored.<p></td>
+<td  width=10% align=center valign=top >
+1</td>
+<td  width=10% align=center valign=top >
+2</td>
+<td  width=10% align=center valign=top >
+3</td>
+<td  width=10% align=center valign=top >
+4</td>
+<td  width=10% align=center valign=top >
+5</td>
+</tr>
+<tr >
+<td  width=50%>
+6. There are water pitchers and
+		              glasses on tables in the rooms.<p></td>
+<td  width=10% align=center valign=top >
+1</td>
+<td  width=10% align=center valign=top >
+2</td>
+<td  width=10% align=center valign=top >
+3</td>
+<td  width=10% align=center valign=top >
+4</td>
+<td  width=10% align=center valign=top >
+5</td>
+</tr>
+<tr >
+<td  width=50%>
+7. Staff help residents drink
+		              if they are not able to do so on their
+		              own.<p></td>
+<td  width=10% align=center valign=top >
+1</td>
+<td  width=10% align=center valign=top >
+2</td>
+<td  width=10% align=center valign=top >
+3</td>
+<td  width=10% align=center valign=top >
+4</td>
+<td  width=10% align=center valign=top >
+5</td>
+</tr>
+<tr >
+<td  width=50%>
+8. Nutritious snacks are available
+		               during the day and evening.<p></td>
+<td  width=10% align=center valign=top >
+1</td>
+<td  width=10% align=center valign=top >
+2</td>
+<td  width=10% align=center valign=top >
+3</td>
+<td  width=10% align=center valign=top >
+4</td>
+<td  width=10% align=center valign=top >
+5</td>
+</tr>
+<tr >
+<td  width=50%>
+9. The environment in the dining room 
+		              encourages residents to relax,
+		              socialize, and enjoy their food.<p></td>
+<td  width=10% align=center valign=top >
+1</td>
+<td  width=10% align=center valign=top >
+2</td>
+<td  width=10% align=center valign=top >
+3</td>
+<td  width=10% align=center valign=top >
+4</td>
+<td  width=10% align=center valign=top >
+5</td>
+</tr>
+</table>
+ 
+		 <p align=right>
+		<b>
+		TOTAL: _____________<br> 
+		(Best Possible Score: 45)</b>
+		<p class="SubTitle">Useful Tips
+		<p>
+		<ul>
+			<li>Ask the professional staff how the medicine a resident takes can
+		        affect what they eat and how often they may want something to
+		        drink. </li><p>
+		     <li>Visit at mealtime. Are residents rushed through meals or do they
+		         have time to finish eating and to use the meal as an opportunity
+		         to socialize with each other? </li><p>
+		     <li>Sometimes the food a home serves is fine, but a resident still
+		         won't eat. Nursing home residents may like some control over
+		         their diet. Can they select their meals from a menu or select their
+		         mealtime? </li><p>
+		     <li>If residents need help eating, do care plans specify what type of
+		         assistance they will receive? </li>
+		  </ul>
+	</li>	<!--/Outer-->
+	
+	<P>&nbsp;</P>
+		
+    <span class="SubTitle"><li>Safety</span>	<!--Outer-->
+		  <p>
+		  <table cellpadding=2 cellspacing=0 border=0 width=98%>
+<tr >
+
+		<th>&nbsp;</th><th align=right><b>Worst</b></th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th align=center><b>Best</b></th></tr>
+<tr >
+<td  width=50%>
+1. There are handrails in the
+		    hallways and grab bars in the
+		    bathrooms.<p></td>
+<td  width=10% align=center valign=top >
+1</td>
+<td  width=10% align=center valign=top >
+2</td>
+<td  width=10% align=center valign=top >
+3</td>
+<td  width=10% align=center valign=top >
+4</td>
+<td  width=10% align=center valign=top >
+5</td>
+</tr>
+<tr >
+<td  width=50%>
+2. Exits are clearly marked.</td>
+<td  width=10% align=center>
+1</td>
+<td  width=10% align=center valign=top >
+2</td>
+<td  width=10% align=center valign=top >
+3</td>
+<td  width=10% align=center valign=top >
+4</td>
+<td  width=10% align=center valign=top >
+5</td>
+</tr>
+<tr >
+<td  width=50%>
+3. Spills and other accidents are
+		              cleaned up quickly. <p></td>
+<td  width=10% align=center valign=top >
+1</td>
+<td  width=10% align=center valign=top >
+2</td>
+<td  width=10% align=center valign=top >
+3</td>
+<td  width=10% align=center valign=top >
+4</td>
+<td  width=10% align=center valign=top >
+5</td>
+</tr>
+<tr >
+<td  width=50%>
+4. Hallways are free of clutter and
+		              have good lighting.<p></td>
+<td  width=10% align=center valign=top >
+1</td>
+<td  width=10% align=center valign=top >
+2</td>
+<td  width=10% align=center valign=top >
+3</td>
+<td  width=10% align=center valign=top >
+4</td>
+<td  width=10% align=center valign=top >
+5</td>
+</tr>
+<tr >
+<td  width=50%>
+5. There are enough staff to help
+		              move residents quickly in an
+		              emergency. <p> </td>
+<td  width=10% align=center valign=top >
+1</td>
+<td  width=10% align=center valign=top >
+2</td>
+<td  width=10% align=center valign=top >
+3</td>
+<td  width=10% align=center valign=top >
+4</td>
+<td  width=10% align=center valign=top >
+5</td>
+</tr>
+<tr >
+<td >
+6. The nursing home has smoke
+		    detectors and sprinklers.<p> </td>
+<td  width=10% align=center valign=top >
+1</td>
+<td  width=10% align=center valign=top >
+2</td>
+<td  width=10% align=center valign=top >
+3</td>
+<td  width=10% align=center valign=top >
+4</td>
+<td  width=10% align=center valign=top >
+5</td>
+</tr>
+</table>
+
+		 <p align=right>
+		<b>
+		TOTAL: _____________<br> 
+		(Best Possible Score: 30)</b>
+	</li>	<!--/Outer-->
+	
+	<P>&nbsp;</P>
+	
+    <span class="SubTitle"><li>Useful Tips Relating to Information in Nursing Home Compare</span>		<!--Outer-->
+		<p>
+		Nursing Home Compare contains summary information about nursing
+		homes from their last state inspection. It also contains information
+		that was reported by the nursing homes prior to the last State
+		inspection including nursing home and resident characteristics. If you
+		have questions or concerns about the information on a nursing home,
+		you should discuss them during your visit. This section contains useful
+		tips and questions that you may want to ask the nursing home staff,
+		family members and residents of the nursing home during your visit. 
+		<p class="SubTitle">
+		Nursing Home Compare Information on Results of Nursing Home
+		Inspections 
+		<P>
+		<ul>
+			<li>Bring a copy of the Nursing Home Compare inspection results for
+		        the nursing home. Ask whether the deficiencies have been
+		        corrected. </li><p>
+		     <li>Ask to see a copy of the most recent nursing home inspection
+		         report. </li>
+		 </ul>
+		 <p class="SubTitle">
+		 Nursing Home Compare Information on Resident and Nursing
+		 Home Characteristics 
+		 <P>
+			 <ol>
+				<p>
+				<b><li> For the Measure: Residents with Physical Restraints</b><p>
+					<ul>
+						<li>Does it appear that there is sufficient staff to assist
+					      residents who need help in moving or getting in and out
+					      of chairs and bed? </li><p>
+					  <li>Ask the Director of Nursing who is involved in the
+					      decisions about physical restraints. </li><p>
+					  <li>When physical restraints are used, do the staff remove the
+					      physical restraints on a regular basis to help residents with
+					      moving, and with activities of daily living? </li><p>
+					  <li>Do the staff help residents with physical restraints to get in and
+					      out of bed and chairs when they want to get up? </li><p>
+					  <li>Do staff help residents with physical restraints to move as much
+					      as they would like to? </li>
+					</ul><p>
+				</li>				
+
+				<P><b><li> For the Measure: Residents with Pressure (Bed) Sores </b><p>
+				<ul>
+					<li>Ask the staff how they identify if a resident is at risk for
+				      skin breakdown. Ask them what they do to prevent
+				      pressure sores for these residents.</li><p>
+				  <li>Ask the staff about the percentage of their residents
+				      that have pressure sores and why.</li><p>
+				  <li>Do you see staff helping residents change their
+				      positions in wheelchairs, chairs, and beds? </li>
+				</ul>
+			  	</li>
+
+				<p>
+			  	<b><li> For the Measure: Residents with Bowel and Baldder Incontinence </b><p>
+			  	<ul>
+				<li>Does the nursing home smell clean? </li><p>
+				<li>Ask the staff what steps they take to prevent
+			        bowel and bladder incontinence for residents who are at risk. 
+			  	</ul>
+			  	</li>
+
+				<P><b><li> 
+					For the Measure: Residents Who Are Very Dependent in
+					Eating</b><p> 
+						<ul>
+							<li>Look at your response to Question 2 in Section V above.</li><p>
+							<li>Observe residents who need help in eating. Are they
+						       able to finish their meals or is the food returned to the
+						       kitchen uneaten? </li>
+						</ul>
+				</li> 
+				
+				<p>
+				<b><li> 
+					 For the Measure: Residents Who Are Bedfast</b><p> 
+					<ul>
+						<li>Ask the Director of Nursing how staff are assigned to
+					      care for these residents. </li>
+					</ul>
+				</li>	
+				
+				<p>
+				<b><li>	
+					For the Measure: Residents With Restricted Joint
+					Motion</b><p>
+					<ul>
+						<li>Ask the Director of Nursing how the nursing home cares
+						    for residents with restricted joint motion. </li><p>
+						<li>Do the residents get help with getting out of chairs and
+						    beds when they want to get up? </li>
+					</ul>
+				</li>
+				
+				-<p>
+			  <b><li>For the Measure: Residents with Unplanned Weight
+			  Gain or Loss</b><p>
+				<ul>
+					<li>Look at your responses to Questions 2, 3, 4, 5, 8, and 9
+				        in section V above. </li>
+				</ul>
+			  <p>
+			  <b><li>For the Measure: Residents with Behavioral Symptoms </b><p>
+			  <ul>
+				<li>What management and/or medical approaches for
+			        behavioral symptoms are being used by the nursing
+			        home? </li><p>
+			    <li>How does staff handle residents that have behavioral
+			        symptoms such as calling out or yelling? </li><p>
+			    <li>Ask whether residents with behavioral symptoms are
+			        checked by a doctor or behavioral specialist.</li><p>
+			    <li> Ask whether staff get special training to help them to
+			         provide care to residents with behavioral symptoms. </li>
+			  </ul>
+		</ol>
+		<p class="SubTitle">Nursing Home Compare Information on Nursing Staff</p>
+	
+		<p>Caring, competent nursing staff who respect each resident and family member are 
+		very important in assuring that residents get needed care and enjoy the best 
+		possible quality of life. Adequate nursing staff is needed to assess resident needs,
+		plan and give them care, and help them with eating, bathing and other activities. 
+		Some residents (e.g., those who are more dependent in eating or who are bedfast) need
+		more help than other residents depending on their conditions.</p>
+	
+		<p><b>The combinations of registered nurses (RNs), licensed practical and 
+		vocational nurses (LPNs/LVNs), and certified nursing assistants (CNAs)that nursing 
+		homes may have vary depending on the type of care that residents need and the number 
+		of residents in the nursing home.</b></p>
+	
+		<ul>
+			<li>Look at your responses to Questions 2 and 5 in section III above and 
+			Questions 4, 5, and 10 in section IV above.  Also look at your responses to 
+			Questions 2 and 7 in section V above.</li><p>
+
+			<li>Are nursing staff members courteous and friendly to residents and to other 
+			staff?</li><p>
+		
+			<li>Do nursing staff respond timely to residents calls for assistance such as 
+			help getting in and out of bed, dressing and going to the bathroom? </li><p>
+
+			<li>Observe meal times.  Do all residents who need assistance with eating get 
+			help?  Do staff give each resident enough time to chew food thoroughly and 
+			complete the meal?</li><p>
+
+			<li>Which nursing staff members are involved in planning the residents 
+			individual care? (Are they the same ones who give the care to residents?)</li><p>
+
+			<li>Ask questions about staff turnover. Is there frequent turnover among 
+			certified nursing assistants (CNAs)?  What about nurses and supervisors, 
+			including the Director of Nursing and the Administrator?  If staff changes 
+			frequently, ask why.</li><p>
+
+			<li>While the number of nursing staff is important to good care, also consider 
+			other factors, such as education and training.  How many registered nurses (RNs) 
+			are on the staff, and how many available on each shift?  What kind of training 
+			do certified nursing assistants (CNAs) receive?  How does the nursing home ensure
+			that all staff receive continuing education and keep their knowledge and skills 
+			up-to-date?</li><p>
+		</ul>
+		
+		
+	</li>		<!--Outer-->
+</ol>		<!--Outer-->
+
+<Form Name='GoBackMultiForm'><label for='Previous' title='Press Alt + P to return to the previous page.'><input type='button' accesskey='P' id='Previous' name='Previous' value='Return to Previous Page' language='JavaScript' onclick='history.back(1)'></label></form>
+
+<p align="center">
+				<a href='#Top' class='GoToLink' title='Return to the top of this page' onMouseOver="window.status='Top of page'; return true"onMouseOut="window.status='Document: Done'"><img src = '/images/ArrowUp_trans.gif' alt='Link to top of page' border = 0>Top of page</a>
+
+				</p>
+      
+
+	<!-- End of customized content -->
+   
+
+
+<!--<p><a name="Bottom"><font color="white">&nbsp;</font></a></p>-->
+<!-- The inline styles on the following P and a tags are used to virtually hide the element.  Please donot remove. -->
+ <p style="MARGIN: 0; COLOR: white; LINE-HEIGHT: 0; FONT-SIZE: 1pt; FONT-WEIGHT: normal;">
+		<a id = "Bottom" name="Bottom" style="MARGIN: 0; COLOR: white; LINE-HEIGHT: 0; FONT-SIZE: 1pt; FONT-WEIGHT: normal;">&nbsp;</a>
+ </p>
+
+				<p></p> 
+					
+				<style type="text/css">
+.FooterText {
+	font-size: 9pt;
+}
+A.BlueFooter:link {
+	color:#FFFFFF;
+}
+A.BlueFooter:visited {
+	color:#FFFFFF;
+}
+</style>
+
+
+
+	<table width="100%" bgcolor="#FFFFCC" cellpadding="1" cellspacing="0" border="0">
+	
+		
+			<!-- Uncomment this section if you want to reactivate the MSI Survey....
+			<tr>
+				<td class="BottomToolBar" width="100%" align="left" colspan="5">
+					<br />
+					<a class="BottomToolBar" href="http://test.msisurvey.com/start.asp?p=v03041t2" target="_blank">Take the Medicare.gov Survey</a>
+					<br />
+				</td>
+			</tr>
+			-->
+		
+		
+		<tr>
+			<td>&nbsp;</td>
+		</tr>
+		
+		<tr>
+			<td align="center" valign="bottom">
+				<a class="FooterText" href="http://questions.medicare.gov/cgi-bin/medicare.cfg/php/enduser/std_alp.php" title="Click to view the Frequently Asked Questions section">Frequently Asked Questions</a>&nbsp;|&nbsp;	
+				<a class="FooterText" href="/ContactUs.asp" title="Click to view the Contact Us page">Contact Us</a>&nbsp;|&nbsp;
+				<a class="FooterText" href="http://www.cms.hhs.gov/siteinfo/privacy.asp?" title="Click to view the Website Policies interim page on www.cms.hhs.gov website">Website Privacy</a>&nbsp;|&nbsp;
+				<a class="FooterText" href="/WebsitePolicies.asp" title="Click to view the Website Policies section">Website Policies</a>
+				<br />
+				<a class="FooterText" href="http://www.cms.hhs.gov/foia/default.asp" title="Click to view the Freedom of Information Act section on www.cms.hhs.gov website">Freedom of Information Act</a>&nbsp;|&nbsp;
+				<a class="FooterText" href="/Library/ExternalSiteRedirector.asp?Language=English&amp;URLPath=http://www.firstgov.gov" title="Click to view the external site redirector page that will provide a link to the www.FirstGov.gov website">FirstGov.gov</a>
+			</td>
+		</tr>
+		<tr>
+			<td align="right" class="FootNote">
+			
+			115
+
+			</td>
+		</tr>
+		
+		<tr style="background-color:#3366CC;">
+			
+			<td align="center" style="color:#FFFFFF;font-weight:bold;font-size:9pt;">
+					<a class="BlueFooter" href="http://www.cms.hhs.gov/" title="Click to view the www.cms.hhs.gov homepage">Centers for Medicare &amp; Medicaid Services</a>&nbsp;|&nbsp;
+					<a class="BlueFooter" href="/Library/ExternalSiteRedirector.asp?Language=English&amp;URLPath=http://www.hhs.gov/" title="Click to view the external site redirector page that will provide a link to the www.hhs.gov website">U.S. Department of Health and Human Services</a>
+			</td>
+			
+		</tr>
+	</table>
+
+
+
+
+
+<!--
+OLD FOOTER (esp. version) (before Nov-04 release)
+
+<table width="100%" bgcolor="#FFFFCC" cellspacing="0" cellpadding="5" border="0">
+	<tr> 	          
+		<td class="BottomToolBar" width="10%" ALIGN="right">
+			<a class="BottomToolBar" href="http://cms.hhs.gov/"><img src="/images/cmslogblue1-5.gif" alt="Centers for Medicare &amp; Medicaid Services" width="108" height="40" border="0"></a>
+		</td>
+		<td width="40%" align="left" class="BottomToolBar">
+			<a class="BottomToolBar" href="http://cms.hhs.gov" title="Haga clic aquí para ver información sobre los planes de Medicare en el sitio Web de CMS">Centros de Servicios de Medicare y Medicaid</a>		
+		</td>
+		<td class="BottomToolBar" align="right" width="10%">
+			<a class="BottomToolBar" href="/Library/ExternalSiteRedirector.asp?Language=Spanish&amp;URLPath=http://www.hhs.gov">
+			<img src="/Images/All_HHSLogo.gif" alt="Link to Department of Health and Human Services Website" width="52" height="48" border="0"></a>
+		</td>
+		<td width="40%" align="left" class="BottomToolBar">
+			<a class="BottomToolBar" href="/Library/ExternalSiteRedirector.asp?Language=Spanish&amp;URLPath=http://www.hhs.gov">Departamento de Salud y Servicios Humanos</a>
+		</td>
+	</tr>
+	
+</table>
+-->
+
+
+
+</body>
+
+</html>

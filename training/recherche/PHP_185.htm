@@ -1,0 +1,331 @@
+<HTML>
+<HEAD>
+<SCRIPT LANGUAGE="JavaScript">
+
+
+
+
+
+
+
+<!-- hiding content from old browsers
+
+
+
+/* 
+
+This script and all others are copyright (c) 1996 by Tomer Shiran and Yehuda Shiran. They will all be posted in
+
+our upcoming book on JavaScript, along with many others. Feel free to copy the script. A link to this
+
+page would be a nice gesture in return. The official site of the t-banner is http://www.geocities.com/Hollywood/4250/t-banner.htm
+
+The JavaScript collection is located at http://www.geocities.com/Hollywood/4250/index.html
+
+*/
+
+var i = 0;
+
+var TextNumber = 0;
+
+var TextInput = new MakeArray(4); // (0, 1, 2, 3, 4)
+
+var HelpText="";
+
+var Text = "";
+
+var Speed=500   
+
+var WaitSpace="      "
+
+TextInput[0] = 'Welcome to My Home Page.'  
+
+TextInput[1] = "Don't forget to sign my guestbook please, thank you."
+
+TextInput[2] = 'Please add it to your bookmark.'
+
+TextInput[3] = "Ayo, kirim-kirim email dong, jangan malu-malu deh ;)"
+
+
+
+TotalTextInput = 3; // (0, 1, 2, 3,)
+
+
+
+
+
+for (var Tomer = 0; Tomer <= TotalTextInput; Tomer++) {
+
+        TextInput[Tomer]+=WaitSpace
+
+}
+
+
+
+
+
+        
+
+var TimerId
+
+var TimerSet=false;
+
+
+
+function startBanner ()  {
+
+        TimerSet=!TimerSet
+
+        if (TimerSet)
+
+                banner();
+
+        else
+
+                kill();
+
+}
+
+
+
+function banner() {
+
+        Text=rollMessage();
+
+        TimerId = setTimeout("banner()", Speed)
+
+        window.status=Text;
+
+        
+
+}
+
+
+
+function rollMessage () {
+
+        Wait_yn=false;
+
+        i++;
+
+        var CheckSpace = HelpText.substring(i-1, i);
+
+        CheckSpace = "" + CheckSpace;
+
+        if (CheckSpace == " ") {i++;}
+
+        if (i >= HelpText.length+1) {
+
+                i=0; 
+
+                if (TextNumber < TotalTextInput) 
+
+                        TextNumber++
+
+                else 
+
+                        TextNumber = 0; 
+
+                init();
+
+        }
+
+        Text = HelpText.substring(0, i);
+
+        return (Text);
+
+}
+
+
+
+function init () {
+
+        Text = TextInput[TextNumber]
+
+        HelpText = Text;
+
+}
+
+
+
+function kill () {
+
+        clearTimeout (TimerId)
+
+}
+
+
+
+function DoPause () {
+
+        kill ();
+
+        TimerId = setTimeout("banner()", 3000);
+
+}
+
+
+
+function DoMessages(Message) {
+
+        DoPause();
+
+        window.status = Message
+
+}
+
+
+
+function MakeArray(n) {
+
+        this.length = n;
+
+        for (var i = 1; i <= n; i++) { 
+
+                 this[i] = 0
+
+        }
+
+        return this
+
+}
+
+
+
+
+
+// end hiding content-->
+
+
+
+
+</SCRIPT>
+
+<TITLE>Ronny Wahyono's Home Page</TITLE>
+</HEAD>
+<BODY onLoad="init(); startBanner();" BACKGROUND="stars.gif" TEXT="#C4C4FF" LINK="#6A6AFF" VLINK="#B5B500" ALINK="#FF7575">
+
+
+
+
+
+<!--COLOR-->
+
+
+<P ALIGN="center"><B>
+
+<!-- BEGIN INTERNET LINK EXCHANGE CODE -->
+<A HREF="http://ad.linkexchange.com/X035156/gotoad.map" target="_top">
+<IMG WIDTH="440" HEIGHT="40" BORDER="1" ISMAP="ismap" ALT="Internet Link Exchange" SRC="http://ad.linkexchange.com/X035156/logoshowad?free"></A>
+<BR>
+<FONT SIZE="1"><A HREF="http://www.linkexchange.com/" target="_top">
+Member of the Internet Link Exchange</A></FONT><BR>
+<!-- END INTERNET LINK EXCHANGE CODE  -->
+
+</B></P>
+<P ALIGN="center">
+
+<!--HEAD1-->
+<FONT SIZE="10">
+<IMG SRC="r.gif" ALT="R"><IMG SRC="o.gif" ALT="O"><IMG SRC="n.gif" ALT="N"><IMG SRC="n.gif" ALT="N"><IMG SRC="y.gif" ALT="Y">'s Home Page
+</FONT><BR>
+
+<FONT COLOR="#B5B500" FACE="Comic Sans MS"><KBD><BLINK>(best seen with 800 x 600)</BLINK></KBD></FONT></P>
+<P ALIGN="center"><FONT COLOR="#B5B500"><KBD></KBD></FONT></P>
+<P ALIGN="center">
+
+<!--BODY-->
+
+<FONT FACE="Comic Sans MS">This site is best viewed with </FONT><A HREF="http://www.netscape.com"><FONT FACE="Comic Sans MS">Netscape</FONT></A><FONT FACE="Comic Sans MS"> ver 2.0+ </FONT><IMG SRC="netscape.gif" ALT="netscape.gif"><BR>
+<FONT FACE="Comic Sans MS">
+I will keep on improving this site, step-by-step   :)</FONT><BR>
+<I><FONT FACE="Comic Sans MS">Since 10th June 1996, you've been </FONT><A HREF="http://www.digits.com"><FONT FACE="Comic Sans MS"> counted</FONT></A><FONT FACE="Comic Sans MS"> as a visitor number :</FONT></I></P>
+
+<P ALIGN="center">
+<IMG SRC="http://counter.digits.com/wc/-d/6/-c/8/-z/RonnyCounter" ALIGN="middle" WIDTH="90" HEIGHT="20" BORDER="0" HSPACE="4" VSPACE="2">
+</P>
+<P ALIGN="center">
+
+<!--LINE2-->
+<IMG SRC="divider1.gif" BORDER="0" ALT="divider1.gif">
+</P>
+<P>
+
+<!--LINKS-->
+</P>
+<P ALIGN="center">
+<IMG SRC="hotlink.gif" ALT="hotlink.gif">
+
+</P>
+<P>
+
+<!--LINK1-->
+<A HREF="http://www.umanitoba.ca/indonesian"><IMG SRC="koming.gif" ALIGN="left" HSPACE="5" BORDER="0" ALT="koming.gif"></A><A HREF="http://www.umanitoba.ca/indonesian"> </A>
+</P>
+<BLOCKQUOTE><I><FONT FACE="Comic Sans MS">Indonesian Home Page</FONT></I><FONT FACE="Comic Sans MS">, the first Indonesian Home Page in the Internet.  It has many links to go to other Indonesia's interesting sites.</FONT></BLOCKQUOTE>
+<BR>
+
+<!--LINK2-->
+
+
+<!--LINK3-->
+<P><A HREF="http://www.gitnet.com/clients/indonesia/chat/">
+<IMG SRC="warung.jpg" HEIGHT="90" WIDTH="110" ALIGN="left" BORDER="0" ALT="warung.jpg"></A></P>
+ 
+<BLOCKQUOTE><I><FONT FACE="Comic Sans MS">WARUNG KOPI - Indonesian Web Chat</FONT></I><FONT FACE="Comic Sans MS">, first, just fill in a name you like, then choose Ruangan Utama + Meja 1 to join the chat, then off you go !!!</FONT></BLOCKQUOTE>
+<P><BR>
+<BR>
+<BR>
+
+<!--LINK4-->
+</P>
+<P><A HREF="http://www.mirc.co.uk/get.html"><IMG SRC="mircnow.gif" ALIGN="middle" BORDER="0" ALT="mircnow.gif"> </A><FONT FACE="Comic Sans MS">mIRC version 5.02 is now available !!! (Released 21st April)</FONT></P>
+  
+<BR>
+<P>
+
+<!--Personal Profile-->
+<A HREF="http://www.nw.com.au/~ronny/personal.htm"><IMG SRC="batman.jpg" ALIGN="middle" BORDER="0" ALT="PERSONAL"></A><FONT FACE="Comic Sans MS">
+ View my Personal Profile Page</FONT> 
+<BR>
+</P>
+
+<P ALIGN="center"><IMG SRC="divider1.gif" BORDER="0" ALT="divider1.gif"></P>
+<P ALIGN="center">
+
+<!--Guestbook-->
+<A HREF="http://books.dreambook.com/siip/guestbk.sign.html"><IMG SRC="sign.gif" BORDER="0" ALT="Sign My Guestbook"></A>
+</P>
+<P ALIGN="center">
+<A HREF="http://books.dreambook.com/siip/guestbk.html"><IMG SRC="view.gif" BORDER="0" ALT="View My Guestbook"></A>
+</P>
+
+
+
+<P><A HREF="http://www.nw.com.au/~ronny/surf.htm"><BR>
+<IMG SRC="search1.gif" ALIGN="middle" BORDER="0" ALT="Search"></A><FONT FACE="Comic Sans MS">Lookin' for something in the Internet ?</FONT></P>
+  
+<!-- End Search Form -->
+
+<P>
+
+<!--FOOT-->
+<FONT FACE="Comic Sans MS">Please e-mail me if you have anything to say to me, thank you
+</FONT>
+
+<!--MAIL-->
+</P>
+<P>
+<IMG SRC="@.gif" ALIGN="middle" ALT="@"><FONT FACE="Comic Sans MS">&copy; 1996 </FONT><A HREF="mailto:ronny@net1.nw.com.au">
+<I><FONT FACE="Comic Sans MS">ronny@net1.nw.com.au</FONT></I></A><BR>
+<FONT FACE="Comic Sans MS">Last </FONT><IMG SRC="updated.gif" ALT="updated.gif"><FONT FACE="Comic Sans MS"> : Wednesday, 30th April, 1997</FONT>
+<BR>
+</P>
+
+<!--CRESCENDO-->
+<P ALIGN="center"><FONT FACE="Comic Sans MS" SIZE="1" COLOR="Lime"><I>If you cannot hear the midi, download <A HREF="http://www.liveupdate.com/crescendo.html">Crescendo PLUS 2.3 beta 3</A></I></FONT></P>
+<P ALIGN="center"><EMBED TYPE="music/crescendo" SONG="yogya.mid" PLUGINSPAGE="http://www.liveupdate.com/dl.html" WIDTH="200" HEIGHT="55"> </P>
+
+
+</BODY>
+</HTML>

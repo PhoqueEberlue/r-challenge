@@ -1,0 +1,846 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>behind the waterfall</title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta name="generator" content="Blogger" />
+<link rel="alternate" type="application/atom+xml" title="behind the waterfall" href="atom.xml" />
+<link rel="service.post" type="application/atom+xml" title="behind the waterfall" href="http://www.blogger.com/atom/7806681" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.blogger.com/rsd.g?blogID=7806681" />
+<style type="text/css">
+@import url("http://www.blogger.com/css/blog_controls.css");
+@import url("http://www.blogger.com/dyn-css/authorization.css?blogID=7806681");
+</style>
+
+
+
+  <style type="text/css">
+
+
+/* 
+Blogger Template Style
+Name:     TicTac (Blueberry)
+Author:   Dan Cederholm
+URL:      www.simplebits.com
+Date:     1 March 2004
+*/
+
+/* ---( page defaults )--- */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, sans-serif;
+  font-size: small;
+  text-align: center;
+  color: #333;
+  background: #e0e0e0;
+  }
+
+blockquote {
+  margin: 0 0 0 30px;
+  padding: 10px 0 0 20px;
+  font-size: 88%;
+  line-height: 1.5em;
+  color: #666;
+  background: url(http://www.blogblog.com/tictac_blue/quotes.gif) no-repeat top left;
+  }
+
+blockquote p {
+  margin-top: 0;
+  }
+
+abbr, acronymn {
+  cursor: help;
+  font-style: normal;
+  border-bottom: 1px dotted;
+  }
+
+code {
+  color: #996666;
+  }
+
+hr {
+  display: none;
+  }
+
+img {
+  border: none;
+  }
+
+/* unordered list style */
+
+ul {
+  list-style: none;
+  margin: 0 0 20px 30px;
+  padding: 0;
+  }
+
+li {
+  list-style: none;
+  padding-left: 14px;
+  margin-bottom: 3px;
+  background: url(http://www.blogblog.com/tictac_blue/tictac_blue.gif) no-repeat 0 6px;
+  }
+
+/* links */
+
+a:link {
+  color: #6699cc;
+  }
+
+a:visited {
+  color: #666699;
+  }
+
+a:hover {
+  color: #5B739C;
+  }
+
+a:active {
+  color: #5B739C;
+  text-decoration: none;
+  }
+
+/* ---( layout structure )---*/
+
+#wrap {
+  width: 847px;
+  margin: 0 auto;
+  text-align: left;
+  background: url(http://www.blogblog.com/tictac_blue/tile.gif) repeat-y;
+  }
+
+#content {
+  margin-left: 62px; /* to avoid the BMH */
+  }
+
+#main-content {
+  float: left;
+  width: 460px;
+  margin: 20px 0 0 0;
+  padding: 0;
+  line-height: 1.5em;
+  }
+
+#sidebar {
+  margin: 0 41px 0 547px;
+  padding: 20px 0 0 0;
+  font-size: 85%;
+  line-height: 1.4em;
+  color: #999;
+  background: url(http://www.blogblog.com/tictac_blue/sidebar_bg.gif) no-repeat 0 0;
+  }
+
+/* ---( header and site name )--- */
+
+#blog-header {
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Grande", "Trebuchet MS";
+  background: #e0e0e0 url(http://www.blogblog.com/tictac_blue/top_div_blue.gif) no-repeat top left;
+  }
+
+#blog-header h1 {
+  margin: 0;
+  padding: 45px 60px 50px 160px;
+  font-size: 200%;
+  color: #fff;
+  text-shadow: #4F73B6 2px 2px 2px;
+  background: url(http://www.blogblog.com/tictac_blue/top_h1_blue.gif) no-repeat bottom left;
+  }
+
+#blog-header h1 a {
+  text-decoration: none;
+  color: #fff;
+  }
+
+#blog-header h1 a:hover {
+  color: #eee;
+  }
+
+/* ---( main column )--- */
+
+h2.date-header {
+  margin-top: 0;
+  padding-left: 14px;
+  font-size: 90%;
+  color: #999999;
+  background: url(http://www.blogblog.com/tictac_blue/date_icon_blue.gif) no-repeat 0 50%;
+  }
+
+h3.post-title {
+  margin-top: 0;
+  font-family: "Lucida Grande", "Trebuchet MS";
+  font-size: 140%;
+  letter-spacing: -1px;
+  color: #993333;
+  }
+
+.post {
+  margin: 0 0 1.5em 0;
+  padding: 0 0 1.5em 14px;
+  font-size: 88%;
+  border-bottom: 1px solid #ddd;
+  }
+
+.post-footer {
+  margin: 0;
+  padding: 0 0 0 14px;
+  font-size: 80%;
+  color: #999;
+  background: url(http://www.blogblog.com/tictac_blue/tictac_grey.gif) no-repeat 0 8px;
+  }
+
+.post img {
+  padding: 6px;
+  border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  border-bottom: 1px solid #c0c0c0;
+  border-right: 1px solid #c0c0c0;
+  }
+
+/* comment styles */
+
+#comments {
+  padding-top: 10px;
+  font-size: 85%;
+  line-height: 1.5em;
+  color: #666;
+  background: #eee url(http://www.blogblog.com/tictac_blue/comments_curve.gif) no-repeat top left;
+  }
+
+#comments h4 {
+  margin: 20px 0 15px 0;
+  padding: 8px 0 0 40px;
+  font-family: "Lucida Grande", "Trebuchet MS";
+  font-size: 130%;
+  color: #666;
+  background: url(http://www.blogblog.com/tictac_blue/bubbles.gif) no-repeat 10px 0;
+  height: 29px !important; /* for most browsers */
+  height /**/:37px; /* for IE5/Win */
+  }
+  
+#comments ul {
+  margin-left: 0;
+  }
+
+#comments li {
+  background: none;
+  padding-left: 0;
+  }
+  
+.comment-body {
+  padding: 0 10px 0 25px;
+  background: url(http://www.blogblog.com/tictac_blue/tictac_blue.gif) no-repeat 10px 5px;
+  }
+
+.comment-body p {
+  margin-bottom: 0;
+  }
+
+.comment-data {
+  margin: 4px 0 0 0;
+  padding: 0 10px 1em 60px;
+  color: #999;
+  border-bottom: 1px solid #ddd;
+  background: url(http://www.blogblog.com/tictac_blue/comment_arrow_blue.gif) no-repeat 44px 2px;
+  }
+
+.deleted-comment {
+  font-style:italic;
+  color:gray;
+  }
+
+/* ---( sidebar )--- */
+
+h2.sidebar-title {
+  margin: 0 0 0 0;
+  padding: 25px 0 0 50px;
+  font-family: "Lucida Grande", "Trebuchet MS";
+  font-size: 130%;
+  color: #666;
+  height: 32px;
+  background: url(http://www.blogblog.com/tictac_blue/sidebar_icon.gif) no-repeat 20px 15px;
+  height: 32px !important; /* for most browsers */
+  height /**/:57px; /* for IE5/Win */
+  }
+
+#sidebar ul, #sidebar p {
+  margin: 0;
+  padding: 5px 20px 1em 20px;
+  border-bottom: 1px solid #ddd;
+  }
+
+#sidebar li {
+  background: url(http://www.blogblog.com/tictac_blue/tictac_blue.gif) no-repeat 0 5px;
+  }
+
+/* profile block */
+
+.profile-datablock {
+  margin: 0;
+  padding: 5px 20px 0 20px;
+  }
+
+.profile-datablock dd {
+  margin: 0;
+  padding: 0;
+  }
+
+.profile-img img {
+  float: left;
+  margin: 0 10px 0 0;
+  padding: 4px;
+  border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  border-bottom: 1px solid #c0c0c0;
+  border-right: 1px solid #c0c0c0;
+  background: #fff;
+  }
+
+#sidebar p.profile-link {
+  padding-left: 36px;
+  background: url(http://www.blogblog.com/tictac_blue/profile_blue.gif) no-repeat 20px 4px;
+  }
+
+p#powered-by, #sidebar p.profile-textblock {
+  margin-top: 1em;
+  border: none;
+  }
+
+/* ---( footer )--- */
+
+.clear { /* to fix IE6 padding-top issue */
+  clear: both;
+  height: 0;
+  }
+
+#footer {
+  margin: 0;
+  padding: 0 0 9px 0;
+  font-size: 85%;
+  color: #ddd;
+  background: url(http://www.blogblog.com/tictac_blue/bottom_sill.gif) no-repeat bottom left;
+  }
+
+#footer p {
+  margin: 0;
+  padding: 20px 320px 20px 95px;
+  background: url(http://www.blogblog.com/tictac_blue/bottom_sash.gif) no-repeat top left;
+  }
+
+
+  </style>
+
+
+<!-- --><style type="text/css">@import url(http://www.blogger.com/css/navbar/main.css);
+@import url(http://www.blogger.com/css/navbar/1.css);
+</style>
+
+</head>
+
+<body><!-- --><div id="b-navbar"><a href="http://www.blogger.com/" id="b-logo" title="Go to Blogger.com"><img src="http://www.blogger.com/img/navbar/1/logobar.gif" alt="Blogger" width="80" height="24" /></a><form id="b-search" action="http://www.google.com/search"><div id="b-more"><a href="http://www.blogger.com/" id="b-getorpost"><img src="http://www.blogger.com/img/navbar/1/btn_getblog.gif" alt="Get your own blog" width="112" height="15" /></a><a href="http://www.blogger.com/redirect/next_blog.pyra?navBar=true" id="b-next"><img src="http://www.blogger.com/img/navbar/1/btn_nextblog.gif" alt="Next blog" width="72" height="15" /></a></div><div id="b-this"><input type="text" id="b-query" name="q" /><input type="hidden" name="ie" value="UTF-8" /><input type="hidden" name="sitesearch" value="arland.blogspot.com" /><input type="image" src="http://www.blogger.com/img/navbar/1/btn_search.gif" alt="Search" value="Search" id="b-searchbtn" title="Search this blog with Google" /><a href="javascript:BlogThis();" id="b-blogthis">BlogThis!</a></div></form></div><script type="text/javascript"><!--
+
+function BlogThis() {Q='';x=document;y=window;if(x.selection) {Q=x.selection.createRange().text;} else if (y.getSelection) { Q=y.getSelection();} else if (x.getSelection) { Q=x.getSelection();}popw = y.open('http://www.blogger.com/blog_this.pyra?t=' + escape(Q) + '&u=' + escape(location.href) + '&n=' + escape(document.title),'bloggerForm','scrollbars=no,width=475,height=300,top=175,left=75,status=yes,resizable=yes');void(0);}
+
+ --></script><div id="space-for-ie"></div>
+
+<div id="wrap"> <!-- #wrap - for centering -->
+
+<!-- Blog Header -->
+<div id="blog-header">
+  <h1>
+    
+	behind the waterfall
+	
+  </h1>
+</div>
+
+
+<div id="content"> <!-- #content wrapper -->
+
+<!-- Begin #main-content -->
+<div id="main-content">
+
+
+
+    
+  <h2 class="date-header">Tuesday, March 15, 2005</h2>
+  
+  
+     
+  <!-- Begin .post -->
+  <div class="post"><a name="111089761206363349"></a>
+     
+    
+     
+    <div class="post-body">
+    
+      <p><div style="text-align: center;"><a href="http://photos1.blogger.com/img/117/4117/640/camera-front-angled.jpg"><img style="border: 1px solid rgb(170, 170, 170); margin: 2px;" src="http://photos1.blogger.com/img/117/4117/320/camera-front-angled.jpg" border="0" /></a><br /></div> <div style="text-align: center;">My Preciousss... <a href="http://www.hello.com/" target="ext"><img src="http://photos1.blogger.com/pbh.gif" alt="Posted by Hello" style="border: 0px none ; padding: 0px; background: transparent none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial;" align="middle" border="0" /></a></div></p>
+    
+    </div>
+    
+    <p class="post-footer">posted by arland at 
+      <a href="http://arland.blogspot.com/2005/03/my-preciousss.html" title="permanent link">10:40 PM</a> 
+       |
+         <a class="comment-link" href="http://arland.blogspot.com/2005/03/my-preciousss.html#comments">0 comments</a>
+       <span class="item-control admin-427134479 pid-1943175129"><a style="border:none;" href="http://www.blogger.com/post-edit.g?blogID=7806681&amp;postID=111089761206363349&amp;quickEdit=true" title="Edit Post"><span class="quick-edit-icon">&nbsp;</span></a></span></p>
+  
+  </div>
+  <!-- End .post -->
+  
+  
+   <!-- Begin #comments -->
+ 
+  <!-- End #comments -->
+
+
+
+    
+  <h2 class="date-header">Monday, March 14, 2005</h2>
+  
+  
+     
+  <!-- Begin .post -->
+  <div class="post"><a name="111081123947148515"></a>
+     
+    
+     
+    <div class="post-body">
+    
+      <p>I bought a digital camera yesterday and, like a child on Christmas morning, I play with my new toy every chance I get. I've only had the camera for a day but I've already taken pictures of all sorts of things: guinea pigs, empty soda bottles, plants, our garage, squidballs, the Makati skyline. I know that my enthusiasm will eventually taper off, plateau, but right now all I can think of is 'what will I take a picture of next'? *giggle* <a href="http://www.hello.com/" target="ext"><img src="http://photos1.blogger.com/pbh.gif" alt="Posted by Hello" style="border: 0px none ; padding: 0px; background: transparent none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial;" align="middle" border="0" /></a></p>
+    
+    </div>
+    
+    <p class="post-footer">posted by arland at 
+      <a href="http://arland.blogspot.com/2005/03/i-bought-digital-camera-yesterday-and.html" title="permanent link">10:40 PM</a> 
+       |
+         <a class="comment-link" href="http://arland.blogspot.com/2005/03/i-bought-digital-camera-yesterday-and.html#comments">0 comments</a>
+       <span class="item-control admin-427134479 pid-1943175129"><a style="border:none;" href="http://www.blogger.com/post-edit.g?blogID=7806681&amp;postID=111081123947148515&amp;quickEdit=true" title="Edit Post"><span class="quick-edit-icon">&nbsp;</span></a></span></p>
+  
+  </div>
+  <!-- End .post -->
+  
+  
+   <!-- Begin #comments -->
+ 
+  <!-- End #comments -->
+
+
+
+    
+  
+     
+  <!-- Begin .post -->
+  <div class="post"><a name="111080897852401762"></a>
+     
+    
+     
+    <div class="post-body">
+    
+      <p><div style="text-align: center;"><a href="http://photos1.blogger.com/img/117/4117/640/r25482121561.jpg"><img style="border: 1px solid rgb(170, 170, 170); margin: 2px;" src="http://photos1.blogger.com/img/117/4117/320/r25482121561.jpg" border="0" /></a><br /></div> <div style="text-align: center;">Picasa + Hello + BloggerBot test <a href="http://www.hello.com/" target="ext"><img src="http://photos1.blogger.com/pbh.gif" alt="Posted by Hello" style="border: 0px none ; padding: 0px; background: transparent none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial;" align="middle" border="0" /></a></div></p>
+    
+    </div>
+    
+    <p class="post-footer">posted by arland at 
+      <a href="http://arland.blogspot.com/2005/03/picasa-hello-bloggerbot-test.html" title="permanent link">10:02 PM</a> 
+       |
+         <a class="comment-link" href="http://arland.blogspot.com/2005/03/picasa-hello-bloggerbot-test.html#comments">0 comments</a>
+       <span class="item-control admin-427134479 pid-1943175129"><a style="border:none;" href="http://www.blogger.com/post-edit.g?blogID=7806681&amp;postID=111080897852401762&amp;quickEdit=true" title="Edit Post"><span class="quick-edit-icon">&nbsp;</span></a></span></p>
+  
+  </div>
+  <!-- End .post -->
+  
+  
+   <!-- Begin #comments -->
+ 
+  <!-- End #comments -->
+
+
+
+    
+  <h2 class="date-header">Sunday, March 06, 2005</h2>
+  
+  
+     
+  <!-- Begin .post -->
+  <div class="post"><a name="111012519971777283"></a>
+     
+    
+     
+    <div class="post-body">
+    
+      <p>Sometimes I feel this great need to talk to a person though I don't have anything to say...</p>
+    
+    </div>
+    
+    <p class="post-footer">posted by arland at 
+      <a href="http://arland.blogspot.com/2005/03/sometimes-i-feel-this-great-need-to.html" title="permanent link">11:57 PM</a> 
+       |
+         <a class="comment-link" href="http://arland.blogspot.com/2005/03/sometimes-i-feel-this-great-need-to.html#comments">0 comments</a>
+       <span class="item-control admin-427134479 pid-1943175129"><a style="border:none;" href="http://www.blogger.com/post-edit.g?blogID=7806681&amp;postID=111012519971777283&amp;quickEdit=true" title="Edit Post"><span class="quick-edit-icon">&nbsp;</span></a></span></p>
+  
+  </div>
+  <!-- End .post -->
+  
+  
+   <!-- Begin #comments -->
+ 
+  <!-- End #comments -->
+
+
+
+    
+  
+     
+  <!-- Begin .post -->
+  <div class="post"><a name="111012453788825373"></a>
+     
+    
+    <h3 class="post-title">
+	 
+	 Not a Morning Person
+	 
+    </h3>
+    
+     
+    <div class="post-body">
+    
+      <p>I'm not a morning person. I've always been content spending the early half of the day with my pillows, my blanket and my bed. Ahh, comfort. I set my alarm to go off three times just to make sure. And, in spite of that it still takes me an hour after waking up to actually, you know, wake up. A morning zombie - the only difference between me and the undead is I'm stilll alive.<br /><br />Last week, it almost cost me. I was riding at the back of an AUV, half-asleep-half-awake, on my way to work. At one of the stops, somebody was going to alight so I swung the door open without looking. The driver was looking at me and he was saying something. It took me several seconds to realize what was happening - he's telling me to watch the door! Fortunately, I did not hit anything. Whew!<br />----<br /><br />In other matters, tomorrow me and my fellow trainees will be celebrating our first month at work. We're still in training and will still be for another month. I want to start working already. I want to experience it so I could finally know if I'd like it or not - I mean, so that if I don't like it, I could start 'dealing' with it, and if I do like it, I could start enjoying it. I guess all I'm trying to say is I want the 'real' thing. Bring it on!</p>
+    
+    </div>
+    
+    <p class="post-footer">posted by arland at 
+      <a href="http://arland.blogspot.com/2005/03/not-morning-person.html" title="permanent link">11:47 PM</a> 
+       |
+         <a class="comment-link" href="http://arland.blogspot.com/2005/03/not-morning-person.html#comments">0 comments</a>
+       <span class="item-control admin-427134479 pid-1943175129"><a style="border:none;" href="http://www.blogger.com/post-edit.g?blogID=7806681&amp;postID=111012453788825373&amp;quickEdit=true" title="Edit Post"><span class="quick-edit-icon">&nbsp;</span></a></span></p>
+  
+  </div>
+  <!-- End .post -->
+  
+  
+   <!-- Begin #comments -->
+ 
+  <!-- End #comments -->
+
+
+
+    
+  <h2 class="date-header">Saturday, February 26, 2005</h2>
+  
+  
+     
+  <!-- Begin .post -->
+  <div class="post"><a name="110935472422673129"></a>
+     
+    
+    <h3 class="post-title">
+	 
+	 Scripting
+	 
+    </h3>
+    
+     
+    <div class="post-body">
+    
+      <p>Work's good. We're still training - some programming stuff, tools we're going to use-- so there's not much pressure... yet. I'm actually enjoying the training, learning some new things. Along with the introduction of a new topic, we got ourselves a new trainer (<span style="font-style: italic;">or trainor?</span>) whom I dislike - initially, at least. He's been useless so far. Not that he's incompetent or anything - I mean, he wouldn't be our trainer if he weren't- but the way he does could be called teaching only in the loosest sense of the word. He keeps saying that he's not going to spoon-feed us information so we'd learn. So far he's been true to he's been true to his word - he hasn't given us any information at all. He gives us these handouts, PowerPoint printouts that were supposed to be an outline of the topics, then proceeds to NOT discuss them. No syntax, no manual, no list of commands. Nada. He just hovered. If that's all he's going to do, he should have just given us a to-do list and left us to ourselves. We'd all be happy that way.<br /><br />-----<br />I wanted this post to be a positive one - it was positive at the start - but ended up with another rant. Maybe next time.</p>
+    
+    </div>
+    
+    <p class="post-footer">posted by arland at 
+      <a href="http://arland.blogspot.com/2005/02/scripting.html" title="permanent link">2:02 AM</a> 
+       |
+         <a class="comment-link" href="http://arland.blogspot.com/2005/02/scripting.html#comments">0 comments</a>
+       <span class="item-control admin-427134479 pid-1943175129"><a style="border:none;" href="http://www.blogger.com/post-edit.g?blogID=7806681&amp;postID=110935472422673129&amp;quickEdit=true" title="Edit Post"><span class="quick-edit-icon">&nbsp;</span></a></span></p>
+  
+  </div>
+  <!-- End .post -->
+  
+  
+   <!-- Begin #comments -->
+ 
+  <!-- End #comments -->
+
+
+
+    
+  <h2 class="date-header">Sunday, February 13, 2005</h2>
+  
+  
+     
+  <!-- Begin .post -->
+  <div class="post"><a name="110831026061128517"></a>
+     
+    
+    <h3 class="post-title">
+	 
+	 Week One
+	 
+    </h3>
+    
+     
+    <div class="post-body">
+    
+      <p>I just finished my first week at work. We're still training, though, so I don't consider it real work yet - feels more like college. I've met new friends. I was actually surprised how fast we became at ease with one another - by the third day we've already played an impromptu game of charades and talked about relationships.<br /><br />We met the GM of the company last Tuesday. He gave a speech that was both inspiring and intimidating, and left a pretty good impression. I know it's early in the game and I don't know him that well yet, but, still, my first thought was "I'd enjoy working for this guy."<br /><br />So... That's all for now. A new week starts tomorrow - I got to get me some beauty sleep.</p>
+    
+    </div>
+    
+    <p class="post-footer">posted by arland at 
+      <a href="http://arland.blogspot.com/2005/02/week-one.html" title="permanent link">11:56 PM</a> 
+       |
+         <a class="comment-link" href="http://arland.blogspot.com/2005/02/week-one.html#comments">0 comments</a>
+       <span class="item-control admin-427134479 pid-1943175129"><a style="border:none;" href="http://www.blogger.com/post-edit.g?blogID=7806681&amp;postID=110831026061128517&amp;quickEdit=true" title="Edit Post"><span class="quick-edit-icon">&nbsp;</span></a></span></p>
+  
+  </div>
+  <!-- End .post -->
+  
+  
+   <!-- Begin #comments -->
+ 
+  <!-- End #comments -->
+
+
+
+    
+  <h2 class="date-header">Monday, February 07, 2005</h2>
+  
+  
+     
+  <!-- Begin .post -->
+  <div class="post"><a name="110778820341614905"></a>
+     
+    
+     
+    <div class="post-body">
+    
+      <p>I last saw her over a year ago. I don't remember the first time I saw her. I've never spoken to her. We've never been introduced - I didn't know her and she didn't know me. But whenever she was around, in the room, I always managed to notice her, see her. I found myself drawn, or, at the least, found my attention focused on her. I can even remember her face and match it with her name (<span style="font-style: italic;">this coming from a person who can't even remember what color shirt somebody he saw a couple of minutes ago was wearing</span>). And I don't have any idea why.<br /><br />I believe that there's a reason for all our actions and emotions. So, I guess I'm just wondering: what is it that made her, this may be stretching it a bit, 'special'?</p>
+    
+    </div>
+    
+    <p class="post-footer">posted by arland at 
+      <a href="http://arland.blogspot.com/2005/02/i-last-saw-her-over-year-ago.html" title="permanent link">10:50 PM</a> 
+       |
+         <a class="comment-link" href="http://arland.blogspot.com/2005/02/i-last-saw-her-over-year-ago.html#comments">0 comments</a>
+       <span class="item-control admin-427134479 pid-1943175129"><a style="border:none;" href="http://www.blogger.com/post-edit.g?blogID=7806681&amp;postID=110778820341614905&amp;quickEdit=true" title="Edit Post"><span class="quick-edit-icon">&nbsp;</span></a></span></p>
+  
+  </div>
+  <!-- End .post -->
+  
+  
+   <!-- Begin #comments -->
+ 
+  <!-- End #comments -->
+
+
+
+    
+  <h2 class="date-header">Sunday, February 06, 2005</h2>
+  
+  
+     
+  <!-- Begin .post -->
+  <div class="post"><a name="110770313208640524"></a>
+     
+    
+    <h3 class="post-title">
+	 
+	 T.V. and Stuff...
+	 
+    </h3>
+    
+     
+    <div class="post-body">
+    
+      <p><span style="font-weight: bold;">3R</span><br />I watch <a href="http://www.3r.com.my/across.htm">3R</a>. No - I'm a big fan. It's one of the few intelligent shows on TV today. Or, it was. They recently concluded their second season, and with that said goodbye to the original hosts: Charl, Reema, and Anna. Their being ordinary people -the result of a search- was one of the reasons why I liked the show - for once, the issues were the focus instead of being drowned by the 'star power'. When they were replaced by a trio of celebrities, part of the show's appeal faded. I felt like the producers sold out. I expected their replacements to be 'real' people, too, but unfortunately the they thought otherwise.<br /><br />I half-watched (<span style="font-style: italic;">not too interested</span>) the first episode of the new season today. I'm still quite skeptical. The new host spent the entire show establishing themselves as just regular people - what they're like behind the camera, their aspirations, personal experiences. But it just felt connived, scripted, because they were trying too hard. Like, they just want to get the 'where-just-regular-people' message out of the way so they could go back to making the show.<br /><br />I'd still watch the show, though, just to see how it goes - if they could recreate the original 'spirit'.<br /><br /><span style="font-weight: bold;">Amazing Race 6</span><br />After the <a href="http://www.cbs.com/primetime/amazing_race5/">exciting 5th season</a>, the <a href="http://www.cbs.com/primetime/amazing_race6/">6th</a> just doesn't seem... amazing. It's been more like The Annoying Race, with the overabundance of whiny and irritating contestants. I didn't even notice that the season finale's this wednesday already. I wouldn't be able to watch it <a href="http://arland.blogspot.com/2004/09/box-of-memories.html">live in the morning</a> like I did <a href="http://arland.blogspot.com/2004/09/reality-tv.html">last season</a> (<span style="font-style: italic;">with me being at work and all</span>), though I couldn't care less.<br /><br />-----<br />Oh, I'll be starting work tomorrow, and I'm looking forward to it. Wish me luck.</p>
+    
+    </div>
+    
+    <p class="post-footer">posted by arland at 
+      <a href="http://arland.blogspot.com/2005/02/tv-and-stuff.html" title="permanent link">11:16 PM</a> 
+       |
+         <a class="comment-link" href="http://arland.blogspot.com/2005/02/tv-and-stuff.html#comments">0 comments</a>
+       <span class="item-control admin-427134479 pid-1943175129"><a style="border:none;" href="http://www.blogger.com/post-edit.g?blogID=7806681&amp;postID=110770313208640524&amp;quickEdit=true" title="Edit Post"><span class="quick-edit-icon">&nbsp;</span></a></span></p>
+  
+  </div>
+  <!-- End .post -->
+  
+  
+   <!-- Begin #comments -->
+ 
+  <!-- End #comments -->
+
+
+
+  <hr />
+</div><!-- End #main-content -->
+</div><!-- End #content -->
+
+
+
+<!-- Begin #sidebar -->
+<div id="sidebar">
+
+  <h2 class="sidebar-title">About</h2>
+
+  <p>Just <a href="http://www.blogger.com/profile/3712452">me</a>, mumbling on this long walk...</p>
+  
+   <!-- Begin #profile-container -->
+   
+  <!--          <div id="profile-container"> <h2 class="sidebar-title">About Me</h2> <dl class="profile-datablock">   <dt class="profile-img"> <a href="http://www.blogger.com/profile/3712452"> <img width="80" alt="My Photo" height="60" src="http://img.photobucket.com/albums/v343/arland/jenna.jpg"> </a> </dt>   <dd class="profile-data"> <strong>Name:</strong>arland </dd>  <dd class="profile-data"> <strong>Location:</strong>Philippines </dd>  </dl>  <p class="profile-textblock"> 'S' ako. (inside joke... :p) </p>  <p class="profile-link"> <a href="http://www.blogger.com/profile/3712452">View my complete profile</a> </p> </div>   // I ADDED-->
+   
+  <!-- End #profile -->
+        
+         <h2 class="sidebar-title">A Quote</h2>
+         <ul id="recently">
+           <li>What if I should discover that the poorest of the beggars and the most impudent of offenders are all within me, and that I stand in need of the alms of my own kindness; that I myself am the enemy who must be loved -- what then?<br /> - Carl Jung</li>
+        </ul>
+
+        <h2 class="sidebar-title">A Song</h2>
+         <ul id="recently">
+          <li> <b>Never Saw Blue Like That</b>
+          <br /> Shawn Colvin
+          </li>
+<br />Today, we took a walk up the street,
+<br />Picked a flower, climbed the hill above the lake.
+<br />And secret thoughts were said aloud,
+<br />We watched the faces in the clouds,
+<br />Until the clouds had blown away.
+<br />Were we ever somewhere else?
+<br />You know, its hard to say.
+<br />
+<br />I never saw blue like that before,
+<br />Across the sky, around the world.
+<br />You've given me all you have and more.
+<br />And no one else has ever shown me how
+<br />To see the world the way I see it now.
+<br />Oh, I, I never saw blue like that.
+<br />
+<br />I can't believe, a month ago,
+<br />I was alone, I didn't know you,
+<br />I hadn't seen you or heard your name.
+<br />And even now, Im so amazed,
+<br />It's like a dream, it's like a rainbow,
+<br />it's like the rain.
+<br />Some things are the way they are.
+<br />And words just can't explain.
+<br />
+<br />I never saw blue like that before,
+<br />Across the sky, around the world,
+<br />You've given me all you have and more.
+<br />And no one else has ever shown me how,
+<br />To see the world the way I see it now.
+<br />Oh, I, I never saw blue like that before.
+<br />
+<br />And it feels like now, 
+<br />And it feels always,
+<br />And it feels like coming home.
+<br />
+<br />I never saw blue like that before.
+<br />Across the sky, around the world,
+<br />You've given me all you have and more.
+<br />And no one else has ever shown me how,
+<br />To see the world the way I see it now.
+<br />Oh, I, I never saw blue like that before.
+<br />Oh, I, I never saw blue like that....
+<br />
+<br />
+         </ul>
+
+        <h2 class="sidebar-title">Friends</h2>
+         <ul id="recently">
+           <li><a href="http://chat-server.blogspot.com/">Chat-Server</a><br />  the blog I share with Pio</li>
+           <li><a href="http://mylittlesipofcoffee.blogspot.com/">Our Little Sip of Coffee</a><br />  by Maj and Susana</li>
+         </ul>
+
+        <h2 class="sidebar-title">Links</h2>
+         <ul id="recently">
+           <li><a href="http://www.bookcrossing.com/">BookCrossing</a> - Free your books!</li>
+           <li><a href="http://www.dragon-tails.com/">Dragon Tails</a> - A web comic about the antics of a bunch of 'modern' mythical reptiles.</li>
+           <li><a href="http://www.download.com/">Download.com</a> - for software and music downloads</li>
+        </ul>
+
+  <h2 class="sidebar-title">Previous Posts</h2>
+  
+  <ul id="recently">
+    
+        <li><a href="http://arland.blogspot.com/2005/03/my-preciousss.html">
+ My Preciousss... </a></li>
+     
+        <li><a href="http://arland.blogspot.com/2005/03/i-bought-digital-camera-yesterday-and.html">I bought a digital camera yesterday and, like a ch...</a></li>
+     
+        <li><a href="http://arland.blogspot.com/2005/03/picasa-hello-bloggerbot-test.html">
+ Picasa + Hello + BloggerBot test </a></li>
+     
+        <li><a href="http://arland.blogspot.com/2005/03/sometimes-i-feel-this-great-need-to.html">Sometimes I feel this great need to talk to a pers...</a></li>
+     
+        <li><a href="http://arland.blogspot.com/2005/03/not-morning-person.html">Not a Morning Person</a></li>
+     
+        <li><a href="http://arland.blogspot.com/2005/02/scripting.html">Scripting</a></li>
+     
+        <li><a href="http://arland.blogspot.com/2005/02/week-one.html">Week One</a></li>
+     
+        <li><a href="http://arland.blogspot.com/2005/02/i-last-saw-her-over-year-ago.html">I last saw her over a year ago. I don't remember t...</a></li>
+     
+        <li><a href="http://arland.blogspot.com/2005/02/tv-and-stuff.html">T.V. and Stuff...</a></li>
+     
+        <li><a href="http://arland.blogspot.com/2005/02/fugitive.html">Fugitive</a></li>
+     
+  </ul>
+  
+  
+  <h2 class="sidebar-title">Archives</h2>
+  
+  <ul class="archive-list">
+   	  
+    	<li><a href="http://arland.blogspot.com/2004_06_01_arland_archive.html">June 2004</a></li>
+	  
+    	<li><a href="http://arland.blogspot.com/2004_07_01_arland_archive.html">July 2004</a></li>
+	  
+    	<li><a href="http://arland.blogspot.com/2004_08_01_arland_archive.html">August 2004</a></li>
+	  
+    	<li><a href="http://arland.blogspot.com/2004_09_01_arland_archive.html">September 2004</a></li>
+	  
+    	<li><a href="http://arland.blogspot.com/2004_10_01_arland_archive.html">October 2004</a></li>
+	  
+    	<li><a href="http://arland.blogspot.com/2004_11_01_arland_archive.html">November 2004</a></li>
+	  
+    	<li><a href="http://arland.blogspot.com/2004_12_01_arland_archive.html">December 2004</a></li>
+	  
+    	<li><a href="http://arland.blogspot.com/2005_01_01_arland_archive.html">January 2005</a></li>
+	  
+    	<li><a href="http://arland.blogspot.com/2005_02_01_arland_archive.html">February 2005</a></li>
+	  
+    	<li><a href="http://arland.blogspot.com/2005_03_01_arland_archive.html">March 2005</a></li>
+	  
+      
+  </ul>
+  
+  
+  <!--<h2 class="sidebar-title">New</h2>
+  
+  <p>This is a paragraph of text in the sidebar.</p>
+  -->
+  
+  <p id="powered-by"><a href="http://www.blogger.com"><img src="http://buttons.blogger.com/bloggerbutton1.gif" alt="Powered by Blogger" /></a></p>
+  <p id="powered-by"><a href="http://www.spreadfirefox.com/?q=affiliates&amp;id=65586&amp;t=58"><img border="0" alt="Get Firefox!" title="Get Firefox!" src="http://sfx-images.mozilla.org/affiliates/Buttons/180x60/get.gif"/></a></p>
+
+
+</div>
+<!-- End #sidebar -->
+
+<div class="clear">&nbsp;</div>
+
+<div id="footer">
+   <p><!-- If you'd like, you could place footer information here. -->&nbsp;</p>
+</div>
+
+</div> <!-- end #wrap -->
+
+<!-- c(~) -->
+</body>
+</html>

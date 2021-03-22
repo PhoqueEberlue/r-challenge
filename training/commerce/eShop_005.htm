@@ -1,0 +1,526 @@
+<!-- IWCatDefault.tem Rel: 3.0 - Copyright (c) 2002 Marks and Spencer plc. All rights reserved -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<link rel="stylesheet" href="/templates/static/styles/rebrand/rb04_error_page.css" type="text/css" media="all"/>
+<html xmlns="http://www.w3.org/TR/xhtml1" lang="en-GB" xml:lang="en-GB">
+<head>
+  <meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT" />
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="pragma" content="no-cache" />
+  <meta name="distribution" content="GLOBAL" />
+  <meta name="revisit-after" content="15 Days" />
+  <meta name="description" content="Welcome to Marks &amp; Spencer online. Shop online, see our share price, corporate history, recruitment and community sections and find out about our stores" />
+<title>Marks &amp; Spencer Online Shopping</title>
+<meta name="robots" content="ALL" />
+<meta name="rating" content="SAFE FOR KIDS" />
+<meta name="copyright" content="Marks and Spencer p.l.c." />
+<meta name="Author" content="Marks and Spencer p.l.c." />
+<meta name="Classification" content="Retailer Apparel" />
+<meta name="Language" content="en-GB" />
+<meta http-equiv="reply-to" content="webmaster@marks-and-spencer.com" />
+<script language="JavaScript" type="text/javascript" src="/mocha/include.new.js"></script>
+<script language="JavaScript" type="text/javascript" src="/mocha/sitestat_all.js"></script>
+
+<!--  IWEventHandling.tem -->
+
+				
+
+
+
+
+</head>
+
+
+<body onLoad="void globalInit();" >
+
+<!-- End Sitestat4 Loadingtime1 code -->
+<!-- Begin Sitestat code -->
+
+<script language="JavaScript1.1" type="text/javascript">
+<!--
+var counterName = "/";
+//-->
+</script>
+<!-- End Sitestat code -->
+
+
+<!-- check IW for page ID -->
+
+
+   <!-- IWNavBar-Browse.tem Rel: 3.0 - Copyright (c) 2002 Marks and Spencer plc. All rights reserved -->
+
+   
+<!-- Start DI Tracking Code for HEAD section-->
+<SCRIPT LANGUAGE="JavaScript1.2">
+if (window.location.protocol == "http:") /* only execute for non-logged-in pages Karl */
+{
+	var refr=escape(document.referrer); /* get the http referer and encode it */
+	var dom=location.hostname; /* get the host domain */
+	var stURL="http://eu.link.decdna.net/n/10276/11596/www.marksandspencer.com/c6687357002503000000000600000000032807920000000000000000000000000000000100/i/c?0&1pixgif&referer="
+	+ refr;
+	if (refr && refr.search(dom) == -1) /* if the referrer is external preload the image request */
+	{
+		imageTR = new Image();
+		imageTR.src = stURL;
+	}
+}
+
+</SCRIPT>
+<!-- End DI Tracking Code -->   
+   
+
+<script language="JavaScript" type="text/javascript">
+<!--
+//<![CDATA[
+function submitInput(theInput) {
+
+  var theValue = theInput.value;
+  var theForm  = theInput.form;
+
+  if (theValue == "Keyword or Product Code"){
+    alert("Please enter a Keyword or Product Code");
+    document.navProductSearch.query.focus();
+    return (false);
+  }
+
+  if (!isNaN(parseInt(theValue, 10))) {
+    theValue = theValue.replace(/\s/g, "");
+  }
+
+  invalidstring = new Array('&&', '**', '&*', '*&', '<', '>', '{', '}');
+  var invalidstring1 = '*';
+
+
+  if(theValue.length == 0) {
+    alert("Please enter search criteria");
+    return (false);
+  }
+  else if(theValue.length == 1) {
+    if(!allownotinstring(theValue, invalidstring1)) {
+      alert("Please refine search criteria");
+      return (false);
+    }
+  }
+  else {
+    for (count=0; count < invalidstring.length; count++) {
+      if(!allownotinstring(theValue, invalidstring[count])) {
+        var message = "Invalid characters in search! Cannot use " + theValue
+        alert(message);
+        return (false);
+      }
+    }
+  }
+
+    if( !isNaN(parseInt(theValue, 10 )))
+    {
+    	//if search string is numeric and its length is less than 8 then pad it with zeros
+    	if(theValue.length <= 8)
+      	{
+    		var UPCPad = 8 - theValue.length;
+            	for (var i=0; i<UPCPad; i++)
+    		      {
+    			        theValue = "0" + theValue;
+    		      }
+      	}
+      	document.forms.navProductSearch.query.value = theValue;
+      	document.forms.navProductSearch.action = "/IWProductSearch.process";
+      	document.forms.navProductSearch.submit();
+     }
+     else {
+
+        var firstChar = theValue.substring(0,1);
+
+      	//Check if first char is not numeric
+      	if( isNaN( parseInt( firstChar, 10 ) ) )
+      	{
+      		var nextTwoChar = theValue.substring(1,3);
+
+      		//check if next two char are numeric
+      		if( !isNaN( parseInt( nextTwoChar, 10 ) ) )
+      		{
+      			var fourthChar = theValue.substring(3,4);
+
+      			//check if the fourth char is either space or forward slash or hypen
+      			if( fourthChar == "/" || fourthChar == " " || fourthChar == "-")
+      			{
+      		 		//ignore space or forward slash in search
+      		 		var firstString = theValue.substring(0,3);
+      		 		var lastString = theValue.substring(4,theValue.length);
+      				document.all.query.value = firstString + lastString ;
+
+      				document.forms.navProductSearch.action = "/IWProductSearch.process";
+      	      document.forms.navProductSearch.submit();
+      			}
+      			else {
+      			    document.forms.navProductSearch.action = "/IWProductSearch.process";
+      	        document.forms.navProductSearch.submit();
+      			}
+      		}
+      		else {
+      		    document.forms.navProductSearch.action = "/Search/MNSSearchESP.process";
+      	      document.forms.navProductSearch.submit();
+      		}
+      	}
+      	else {
+      	    document.forms.navProductSearch.action = "/Search/MNSSearchESP.process";
+      	    document.forms.navProductSearch.submit();
+      	}
+     }
+}
+
+
+/* Cycle 9, Cookie Encryption , Change Request, Start*/
+function getcookie(cookiename)
+{
+     var cookiestring=""+document.cookie;
+
+     var indexMain=cookiestring.indexOf('MNSU');
+
+     var Name = "";
+	if(indexMain > 0)
+	{
+	   indexMain = indexMain + 5;
+	   var indexFirst=cookiestring.indexOf('f=');
+	   var indexLast=cookiestring.indexOf('l=');
+	   var firstNm = cookiestring.substring(indexFirst + 2, indexLast - 1)
+
+		if(cookiestring.indexOf(';', indexLast)>0)
+		var lastNm = cookiestring.substring(indexLast + 2, cookiestring.indexOf(';', indexLast))
+		else
+		var lastNm = cookiestring.substring(indexLast + 2, cookiestring.length)
+
+	   firstNm = decode64(firstNm);
+	   lastNm = decode64(lastNm);
+	   Name = firstNm + " " + lastNm;
+
+	 }
+	else
+	 {
+	   indexMain=cookiestring.indexOf('MNSI');
+           if(indexMain > 0)
+			{
+
+		   var firstNm = "";
+
+		   firstNm = decode64(firstNm);
+
+		   var lastNm = "";
+		   lastNm = decode64(lastNm);
+		   Name = firstNm + " " + lastNm;
+
+			}
+	}
+		if(Name != "")
+			{
+				document.write("<div id=hello><p>Hello, " + Name + " <a href=http://www.marksandspencer.com/MNSLogoutUser.process?restartFlow=t >not " + Name + "?" +  "</a></p></div>")
+			}
+    return true;
+}
+/* Cycle 9, Cookie Encryption , Change Request, End*/
+
+
+// ]]
+// -->
+</script>
+<div id="IWNavBar">
+<script language="JavaScript" type="text/javascript" src="/javascript/search-functions.js"></script>
+<script language="JavaScript" type="text/javascript" src="/javascript/MNSBase64.js"></script>
+<link rel="stylesheet" href="/Templates/static/styles/navigation.css" type="text/css" media="all" />
+<link rel="stylesheet" href="/Templates/static/styles/rebrand/rb04_IWNavBar.css" type="text/css" media="all" />
+<!-- Skiplinks.tem Rel: 3.0 -  Copyright (c) 2004 Marks and Spencer plc. All rights reserved -->
+
+<div class="skiplinks">
+  <ul>
+    <script type="text/javascript">
+    // <![CDATA[
+    if (top.frames[0]){
+    }else{
+    document.write('<li><a href="#access-content" accesskey="c">Jump to main Content [Accesskey \'C\']</a></li>');
+    }
+    // ]]>
+    </script>
+    <li><a href="#access-navigation" accesskey="n">Jump to department Navigation menu [Accesskey 'N']</a></li>
+
+    <script type="text/javascript">
+    // <![CDATA[
+    if (top.frames[0]){
+    }else{
+    document.write('<li><a href="#access-subnav" accesskey="s">Jump to Sub-navigation menu [Accesskey \'S\']</a></li>');
+    }
+    // ]]>
+    </script>
+    <li><a href="#access-basket" accesskey="b">Jump to shopping Basket [Accesskey 'B']</a></li>
+  </ul>
+</div>
+
+<a target="_top" href="/" id="IWNavBarLogo"><img src="/images/topnav/level0/new/logo.gif" width="157" height="86" alt="Marks &amp; Spencer" border="0"/></a>
+<!--      IWBasket.tem -->
+
+
+
+  <div id="IWBasket">
+  <a name="access-basket" id="access-basket"></a>
+  <h2><a target="_top" href="/OMBasketDetail.process?RestartFlow=t&OMAction=BasketDetail"><img src="/images/topnav/level0/new/rb04_shopbasket.gif" width="108" height="25" alt="shopping basket" border="0" /></a></h2>
+
+  <p id="basketUtils"><a target="_top" href="/OMBasketDetail.process?RestartFlow=t&OMAction=BasketDetail"><img src="/images/topnav/level0/new/rb04_view.gif" width="41" height="22" alt="View Shopping Basket" border="0" /></a><span class="offLeft"> | </span><a target="_top" href="/OMPlaceOrder.process?RestartFlow=t&OMStartOrderProcess=t"><img src="/images/topnav/level0/new/rb04_checkout.gif" width="67" height="22" alt="Proceed to Checkout" border="0" /></a></p>
+
+  <p id="basketItems"><SCRIPT language=JavaScript src="javascript/IWBasketGet.js" type=text/javascript></SCRIPT></p>
+
+  
+  <p id="basketDisclaim">inc.<a href="/Templates/static/context-help/delivery-charge.html" onclick="launch(this.href, 400, 400, 'help', true); return false;" target="_blank" title="This link will open in a new window">delivery</a> and <a href="/Templates/static/context-help/vat-popup.html" onclick="launch(this.href, 400, 400, 'help', true); return false" target="_blank" title="This link will open in a new window">VAT</a></p>
+  
+  </div>
+
+
+<ul id="IWNavBarKeyTasks" class="utilNav">
+	<li class="IWNavBarKeyTasksNoDivider"><a target="_top" href="/" class="utilNav2" accesskey="1">Home</a></li>
+	<li><a target="_top" href="/Members.tem">Your File</a>
+	</li>
+	<li><a href="/templates/static/popups/help/index.html" onClick="launch(this.href, 640, 480, 'help', true); return false;" class="utilNav2" accesskey="6">Help</a></li>
+	<li><a target="_top" href="/Templates/Catalog/IWDeptStrokeOrderForm.tem" class="utilNav2" title="search using a product reference code">Quick Order</a></li>
+	<li class="IWNavBarKeyTasksNoDivider" style="padding-right: 0; margin-right: 0;"><script type="text/javascript">
+	<!-- // <![CDATA[
+	document.write('<form method="post" action="/Search/MNSSearchESP.process" target="_top" enctype="x-www-form-encoded" name="navProductSearch" onSubmit="return submitInput(this.elements[\'query\']);">');
+	// ]]>
+	// -->
+	</script>
+	<noscript><form method="post" action="/Search/MNSSearchESP.process" target="_top" enctype="x-www-form-encoded" name="navProductSearch"></noscript>
+	<script type="text/javascript">
+	<!-- // <![CDATA[
+	document.write('<input type="text" class="searchBox" name="query" value="Keyword or Product Code" onFocus="if(this.value==\'Keyword or Product Code\')this.value=\'\';" onBlur="if(this.value==\'\')this.value=\'Keyword or Product Code\';" accesskey="4" id="txSearchQuery"/>');
+	// ]]>
+	// -->
+	</script>
+	<noscript><input type="text" class="searchBox" name="query" value=""  accesskey="4" id="txSearchQuery"/></noscript>
+	<input type="image" src="/images/topnav/rb04_search.gif" width="55" height="22" alt="Search" id="IWNavBarSeachGo" />
+	
+	<input type="hidden" name="SearchAction" value="Basic" />
+	<input type="hidden" name="var" value="stemming" />
+	<input type="hidden" name="stemming" value="true" />
+	<input type="hidden" name="var" value="num_rows" />
+	<input type="hidden" name="num_rows" value="50" />
+	<input type="hidden" name="var" value="query.message" />
+	<input type="hidden" name="error_query" value="Go back and enter some words to search for." />
+	<input type="hidden" name="RowsPerPage" value="50" />
+	<input type="hidden" name="prod_attrib" value="1" />
+	<input type="hidden" name="RestartFlow" value="t" />
+	</form></li>
+</ul>
+
+
+
+       
+	
+	
+		
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+
+		   <script language="javascript">
+			getcookie();
+		   </script>
+		
+	
+        
+	
+
+
+
+
+<ul id="primary"><a name="access-navigation"></a><li><a target="_top" href="/IWCatSectionView.process?Section_Id=5"><img src="/Images/Catalog/Product/section\unselected\women_off_050303.gif" height="25" alt="Women" border="0" /></a></li><li><a target="_top" href="/IWCatSectionView.process?Section_Id=6"><img src="/Images/Catalog/Product/section\unselected\lingerie_off_050303.gif" height="25" alt="Lingerie" border="0" /></a></li><li><a target="_top" href="/IWCatSectionView.process?Section_Id=7"><img src="/Images/Catalog/Product/section\unselected\men_off_050303.gif" height="25" alt="Men" border="0" /></a></li><li><a target="_top" href="/IWCatSectionView.process?Section_Id=8"><img src="/Images/Catalog/Product/section\unselected\kids_off_050303.gif" height="25" alt="Kids" border="0" /></a></li><li><a target="_top" href="/IWCatSectionView.process?Section_Id=10"><img src="/Images/Catalog/Product/section\unselected\home_off_050303.gif" height="25" alt="Home" border="0" /></a></li><li><a target="_top" href="/IWCatSectionView.process?Section_Id=833"><img src="/Images/Catalog/Product/section\unselected\furniture_off_050303.gif" height="25" alt="Furniture" border="0" /></a></li><li><a target="_top" href="/IWCatSectionView.process?Section_Id=1658"><img src="/Images/Catalog/Product/section\unselected\gifts_off_050303.gif" height="25" alt="Gifts" border="0" /></a></li><li><a target="_top" href="/IWCatSectionView.process?Section_Id=12"><img src="/Images/Catalog/Product/section\unselected\flowers_off_050303.gif" height="25" alt="Flowers" border="0" /></a></li><li><a target="_top" href="/IWCatSectionView.process?Section_Id=4104"><img src="/Images/Catalog/Product/section\unselected\wine_off_050303.gif" height="25" alt="Wine" border="0" /></a></li><li><a target="_top" href="/IWCatSectionView.process?Section_Id=5703"><img src="/Images/Catalog/Product/section\unselected\offer_off_050303.gif" height="25" alt="Offers" border="0" /></a></li></ul>
+
+
+	<img src="/images/1.gif" width="1" height="10" alt="" />
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    <link rel="stylesheet" href="/templates/static/styles/main_04.css" type="text/css" media="all" />
+
+<div id="wrapper">
+<div id="leftNav">
+<h3>Featured Collections</h3>
+<a name="access-subnav"></a>
+<ul>
+<li><a href="/IWCatSectionView.process?IWAction=Load&Merchant_Id=1&Section_Id=5&Page_Count=1&RestartFlow=t"><strong>Women</strong></a></li>
+<li><a href="/IWCatSectionView.process?IWAction=Load&Merchant_Id=1&Section_Id=7211&Page_Count=1&RestartFlow=t">Autograph</a></li>
+<li><a href="/IWCatSectionView.process?IWAction=Load&Merchant_Id=1&Section_Id=5889&Page_Count=1&RestartFlow=t">per una</a></li>
+<li class="last-item"><a href="/IWCatSectionView.process?IWAction=Load&Merchant_Id=1&Section_Id=5907&Page_Count=1&RestartFlow=t">Limited Collection</a></li>
+
+<li><a href="/IWCatSectionView.process?IWAction=Load&Merchant_Id=1&Section_Id=6&Page_Count=1&RestartFlow=t"><strong>Lingerie</strong></a></li>
+<li class="last-item"><a href="/IWCatSectionView.process?IWAction=Load&Merchant_Id=1&Section_Id=6985&Page_Count=1&RestartFlow=t">Adored</a></li>
+
+<li><a href="/IWCatSectionView.process?IWAction=Load&Merchant_Id=1&Section_Id=7&Page_Count=1&RestartFlow=t"><strong>Men</strong></a></li>
+<li><a href="/IWCatSectionView.process?IWAction=Load&Merchant_Id=1&Section_Id=634&Page_Count=1&RestartFlow=t">Blue Harbour</a></li>
+<li class="last-item"><a href="/IWCatSectionView.process?IWAction=Load&Merchant_Id=1&Section_Id=6747&Page_Count=1&RestartFlow=t">Collezione</a></li>
+
+<li><a href="/IWCatSectionView.process?IWAction=Load&Merchant_Id=1&Section_Id=8&Page_Count=1&RestartFlow=t"><strong>Kids</strong></a></li>
+<li class="last-item"><a href="/IWCatSectionView.process?IWAction=Load&Merchant_Id=1&Section_Id=5642&Page_Count=1&RestartFlow=t">Schoolwear</a></li>
+</ul>
+<h3>Online Features</h3>
+<ul>
+<li><a href="/IWCatSectionView.process?IWAction=Load&Merchant_Id=1&Section_Id=6094&Page_Count=1&RestartFlow=t">In the Press</a></li>
+<li class="last-item"><a href="/IWCatSectionView.process?IWAction=Load&Merchant_Id=1&Section_Id=3711&Page_Count=1&RestartFlow=t">&amp;MORE offers</a></li>
+</ul>
+
+<div id="leftMoney"><a href="http://www6.marksandspencer.com/default.asp"><img src="images/static/billboards/main/left_nav_money_040804.gif" alt="Marks &amp; Spencer Money" width="127" height="50" border="0" /></a></div>
+<div id="leftEmail">
+<div class="leftEmailImg"><img src="images/static/billboards/main/left_nav_email_040804.gif" width="36" height="30" alt="" /></div>
+<div class="leftEmailLink"><a href="http://marksandspencer.ed4.net/profile/signup.cfm" onClick="javascript:launch(this.href, 800, 600, 'help', true);return false;" target="_top" class="leftEmailLink">Newsletter</a></div>
+<p>Be the first to hear about offers, promotions and products</p>
+</div>
+
+
+</div>
+<div id="WrapContent">
+
+<div style="margin-bottom: 14px; ">
+<a href="/templates/static/popups/help/shopping/promotioncode_how_new.html#freedeliveryOne" onClick="javascript:launch(this.href, 673, 550, 'help', true);return false;" target="_top">
+<img src="/images/static/billboards/headers/free_delivery_180105.gif" width="560" height="59" border="0" alt="free delivery when you spend &pound;30 or more">
+</a>
+</div>
+<a name="access-content"></a>
+
+<h1 class="hide">Homepage</h1>
+    <div id="mainPromo" class="promoMain bgImage"><a href="/IWCatSectionView.process?IWAction=Load&Merchant_Id=1&Section_Id=833&Page_Count=1&RestartFlow=t"><img src="images/static/billboards/main/main_hero_text_050323.gif" alt="see all furniture"  border="0" class="mainhero" /></a>
+      <div id="mainPromoInfo" class="promoMain">
+<p>This Easter you can furnish your home for less with big savings on a wide range of sofas, chairs, furniture <br />and homeware</p>
+<ul>
+<li class="cheved botBold"><a href="/IWCatSectionView.process?IWAction=Load&Merchant_Id=1&Section_Id=833&Page_Count=1&RestartFlow=t">At least <span class="red">20% off </span> selected <br />furniture collections</a></li>
+<li class="cheved botBold"><a href="/IWCatSectionView.process?IWAction=Load&Merchant_Id=1&Section_Id=6088&Page_Count=1&RestartFlow=t">At least <span class="red">20% off</span> selected sofas and chairs in all <br />fabrics and leather </a></li>
+<li class="cheved botBold"><a href="/IWCatSectionView.process?IWAction=Load&Merchant_Id=1&Section_Id=10&Page_Count=1&RestartFlow=t"><span class="red">20% off</span> selected <br />homeware items</a></li>
+</ul>
+</div>
+</div>
+
+<div class="tallThumbWrap">
+
+<div class="columnPromo">
+<div class="titleGrey"><h2><a href="/IWCatSectionView.process?IWAction=Load&Merchant_Id=1&Section_Id=5&Page_Count=1&RestartFlow=t">Summer Fashion</a></h2>
+<a href="/IWCatSectionView.process?IWAction=Load&Merchant_Id=1&Section_Id=5&Page_Count=1&RestartFlow=t"><img src="images/static/billboards/main/main_t1_050322.jpg" alt="see all summer fashion" class="borderNewH2"/></a></div>
+<p style="margin-bottom: 29px;">Check out the latest high-summer additions to our women’s collections</p>
+<ul style="margin-bottom: 3px;">
+<li><a href="/IWCatSectionView.process?IWAction=Load&Merchant_Id=1&Section_Id=16&Page_Count=1&RestartFlow=t">View Tops & T-shirts</a></li>
+<li><a href="/IWCatSectionView.process?IWAction=Load&Merchant_Id=1&Section_Id=5953&Page_Count=1&RestartFlow=t">View Casual Trousers</a></li>
+<li><a href="/IWCatSectionView.process?IWAction=Load&Merchant_Id=1&Section_Id=6668&Page_Count=1&RestartFlow=t">View Swimwear</a></li>
+</ul>
+</div>
+
+<div class="columnPromoMain">
+<!--<div class="titleGrey">-->
+<div><h2><a href="/IWCatSectionView.process?IWAction=Load&Merchant_Id=1&Section_Id=634&Page_Count=1&RestartFlow=t"><img src="images/static/billboards/main/main_t2_title_050323.gif" alt="see all blue harbour collection"  border="0" /></a></h2>
+<a href="/IWCatSectionView.process?IWAction=Load&Merchant_Id=1&Section_Id=634&Page_Count=1&RestartFlow=t"><img src="images/static/billboards/main/main_t2_050323.jpg"  alt="see all blue harbour collection"  border="0" class="borderNewH2"/></a></div>
+<p style="margin-bottom: 13px;">Freshen up with the cool summer colours and relaxed designs of <br />Blue Harbour</p>
+<ul style="margin-bottom: 4px;">
+<li><a href="/IWCatSectionView.process?IWAction=Load&Merchant_Id=1&Section_Id=662&Page_Count=1&RestartFlow=t">View Tops & T-shirts</a></li>
+<li><a href="/IWCatSectionView.process?IWAction=Load&Merchant_Id=1&Section_Id=724&Page_Count=1&RestartFlow=t">View Shorts & Swimwear</a></li>
+<li><a href="/IWCatSectionView.process?IWAction=Load&Merchant_Id=1&Section_Id=664&Page_Count=1&RestartFlow=t">View Shoes</a></li>
+</ul>
+</div>
+
+
+<div class="columnPromo last">
+<div class="titleGrey"><h2><a href="/IWCatSectionView.process?IWAction=Load&Merchant_Id=1&Section_Id=12&Page_Count=1&RestartFlow=t">Flowers for Easter</a></h2>
+<a href="/IWCatSectionView.process?IWAction=Load&Merchant_Id=1&Section_Id=12&Page_Count=1&RestartFlow=t"><img src="images/static/billboards/main/main_t3_050321.jpg" alt="see all flowers" class="borderNewH2" /></a></div>
+<p style="margin-bottom: 13px;">Wish your loved ones a <br />very ‘Happy Easter‘ with <br />our selection of <br />gorgeous blooms</p>
+<ul style="margin-bottom: 4px;">
+<li><a href="/IWCatSectionView.process?IWAction=Load&Merchant_Id=1&Section_Id=2714&Page_Count=1&RestartFlow=t">View Easter Flowers</a></li>
+<li><a href="/IWCatSectionView.process?IWAction=Load&Merchant_Id=1&Section_Id=7082&Page_Count=1&RestartFlow=t">View Flowers by Post</a></li>
+<li><a href="/IWCatSectionView.process?IWAction=Load&Merchant_Id=1&Section_Id=1151&Page_Count=1&RestartFlow=t">View Wine Gifts</a></li>
+</ul>
+</div>
+</div>
+
+
+
+
+</div>
+<div class="PropBar" style="margin-top:8px;"><p>so much more just for you at <em>www.marksandspencer.com</em></p></div>
+</div>
+
+
+  
+
+
+
+
+
+
+
+
+   <!-- IWServiceBar.tem Rel: 3.0 -->
+
+<a name="bottom"></a>
+<div id="footer">
+<div id="serviceBarShop">
+<h2>Shopping Online</h2>
+<ul><li><a target="_top" href="/UMRegisterCustomer.process?restartFlow=t">Your account</a></li>
+	<li class="right"><a href="/templates/static/popups/help/sizeguide/index.html" onClick="launch(this.href, 640, 480, 'help', true); return false;" target="_blank" title="This link opens in a new window">Size Guide</a></li>
+	<li><a href="/templates/static/popups/help/delivery/charges.html" onClick="launch(this.href, 640, 480, 'help', true); return false;" target="_blank" title="This link opens in a new window">Delivery charges</a></li>
+	<li class="right"><a href="/IWCatSectionView.process?IWAction=Load&Merchant_Id=1&Section_Id=2590&Page_Count=1&RestartFlow=t" >Site map</a></li>
+<li><a href="/templates/static/popups/help/policies/payment.html" onClick="launch(this.href, 640, 480, 'help', true); return false;" target="_blank" title="This link opens in a new window">Payment &amp; returns</a></li>
+<li><a href="/templates/static/popups/help/policies/access.html" onClick="launch(this.href, 640, 480, 'help', true); return false;" target="_blank" title="This link opens in a new window">Accessibility</a></li>
+<li class="right"><a href="/templates/static/popups/help/policies/tandc.html" onClick="launch(this.href, 640, 480, 'help', true); return false;" target="_blank" title="This link opens in a new window" accesskey="8">Terms &amp; Conditions</a></li>
+<li class="right"><a href="http://www2.marksandspencer.com/feedback/help/index.asp?n=c" onClick="launch(this.href, 640, 480, 'help', true); return false;" target="_blank" title="This link opens in a new window" accesskey="9">Contact Us</a></li>
+</ul>
+</div>
+
+<div id="serviceBarService">
+<h2>Services</h2>
+<ul>
+<li><a href="http://marksandspencer.ed4.net/profile/signup.cfm" title="Be the first to hear about our new offers">Email Newsletter</a></li>
+<li><a href="http://www2.marksandspencer.com/foodmagazine/" title="recipes and ideas">Our Food</a></li>
+<li><a href="/GiftRegistry/MSGiftRegistryHome.process?RestartFlow=t">Gift Registry</a></li>
+</ul>
+</div>
+
+<div id="serviceBarMoney">
+<h2>M&amp;S Money</h2>
+<ul>
+<li><a href="http://www6.marksandspencer.com/default.asp">&amp;More Card</a></li>
+<li><a href="http://www6.marksandspencer.com/pages/default.asp?PageId=home&Product=PL">Personal loans</a></li>
+<li><a href="http://www6.marksandspencer.com/default.asp">Insurance</a></li>
+<li><a href="http://www6.marksandspencer.com/default.asp">Savings and investment</a></li>
+</ul>
+</div>
+
+<div id="serviceBarAbout">
+<h2>About Us</h2>
+<ul>
+<li><a href="http://www2.marksandspencer.com/thecompany/">The Company</a></li>
+<li><a href="http://www2.marksandspencer.com/stores/">Store finder</a></li>
+<li><a href="http://www2.marksandspencer.com/thecompany/workingwithus/index.shtml">Jobs</a></li>
+<li><a href="/templates/static/popups/help/policies/privacy.html" onClick="launch(this.href, 640, 480, 'help', true); return false;" target="_blank" title="This link opens in a new window">Privacy</a></li>
+</ul>
+</div>
+
+<div id="helloSpider"><p>Online shopping for <a href="/IWCatSectionView.process?Section_Id=5">women's</a> clothing, <a href="/IWCatSectionView.process?Section_Id=7">men's</a> clothing, <a href="/IWCatSectionView.process?Section_Id=6">lingerie</a>, <a href="/IWCatSectionView.process?Section_Id=8">childrenswear</a>, <a href="/IWCatSectionView.process?Section_Id=10">home</a> &amp; <a href="/IWCatSectionView.process?Section_Id=833">furniture</a></p>
+</div>
+
+</div>
+
+
+<script language="JavaScript1.1" type="text/javascript">
+<!--
+var counterName = counterName + "";
+--></script>
+<script language="JavaScript" type="text/javascript" src="/mocha/special_characters.js"></script>
+<script language="JavaScript" type="text/javascript" src="/mocha/sitestat_report.js"></script>
+
+</body>
+</html>

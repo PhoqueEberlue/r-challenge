@@ -1,0 +1,853 @@
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+
+
+
+
+<SCRIPT TYPE="text/javascript"><!--
+
+var pfCookie = getCookieVal( "null" );
+document.SHOW_SUMMARIES = (pfCookie == null) || (pfCookie== "1") ;
+
+if( ! document.TEXT_NODE )		document.TEXT_NODE=3;	//ie fix
+if( ! document.ELEMENT_NODE )	document.ELEMENT_NODE=1;	//ie fix
+
+function isMac(){
+	if( navigator && navigator.userAgent ){
+		if( navigator.userAgent.indexOf("Mac") >=0  )
+			return true;
+	}//if
+	return false;
+}//fn
+
+function isIE( version ){
+	if( navigator && navigator.userAgent ){
+		var ua=navigator.userAgent ;
+		var idx=ua.indexOf( " MSIE "+version +"." );
+		if( idx >=0 )
+			return true;
+	}//if
+	return false;
+}//fn
+
+function storeCookie(key,val) { 
+	var age =  100*24*3600 * 1000;	// ms in 100 days
+	storeCookieKey( key, val, age, true );
+}//storeCookie
+	
+function storeCookie(key,val,age,reloadPg) { 
+	var expDate = new Date();
+	var expTime = expDate.getTime()  + age;
+	expDate.setTime( expTime );
+	 	document.cookie = 	key +"="+ val + "; expires="+ expDate.toGMTString() ;
+	
+	
+	if( reloadPg )
+		window.location.reload();
+}//storeCookie
+	
+function getCookieVal( key ){
+	var cookiesText = document.cookie;
+	var keyAt = cookiesText.indexOf(key);		//get position of key
+	 
+	 	//window.alert("Cookie Key: "+key+" is at "+ keyAt );
+	
+	  if (keyAt == -1)  return null;  
+	  
+	  var sepAt = cookiesText.indexOf("=", keyAt );					//find next seperator pos after key
+	  var endAt = cookiesText.indexOf(";", sepAt );					//find first delim. after sep.
+	  if (endAt == -1) 	  endAt = cookiesText.length; 		// Last pair has no delimiter
+	  
+	  var val = cookiesText.substring( 1+ sepAt, endAt);
+	  
+ 	 	 //window.alert("Cookie Key: "+key+" has val \n"+val);
+	  return val;
+}//func
+
+function interceptClickBuyStory( premUrl, premQS, jumpUrl, cookieKey  ){
+	var showSumms = document.SHOW_SUMMARIES;
+	if( cookieKey ){	
+	var portfolioCookie = getCookieVal( cookieKey );
+		showSumms = (portfolioCookie == null) || (portfolioCookie== "1") ;
+	}//if
+	displayClickBuyStory(showSumms, premUrl, premQS, jumpUrl);
+	return false;
+}//func
+
+function displayClickBuyStory( showSummaries,  premUrl, premQS, jumpUrl  ){
+	if( premUrl.length > 0 ){
+		if( showSummaries )
+			window.location = jumpUrl;
+		else{
+			var btAppend = "$$$javascript:self.close();";    // ensure c&b back button functions properly.
+			var styleQS = "&STYLE_SHEET="+ getCookieVal( "STYLE_SHEET" );
+			newWindow = window.open( premUrl + "?"+ premQS + styleQS + btAppend, "portfolio_window");
+			newWindow.focus();
+		}
+	}else
+		window.location = jumpUrl;
+}//fn
+
+
+
+
+function openPremXwordWin( xword, printable){		//xword is the crossword filename, printable is flag (true/false)
+	var goDirect= ! document.SHOW_SUMMARIES;
+	var htmlPos = xword.lastIndexOf("cryptic.html");
+	if( htmlPos > 0 )
+		xword=xword.substring(0,htmlPos);
+
+	htmlPos = xword.lastIndexOf("printable.html");
+	if( htmlPos > 0 )
+		xword=xword.substring(0,htmlPos);
+	
+	var url="/crosswords/crossword.jsp";
+	if( goDirect )
+		url = "https://bt.premium-link.net/newauth/popup0/http://bt.premium-link.net/$59096$0$/crossword.jsp";
+	if( printable )
+		url += "?printable=true";
+   	else
+	    url += "?cryptic=true";
+	
+	url += "&crossword="+ xword;
+	url += "&cb_content_name="+ escape( "Cryptic Crossword: "+ xword );
+
+	if( goDirect )
+		xwordWin  = window.open(url,"xwordWin",'toolbar=1,location=0,directories=0,status=0,menubar=0,scrollbars=1,resizable=1,width=750,height=750');
+	else
+		window.location=url;
+	
+	return false; //must return false to link
+}//fn
+
+
+function getDateString(){ 
+	var months = new Array("January","February","March","April","May","June","July","August","September","October","November","December");	
+	var today  = new Date();
+	var year  = today.getYear() , 	month = today.getMonth(),
+	dayOfWk  = today.getDay(), dayOfMonth=today.getDate() ,
+	hh  = today.getHours(),	mm = today.getMinutes();
+
+	if(year < 1000)             year += 1900;         
+	if (hh < 10 ) 	   hh= "0" + hh; 
+	if (mm< 10 )   mm = "0" + mm; 
+
+	var dateStr = dayOfMonth + " "+ months[month] + " "+ year + "  "+ hh+ ":" + mm;
+
+	return dateStr;
+	
+}//function
+
+
+function toggle(button, trueVal, falseVal){
+	if(button.value==trueVal){
+		button.value=falseVal;
+		button.checked=false; 
+	}else{
+		button.value=trueVal;
+		button.checked=true;  
+	}//else
+}//function
+
+
+function openWin1 (url){
+	openNewWin(url,520,600);
+}
+
+function openNewWin(url, w, h){
+	var atts =  'width='+w+',height='+h+',menubar=yes,scrollable=yes,resizable=no,toolbar=no,location=no,directories=no,status=0,toolbar=0,menubar=0,scrollbars=1,resizable=0';
+	var newWindow = open (url, '_blank',atts);
+	newWindow.focus ();
+	if (document.layers)
+		open (location, '_self')
+}
+
+
+
+STYLE_FILES = new Array ("BIG","style_large.css", "MEDIUM", "style_medium.css", "SMALL", "style_small.css");
+DEFAULT_STYLE = "style_small.css", DEFAULT_STYLE_KEY = "SMALL";
+
+function getStyleFile(){
+	var key = getCookieVal( "STYLE_SHEET" );
+	var file=DEFAULT_STYLE;
+	for( s=0; s< STYLE_FILES.length; s+=2 ){
+		if( key == STYLE_FILES[s] )
+			file = STYLE_FILES[s+1];
+	}//for
+	
+	//window.status = "styleKey :  "+ key;
+
+	return file;
+}//func
+
+function getStyleKey(){
+	var key = getCookieVal( "STYLE_SHEET" );
+	var setting=DEFAULT_STYLE_KEY;
+	for( s=0; s< STYLE_FILES.length; s+=2 ){
+		if( key == STYLE_FILES[s] )
+			setting = key;
+	}//for
+
+	return setting;
+}//func
+
+function getStyleSheet(){
+	document.writeln("<link rel=\"STYLESHEET\" type=\"text/css\" href=\"/includes/styles/style_main.css\">");
+	document.writeln("<link rel=\"STYLESHEET\" type=\"text/css\" href=\"/includes/styles/"+ getStyleFile() +"\">");
+	document.writeln("<style type=\"text/css\" media=\"all\">@import \"/includes/styles/style_ie.css\";</style>");	
+}//func
+
+
+
+function openWin1 (url){
+	openNewWin(url,520,600);
+}
+
+function openNewWin(url, w, h){
+	var atts =  'width='+w+',height='+h+',menubar=yes,scrollable=yes,resizable=no,toolbar=no,location=no,directories=no,status=0,toolbar=0,menubar=0,scrollbars=1,resizable=0';
+	var newWindow = open (url, '_blank',atts);
+	newWindow.focus ();
+	if (document.layers)
+		open (location, '_self')
+}
+
+
+
+function shuffleArray( dataArray, shuffles ){
+	if( dataArray.length <2)
+		return dataArray;
+	
+	var len = dataArray.length;
+	for( s=0; s< shuffles; s++ ){
+		var shuffled = new Array (len);
+		var shuffPoint =  Math.round( Math.random() * (len-1) );
+	
+		for( e=shuffPoint; e<len;  e++ )
+			shuffled[ e-shuffPoint ] = dataArray[e]; 
+		for( e=0; e<shuffPoint; e++ )
+			shuffled[ e+ (len-shuffPoint) ] = dataArray[e]; 
+	
+		dataArray = shuffled;
+	}//for
+	return dataArray;
+}//fn
+	
+function getRandomAdIds( cmpIds, optIds, totalAds ){
+	cmpIds = shuffleArray( cmpIds, 3 );
+	optIds = shuffleArray( optIds, 3 );
+	
+	var adArray = new Array( totalAds );
+	var adCount =0;
+	for( a=0; a<cmpIds.length; a++){
+		if(adCount < totalAds){
+			adArray[adCount] = cmpIds[a] ;
+			adCount++;
+		}//if
+	}
+	for( a=0; a<optIds.length; a++){
+		if( adCount<totalAds ){
+			adArray[adCount] = optIds[a] ;
+			adCount++;
+		}//if
+	}//for
+	
+	return adArray;	
+}//func
+
+function timeStampPage( refTime, serverStamp ){
+		var debug = getCookieVal( "INDY_DEBUG" );
+		if( debug != "1" )
+			return;
+		var requestTime  =  new Date( refTime );
+		var nowTime = new Date();
+		var nowTimeStamp = nowTime.getDate() + " / "+ ( nowTime.getMonth()+1)  + " / "+  new String( nowTime.getYear() ).substr(2);
+		var diff = ( nowTime.getTime() - requestTime.getTime() ) / 1000;
+	
+		document.writeln( serverStamp );
+		document.writeln( "<br>\nLocal time is "+ nowTimeStamp + " --- elapsed: " + Math.round( diff ) );
+}//fn
+	
+
+//-->
+</script>
+
+
+
+
+
+<script language="javascript" type="text/javascript"><!--
+if (parent != self)
+	window.parent.location = location;
+	
+getStyleSheet();	// in clientScripts include
+
+//-->
+</script>
+
+
+<title>Independent</title>
+<META NAME="description" CONTENT="The Independent Newspaper">
+<META NAME="keywords" CONTENT="The Independent, Independent.co.uk, newspaper, UK, Britain, England, London, broadsheet, latest, news, argument, forum, competitions, sport, entertainment, PDA, 50best">
+</head>
+
+
+<body bgcolor="ffffff" text="#000000" leftMargin="5" topMargin="0" marginheight="0" marginwidth="0">
+
+<a name="top"></a>
+
+<!-- top table -->
+
+<table width="750" border="0" cellspacing="0" cellpadding="0">
+
+<!-- banner and logo -->
+<tr> 
+<td width="200" height="60">
+<script language="javascript">
+<!--
+var mydate=new Date()
+var today=mydate.getDay()
+
+if (today==0)
+	document.write('<a href="http://www.independent.co.uk"><img src="http://www.independent.co.uk/img/newsite/furniture/indy_site_logo.gif" alt="independent.co.uk" hspace="10" border="0"></a><br clear="all">')
+else
+	document.write('<a href="http://www.independent.co.uk"><img src="http://www.independent.co.uk/img/newsite/furniture/indy_site_logo.gif" alt="independent.co.uk" hspace="10" border="0"></a><br clear="all">')
+//-->
+
+</script>
+</td>
+
+<td align="center" height="60">
+ 
+<table width="488" border="0" cellspacing="0" cellpadding="0" height="80">
+<tr height="80"> 
+<td width="468" height="80">
+<!--  Advertron2: Adlink Banner (www)    ( #758 )  -->
+ <!------- Start of (WWW) DoubleClick ADJ Tag, size : 468x60 ------>
+<table cellspacing="0" cellpadding="0" border="0" width="468" height="60">
+	<tr><td valign="top" border="0" width="468" height="60"> 
+	<script language="JavaScript">
+	   var rand = Math.round ( Math.random() * Math.pow (10,7) ) 	+	 Math.pow(10,6);
+	   document.write("<script language=\"JavaScript\" src=\"http://ad.uk.doubleclick.net/adj/independentdigital.co.uk/www;dcopt=ist;sz=468x60;ord=" +rand+ "?\"><\/script>");
+	</script>
+	<noscript>
+	<a href="http://ad.uk.doubleclick.net/jump/independentdigital.co.uk/www;dcopt=ist;sz=468x60;ord=1110804629208?" target="_new">
+	<img src="http://ad.uk.doubleclick.net/ad/independentdigital.co.uk/www;dcopt=ist;sz=468x60;ord=1110804629208?" border="0" width="468" height="60"> 
+	</a>
+	</noscript>
+	</td></tr>
+</table>
+<!------- End of DoubleClick ADJ Tag, size : 468x60  ------>
+
+
+
+</td></tr>
+</table>
+<!-- banner and logo end-->
+<td>
+</tr>
+
+
+<!-- stripadvert end-->
+<tr><td colspan="2" class="whitebg"><img src="/img/furniture/trans.gif" width="1" height="4"></td></tr>
+</table>
+<!-- end top table --> 
+
+<!-- main table --> 
+
+<table width="750" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="130" align="left" valign="top"> 
+
+<!-- navigation --> 
+
+
+
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2">
+<tr class="navibg"> 
+<td class="naviprimary">&nbsp;&nbsp;<a href="http://news.independent.co.uk/" class="navbd">News</a></td>
+</tr>
+<tr><td>
+&nbsp;&nbsp;<a href="http://news.independent.co.uk/uk/" class="nv">UK</a><br>
+&nbsp;&nbsp;<a href="http://news.independent.co.uk/europe/" class="nv">Europe</a><br>
+&nbsp;&nbsp;<a href="http://news.independent.co.uk/world/" class="nv">World</a><br>
+&nbsp;&nbsp;<a href="http://news.independent.co.uk/business/" class="nv">Business</a><br>
+&nbsp;&nbsp;<a href="http://news.independent.co.uk/media/" class="nv">Media</a><br>
+&nbsp;&nbsp;<a href="http://news.independent.co.uk/people/" class="nv">People</a><br>
+</td></tr>
+</table>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2">
+<tr class="navibg"> 
+<td class="naviprimary">&nbsp;&nbsp;<a href="http://sport.independent.co.uk/" class="navbd">Sport</a></td>
+</tr>
+<tr><td>
+&nbsp;&nbsp;<a href="http://sport.independent.co.uk/cricket/" class="nv">Cricket</a><br>
+&nbsp;&nbsp;<a href="http://sport.independent.co.uk/fishing/" class="nv">Fishing</a><br>
+&nbsp;&nbsp;<a href="http://sport.independent.co.uk/general/" class="nv">General</a><br>
+&nbsp;&nbsp;<a href="http://sport.independent.co.uk/golf/" class="nv">Golf</a><br>
+&nbsp;&nbsp;<a href="http://sport.independent.co.uk/motor_racing/" class="nv">Motor Racing</a><br>
+&nbsp;&nbsp;<a href="http://sport.independent.co.uk/olympics/" class="nv">Olympics</a><br>
+&nbsp;&nbsp;<a href="http://sport.independent.co.uk/rugby_league/" class="nv">Rugby League</a><br>
+&nbsp;&nbsp;<a href="http://sport.independent.co.uk/rugby_union/" class="nv">Rugby Union</a><br>
+&nbsp;&nbsp;<a href="http://sport.independent.co.uk/sports_politics/" class="nv">Sports Politics</a><br>
+&nbsp;&nbsp;<a href="http://sport.independent.co.uk/tennis/" class="nv">Tennis</a><br>
+&nbsp;&nbsp;<a href="http://sport.independent.co.uk/football/" class="nv">Football</a><br>
+</td></tr>
+</table>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2">
+<tr class="navibg"> 
+<td class="naviprimary">&nbsp;&nbsp;<a href="http://comment.independent.co.uk/" class="navbd">Comment</a></td>
+</tr>
+<tr><td>
+&nbsp;&nbsp;<a href="http://comment.independent.co.uk/leading_articles/" class="nv">Leading Articles</a><br>
+&nbsp;&nbsp;<a href="http://comment.independent.co.uk/letters/" class="nv">Letters</a><br>
+&nbsp;&nbsp;<a href="http://comment.independent.co.uk/commentators/" class="nv">Commentators</a><br>
+&nbsp;&nbsp;<a href="http://comment.independent.co.uk/podium/" class="nv">Podium</a><br>
+&nbsp;&nbsp;<a href="http://comment.independent.co.uk/regular_columnists/" class="nv">Regular Columnists</a><br>
+</td></tr>
+</table>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2">
+<tr class="navibg"> 
+<td class="naviprimary">&nbsp;&nbsp;<a href="http://education.independent.co.uk/" class="navbd">Education</a></td>
+</tr>
+<tr><td>
+&nbsp;&nbsp;<a href="http://education.independent.co.uk/news/" class="nv">News</a><br>
+&nbsp;&nbsp;<a href="http://education.independent.co.uk/business_schools/" class="nv">Business Schools</a><br>
+&nbsp;&nbsp;<a href="http://education.independent.co.uk/careers_advice/" class="nv">Careers Advice</a><br>
+&nbsp;&nbsp;<a href="http://education.independent.co.uk/gap_year/" class="nv">Gap Year</a><br>
+&nbsp;&nbsp;<a href="http://education.independent.co.uk/graduate_options/" class="nv">Graduate Options</a><br>
+&nbsp;&nbsp;<a href="http://education.independent.co.uk/higher/" class="nv">Higher</a><br>
+&nbsp;&nbsp;<a href="http://education.independent.co.uk/further/" class="nv">Further</a><br>
+&nbsp;&nbsp;<a href="http://education.independent.co.uk/schools/" class="nv">Schools</a><br>
+</td></tr>
+</table>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2">
+<tr class="navibg"> 
+<td class="naviprimary">&nbsp;<a href="http://motoring.independent.co.uk/" class="navbd">Motoring</a></td>
+</tr>
+<tr><td>
+&nbsp;&nbsp;<a href="http://motoring.independent.co.uk/features/" class="nv">Features</a><br>
+&nbsp;&nbsp;<a href="http://motoring.independent.co.uk/road_tests/" class="nv">Road Tests</a><br>
+&nbsp;&nbsp;<a href="http://motoring.independent.co.uk/comment/" class="nv">Comment</a><br>
+&nbsp;&nbsp;<a href="http://motoring.independent.co.uk/motor_racing/" class="nv">Motor Racing</a><br>
+</td></tr>
+</table>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2">
+<tr class="navibg"> 
+<td class="naviprimary">&nbsp;<a href="http://money.independent.co.uk/" class="navbd">Money</a></td>
+</tr>
+<tr><td>
+&nbsp;&nbsp;<a href="http://money.independent.co.uk/property/" class="nv">Property</a><br>
+&nbsp;&nbsp;<a href="http://money.independent.co.uk/personal_finance/" class="nv">Personal Finance</a><br>
+</td></tr>
+</table>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2">
+<tr class="navibg"> 
+<td class="naviprimary">&nbsp;<a href="http://jobs.independent.co.uk/" class="navbd">Jobs</a></td>
+</tr>
+<tr><td>
+&nbsp;&nbsp;<a href="http://jobs.independent.co.uk/relocation/" class="nv">Relocation</a><br>
+&nbsp;&nbsp;<a href="http://jobs.independent.co.uk/careers/" class="nv">Careers</a><br>
+&nbsp;&nbsp;<a href="http://jobs.independent.co.uk/personality_tests/" class="nv">Personality Tests</a><br>
+&nbsp;&nbsp;<a href="http://jobs.independent.co.uk/featured_employers/" class="nv">Featured Employers</a><br>
+</td></tr>
+</table>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2">
+<tr class="navibg"> 
+<td class="naviprimary">&nbsp;<a href="http://travel.independent.co.uk/" class="navbd">Travel</a></td>
+</tr>
+<tr><td>
+&nbsp;&nbsp;<a href="http://travel.independent.co.uk/news_and_advice/" class="nv">News &amp; Advice</a><br>
+&nbsp;&nbsp;<a href="http://travel.independent.co.uk/uk/" class="nv">UK</a><br>
+&nbsp;&nbsp;<a href="http://travel.independent.co.uk/africa/" class="nv">Africa</a><br>
+&nbsp;&nbsp;<a href="http://travel.independent.co.uk/americas/" class="nv">Americas</a><br>
+&nbsp;&nbsp;<a href="http://travel.independent.co.uk/ausandpacificrim/" class="nv">Australasia &amp; Pacific</a><br>
+&nbsp;&nbsp;<a href="http://travel.independent.co.uk/europe/" class="nv">Europe</a><br>
+&nbsp;&nbsp;<a href="http://travel.independent.co.uk/mideastandasia/" class="nv">Middle East &amp; Asia</a><br>
+&nbsp;&nbsp;<a href="http://travel.independent.co.uk/southeastasia/" class="nv">South-East Asia</a><br>
+&nbsp;&nbsp;<a href="http://travel.independent.co.uk/themes/" class="nv">Themes</a><br>
+</td></tr>
+</table>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2">
+<tr class="navibg"> 
+<td class="naviprimary">&nbsp;<a href="http://enjoyment.independent.co.uk/" class="navbd">Enjoyment</a></td>
+</tr>
+<tr><td>
+&nbsp;&nbsp;<a href="http://enjoyment.independent.co.uk/books/" class="nv">Books</a><br>
+&nbsp;&nbsp;<a href="http://enjoyment.independent.co.uk/crosswords/" class="nv">Crosswords</a><br>
+&nbsp;&nbsp;<a href="http://enjoyment.independent.co.uk/dating/" class="nv">Dating</a><br>
+&nbsp;&nbsp;<a href="http://enjoyment.independent.co.uk/film/" class="nv">Film</a><br>
+&nbsp;&nbsp;<a href="http://enjoyment.independent.co.uk/food_and_drink/" class="nv">Food &amp; Drink</a><br>
+&nbsp;&nbsp;<a href="http://enjoyment.independent.co.uk/music/" class="nv">Music</a><br>
+&nbsp;&nbsp;<a href="http://enjoyment.independent.co.uk/photography/" class="nv">Photography</a><br>
+&nbsp;&nbsp;<a href="http://enjoyment.independent.co.uk/theatre/" class="nv">Theatre</a><br>
+</td></tr>
+</table>
+
+
+
+
+
+<br clear=all>
+
+<!-- navigation end --> 
+ 
+</td>
+<td width="10">&nbsp;</td>
+<td width="445" align="left" valign="top">
+
+
+
+
+
+
+
+<br>
+
+<table cellpadding="10" cellspacing="0" bgcolor="F5F5F5" width="165" align="right">
+<tr><td align="left" valign="top" bgcolor="F5F5F5">
+<!-- Editorial slots 2 & 3 -->
+	<!-- editorial ad slot2  
+-->
+<!--  Advertron2: Editors choice - Hub - slot 2   ( #1606 )  -->
+<!-- Indy:Include story# 324058 --><p class="red" id="sectionheadline">Editor's Choice</p>
+
+
+<p><a href="http://news.independent.co.uk/media/story.jsp?story=619675" class="black12px">
+<b class="grey">Robert Thomson</b><br>
+<img src="http://www.independent.co.uk/images/edschoice/2005-03/times40.gif" width="40" height="44" align="left" border="0" vspace="2">
+A bit of a dude: the man moving with the Times</a></p>
+
+<p><a href="http://news.independent.co.uk/world/middle_east/story.jsp?story=619635" class="black12px">
+<b class="grey">Life in Iraq</b><br>
+<img src="http://www.independent.co.uk/images/edschoice/2005-03/sol40.gif" width="40" height="44" align="left" border="0" vspace="2">
+The terrifying ordeal of military checkpoints</a></p>
+
+<p><a href="http://news.independent.co.uk/media/story.jsp?story=619630" class="black12px">
+<b class="grey">Doctor Who</b><br>
+<img src="http://www.independent.co.uk/images/edschoice/2005-03/doc40.gif" width="40" height="44" align="left" border="0" vspace="2">
+The Time Lord is back on Earth after 15 years</a></p>
+
+
+<p><a href="http://news.independent.co.uk/world/fisk/story.jsp?story=619657" class="black12px">
+<b class="grey">Robert Fisk</b><br>
+UN finds evidence of cover-up over Hariri</a><img src="http://www.independent.co.uk/img/furniture/clickandbuy/pp.gif" width="24" height="11" border="0" alt="independent portfolio"></p>
+
+<p><a href="http://news.independent.co.uk/uk/environment/story.jsp?story=619681" class="black12px">
+<b class="grey">Jurassic bark</b><br>
+The tree that grew in the age of dinosaurs</a></p>
+
+<p><a href="http://comment.independent.co.uk/columnists_a_l/yasmin_alibhai_brown/story.jsp?story=619643" class="black12px">
+<b class="grey">Yasmin Alibhai-Brown</b><br>
+Dangerous delusion</a><img src="http://www.independent.co.uk/img/furniture/clickandbuy/pp.gif" width="24" height="11" border="0" alt="independent portfolio"></p>
+
+<p><a href="http://enjoyment.independent.co.uk/books/news/story.jsp?story=619678" class="black12px">
+<b class="grey">Art of the sequel</b><br>
+Successes and failures</a></p>
+
+<p><a href="http://comment.independent.co.uk/commentators/story.jsp?story=619640" class="black12px">
+<b class="grey">Guy Adams</b><br>
+The greed culture<img src="http://www.independent.co.uk/img/furniture/clickandbuy/pp.gif" width="24" height="11" border="0" alt="independent portfolio"></a></p>
+
+
+<p class="red" id="sectionheadline">Day In A Page</p>
+<p>
+<a href="http://www.independent.co.uk/edaily/esunday/" class="black12px">Sun</a> | 
+<a href="http://www.independent.co.uk/edaily/emonday/" class="black12px">Mon</a> | 
+<a href="http://www.independent.co.uk/edaily/etuesday/" class="black12px">Tue</a> | 
+<a href="http://www.independent.co.uk/edaily/ewednesday/" class="black12px">Wed</a> | 
+<a href="http://www.independent.co.uk/edaily/ethursday/" class="black12px">Thu</a> | 
+<a href="http://www.independent.co.uk/edaily/efriday/" class="black12px">Fri</a> | 
+<a href="http://www.independent.co.uk/edaily/esaturday/" class="black12px">Sat</a>
+</p>
+
+
+<p class="red" id="sectionheadline">Plus&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+
+<p>
+<a href="http://news.independent.co.uk/people/obituaries/" class="black12px">Obituaries</a> | 
+<a href="http://comment.independent.co.uk/letters/" class="black12px">Letters to the Editor</a> | 
+<a href="http://news.independent.co.uk/people/pandora/" class="black12px">Pandora: The Independent Diary</a> | 
+<a href="http://forums.delphiforums.com/IndyBookGroup/messages" class="black12px" target="new">The Independent Book Group</a> | 
+<a href="http://www.independent.co.uk/portfolio/" class="black12px">Portfolio<img src="http://www.independent.co.uk/img/furniture/clickandbuy/pp.gif" width="24" height="11" border="0" alt="independent portfolio">packages</a> | 
+<a href="http://www.independent.co.uk/story.jsp?story=59363" class="black12px">Daily e-mail update</a>
+</p>
+
+
+
+
+
+
+<script type="text/javascript">
+if( (typeof defaultEdsChoice)=="function" )  
+ defaultEdsChoice();
+</script>
+<!-- editorial ad slot3  [no Ad for slot] 
+-->
+
+
+</td></tr>
+</table>
+
+
+
+
+<!-- content -->
+<!--	Template: hub.jsp	(new) -->
+
+<!--	Hub Story ID: 51277		-->
+
+
+
+
+
+<br><p class="sectionheadline"><a href="http://news.independent.co.uk/">Top stories</a></p>
+
+<p><a href="http://news.independent.co.uk/uk/this_britain/story.jsp?story=619692" class="larger">Refugees could cut skills shortages <u>and</u> pay &#163;100m tax</a><br>
+Thousands of refugees who have been trained as doctors, engineers and other professionals are being denied the opportunity to work in Britain because of government restrictions</p>
+
+<p class="bullet"><a href="http://news.independent.co.uk/uk/this_britain/story.jsp?story=619691">
+The Doctor: 'I don't want to be a waiter when I could help people'</a></p>
+
+
+<p><a href="http://news.independent.co.uk/uk/this_britain/story.jsp?story=619949">
+Army criticised over care of recruits</a><br>
+<img src="http://www.independent.co.uk/images/editorial_images/2005-03/deepcut14.jpg" width="200" height="140" border="0" vspace="2"><br>
+The armed forces were urged to establish an independent commission to deal with bullying, in the wake of the deaths of four recruits at the Deepcut Army barracks
+<img src="http://www.independent.co.uk/images/furniture/new.gif" width="36" height="11" border="0">
+</p>
+
+
+
+<p><a href="http://news.independent.co.uk/uk/politics/story.jsp?story=619690">
+Letwin promises tax cuts for low-paid</a><br>
+The Conservative Party will direct most of its remaining &#163;2.7bn of promised tax cuts at the low paid, says Oliver Letwin, the shadow Chancellor</p>
+
+<p class="bullet"><a href="http://news.independent.co.uk/people/profiles/story.jsp?story=619641">
+Oliver Letwin Interview</a></p>
+
+
+
+<br><p class="sectionheadline"><a href="http://news.independent.co.uk/uk/">UK news</a></p>
+
+<p class="bullet"><a href="http://news.independent.co.uk/uk/crime/story.jsp?story=619688">
+Police chief who 'cannot cope' wins support</a></p>
+<p class="bullet"><a href="http://news.independent.co.uk/uk/politics/story.jsp?story=619687">
+Women warn Blair that he has lost their respect and votes</a></p>
+<p class="bullet"><a href="http://news.independent.co.uk/uk/environment/story.jsp?story=619686">
+Freak wave claims mother and children</a></p>
+<p class="bullet"><a href="http://news.independent.co.uk/uk/politics/story.jsp?story=619885">
+Paul Boateng stands down as MP</a><img src="http://www.independent.co.uk/images/furniture/new.gif" width="36" height="11" border="0"></p>
+
+
+
+
+<br><p class="sectionheadline"><a href="http://news.independent.co.uk/world/">World news</a></p>
+
+<p class="bullet"><a href="http://news.independent.co.uk/uk/ulster/story.jsp?story=619689">
+Kennedy snubs Adams as US recoils at IRA crime</a></p>
+<p class="bullet"><a href="http://news.independent.co.uk/world/americas/story.jsp?story=619658">
+Massacre in church ends America's weekend of gun murders</a></p>
+<p class="bullet"><a href="http://news.independent.co.uk/world/fisk/story.jsp?story=619657">
+Robert Fisk: UN finds evidence of cover-up in Hariri assassination<img src="http://www.independent.co.uk/img/furniture/clickandbuy/pp.gif" width="24" height="11" border="0" alt="independent portfolio"></a></p>
+<p class="bullet"><a href="http://news.independent.co.uk/world/middle_east/story.jsp?story=619656">
+Israel to dismantle 24 of its illegal West Bank outposts</a></p>
+
+
+
+<br><p class="sectionheadline"><a href="http://news.independent.co.uk/europe/">Europe news</a></p>
+
+<p class="bullet"><a href="http://news.independent.co.uk/europe/story.jsp?story=619661">
+Spanish police crack huge money-laundering racket</a></p>
+<p class="bullet"><a href="http://news.independent.co.uk/europe/story.jsp?story=619660">
+French vote on EU threatens to tear apart Socialist party</a></p>
+<p class="bullet"><a href="http://news.independent.co.uk/europe/story.jsp?story=619659">
+Jules Verne: mythmaker of the machine age</a></p>
+
+
+<!--
+<br><p class="sectionheadline"><a href="http://education.independent.co.uk/news/">Education</a></p>
+<p class="bullet"><a href="http://education.independent.co.uk/news/story.jsp?story=619544">
+Huge rise in number of schools planning to offer baccalaureate</a></p>
+<p class="bullet"><a href="http://education.independent.co.uk/news/story.jsp?story=619531">
+Focus: Should boys and girls be educated separately?</a></p>
+-->
+
+
+<br><p class="sectionheadline"><a href="http://news.independent.co.uk/business/">Business news</a></p>
+
+<p class="bullet"><a href="http://news.independent.co.uk/business/news/story.jsp?story=619731">
+Boots crisis deepens after Dodd quits as finance director</a></p>
+<p class="bullet"><a href="http://news.independent.co.uk/business/news/story.jsp?story=619730">
+Gadget Shop shareholder row threatens future of high street chain</a></p>
+<p class="bullet"><a href="http://news.independent.co.uk/business/news/story.jsp?story=619724">
+Chancellor to promise a Budget bonfire of red tape</a></p>
+
+
+<br><p class="sectionheadline"><a href="http://sport.independent.co.uk">Sport</a></p>
+
+<p class="bullet"><a href="http://sport.independent.co.uk/rugby_union/story.jsp?story=619720">
+Wilkinson's comeback lasts just 32 minutes</a></p>
+<p class="bullet"><a href="http://sport.independent.co.uk/football/tottenham/story.jsp?story=619719">
+Kluivert on target for revitalised Newcastle</a></p>
+<p class="bullet"><a href="http://sport.independent.co.uk/football/news/story.jsp?story=619716">
+Detailed threats and breach of security forced Frisk to quit</a></p>
+
+
+<br><p class="sectionheadline"><a href="http://money.independent.co.uk">Money</a></p>
+<p class="bullet"><a href="http://money.independent.co.uk/personal_finance/invest_save/story.jsp?story=619513">
+New dawn fades for the stakeholder</a></p>
+
+
+<br><p class="sectionheadline"><a href="http://news.independent.co.uk/people/" class="red">People</a></p>
+<p class="bullet"><a href="http://news.independent.co.uk/people/profiles/story.jsp?story=619641">
+Oliver Letwin: Monday Interview</a></p>
+
+
+
+
+
+
+
+
+
+<!-- start of footer -->
+
+
+
+</td>
+<td width="10">&nbsp;</td>
+<td width="165" align="left" valign="top"> 
+
+<!-- date -->
+<p class="datesmall"><script language="JavaScript">document.write( getDateString() );</script></p>
+
+<table cellpadding=2 cellspacing=2 width=165 class="channelbg">
+<tbody> 
+<tr class="channelbg"> 
+<form action="/search/search.jsp" class="searchbox" name="minisearch">
+<input type="hidden" name="minisearch" value="1">
+<td class="channelbg" valign="top">&nbsp;<span class=articletext>Search this site:</span><br clear=all>
+&nbsp;<input class="box" name=keywords onClick="document.minisearch.keywords.value='';" size="16"></td>
+<td valign="top"><input class="button" name="submit" type="submit" value="Go"></td>
+</form>
+</tr>
+<tr><td colspan="2">&nbsp;<a href="/low_res/index.jsp?page=0&host=1&dir=1" class="black12px"><img src="http://www.independent.co.uk/img/furniture/printer_icon.gif" border="0" width="23" height="11" alt="printable version">Printable Page</a><br CLEAR=ALL></td></tr>
+
+<tr><td colspan="2"><a class="black12px" href="http://www.independent.co.uk/portfolio/"><img src="http://www.independent.co.uk/img/furniture/clickandbuy/pp.gif" width="24" height="11" border="0" alt="independent portfolio">Independent Portfolio.<br>Click here to find out more.</a></td></tr>
+
+</tbody> 
+</table>
+
+<!-- commercial adverts -->
+<table cellpadding="0" cellspacing="0" border="0">
+<tr align="center" valign="top"><td><img src="/img/furniture/trans.gif" width="165" height="9" alt="" border="0"></td></tr>
+
+
+<tr align="center" valign="top"><td><!--  Advertron2: Southafrica   ( #1802 )  -->
+<a href="http://www.independent.co.uk/clickad.jsp?ad=1802&dir=1&url=http://travel.independent.co.uk/africa/southern/story.jsp%3Fstory%3D616858" target="_blank"><img src="http://www.independent.co.uk/img/commercial/skyscrapers/southafrica_sky4.gif" alt="Southafrica" border="0" width="120" height="600"></a></td></tr>  
+
+
+</table>
+
+<!-- commercial adverts end --> 
+
+</td>
+</tr>
+</table>
+<br>
+
+<!-- content adverts --> 
+<br clear=all>
+<!-- our content-->
+<table width="740">
+<tr>
+<td align="center">
+<table>
+<tr>
+<td align="center">
+<hr width="550" size="1" align="center">
+<a href="http://www.independent.co.uk/legal/" class="black12px">Terms of Use</a> | 
+<a href="http://www.independent.co.uk/story.jsp?story=55090" class="black12px">Privacy Policy, including use of cookies</a> |
+<a href="http://www.independent.co.uk/story.jsp?story=59363" class="black12px">Sign up for our free daily news update</a><br>
+<a href="http://www.independent.co.uk/story.jsp?story=414313" class="black12px">Freelance contributions</a> | 
+<a href="http://www.independent.co.uk/story.jsp?story=116349" class="black12px">Advertise in print</a> |
+<a href="http://www.inmplc.com" class="black12px">INM PLC</a> | 
+<a href="http://www.independent.co.uk/story.jsp?story=55123" class="black12px">Contact us</a> 
+<br clear=all>
+<br>
+<span class="black12px">©2005 Independent News & Media (UK) Ltd.</span></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- our content end-->
+<!-- Netscape re-size -->
+
+<script language="javascript" type="text/javascript">
+
+<!--
+
+function WM_netscapeCssFix () {
+	if (document.WM.WM_netscapeCssFix.initWindowWidth != window.innerWidth || document.WM.WM_netscapeCssFix.initWindowHeight != window.innerHeight) {
+		document.location = document.location;
+	}
+}
+
+function WM_netscapeCssFixCheckIn () {
+	if ((navigator.appName == 'Netscape') && (parseInt(navigator.appVersion) == 4)) {
+		if (typeof document.WM == 'undefined') {
+			document.WM = new Object;
+		}
+		if (typeof document.WM.WM_scaleFont == 'undefined') {
+			document.WM.WM_netscapeCssFix = new Object;
+			document.WM.WM_netscapeCssFix.initWindowWidth = window.innerWidth;
+			document.WM.WM_netscapeCssFix.initWindowHeight = window.innerHeight;
+		}
+		window.onresize = WM_netscapeCssFix;
+	}
+}
+
+WM_netscapeCssFixCheckIn ();
+
+//-->
+
+
+</script>
+<!-- /Netscape re-size -->
+
+<!-- designed by nuwan nagahawatte -->
+
+<!-- independent.co.uk is owned and trained by independent digital -->
+<!-- end of footer -->
+
+
+
+<script type="text/javascript">
+	var stamp = "server request at: 14 / 03 / 05 @ 12:50:29 <br>\n server completion at: 14 / 03 / 05 @ 12:50:29 <br>\n  <br>\n Elapsed difference:	0";
+	timeStampPage( 1110804629208, stamp  );
+</script>
+
+</body>
+</html>
+

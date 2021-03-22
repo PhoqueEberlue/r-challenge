@@ -1,0 +1,482 @@
+
+<html>
+<!-- perfumes and fragrance, discount cosmetics, discount makeup, eauzone beauty, skincare products, lipstick and eyeshadow, gift sets and designer brands, armani, hugo boss, issey miyake, chanel, clinique, christian dior, clarins, estee lauder, revlon, max factor, loreal. -->
+
+<!-- optimised 21-10-03 -->
+<head>
+<title>Eauzone UK Ltd is an Online Beauty retailer</title>
+<meta name="Description" content="Eauzone is the Online Beauty retailer of discounted fragrances, cosmetics and skincare for all the premier brands. Tips and beauty advice, corporate gifts and special offers, click and save ££££'s.">
+<meta name="Keywords" content="perfumes and fragrance, discount cosmetics, discount makeup, eauzone beauty, skincare products, lipstick and eyeshadow, gift sets and designer brands, armani, hugo boss, issey miyake, chanel, clinique, christian dior, clarins, estee lauder, revlon, max factor, loreal.">
+
+<script language="javascript">
+<!--
+function submitform(lcwhich)
+	{
+	if (lcwhich=="brand")
+		{
+		document.indexform.action="category.asp"
+		document.indexform.submit()
+		}
+	else
+		{
+		document.indexform.action="listproducts.asp?init=Y&category=" + lcwhich
+		document.indexform.submit()
+		}
+	}
+-->
+</script>
+<SCRIPT LANGUAGE="JavaScript">
+function popUp(url) {
+sealWin=window.open(url,"win",'toolbar=0,location=0,directories=0,status=1,menubar=1,scrollbars=1,resizable=1,width=500,height=450');
+self.name = "mainWin";
+}
+</SCRIPT>
+
+<script language="JavaScript" type="text/javascript" src="ashlib.js"></script>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+// this flag is set to N on stylesheet. It should only be reset to y on viewproduct, if the product 
+// has a colour choice available
+lccheckcolflag = "N";
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_goToURL() { //v3.0
+  var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
+  for (i=0; i<(args.length-1); i+=2) eval(args[i]+".location='"+args[i+1]+"'");
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+
+//-->
+</script>
+<script language="JavaScript">
+
+function submitnavform(lcwhich)
+	{
+	if (lcwhich=="brand")
+		{
+		document.navform.action="category.asp"
+		document.navform.submit()
+		}
+	else
+		{
+		document.navform.action="listproducts.asp?init=Y&category=" + lcwhich
+		document.navform.submit()
+		}
+	}
+</script>
+<script language="JavaScript">
+
+function submitbuyform(lcwhich)
+{
+	var qty;
+	var code;
+	var giftwrap;
+	var giftwraparr;
+	var colours;
+
+	if (lccheckcolflag == "Y")
+	{
+		if (document.buyform.ccolour.value == "")
+		{
+			alert("You must select a colour for this product.");
+			return false;
+		}
+	}
+
+	qty=document.buyform.qty.value;
+	code=document.buyform.stockcode.value;
+	giftwrap=document.buyform.giftwrapped[document.buyform.giftwrapped.selectedIndex].value;
+	colours=document.buyform.ccolour.value;
+
+	if (giftwrap != "N")
+	{
+		giftwraparr = document.buyform.gift;
+		
+		for (var i = 0; i < giftwraparr.length; i++)
+		{
+			if (giftwraparr[i].checked == true)
+			{
+				giftwrap = giftwraparr[i].value;
+			}			
+		}
+	}
+
+	if ((qty == null) || (qty <= 0))
+	{
+		qty=1;
+	}
+
+	flashadded();
+
+	addtocart(code, "", qty, giftwrap, colours);
+}
+</script>
+
+<link href="exp.css" rel="stylesheet" type="text/css">
+
+<title>Eauzone UK Ltd is an Online Beauty retailer</title>
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="20" valign="top"><img src="images/transp.gif" width="20" height="10"></td>
+    <td width="120" valign="bottom">
+      <table border="0" cellspacing="0" cellpadding="0">
+
+	  <tr>
+	  	<td>   
+      <div id="basket">
+<table width="130" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr> 
+	<td style="padding:2px; border: solid 1px #CCCCCC">
+  	<div id="innerbasket">
+    	<br>
+    	<font class="small" color="steelblue">Checking Your Basket...</font>
+    	<br><br>
+    </div>
+    </td>
+  </tr>
+</table>
+</div>
+
+<iframe src="ifr_addtoord.asp?show=Y" width="0" height="0" id="productadd" style="visibility: hidden"></iframe>
+
+
+		</td>
+	  </tr>
+      <tr>
+        <td><img src="images/transp.gif" width="120" height="3"></td>
+      </tr>
+    </table></td>
+    <td width="20" valign="top"><img src="images/transp.gif" width="20" height="10"></td>
+    <td id="banner"><a href="specialoffers.asp"><img src="images/top_save70anim.gif" border="0"></a></td>
+    <td width="152" valign="bottom"><img src="images/top_logo.gif" width="152" height="71"></td>
+    <td width="19" valign="bottom" bgcolor="#990000"><img src="images/top_logozone.gif" width="19" height="71"></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="20"><img src="images/transp.gif" width="20" height="10"></td>
+    <td width="100%" valign="bottom"><table border="0" cellspacing="0" cellpadding="0">
+      <tr>
+          <td class="small"><b><a href="login.asp" class="menured">&nbsp;Your&nbsp;Account&nbsp;</a></b></td>
+        <td width="8"><img src="images/transp.gif" width="8" height="10"></td>
+        <td class="small"><a href="corporate.asp" class="menu">&nbsp;Corporate&nbsp;Accounts&nbsp;</a></td>
+        <td width="8"><img src="images/transp.gif" width="8" height="10"></td>
+        <td class="small"><a href="about.asp" class="menu">&nbsp;About&nbsp;Us&nbsp;</a></td>
+        <td width="8"><img src="images/transp.gif" width="8" height="10"></td>
+        <td class="small"><a href="storelocator.asp" class="menu">&nbsp;Store&nbsp;Locator&nbsp;</a></td>
+        <td width="8"><img src="images/transp.gif" width="8" height="10"></td>
+        <td class="small"><a href="customerservices.asp" class="menu">&nbsp;Customer&nbsp;Services&nbsp;</a></td>
+        <td width="8"><img src="images/transp.gif" width="8" height="10"></td>
+        <td class="small"><a href="specialoffers.asp" class="menu">&nbsp;Special&nbsp;Offers&nbsp;</a></td>
+        <td width="8"><img src="images/transp.gif" width="8" height="10"></td>
+        <td class="small"><a href="contact.asp" class="menu">&nbsp;Contact&nbsp;Us&nbsp;</a></td>
+        <td width="8"><img src="images/transp.gif" width="8" height="10"></td>
+        <td class="small"><a href="index.asp" class="menu">&nbsp;Home&nbsp;</a></td>
+      </tr>
+    </table></td>
+    <td width="19" bgcolor="#990000"><img src="images/transp.gif" width="19" height="19"></td>
+  </tr>
+  <tr bgcolor="#FFCCCC">
+    <td><img src="images/transp.gif" width="20" height="3"></td>
+    <td width="100%" valign="bottom" style="small"><font color="#990000"><b>
+      
+      <img src="images/transp.gif" width="20" height="3">
+      
+    </b></font></td>
+    <td width="19"><img src="images/transp.gif" width="19" height="3"></td>
+  </tr>
+</table>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="20"><img src="images/transp.gif" width="20" height="10"></td>
+    <td width="119" valign="bottom" bgcolor="#FFCCCC"><img src="images/homepic_cosmetics.jpg" width="119" height="143"></td>
+    <td width="10%"><img src="images/transp.gif" width="20" height="10"></td>
+    <td width="115" valign="bottom" bgcolor="#FFCCCC"><img src="images/homepic_fragrances.jpg" width="115" height="143"></td>
+    <td width="10%"><img src="images/transp.gif" width="20" height="10"></td>
+    <td width="119" valign="bottom" bgcolor="#FFCCCC"><img src="images/homepic_skincare.jpg" width="119" height="143"></td>
+    <td width="10%"><img src="images/transp.gif" width="20" height="10"></td>
+    <td colspan="3">
+	
+    <table width="300" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td colspan="2" class="large"><font color="#666666"><b>new this month…</b></font></td>
+        </tr>
+      <tr>
+        <td><font color="#990000"><span class="large"><b>Givenchy swisscare Continuous Hydration fluid 50ml</b></span></font><br>
+          <font color="#990000">Hydra-Tricellia evolution, Continuous Fl...</font><font color="#666666"><span class="large"><b>&pound;17.95</b></span></font><br>
+          <a href="viewproduct.asp?code=7545&ind=Y"><span class="small">&nbsp;MORE&nbsp;INFO&nbsp;</span></a></td>
+        <td width="116"><a href="viewproduct.asp?code=7545&ind=Y" class="ignore"><img src="products/missingimage_s.jpg" border="0" title="view this product"></a></td>
+      </tr>
+    </table>
+
+    </td>
+  </tr>
+  <tr>
+    <td width="20" bgcolor="#FFCCCC">&nbsp;</td>
+    <td width="119" bgcolor="#FFCCCC"><img src="images/homet_cosmetics.gif" width="119" height="26"></td>
+    <td width="10%" bgcolor="#FFCCCC">&nbsp;</td>
+    <td width="115" bgcolor="#FFCCCC"><img src="images/homet_fragrances.gif" width="115" height="26"></td>
+    <td width="10%" bgcolor="#FFCCCC">&nbsp;</td>
+    <td width="119" bgcolor="#FFCCCC"><img src="images/homet_skincare.gif" width="119" height="26"></td>
+    <td width="10%" bgcolor="#FFCCCC">&nbsp;</td>
+    <td bgcolor="#FFCCCC"><img src="images/homet_giftsets.gif" width="119" height="26"></td>
+    <td width="10%" bgcolor="#FFCCCC"><img src="images/transp.gif" width="20" height="10"></td>
+    <td bgcolor="#FFCCCC"><img src="images/homet_brands.gif" width="119" height="26"></td>
+  </tr>
+  <form action="" method="POST" name="indexform">
+  <tr>
+    <td width="20" bgcolor="#FFCCCC"><img src="images/transp.gif" width="20" height="25"></td>
+    <td width="119" bgcolor="#FFCCCC"><select name="cosmetics" onchange="submitform('cosmetics')">
+    <option value="" selected>Please Select...</option>
+<option value="For Her">For Her</option>
+    </select></td>
+    <td width="10%" bgcolor="#FFCCCC">&nbsp;</td>
+    <td width="115" bgcolor="#FFCCCC"><select name="fragrances" onchange="submitform('fragrances')">
+      <option value="" selected>Please Select...</option>
+<option value="For Her">For Her</option><option value="For Him">For Him</option>
+    </select></td>
+    <td width="10%" bgcolor="#FFCCCC">&nbsp;</td>
+    <td width="119" bgcolor="#FFCCCC"><select name="skincare" onchange="submitform('skincare')">
+      <option value="" selected>Please Select...</option>
+<option value="For Him">For Him</option><option value="For Her">For Her</option>
+    </select></td>
+    <td width="10%" bgcolor="#FFCCCC">&nbsp;</td>
+    <td bgcolor="#FFCCCC"><select name="giftsets" onchange="submitform('giftsets')">
+      <option value="" selected>Please Select...</option>
+<option value="For Him">For Him</option><option value="For Her">For Her</option>
+    </select></td>
+    <td width="10%" bgcolor="#FFCCCC">&nbsp;</td>
+    <td bgcolor="#FFCCCC"><select name="brand" onchange="submitform('brand')">
+      <option value="" selected>Please Select...</option>
+<option value="Alexander De Markoff">Alexander De Markoff</option><option value="Alexander McQueen">Alexander McQueen</option><option value="Anna Sui">Anna Sui</option><option value="Aramis">Aramis</option><option value="Armani">Armani</option><option value="Bloom">Bloom</option><option value="Boss">Boss</option><option value="Burberry">Burberry</option><option value="Cacharel">Cacharel</option><option value="Calvin Klein">Calvin Klein</option><option value="Carolina Herrera">Carolina Herrera</option><option value="Cerruti">Cerruti</option><option value="Chanel">Chanel</option><option value="Chloe">Chloe</option><option value="Christian Dior">Christian Dior</option><option value="Clarins">Clarins</option><option value="Clinique">Clinique</option><option value="Davidoff">Davidoff</option><option value="Diesel">Diesel</option><option value="Dolce & Gabbana">Dolce & Gabbana</option><option value="Donna Karen">Donna Karen</option><option value="Dunhill">Dunhill</option><option value="Elizabeth Arden">Elizabeth Arden</option><option value="Elizabeth Taylor">Elizabeth Taylor</option><option value="Escada">Escada</option><option value="Estee Lauder">Estee Lauder</option><option value="Fendi">Fendi</option><option value="GALE HAYMAN">GALE HAYMAN</option><option value="Gant">Gant</option><option value="Ghost">Ghost</option><option value="Giorgio">Giorgio</option><option value="Giorgio Beverly Hills">Giorgio Beverly Hills</option><option value="Givenchy">Givenchy</option><option value="Gres">Gres</option><option value="Gucci">Gucci</option><option value="Guerlain">Guerlain</option><option value="Guy Laroche">Guy Laroche</option><option value="Hard Candy">Hard Candy</option><option value="Hugo Boss ">Hugo Boss </option><option value="Isabella Rossellini">Isabella Rossellini</option><option value="Issey Miyake">Issey Miyake</option><option value="Jaguar">Jaguar</option><option value="Jean Paul Gaultier">Jean Paul Gaultier</option><option value="JLO Jennifer Lopez">JLO Jennifer Lopez</option><option value="Joop">Joop</option><option value="Kenzo">Kenzo</option><option value="La Perla">La Perla</option><option value="Lacoste">Lacoste</option><option value="Lagerfeld">Lagerfeld</option><option value="Lancome">Lancome</option><option value="Lanvin">Lanvin</option><option value="Laura Biagiotti">Laura Biagiotti</option><option value="Max Factor">Max Factor</option><option value="Montana">Montana</option><option value="Moschino">Moschino</option><option value="Nina Ricci">Nina Ricci</option><option value="Oscar De La Renta">Oscar De La Renta</option><option value="Paco Rabanne">Paco Rabanne</option><option value="Paloma Picasso">Paloma Picasso</option><option value="Paul Smith">Paul Smith</option><option value="Police">Police</option><option value="Puig">Puig</option><option value="Ralph Lauren">Ralph Lauren</option><option value="Revlon">Revlon</option><option value="Roc">Roc</option><option value="Rochas">Rochas</option><option value="Ruby&Millie">Ruby&Millie</option><option value="St Tropez">St Tropez</option><option value="Ted Baker">Ted Baker</option><option value="Thierry Mugler">Thierry Mugler</option><option value="Tommy Hilfiger">Tommy Hilfiger</option><option value="Toni&Guy TIGI">Toni&Guy TIGI</option><option value="Urban Decay">Urban Decay</option><option value="Valentino">Valentino</option><option value="Van Cleef">Van Cleef</option><option value="Vanderbilt">Vanderbilt</option><option value="Versace">Versace</option><option value="Vivienne Westwood">Vivienne Westwood</option><option value="Yves Saint Laurent">Yves Saint Laurent</option>
+    </select></td>
+  </tr></form>
+</table>
+<table width="100%" border="0" cellpadding="2" cellspacing="0">
+  <tr>
+    <td width="50%" align="center" class="large"><b style="padding:1px; border: solid 1px #990000"><font color="#990000">FREE&nbsp;</font><font color="#666666">DELIVERY*&nbsp;ON&nbsp;ORDERS&nbsp;OVER&nbsp;&pound;25.00</font></b></td>
+    <td width="5" align="center"><img src="images/transp.gif" width="5" height="40"></td>
+    <td width="50%" align="center" class="large"><b style="padding:1px; border: solid 1px #990000"><font color="#666666">GIFT&nbsp;WRAPPING&nbsp;SERVICE&nbsp;AVAILABLE&nbsp;FROM&nbsp;&pound;1.95</font></b></td>
+  </tr>
+  <tr align="center">
+    <td colspan="3" bgcolor="#FFCCCC">&nbsp;</td>
+  </tr>
+</table>
+
+<table width="100%" border="0" cellpadding="2" cellspacing="1">
+  <tr>
+    <td width="20%" align="center"><img src="images/transp.gif" width="10" height="5"></td>
+    <td width="26%" align="center"><img src="images/transp.gif" width="10" height="5"></td>
+    <td width="26%" align="center"><img src="images/transp.gif" width="10" height="5"></td>
+    <td width="10" align="center"><img src="images/transp.gif" width="10" height="5"></td>
+  </tr>
+  <tr>
+    <td width="20%" align="center"><a href="specialoffers.asp" class="ignore"><img src="images/specialoffers.gif" width="102" height="102" border="0"></a></td>
+    <td width="26%" align="center" style="border-left: solid 1px #CCCCCC">
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td><img src="images/brandS_ElizabethArden.gif"></td>
+        <td><b><font color="#990000">True Love 100 edt spray</font></b><br>
+</td>
+      </tr>
+      <tr>
+        <td align="center"><a href="viewproduct.asp?code=771&ind=Y" class="ignore"><img src="products/771_s.jpg" border="0" title="view this product"></a></td>
+        <td valign="top"><table width="100%" border="0" cellspacing="1" cellpadding="1">
+          <tr align="center" bgcolor="#990000">
+            <td colspan="2" class="small"><font color="#FFFFFF">Hot One !</font></td>
+            </tr>
+          <tr class="small">
+            <td bgcolor="#CCCCCC"><b>RRP:</b></td>
+            <td align="right"><b><s>&pound;39.00</s></b></td>
+          </tr>
+          <tr>
+            <td bgcolor="#990000" class="small"><font color="#FFFFFF"><b>NOW&nbsp;ONLY:</b></font></td>
+            <td align="right" class="large"><font color="#990000"><b>&pound;17.95</b></font></td>
+          </tr>
+          <tr>
+            <td><b><font color="#666666">SAVE</font></b></td>
+            <td align="right" class="large"><b><font color="#999999">&pound;21.05</font></b></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td align="right" class="small"><a href="viewproduct.asp?code=771&ind=Y">&nbsp;MORE&nbsp;</a></td>
+          </tr>
+        </table>
+        </td>
+      </tr>
+    </table>
+    </td>
+    <td width="26%" align="center" style="border-left: solid 1px #CCCCCC">
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td><img src="images/brandS_YvesSaintLaurent.gif"></td>
+        <td><b><font color="#990000">Touche Eclat Concealer</font></b><br>
+Yves Saint Laurent best sellin...</td>
+      </tr>
+      <tr>
+        <td align="center"><a href="viewproduct.asp?code=2638&ind=Y" class="ignore"><img src="products/2638_s.jpg" border="0" title="view this product"></a></td>
+        <td valign="top"><table width="100%" border="0" cellspacing="1" cellpadding="1">
+          <tr align="center" bgcolor="#990000">
+            <td colspan="2" class="small"><font color="#FFFFFF">Best Price</font></td>
+            </tr>
+          <tr class="small">
+            <td bgcolor="#CCCCCC"><b>RRP:</b></td>
+            <td align="right"><b><s>&pound;22.00</s></b></td>
+          </tr>
+          <tr>
+            <td bgcolor="#990000" class="small"><font color="#FFFFFF"><b>NOW&nbsp;ONLY:</b></font></td>
+            <td align="right" class="large"><font color="#990000"><b>&pound;17.95</b></font></td>
+          </tr>
+          <tr>
+            <td><b><font color="#666666">SAVE</font></b></td>
+            <td align="right" class="large"><b><font color="#999999">&pound;4.05</font></b></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td align="right" class="small"><a href="viewproduct.asp?code=2638&ind=Y">&nbsp;MORE&nbsp;</a></td>
+          </tr>
+        </table>
+        </td>
+      </tr>
+    </table>
+    </td>
+    <td width="26%" align="center" style="border-left: solid 1px #CCCCCC">
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td><img src="images/brandS_Armani.gif"></td>
+        <td><b><font color="#990000">Emporio Armarni HE 50ml E.D.T Demo</font></b><br>
+Emporio Armarni HE 50ml edt de...</td>
+      </tr>
+      <tr>
+        <td align="center"><a href="viewproduct.asp?code=7970&ind=Y" class="ignore"><img src="products/7970_s.jpg" border="0" title="view this product"></a></td>
+        <td valign="top"><table width="100%" border="0" cellspacing="1" cellpadding="1">
+          <tr align="center" bgcolor="#990000">
+            <td colspan="2" class="small"><font color="#FFFFFF">Great Value!!!</font></td>
+            </tr>
+          <tr class="small">
+            <td bgcolor="#CCCCCC"><b>RRP:</b></td>
+            <td align="right"><b><s>&pound;30.00</s></b></td>
+          </tr>
+          <tr>
+            <td bgcolor="#990000" class="small"><font color="#FFFFFF"><b>NOW&nbsp;ONLY:</b></font></td>
+            <td align="right" class="large"><font color="#990000"><b>&pound;18.95</b></font></td>
+          </tr>
+          <tr>
+            <td><b><font color="#666666">SAVE</font></b></td>
+            <td align="right" class="large"><b><font color="#999999">&pound;11.05</font></b></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td align="right" class="small"><a href="viewproduct.asp?code=7970&ind=Y">&nbsp;MORE&nbsp;</a></td>
+          </tr>
+        </table>
+        </td>
+      </tr>
+    </table>
+    </td>
+    <td width="26%" align="center" style="border-left: solid 1px #CCCCCC">
+
+    </td>
+    <td width="10" align="center" style="border-left: solid 1px #CCCCCC">&nbsp;</td>
+  </tr>
+</table>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="center" valign="top"><table border="0" cellspacing="2" cellpadding="2">
+      <tr>
+        <td><img src="images/crd_mastercard_s.gif" width="32" height="20"></td>
+        <td><img src="images/crd_visa_s.gif" width="32" height="20"></td>
+        <td><img src="images/crd_delta_s.gif" width="32" height="20"></td>
+        <td><img src="images/crd_switch_s.gif" width="18" height="20"></td>
+        <td><img src="images/crd_solo_s.gif" width="18" height="20"></td>
+        <td><a href="javascript:popUp('https://digitalid.verisign.com/as2/0ccd4c333985cc9fb4bc0a7ebcb91ad4')" class="ignore"><img src="images/siteseal_S.gif" width="28" height="30" border="0"></a></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+//-->
+</script>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="center"><img src="images/transp.gif" width="20" height="5"></td>
+    <td valign="top"><img src="images/transp.gif" width="20" height="5"></td>
+    <td align="center"><img src="images/transp.gif" width="20" height="5"></td>
+  </tr>
+  <tr>
+    <td width="20" align="center">&nbsp;</td>
+    <td width="100%" align="center" valign="top" class="small">|&nbsp;<a href="javascript:;" onClick="MM_openBrWindow('pop_terms.asp','','scrollbars=yes,resizable=yes,width=500,height=400')" class="plain">Terms&nbsp;&amp;&nbsp;Conditions</a>&nbsp;|&nbsp;<a href="javascript:;" onClick="MM_openBrWindow('pop_privacy.asp','','scrollbars=yes,resizable=yes,width=500,height=400')" class="plain">Your 
+      Privacy &amp; Security</a>&nbsp;|&nbsp;<a href="javascript:;" onClick="MM_openBrWindow('pop_delivery.asp','','scrollbars=yes,resizable=yes,width=500,height=400')" class="plain">Delivery&nbsp;Information</a>&nbsp;|<br>
+      website &copy; Eauzone
+    2004. all rights reserved. designed by <a href="http://www.getfiredup.co.uk" class="plain">Fired Up</a></td>
+    <td width="20" align="center">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="20"><img src="images/transp.gif" width="20" height="10"></td>
+    <td width="100%"><img src="images/transp.gif" width="10" height="4"></td>
+    <td width="20"><img src="images/transp.gif" width="20" height="4"></td>
+  </tr>
+</table>
+
+
+<div align="center"><p><span class="small"><font color="#999999">* UK Mainland Customers only</font></span></p>
+</div>
+<noscript>
+
+<a href="index.asp">perfumes and fragrance</a> 
+<a href="corporate.asp">discount cosmetics</a> 
+<a href="about.asp">discount makeup</a> 
+<a href="storelocator.asp">eauzone beauty</a> 
+<a href="customerservices.asp">skincare products</a> 
+<a href="specialoffers.asp">lipstick and eyeshadow</a>
+<a href="contact.asp">gift sets and designer brands</a>
+<a href="index.asp">armani</a>
+<a href="galehayman.asp">Gale Hayman</a>
+<a href="clarins.asp">Clarins</a>
+<a href="rubymillie.asp">Ruby &amp; Millie</a>
+</noscript>
+</body>
+</html>

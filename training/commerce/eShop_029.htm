@@ -1,0 +1,1584 @@
+<html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<title>bol.com: </title>
+<style>
+BODY			{font-size: 12px; font-family: Verdana; scrollbar-face-color: #3165CE; scrollbar-arrow-color: #FFCC33; scrollbar-3dlight-color: #F2F1E2; scrollbar-darkshadow-color: #F2F1E2; scrollbar-track-color: #F2F1E2; scrollbar-shadow-color: #FFFFFF; scrollbar-base-color: #FFFFFF;}
+A				{color: #000000; font-size: 11px; font-weight: bold; font-family: tahoma, arial, helvetica; text-decoration: none;}
+A:link			{color: #3366CC; text-decoration: underline;}
+A:visited		{color: #3366CC; text-decoration: underline;}
+A.GRP:link 		{color: #FFFFFF; text-decoration: none;}
+A.GRP:visited	{color: #FFFFFF; text-decoration: none;}
+A.GRP:hover		{color: #FFFFFF; text-decoration: underline;}
+A.CAT:link		{color: #000000; text-decoration: none;}
+A.CAT:visited	{color: #000000; text-decoration: none;}
+A.CAT:hover		{color: #3165CE; text-decoration: underline;}
+A.THS			{color: black; font-size: 10px; font-weight: bold; text-decoration: underline;}
+A.THS:visited	{color: black;}
+A.TABS:link		{color: #FFFFFF; font-size: 11px; font-weight: bold; font-family: Tahoma, arial, helvetica; text-decoration: none;}
+A.TABS:visited	{color: #FFFFFF; font-family: Tahoma, arial, helvetica; text-decoration: none; }
+A.TABS:hover	{color: #FFFFFF; font-family: Tahoma, arial, helvetica; text-decoration: underline;}
+A.BTM			{color: black; font-size: 11px; font-family: tahoma, arial, helvetica; text-decoration: underline;}
+A.BTM:visited	{color: black; text-decoration: underline;}
+
+INPUT			{font-size: 12px; font-family: Verdana;}
+SELECT			{font-size: 12px; font-family: Verdana;}
+TEXTAREA		{font-size: 12px; font-family: Verdana;}
+</style><img id="idVsid" name="idVsid" width="1" height="1" style="display:none"><script language="javascript">
+	var g_bLoggedIn = false;
+	var g_sSessionId = '87328170';
+	var g_sSRID = '';
+	var m_sMemberNo = '';
+
+	//Show affiliate id associated with url used (taken from session data)
+	var m_sAffiliateId = 'TD';
+
+	
+	function CheckLogin(oForm, bPassword, sAction)
+	{
+		if (oForm.ED209_login_id.value == "")
+			{
+			alert ("Please Enter Your User Name.");
+			oForm.ED209_login_id.focus();
+			return false;
+			}
+		else if (oForm.ED209_usr_psswrd.value == "" && bPassword == "True" && oForm.ED209_login_id.value.toUpperCase() != "GUEST")
+			{
+			alert ("Please enter your Password or click Login Problems.");
+			oForm.ED209_usr_psswrd.focus();
+			return false;
+			}
+		else
+			{
+			oForm.ED209Action.value = sAction;
+			oForm.submit();
+			return false;
+			}
+	}
+	
+
+	function CheckLogout(sURL)
+	{
+		var bResponse = false ;
+		
+		if (bResponse == false)
+			window.location.href = sURL ;
+	}
+
+	
+	function DmaPrivacy()
+	{
+		window.open("/static/BcaPrivacy.htm", "BCAPrivacy","HEIGHT=480,WIDTH=640,MENUBAR=no,STATUS=no,SCROLLBARS=yes,RESIZABLE=yes");
+	}
+	
+	
+	var intStartPosn = document.location.href.indexOf("vsid");
+	if (intStartPosn > -1){
+		var strDelim = document.location.href.substr(intStartPosn+4,1);
+		if (strDelim != "/") strDelim = "&";
+		var intEndPosn = document.location.href.indexOf(strDelim, intStartPosn+5);
+		if (intEndPosn == -1) intEndPosn = document.location.href.length;
+		var strVsid = document.location.href.substr(intStartPosn+5,intEndPosn-intStartPosn-5); 
+	
+		var strSrc1 = 'http://www.booksdirect.co.uk/ClientId.Asp?' + 'SessId=87328170&ClientId=&Url=www.uk.bol.com' + '&vsid=' + strVsid;
+	}
+	else {
+		var strSrc1 = 'http://www.booksdirect.co.uk/ClientId.Asp?' + 'SessId=87328170&ClientId=&Url=www.uk.bol.com' + '&vsid=0';
+	}
+	
+		var oImg = new Image();
+		oImg.src = strSrc1;		
+		</script><script language="javascript" src="/scripts/template.js"></script><script language="javascript" src="/scripts/TopTen_0076.js"></script><script language="javascript" src="/scripts/Bookstore_TopTen_0076.js"></script></head>
+<body bgcolor="#FFFFFF" leftmargin="2" topmargin="2" rightmargin="0" bottommargin="0" marginwidth="0" marginheight="0"><a name="top"></a><center>
+<noscript>
+<h1>To use this site, please turn your browser scripting on.<br id="">If you are unsure how to do this 
+		<a href="/shared/javascript_help.asp" target="_new"><font face="Tahoma" size="6">click here</font></a>.</h1>
+</noscript>
+<table border="0" cellpadding="0" cellspacing="0" width="775">
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="775">
+<form method="post" action="scart_bg.asp" id="frmAddToBasket" name="frmAddToBasket"><input type="hidden" name="txt_tab_id" id="txt_tab_id" value="1"><input type="hidden" name="txt_tab_name" id="txt_tab_name" value="CLUB"><input type="hidden" name="txt_mode" id="txt_mode" value="addToBasket"><input type="hidden" name="txt_order_code" id="txt_order_code" value=""><input type="hidden" name="txt_title_id" id="txt_title_id" value=""><input type="hidden" name="txt_price" id="txt_price" value=""></form>
+<form method="post" action="scart.asp" id="frmAddToBasketE" name="frmAddToBasketE"><input type="hidden" name="txt_mode" id="txt_mode" value="ATBE"><input type="hidden" name="txt_tab_id" id="txt_tab_id" value="1"><input type="hidden" name="txt_tab_name" id="txt_tab_name" value="CLUB"><input type="hidden" name="txt_product_id" id="txt_product_id" value=""></form>
+<form method="post" action="scart.asp" id="frmAddToBasketO" name="frmAddToBasketO"><input type="hidden" name="txt_mode" id="txt_mode" value="ATBO"><input type="hidden" name="txt_tab_id" id="txt_tab_id" value="1"><input type="hidden" name="txt_tab_name" id="txt_tab_name" value="CLUB"><input type="hidden" name="txt_order_code" id="txt_order_code" value=""></form>
+<form method="post" action="mag.asp" id="frmDisplayProduct" name="frmDisplayProduct"><input type="hidden" name="txt_tab_id" id="txt_tab_id" value="1"><input type="hidden" name="txt_tab_name" id="txt_tab_name" value="CLUB"><input type="hidden" name="txt_sub_genre" id="txt_sub_genre" value=""><input type="hidden" name="txt_product_id" id="txt_product_id" value=""><input type="hidden" name="txt_cat_id" id="txt_cat_id" value="CLUB HOME HDR"></form>
+<form method="post" action="mag.asp" id="frmDisplayOrder" name="frmDisplayOrder"><input type="hidden" name="txt_tab_id" id="txt_tab_id" value="1"><input type="hidden" name="txt_tab_name" id="txt_tab_name" value="CLUB"><input type="hidden" name="txt_sub_genre" id="txt_sub_genre" value=""><input type="hidden" name="txt_order_code" id="txt_order_code" value=""><input type="hidden" name="txt_cat_id" id="txt_cat_id" value="CLUB HOME HDR"></form>
+<form method="post" action="mag.asp" id="frmDisplayCat" name="frmDisplayCat"><input type="hidden" name="txt_tab_name" id="txt_tab_name" value="CLUB"><input type="hidden" name="txt_tab_id" id="txt_tab_id" value="1"><input type="hidden" name="txt_page_number" id="txt_page_number" value="1"><input type="hidden" name="txt_cat_id" id="txt_cat_id" value=""></form>
+<form method="post" action="mag.asp" id="frmDisplayGenreProd" name="frmDisplayGenreProd"><input type="hidden" name="txt_tab_id" id="txt_tab_id" value="1"><input type="hidden" name="txt_tab_name" id="txt_tab_name" value="CLUB"><input type="hidden" name="txt_product_id" id="txt_product_id" value=""><input type="hidden" name="txt_sub_genre" id="txt_sub_genre" value=""><input type="hidden" name="txt_cat_id" id="txt_cat_id" value=""></form>
+<form method="post" action="mag.asp" id="frmDisplaySubGenre" name="frmDisplaySubGenre"><input type="hidden" name="txt_tab_id" id="txt_tab_id" value="1"><input type="hidden" name="txt_tab_name" id="txt_tab_name" value="CLUB"><input type="hidden" name="txt_sub_genre" id="txt_sub_genre" value=""><input type="hidden" name="txt_sub_genre_desc" id="txt_sub_genre_desc" value=""><input type="hidden" name="txt_page_number" id="txt_page_number" value="1"><input type="hidden" name="txt_cat_id" id="txt_cat_id" value=""></form>
+<form method="post" action="index.asp" id="frmDisplayTab" name="frmDisplayTab"><input type="hidden" name="txt_tab_id" id="txt_tab_id" value=""><input type="hidden" name="txt_tab_name" id="txt_tab_name" value=""><input type="hidden" name="txt_catgry_name" id="txt_catgry_name" value=""></form>
+<form method="post" action="metapage.asp" id="frmDisplayEtml" name="frmDisplayEtml"><input type="hidden" name="txt_tab_id" id="txt_tab_id" value="1"><input type="hidden" name="txt_tab_name" id="txt_tab_name" value="CLUB"><input type="hidden" name="content" id="content" value=""></form>
+<form method="post" action="scart.asp" id="frmDisplayBasket" name="frmDisplayBasket"><input type="hidden" name="txt_tab_id" id="txt_tab_id" value="1"><input type="hidden" name="txt_tab_name" id="txt_tab_name" value="CLUB"></form>
+<tr>
+<td valign="top" rowspan="3" width="185"><a href="http://www.uk.bol.com"><img src="/images/logos/0076_logo_185.gif" alt="bol.com" width="185" height="85" border="0"></a></td>
+<td rowspan="3" width="5"><img src="/p.gif" width="5" height="85"></td>
+<td align="right" valign="top"><font size="1"><a href="index.asp"><img src="/images/navigation/home.gif" width="53" height="15" border="0" alt="Home"></a><a href="JavaScript:getObject('frmDisplayBasket').submit();"><img src="/images/navigation/basket.gif" width="92" height="15" border="0" alt="Basket"></a><a href="myaccount.asp"><img src="/images/navigation/account.gif" width="96" height="15" border="0" alt="My Account"></a><a href="feedback.asp"><img src="/images/navigation/contact.gif" width="94" height="15" border="0" alt="Contact Us"></a><a href="javascript:ETML('common/sitehelp/help_centre_BOL',0);"><img src="/images/navigation/help_bg.gif" width="54" height="15" border="0" alt="Help"></a><a href="javascript:ETML('common/sitehelp/help_centre_BOL',0);"><img src="/images/navigation/separator.gif" width="8" height="15" border="0" alt="Help"></a><a href="JavaScript:getObject('LoginForm').submit()"><img src="/images/navigation/login.gif" width="60" height="15" border="0" alt="Login"></a></font></td>
+</tr>
+<tr>
+<td><img src="/p.gif" height="20"></td>
+</tr>
+<tr>
+<td valign="bottom">
+<table border="0" cellpadding="0" cellspacing="0" id="john">
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td><img src="/p.gif" width="15" height="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="66" height="1"></td>
+<td><img src="/p.gif" width="15" height="1"></td>
+</tr>
+<tr bgcolor="#3165CE">
+<td><img src="/images/ll.gif" width="15" height="30"></td>
+<td width="66" align="center"><a class="TABS" href="Javascript:TAB('1', 'CLUB', 'CLUB HOME HDR');"><font color="#FFFFFF">Bestsellers at 60% Off</font></a></td>
+<td><img src="/images/rm.gif" width="15" height="30"></td>
+</tr>
+</table>
+</td>
+<td>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td bgcolor="#000000"><img src="/p.gif" width="66" height="1"></td>
+<td><img src="/p.gif" width="15" height="1"></td>
+</tr>
+<tr bgcolor="#9A9A9A">
+<td width="66" align="center"><a class="TABS" href="Javascript:TAB('2', 'BOOKSTORE', 'BOOKSTORE HOME HDR');"><font color="#FFFFFF">More titles at 20% off</font></a></td>
+<td><img src="/images/rm.gif" width="15" height="30"></td>
+</tr>
+</table>
+</td>
+<td>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td bgcolor="#000000"><img src="/p.gif" width="66" height="1"></td>
+<td><img src="/p.gif" width="15" height="1"></td>
+</tr>
+<tr bgcolor="#9A9A9A">
+<td width="66" align="center"><a class="TABS" href="Javascript:TAB('3', 'VIDEO', 'VIDEO HOME HDR');"><font color="#FFFFFF">Video & DVD</font></a></td>
+<td><img src="/images/rm.gif" width="15" height="30"></td>
+</tr>
+</table>
+</td>
+<td>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td bgcolor="#000000"><img src="/p.gif" width="66" height="1"></td>
+<td><img src="/p.gif" width="15" height="1"></td>
+</tr>
+<tr bgcolor="#9A9A9A">
+<td width="66" align="center"><a class="TABS" href="Javascript:TAB('5', 'GENERAL', 'GENERAL HOME HDR');"><font color="#FFFFFF">Book of the Month</font></a></td>
+<td><img src="/images/rm.gif" width="15" height="30"></td>
+</tr>
+</table>
+</td>
+<td>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td bgcolor="#000000"><img src="/p.gif" width="66" height="1"></td>
+<td><img src="/p.gif" width="15" height="1"></td>
+</tr>
+<tr bgcolor="#9A9A9A">
+<td width="66" align="center"><a class="TABS" href="Javascript:TAB('6', 'GENERAL 2', 'Summer Reads');"><font color="#FFFFFF">Summer Reads</font></a></td>
+<td><img src="/images/rm.gif" width="15" height="30"></td>
+</tr>
+</table>
+</td>
+<td>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td bgcolor="#000000"><img src="/p.gif" width="66" height="1"></td>
+<td><img src="/p.gif" width="15" height="1"></td>
+</tr>
+<tr bgcolor="#9A9A9A">
+<td width="66" align="center"><a class="TABS" href="Javascript:TAB('7', 'GENERAL 3', 'GENERAL 3 HOME HDR');"><font color="#FFFFFF">3 for £10</font></a></td>
+<td><img src="/images/rr.gif" width="15" height="30"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="775">
+<tr>
+<td bgcolor="#000000" width="195"><img src="/p.gif" height="1" width="195"></td>
+<td bgcolor="#3165CE" width="86"><img src="/p.gif" height="1" width="86"></td>
+<td bgcolor="#000000" width="494"><img src="/p.gif" height="1" width="494"></td>
+</tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="775">
+<tr>
+<td bgcolor="3165CE" colspan="2"><img src="/p.gif" height="5"></td>
+</tr>
+<tr>
+<td bgcolor="#000000" colspan="2"><img src="/p.gif" height="1"></td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" colspan="2"><img src="/p.gif" height="3"></td>
+</tr>
+<tr>
+<td bgcolor="#000000" colspan="2"><img src="/p.gif" height="1"></td>
+</tr>
+<tr>
+<td bgcolor="#99CCFF"><img src="/p.gif" height="30" width="1"></td>
+<td bgcolor="#99CCFF" valign="middle">
+<table border="0" cellpadding="0" cellspacing="0" width="762">
+<form method="post" action="search.asp" id="frmSearch" name="frmSearch"><input type="hidden" name="txt_tab_id" id="txt_tab_id" value="1"><input type="hidden" name="txt_tab_name" id="txt_tab_name" value="CLUB"><input type="hidden" id="txt_page_number" name="txt_page_number" value="1"><tr>
+<td colspan="3"><img src="/p.gif" height="2"></td>
+</tr>
+<tr>
+<td width="110"> </td>
+<td align="center">
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td><font face="Arial" size="2" color="#FFFFFF"><b>SEARCH: </b></font></td>
+<td><select id="cbo_search_type" name="cbo_search_type" style="width: 150px"><option value="A" selected="">All products</option><option value="B">Books</option><option value="O">Order Code</option></select>
+						 
+					</td>
+<td><input type="text" id="txt_search" name="txt_search" style="width: 185px">
+						 
+					</td>
+<td><input type="image" src="/images/buttons/go.gif" border="0" alt="Go" id="cmd_search" name="cmd_search" onclick="JavaScript:CheckSearch();return false;"><font size="1">  </font></td>
+<td align="center"><a href="Javascript:ETML('common/sitehelp/bol/07_searching_bol', 0);"><font color="#FFFFFF">Search<br id="">Tips</font></a></td>
+</tr>
+</table>
+</td>
+<td width="110" align="right"><font size="1" color="#FFFFFF">July 14, 2004 </font></td>
+</tr>
+<tr>
+<td colspan="3"><img src="/p.gif" height="2"></td>
+</tr>
+</form>
+</table>
+</td>
+</tr>
+<tr>
+<td bgcolor="#000000" colspan="2"><img src="/p.gif" height="1"></td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" colspan="2"><img src="/p.gif" height="2"></td>
+</tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="775" height="70%">
+<tr>
+<td width="186" align="center" valign="top">
+<font size="1"><br id=""><table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="1"><img src="/p.gif" width="1"></td>
+<td width="1"><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="3" height="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="163" height="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="10" height="1"></td>
+<td width="1"><img src="/p.gif" width="1"></td>
+<td width="1"><img src="/p.gif" width="1"></td>
+</tr>
+<tr>
+<td width="1"><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td bgcolor="3165CE" colspan="3"><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td width="1"><img src="/p.gif" width="1"></td>
+</tr>
+<tr bgcolor="3165CE">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td width="1"><img src="/p.gif" width="1"></td>
+<td><img src="/p.gif" width="3" height="18"></td>
+<td valign="middle"><font size="1" style="font-size:11px" face="Tahoma, arial, helvetica" color="#FFFFFF"><b>MEMBER LOGIN</b></font></td>
+<td width="1"><img src="/p.gif" width="1"></td>
+<td width="1"><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+</tr>
+<tr>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td bgcolor="3165CE" colspan="5"><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+</tr>
+<tr>
+<td bgcolor="#000000" colspan="7"><img src="/p.gif" height="1"></td>
+</tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="180" bgcolor="#f2f1e2">
+<form Method="Post" Action="https://www.securebooks.co.uk/login.asp?cc=0076" name="LoginForm" id="LoginForm" onSubmit="return CheckLogin(LoginForm, 'True','Log In');">
+<tr>
+<td bgcolor="#000000" width="1"><img src="/p.gif" width="1"></td>
+<td width="3"><img src="/p.gif" width="3"></td>
+<td><input Type="Hidden" Name="ED209_memberNo" Value=""><input Type="Hidden" Name="ED209Action" Value=""><input Type="Hidden" Name="ED209SessionId" Value="87328170"><input Type="Hidden" Name="ED209URL" Value="http://www.uk.bol.com/index.asp"><input type="hidden" name="e" value="s201"><input type="hidden" name="aff_id" value="TD"><input type="hidden" name="txt_page_number" value="1"><table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td><font size="1"><b>USERNAME:</b> </font></td>
+<td><input type="text" name="ED209_login_id" id="ED209_login_id" SIZE="10" maxlength="50" style="font-family: Arial; FONT-SIZE: 11px;" value=""></td>
+</tr>
+<tr>
+<td><font size="1"><b>PASSWORD:</b> </font></td>
+<td><input type="password" name="ED209_usr_psswrd" SIZE="10" maxlength="30" style="font-family: Arial; FONT-SIZE: 11px;" onKeyPress="CheckSubmit(document.LoginForm, event)"></td>
+</tr>
+<tr>
+<td><font size="1"> </font></td>
+<td><input type="image" src="/images/buttons/Login.gif" border="0" alt="Login" name="cmdLogin"></td>
+</tr>
+</table>
+</td>
+<td width="3"><img src="/p.gif" width="3"></td>
+<td bgcolor="#000000" width="1"><img src="/p.gif" width="1"></td>
+</tr>
+<tr>
+<td bgcolor="#000000" width="1"><img src="/p.gif" width="1"></td>
+<td width="3"><img src="/p.gif" width="3"></td>
+<td>
+<font face="Arial" size="1">Login Problems? 
+				<a href="JavaScript:getObject('LoginForm').submit();"><font size="1" COLOR="#000000"><b>Click Here</b></font></a><br id="">
+				Not a member? 
+				<a href="javascript:ETML('common/sitehelp/bol/12_benefits', 0);"><font size="1" COLOR="#000000"><b>Click Here</b></font></a><br id=""></font>
+</td>
+<td width="3"><img src="/p.gif" width="3"></td>
+<td bgcolor="#000000" width="1"><img src="/p.gif" width="1"></td>
+</tr>
+</form>
+</table>
+</td>
+</tr>
+<form Method="Post" Action="https://www.securebooks.co.uk/registration.asp?cc=0076" name="RegisterForm" id="RegisterForm"><input Type="Hidden" Name="ED209SessionId" Value="87328170"><input Type="Hidden" Name="ED209URL" Value="http://www.uk.bol.com/index.asp"></form>
+</table>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="1"><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td bgcolor="#f2f1e2"><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td width="1"><img src="/p.gif" width="1"></td>
+</tr>
+<tr>
+<td colspan="2"><img src="/p.gif" width="2" height="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="176" height="1"></td>
+<td colspan="2"><img src="/p.gif" width="2" height="1"></td>
+</tr>
+</table>
+<font face="Arial" size="1"><br id=""><table border="0" cellpadding="0" cellspacing="0" width="180">
+<tr>
+<td width="1"><img src="/p.gif" width="1"></td>
+<td width="1"><img src="/p.gif" width="1"></td>
+<td width="3" bgcolor="#000000"><img src="/p.gif" width="3" height="1"></td>
+<td width="163" bgcolor="#000000"><img src="/p.gif" width="163" height="1"></td>
+<td width="10" bgcolor="#000000"><img src="/p.gif" width="10" height="1"></td>
+<td width="1"><img src="/p.gif" width="1"></td>
+<td width="1"><img src="/p.gif" width="1"></td>
+</tr>
+<tr>
+<td><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td bgcolor="#3165CE" colspan="3"><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td><img src="/p.gif" width="1"></td>
+</tr>
+<tr bgcolor="#3165CE">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td><img src="/p.gif" width="1"></td>
+<td><img src="/p.gif" width="3" height="18"></td>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td valign="middle"><a class="GRP" href="JavaScript:ETML('/current/BGT/Programme/2004/23_July_2004/best_index.etml', '0');">NEW AT 60% OFF OR MORE</a></td>
+<td align="right"><a class="GRP" href="JavaScript:ETML('/current/BGT/Programme/2004/23_July_2004/best_index.etml', '0');">»</a></td>
+</tr>
+</table>
+</td>
+<td colspan="2"><img src="/p.gif" width="2"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+</tr>
+<tr>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td bgcolor="#3165CE" colspan="5"><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+</tr>
+<tr>
+<td bgcolor="#000000" colspan="7"><img src="/p.gif" width="159" height="1"></td>
+</tr>
+<tr bgcolor="#f2f1e2">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="173" height="2"></td>
+<td><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000" width="1"><img src="/p.gif" width="1"></td>
+</tr>
+<tr bgcolor="#f2f1e2">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="1"></td>
+<td colspan="2"><a class="CAT" href="JavaScript:CAT('New in Arts Philos and Poetry');">Arts and Philosophy</a></td>
+<td><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+</tr>
+<tr bgcolor="#f2f1e2">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="173" height="2"></td>
+<td><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000" width="1"><img src="/p.gif" width="1"></td>
+</tr>
+<tr bgcolor="#f2f1e2">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="1"></td>
+<td colspan="2"><a class="CAT" href="JavaScript:CAT('New in Biography');">Biography</a></td>
+<td><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+</tr>
+<tr bgcolor="#f2f1e2">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="173" height="2"></td>
+<td><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000" width="1"><img src="/p.gif" width="1"></td>
+</tr>
+<tr bgcolor="#f2f1e2">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="1"></td>
+<td colspan="2"><a class="CAT" href="JavaScript:CAT('New in Childrens');">Children's</a></td>
+<td><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+</tr>
+<tr bgcolor="#f2f1e2">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="173" height="2"></td>
+<td><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000" width="1"><img src="/p.gif" width="1"></td>
+</tr>
+<tr bgcolor="#f2f1e2">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="1"></td>
+<td colspan="2"><a class="CAT" href="JavaScript:CAT('New in Contemporary Fiction');">Contemporary Fiction</a></td>
+<td><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+</tr>
+<tr bgcolor="#f2f1e2">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="173" height="2"></td>
+<td><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000" width="1"><img src="/p.gif" width="1"></td>
+</tr>
+<tr bgcolor="#f2f1e2">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="1"></td>
+<td colspan="2"><a class="CAT" href="JavaScript:CAT('New in Crime and Thrillers');">Crime &amp; Thrillers</a></td>
+<td><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+</tr>
+<tr bgcolor="#f2f1e2">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="173" height="2"></td>
+<td><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000" width="1"><img src="/p.gif" width="1"></td>
+</tr>
+<tr bgcolor="#f2f1e2">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="1"></td>
+<td colspan="2"><a class="CAT" href="JavaScript:CAT('New in Entertainment');">Entertainment</a></td>
+<td><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+</tr>
+<tr bgcolor="#f2f1e2">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="173" height="2"></td>
+<td><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000" width="1"><img src="/p.gif" width="1"></td>
+</tr>
+<tr bgcolor="#f2f1e2">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="1"></td>
+<td colspan="2"><a class="CAT" href="JavaScript:CAT('New in Romantic Fiction');">Female Fiction</a></td>
+<td><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+</tr>
+<tr bgcolor="#f2f1e2">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="173" height="2"></td>
+<td><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000" width="1"><img src="/p.gif" width="1"></td>
+</tr>
+<tr bgcolor="#f2f1e2">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="1"></td>
+<td colspan="2"><a class="CAT" href="JavaScript:CAT('New in Cookery');">Food &amp; Drink</a></td>
+<td><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+</tr>
+<tr bgcolor="#f2f1e2">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="173" height="2"></td>
+<td><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000" width="1"><img src="/p.gif" width="1"></td>
+</tr>
+<tr bgcolor="#f2f1e2">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="1"></td>
+<td colspan="2"><a class="CAT" href="JavaScript:CAT('New in Health Beauty Self Help');">Health, Beauty &amp; Self-Help</a></td>
+<td><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+</tr>
+<tr bgcolor="#f2f1e2">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="173" height="2"></td>
+<td><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000" width="1"><img src="/p.gif" width="1"></td>
+</tr>
+<tr bgcolor="#f2f1e2">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="1"></td>
+<td colspan="2"><a class="CAT" href="JavaScript:CAT('New in Hist Politics Society');">History, Politics &amp; Society</a></td>
+<td><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+</tr>
+<tr bgcolor="#f2f1e2">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="173" height="2"></td>
+<td><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000" width="1"><img src="/p.gif" width="1"></td>
+</tr>
+<tr bgcolor="#f2f1e2">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="1"></td>
+<td colspan="2"><a class="CAT" href="JavaScript:CAT('New in Home and Garden');">Home &amp; Garden</a></td>
+<td><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+</tr>
+<tr bgcolor="#f2f1e2">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="173" height="2"></td>
+<td><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000" width="1"><img src="/p.gif" width="1"></td>
+</tr>
+<tr bgcolor="#f2f1e2">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="1"></td>
+<td colspan="2"><a class="CAT" href="JavaScript:CAT('New in Literary Fiction');">Literary Fiction</a></td>
+<td><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+</tr>
+<tr bgcolor="#f2f1e2">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="173" height="2"></td>
+<td><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000" width="1"><img src="/p.gif" width="1"></td>
+</tr>
+<tr bgcolor="#f2f1e2">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="1"></td>
+<td colspan="2"><a class="CAT" href="JavaScript:CAT('New in Science and Nature');">Science &amp; Nature</a></td>
+<td><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+</tr>
+<tr bgcolor="#f2f1e2">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="173" height="2"></td>
+<td><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000" width="1"><img src="/p.gif" width="1"></td>
+</tr>
+<tr bgcolor="#f2f1e2">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="1"></td>
+<td colspan="2"><a class="CAT" href="JavaScript:CAT('New in Sci Fi and Fantasy');">SF &amp; Fantasy</a></td>
+<td><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+</tr>
+<tr bgcolor="#f2f1e2">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="173" height="2"></td>
+<td><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000" width="1"><img src="/p.gif" width="1"></td>
+</tr>
+<tr bgcolor="#f2f1e2">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="1"></td>
+<td colspan="2"><a class="CAT" href="JavaScript:CAT('New in Sport');">Sport</a></td>
+<td><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+</tr>
+<tr bgcolor="#f2f1e2">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="173" height="2"></td>
+<td><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000" width="1"><img src="/p.gif" width="1"></td>
+</tr>
+<tr bgcolor="#f2f1e2">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="1"></td>
+<td colspan="2"><a class="CAT" href="JavaScript:CAT('New in Travel');">Travel</a></td>
+<td><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+</tr>
+<tr bgcolor="#f2f1e2">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td colspan="5"><img src="/p.gif" width="175" height="2"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+</tr>
+<tr>
+<td><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td bgcolor="#f2f1e2" colspan="3"><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td><img src="/p.gif" width="1"></td>
+</tr>
+<tr>
+<td colspan="2"><img src="/p.gif" width="2" height="1"></td>
+<td bgcolor="#000000" colspan="3"><img src="/p.gif" width="155" height="1"></td>
+<td colspan="2"><img src="/p.gif" width="2" height="1"></td>
+</tr>
+</table>
+</font>
+<font face="Arial" size="1"><br id=""><table border="0" cellpadding="0" cellspacing="0" width="180">
+<tr>
+<td width="1"><img src="/p.gif" width="1"></td>
+<td width="1"><img src="/p.gif" width="1"></td>
+<td width="3" bgcolor="#000000"><img src="/p.gif" width="3" height="1"></td>
+<td width="163" bgcolor="#000000"><img src="/p.gif" width="163" height="1"></td>
+<td width="10" bgcolor="#000000"><img src="/p.gif" width="10" height="1"></td>
+<td width="1"><img src="/p.gif" width="1"></td>
+<td width="1"><img src="/p.gif" width="1"></td>
+</tr>
+<tr>
+<td><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td bgcolor="#3165CE" colspan="3"><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td><img src="/p.gif" width="1"></td>
+</tr>
+<tr bgcolor="#3165CE">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td><img src="/p.gif" width="1"></td>
+<td><img src="/p.gif" width="3" height="18"></td>
+<td valign="middle"><font size="1" style="font-size:11px" face="Tahoma, arial, helvetica" color="#FFFFFF"><b>THIS MONTH'S SPECIALS</b></font></td>
+<td colspan="2"><img src="/p.gif" width="2"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+</tr>
+<tr>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td bgcolor="#3165CE" colspan="5"><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+</tr>
+<tr>
+<td bgcolor="#000000" colspan="7"><img src="/p.gif" width="159" height="1"></td>
+</tr>
+<tr bgcolor="#f2f1e2">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="173" height="2"></td>
+<td><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000" width="1"><img src="/p.gif" width="1"></td>
+</tr>
+<tr bgcolor="#f2f1e2">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="1"></td>
+<td colspan="2"><a class="CAT" href="JavaScript:ETML('/current/BGT/Summer/2004/Summer_Reads2.etml', '0');">Perfect Summer Reads</a></td>
+<td><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+</tr>
+<tr bgcolor="#f2f1e2">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="173" height="2"></td>
+<td><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000" width="1"><img src="/p.gif" width="1"></td>
+</tr>
+<tr bgcolor="#f2f1e2">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="1"></td>
+<td colspan="2"><a class="CAT" href="JavaScript:ETML('/current/BGT/Features/2004/3 for 10/July04_3410_index.etml', '0');">3 Books for £10</a></td>
+<td><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+</tr>
+<tr bgcolor="#f2f1e2">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="173" height="2"></td>
+<td><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000" width="1"><img src="/p.gif" width="1"></td>
+</tr>
+<tr bgcolor="#f2f1e2">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="1"></td>
+<td colspan="2"><a class="CAT" href="JavaScript:ETML('/common/Features/beach_bundles/2004/beachreads_bol.etml', '0');">Great Value Beach Bundles</a></td>
+<td><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+</tr>
+<tr bgcolor="#f2f1e2">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="173" height="2"></td>
+<td><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000" width="1"><img src="/p.gif" width="1"></td>
+</tr>
+<tr bgcolor="#f2f1e2">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="1"></td>
+<td colspan="2"><a class="CAT" href="JavaScript:ETML('/common/big books/2004/IBOMs/ibom_index_BOL.etml', '0');">International Book of the Month</a></td>
+<td><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+</tr>
+<tr bgcolor="#f2f1e2">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td colspan="5"><img src="/p.gif" width="175" height="2"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+</tr>
+<tr>
+<td><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td bgcolor="#f2f1e2" colspan="3"><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td><img src="/p.gif" width="1"></td>
+</tr>
+<tr>
+<td colspan="2"><img src="/p.gif" width="2" height="1"></td>
+<td bgcolor="#000000" colspan="3"><img src="/p.gif" width="155" height="1"></td>
+<td colspan="2"><img src="/p.gif" width="2" height="1"></td>
+</tr>
+</table>
+</font>
+<font face="Arial" size="1"><br id=""><table border="0" cellpadding="0" cellspacing="0" width="180">
+<tr>
+<td width="1"><img src="/p.gif" width="1"></td>
+<td width="1"><img src="/p.gif" width="1"></td>
+<td width="3" bgcolor="#000000"><img src="/p.gif" width="3" height="1"></td>
+<td width="163" bgcolor="#000000"><img src="/p.gif" width="163" height="1"></td>
+<td width="10" bgcolor="#000000"><img src="/p.gif" width="10" height="1"></td>
+<td width="1"><img src="/p.gif" width="1"></td>
+<td width="1"><img src="/p.gif" width="1"></td>
+</tr>
+<tr>
+<td><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td bgcolor="#3165CE" colspan="3"><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td><img src="/p.gif" width="1"></td>
+</tr>
+<tr bgcolor="#3165CE">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td><img src="/p.gif" width="1"></td>
+<td><img src="/p.gif" width="3" height="18"></td>
+<td valign="middle"><font size="1" style="font-size:11px" face="Tahoma, arial, helvetica" color="#FFFFFF"><b>BOOKS AT 20% OFF OR MORE</b></font></td>
+<td colspan="2"><img src="/p.gif" width="2"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+</tr>
+<tr>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td bgcolor="#3165CE" colspan="5"><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+</tr>
+<tr>
+<td bgcolor="#000000" colspan="7"><img src="/p.gif" width="159" height="1"></td>
+</tr>
+<tr bgcolor="#f2f1e2">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="173" height="2"></td>
+<td><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000" width="1"><img src="/p.gif" width="1"></td>
+</tr>
+<tr bgcolor="#f2f1e2">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="1"></td>
+<td colspan="2"><a class="CAT" href="Javascript:TABCAT(2, 'BOOKSTORE', 'GENRE Arts and Crafts');">Arts and Crafts</a><br>
+<img src="/edimages/Common/bol/p.gif" height="2"><br><a class="CAT" href="Javascript:TABCAT(2, 'BOOKSTORE', 'GENRE Biography');">Biography</a><br>
+<img src="/edimages/Common/bol/p.gif" height="2"><br>
+<a class="CAT" href="Javascript:TABCAT(2, 'BOOKSTORE', 'GENRE Books on TV');">Books on TV</a><br>
+<img src="/edimages/Common/bol/p.gif" height="2"><br>
+<a class="CAT" href="Javascript:TABCAT(2, 'BOOKSTORE', 'GENRE Business');">Business</a><br>
+<img src="/edimages/Common/bol/p.gif" height="2"><br>
+<a class="CAT" href="Javascript:TABCAT(2, 'BOOKSTORE', 'GENRE Children');">Children</a><br>
+<img src="/edimages/Common/bol/p.gif" height="2"><br>
+<a class="CAT" href="Javascript:TABCAT(2, 'BOOKSTORE', 'GENRE Computer Books');">Computer Books</a><br>
+<img src="/edimages/Common/bol/p.gif" height="2"><br>
+<a class="CAT" href="Javascript:TABCAT(2, 'BOOKSTORE', 'GENRE Cookery');">Cookery</a><br><img src="/edimages/Common/bol/p.gif" height="2"><br>
+<a class="CAT" href="Javascript:TABCAT(2, 'BOOKSTORE', 'GENRE Crime');">Crime</a><br>
+<img src="/edimages/Common/bol/p.gif" height="2"><br>
+<a class="CAT" href="Javascript:TABCAT(2, 'BOOKSTORE', 'GENRE Dictionaries & Lang');">Dictionaries &amp; Languages</a><br>
+<img src="/edimages/Common/bol/p.gif" height="2"><br>
+<a class="CAT" href="Javascript:TABCAT(2, 'BOOKSTORE', 'GENRE Entertainment');">Entertainment</a><br>
+<img src="/edimages/Common/bol/p.gif" height="2"><br>
+<a class="CAT" href="Javascript:TABCAT(2, 'BOOKSTORE', 'GENRE Fiction');">Fiction</a><br>
+<img src="/edimages/Common/bol/p.gif" height="2"><br>
+<img src="/edimages/Common/bol/p.gif" height="2"><br>
+<a class="CAT" href="Javascript:TABCAT(2, 'BOOKSTORE', 'GENRE History');">History</a><br>
+<img src="/edimages/Common/bol/p.gif" height="2"><br>
+<a class="CAT" href="Javascript:TABCAT(2, 'BOOKSTORE', 'GENRE Home and Garden');">Home and Garden</a><br>
+<img src="/edimages/Common/bol/p.gif" height="2"><br>
+<a class="CAT" href="Javascript:TABCAT(2, 'BOOKSTORE', 'GENRE Humour');">Humour</a><br>
+<img src="/edimages/Common/bol/p.gif" height="2"><br>
+<a class="CAT" href="Javascript:TABCAT(2, 'BOOKSTORE', 'GENRE Military');">Military</a><br>
+<img src="/edimages/Common/bol/p.gif" height="2"><br>
+<img src="/edimages/Common/bol/p.gif" height="2"><br>
+<a class="CAT" href="Javascript:TABCAT(2, 'BOOKSTORE', 'GENRE Popular Music');">Popular Music</a><br>
+<img src="/edimages/Common/bol/p.gif" height="2"><br>
+<a class="CAT" href="Javascript:TABCAT(2, 'BOOKSTORE', 'GENRE Reference');">Reference</a><br>
+<img src="/edimages/Common/bol/p.gif" height="2"><br>
+<a class="CAT" href="Javascript:TABCAT(2, 'BOOKSTORE', 'GENRE Religion');">Religion</a><br>
+<img src="/edimages/Common/bol/p.gif" height="2"><br>
+<a class="CAT" href="Javascript:TABCAT(2, 'BOOKSTORE', 'GENRE Science and Nature');">Science and Nature</a><br>
+<img src="/edimages/Common/bol/p.gif" height="2"><br>
+<a class="CAT" href="Javascript:TABCAT(2, 'BOOKSTORE', 'GENRE SciFi & Fantasy');">Science Fiction &amp; Fantasy</a><br>
+<img src="/edimages/Common/bol/p.gif" height="2"><br>
+<a class="CAT" href="Javascript:TABCAT(2, 'BOOKSTORE', 'GENRE Specialist Music');">Specialist Music</a><br>
+<img src="/edimages/Common/bol/p.gif" height="2"><br>
+<a class="CAT" href="Javascript:TABCAT(2, 'BOOKSTORE', 'GENRE Sport');">Sport</a><br>
+<img src="/edimages/Common/bol/p.gif" height="2"><br>
+<a class="CAT" href="Javascript:TABCAT(2, 'BOOKSTORE', 'GENRE Transport');">Transport</a><br>
+<img src="/edimages/Common/bol/p.gif" height="2"><br>
+<a class="CAT" href="Javascript:TABCAT(2, 'BOOKSTORE', 'GENRE Travel');">Travel</a><br>
+<img src="/edimages/Common/bol/p.gif" height="2"><br>
+<img src="/edimages/Common/bol/p.gif" height="2"><br>
+
+</td>
+<td><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+</tr>
+<tr bgcolor="#f2f1e2">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td colspan="5"><img src="/p.gif" width="175" height="2"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+</tr>
+<tr>
+<td><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td bgcolor="#f2f1e2" colspan="3"><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td><img src="/p.gif" width="1"></td>
+</tr>
+<tr>
+<td colspan="2"><img src="/p.gif" width="2" height="1"></td>
+<td bgcolor="#000000" colspan="3"><img src="/p.gif" width="155" height="1"></td>
+<td colspan="2"><img src="/p.gif" width="2" height="1"></td>
+</tr>
+</table>
+</font>
+<font face="Arial" size="1"><br id=""><table border="0" cellpadding="0" cellspacing="0" width="180">
+<tr>
+<td width="1"><img src="/p.gif" width="1"></td>
+<td width="1"><img src="/p.gif" width="1"></td>
+<td width="3" bgcolor="#000000"><img src="/p.gif" width="3" height="1"></td>
+<td width="163" bgcolor="#000000"><img src="/p.gif" width="163" height="1"></td>
+<td width="10" bgcolor="#000000"><img src="/p.gif" width="10" height="1"></td>
+<td width="1"><img src="/p.gif" width="1"></td>
+<td width="1"><img src="/p.gif" width="1"></td>
+</tr>
+<tr>
+<td><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td bgcolor="#3165CE" colspan="3"><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td><img src="/p.gif" width="1"></td>
+</tr>
+<tr bgcolor="#3165CE">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td><img src="/p.gif" width="1"></td>
+<td><img src="/p.gif" width="3" height="18"></td>
+<td valign="middle"><font size="1" style="font-size:11px" face="Tahoma, arial, helvetica" color="#FFFFFF"><b>SERVICES</b></font></td>
+<td colspan="2"><img src="/p.gif" width="2"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+</tr>
+<tr>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td bgcolor="#3165CE" colspan="5"><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+</tr>
+<tr>
+<td bgcolor="#000000" colspan="7"><img src="/p.gif" width="159" height="1"></td>
+</tr>
+<tr bgcolor="#f2f1e2">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="173" height="2"></td>
+<td><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000" width="1"><img src="/p.gif" width="1"></td>
+</tr>
+<tr bgcolor="#f2f1e2">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td colspan="2"><img src="/p.gif" width="1"></td>
+<td colspan="2"><a class="CAT" href="JavaScript:ETML('/current/BGT/affiliate.etml', '0');">Partners and Affiliates</a></td>
+<td><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+</tr>
+<tr bgcolor="#f2f1e2">
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td colspan="5"><img src="/p.gif" width="175" height="2"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+</tr>
+<tr>
+<td><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td bgcolor="#f2f1e2" colspan="3"><img src="/p.gif" width="1"></td>
+<td bgcolor="#000000"><img src="/p.gif" width="1"></td>
+<td><img src="/p.gif" width="1"></td>
+</tr>
+<tr>
+<td colspan="2"><img src="/p.gif" width="2" height="1"></td>
+<td bgcolor="#000000" colspan="3"><img src="/p.gif" width="155" height="1"></td>
+<td colspan="2"><img src="/p.gif" width="2" height="1"></td>
+</tr>
+</table>
+</font>
+<font face="Arial" size="1"><br id=""></font>
+</font>
+</td>
+<td width="2"><img src="/p.gif" width="2"></td>
+<td width="586" valign="top" bgcolor="#FFFFFF">
+<center>
+<!-- Category Etml - CLUB HOME HDR : \current\BGT\index\2004\23_July_2004\index2.etml -->
+<title>BOL - Home</title>
+<script language="javascript">
+<!--
+
+function OpenPopUpPostEntry(strEtmlId, strWindowTitle, intWidth, intHeight) {
+	var objRegularExpression = / /gi;
+	var strValidTitle = strWindowTitle.replace(objRegularExpression, "_");
+	var entryText = "";
+
+	for(var i=0; i<document.form1.elements.length; i++)
+	{
+		if(document.form1.elements(i).type == "radio" && document.form1.elements(i).checked)
+		{
+			switch(i)
+			{
+				case 0:
+					entryText = "YES"
+				break;
+				case 1:
+					entryText = "NO"
+				break;
+			}
+		}
+	}	
+		
+	if(entryText != "")
+	{
+		var subWindow =	window.open("popup.asp?entryText=" + entryText + "&entryType=booker&content=" + escape(strEtmlId) + "&WindowTitle=" +  escape(strValidTitle), strValidTitle, "HEIGHT=" + intHeight + ",WIDTH=" + intWidth + ",MENUBAR=0,STATUS=0,SCROLLBARS=1,RESIZABLE=1");		
+	}
+	else
+	{
+		alert("Please choose either YES or NO")
+	}
+}
+
+
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+
+function MM_showHideLayers() { //v3.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+
+
+//-->
+</script>
+<style type="text/css"><!-- .tabtitle {font-family: tahoma, arial, helvetica; color:#FFFFFF; font-size: 11px; text-decoration: none; font-weight : bold;} A.tabtitle:HOVER {color:#666666; font-size: 12px; text-decoration: none;} 
+
+.tablink {font-family: Tahoma, Verdana, Arial; font-size: 11px; color: #3165CE; font-weight: bold; text-decoration: none}
+a.tablink:LINK {font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #3165CE; text-decoration: none; font-weight: bold}
+a.tablink:HOVER {font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #99CCFF; text-decoration: none; font-weight: bold}
+a.tablink:VISITED {font-family: Tahoma, Verdana, Arial; font-size: 11px; font-weight: bold; color: #3165CE; text-decoration: none}
+
+.price {font-family: tahoma, arial, helvetica; color:#E80101; font-size: 12px; text-decoration: none; line-height: 16px; font-weight : bold;} .save {font-family: tahoma, arial, helvetica; color:#99CCFF; font-size: 12px; text-decoration: none; line-height: 16px; font-weight : bold;} .body {font-family: tahoma, arial, helvetica; color:#000000; font-size: 11px; text-decoration: none; line-height: 16px;} .auth {font-family: tahoma, arial, helvetica; color:#9A9A9A; font-size: 11px; text-decoration: none; line-height: 16px;}
+body{
+scrollbar-face-color: #3165CE;
+scrollbar-arrow-color: #FFCC33;
+scrollbar-3dlight-color: #F2F1E2;
+scrollbar-darkshadow-color: #F2F1E2;
+scrollbar-track-color: #F2F1E2;
+scrollbar-shadow-color: #FFFFFF;
+scrollbar-base-color: #FFFFFF
+}
+ --></style>
+<!--first box--><table width="574" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td colspan="3" class="edhealine" height="0"><img src="/p.gif" width=5 height="9"><br>
+      <img src="/edimages/Common/bol/txt/txt_wlcm.gif" width="570" height="20" border="0"></td>
+  </tr><tr>
+    <td width="425"><img src="/edimages/Common/bol/p.gif" width="420" height="6"></td>
+    <td width="11"><img src="/edimages/Common/bol/p.gif" width="10" height="6"></td>
+    <td width="140"><img src="/edimages/Common/bol/p.gif" width="140" height="6"></td>
+  </tr><tr>
+    <td valign="top" width="425"> <img src="/p.gif" width=5 height="6"><br>
+      <img src="/edimages/Common/bol/hm/start_here.gif" width="420" height="13"><br>
+      <table width="420" border="0" cellspacing="0" cellpadding="0" class="body">
+        <tr> 
+          <td width="100"><img src="/p.gif" width=100 height="11"></td>
+          <td width="10"><img src="/p.gif" width=5 height="7"></td>
+          <td width="95"><img src="/p.gif" width=100 height="11"></td>
+          <td width="5"><img src="/p.gif" width=5 height="7"></td>
+          <td width="100"><img src="/p.gif" width=100 height="11"></td>
+          <td width="10"><img src="/p.gif" width=5 height="7"></td>
+          <td width="100"><img src="/p.gif" width=100 height="11"></td>
+        </tr>
+        <tr> 
+          <td width="100"><a href="Javascript:DisplayOrder('3151644');"><img src="/edimages/Common/3d_titles/2004/07_july/128984_70_3d.jpg" width="70" border="0"></a></td>
+          <td width="10">&nbsp;</td>
+          <td width="100"><a href="Javascript:DisplayOrder('3152022');"><img src="/edimages/Common/3d_titles/2004/07_july/128095_70_3d.jpg" width="70" border="0" height="128"></a></td>
+          <td width="5">&nbsp;</td>
+          <td width="100"><a href="Javascript:DisplayOrder('3151529');"><img src="/edimages/Common/3d_titles/2004/07_july/129236_70_3d.jpg" width="70" border="0" height="128"></a></td>
+          <td width="10">&nbsp;</td>
+          <td width="100"><a href="Javascript:DisplayOrder('3152220');"><img src="/edimages/Common/3d_titles/2004/07_july/129284_70_3d.jpg" width="70" border="0" height="128"></a></td>
+        </tr>
+        <tr> 
+          <td  class="auth" valign="top" width="100"><a href="Javascript:DisplayOrder('3151644');" class="tablink">The 
+            Burning Girl &raquo;</a><br>
+            Mark Billingham</td>
+          <td width="10">&nbsp;</td>
+          <td  class="auth" valign="top" width="100"><a href="Javascript:DisplayOrder('3152022');" class="tablink">Gazza: 
+            My Story&raquo;</a><br>
+            Paul Gascoigne</td>
+          <td width="5">&nbsp;</td>
+          <td  class="auth" valign="top" width="100"><a href="Javascript:DisplayOrder('3151529');" class="tablink">The 
+            Coma &raquo;</a><br>
+            <span class="auth">Alex Garland</span></td>
+          <td width="10">&nbsp;</td>
+          <td  class="auth" valign="top" width="100"><a href="Javascript:DisplayOrder('3152220');" class="tablink">On 
+            the Farm &raquo;</a><br>
+            Jimmy Doherty</td>
+        </tr>
+        <tr> 
+          <td valign="top" width="100">&nbsp;</td>
+          <td width="10">&nbsp;</td>
+          <td valign="top" width="100">&nbsp;</td>
+          <td width="5">&nbsp;</td>
+          <td valign="top" width="100">&nbsp;</td>
+          <td width="10">&nbsp;</td>
+          <td valign="top" width="100">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td class="price" width="100"><font size="1">BOL Price:</font> &pound;5.19</td>
+          <td width="10">&nbsp;</td>
+          <td class="price" width="100"><font size="1">BOL Price:</font> &pound;7.19</td>
+          <td width="5">&nbsp;</td>
+          <td class="price" width="100"><font size="1">BOL Price:</font> &pound;3.99</td>
+          <td width="10">&nbsp;</td>
+          <td class="price" width="100"><font size="1">BOL Price:</font> &pound;7.59</td>
+        </tr>
+        <tr> 
+          <td class="save" width="100"><font size="3">SAVE 60%</font></td>
+          <td width="10">&nbsp;</td>
+          <td class="save" width="100"><font size="3">SAVE 60%</font></td>
+          <td width="5">&nbsp;</td>
+          <td class="save" width="100"><font size="3">SAVE 60%</font></td>
+          <td width="10">&nbsp;</td>
+          <td class="save" width="100"><font size="3">SAVE 60%</font></td>
+        </tr>
+      </table>
+      <br>
+      <a href="javascript:ETML('common/SiteHelp/bol/12_benefits_23_July')" class="tablink"><img src="/edimages/Common/bol/touts/tout_join_420x50.gif" width="420" height="50" border="0"></a><img src="/edimages/Common/bol/hm/bot_tab_cl.gif" width="420" height="18"><br>
+      <table width="420" border="0" cellspacing="0" cellpadding="0" class="body">
+        <tr> 
+          <td valign="top" height="50"> 
+            <p>Roll up, Roll up! For all your Summer Reading needs, don't miss 
+              our fab <a href="javascript:TAB('6','GENERAL 2','Summer Reads');" class="tablink">Summer 
+              Reading Promotion</a>, full to the brim with exciting new titles 
+              and fun beach reads.</p>
+            <p>And don't forget our offer of <b>100s of bestsellers at 60% off</b>, 
+              and<b> <a href="javascript:TAB('2','BOOKSTORE','BOOKSTORE HOME HDR');" class="tablink">1000s 
+              more titles with at least 20% off</a></b>! ENJOY...</p>
+          </td>
+        </tr>
+        <tr> 
+          <td> 
+            <table width="420" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td width="140" colspan="3"><img src="/edimages/Common/bol/hm/bot_tab_cl.gif" width="420" height="18"></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+		  
+      <img src="/edimages/Common/bol/p.gif" width="7" height="5"><br>
+      <!--FIRST BLURB TABLE-->
+      <a href="javascript:CAT('New in Biography');"><img src="/edimages/Common/bol/hm/t_bio_chev.gif" width="420" height="20" border="0"></a> 
+      <table width="420" border="0" cellspacing="0" cellpadding="0" class="body" bgcolor="#FFFCF5">
+        <tr> 
+          <td colspan="6"><img src="/edimages/Common/bol/p.gif" width="7" height="6"></td>
+        </tr>
+        <tr> 
+          <td rowspan="4" width="4"><img src="/edimages/Common/bol/p.gif" width="4" height="7"></td>
+          <td rowspan="4" width="71" valign="top"><a href="Javascript:DisplayOrder('3151164');"><img src="/images/titles/130587_70.jpg" width=70 border="0"></a></td>
+          <td rowspan="4" width="7"><img src="/edimages/Common/bol/p.gif" width="7" height="6"></td>
+          <td class="auth" width="251"><a href="Javascript:DisplayOrder('3151164');" class="tablink"> 
+            My Life: Bill Clinton &raquo; </a><br>
+            Bill Clinton</td>
+          <td class="auth" width="98">&nbsp;</td>
+          <td rowspan="4" width="4"><img src="/edimages/Common/bol/p.gif" width="4" height="7"></td>
+        </tr>
+        <tr> 
+          <td colspan="2"><b><s>Pub Price: &pound;25.00</s></b></td>
+        </tr>
+        <tr> 
+          <td colspan="2"> 
+            <table width="335" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td class="price" width="122">BOL Price: &pound;10.00</td>
+                <td width="40"> 
+                  <p><img src="/edimages/Common/bol/hm/arrow_rt.gif"></p>
+                </td>
+                <td width="105" class="save">* SAVE 60 % *</td>
+                <td width="66"><a href="Javascript:DisplayOrder('3151164');"><img src="/edimages/Common/bol/hm/buy_now.gif" width="66" height="15" border="0"></a></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr> 
+          <td valign="top" height="50" colspan="2"> Everyone wants to know about 
+            Lewinsky, how his wife really felt and how Clinton himself dealt with 
+            the scandal. But Clinton&#146;s account also reveals a lot more about 
+            his relationship with Blair and America&#146;s political arena too. 
+            Fascinating stuff...</td>
+        </tr>
+        <tr> 
+          <td colspan="6"><img src="/edimages/Common/bol/hm/more_titles.gif" width="420" height="23"></td>
+        </tr>
+        <tr> 
+          <td width="4">&nbsp;</td>
+          <td colspan="4"> 
+            <table width="412" border="0" cellspacing="0" cellpadding="0" class="body">
+              <tr> 
+                <td class="auth" colspan="5"><a href="Javascript:DisplayOrder('3151255');" class="tablink">Diana: In Pursuit of Love &raquo; </a>&nbsp;&nbsp;&nbsp;&nbsp;Andrew Morton</td>
+              </tr>
+              <tr> 
+                <td width="102"><b><s>Pub Price: &pound;18.00</s></b></td>
+                <td class="price" width="115">BOL Price: &pound;7.20</td>
+                <td width="32"><img src="/edimages/Common/bol/hm/arrow_rt.gif"></td>
+                <td class="save" width="98">* SAVE 60% *</td>
+                <td width="66"> <a href="Javascript:DisplayOrder('3151255');"><img src="/edimages/Common/bol/hm/buy_now.gif" width="66" height="15" border="0"></a></td>
+              </tr>
+              <tr> 
+                <td class="auth" colspan="5"><a href="Javascript:DisplayOrder('3151115');" class="tablink">Being Jordan &raquo;</a>&nbsp;&nbsp;&nbsp;&nbsp; 
+                  <span class="auth">Katie Price</span></td>
+              </tr>
+              <tr> 
+                <td><b><s>Pub Price: &pound;16.99</s></b></td>
+                <td class="price">BOL Price: &pound;6.79</td>
+                <td><img src="/edimages/Common/bol/hm/arrow_rt.gif"></td>
+                <td class="save">* SAVE 60 % *</td>
+                <td><a href="Javascript:DisplayOrder('3151115');"><img src="/edimages/Common/bol/hm/buy_now.gif" width="66" height="15" border="0"></a></td>
+              </tr>
+              <tr> 
+                <td class="auth" colspan="5" height="11"><a href="Javascript:DisplayOrder('3151248');" class="tablink"> 
+                  The Kid &raquo; </a>&nbsp;&nbsp;&nbsp;&nbsp; Kevin Lewis</td>
+              </tr>
+              <tr> 
+                <td><b><s>Pub Price: &pound;6.99</s></b></td>
+                <td class="price">BOL Price: &pound;2.79</td>
+                <td><img src="/edimages/Common/bol/hm/arrow_rt.gif"></td>
+                <td class="save">* SAVE 60% *</td>
+                <td><a href="Javascript:DisplayOrder('3151248');"><img src="/edimages/Common/bol/hm/buy_now.gif" width="66" height="15" border="0"></a></td>
+              </tr>
+              <tr> 
+                <td colspan="5"> 
+                  <div align="right"><img src="/p.gif" width=7 height="7" border="0"><br>
+                    <a href="javascript:CAT('New in Biography');" class="tablink"><font size="2">Click 
+                    here for more Biography titles &raquo;</font></a></div>
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td width="4">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td colspan="6"><img src="/edimages/Common/bol/hm/bot_table.gif" width="420" height="18"></td>
+        </tr>
+      </table>
+      <!--SECOND BLURB TABLE-->
+      <a href="javascript:CAT('New in Romantic Fiction');"><img src="/edimages/Common/bol/hm/t_romantic_fict.gif" width="420" height="20" border="0"></a> 
+      <table width="420" border="0" cellspacing="0" cellpadding="0" class="body" bgcolor="#FFFCF5">
+        <tr>
+          <td colspan="6"><img src="/edimages/Common/bol/p.gif" width="7" height="6"></td>
+        </tr>
+        <tr> 
+          <td rowspan="4" width="4"><img src="/edimages/Common/bol/p.gif" width="4" height="7"></td>
+          <td rowspan="4" width="71" valign="top"><img src="/edimages/Common/bol/p.gif" width="7" height="4" border="0"><a href="Javascript:DisplayOrder('3150562');"><img src="/images/titles/129235_70.jpg" width=70 border="0"></a></td>
+          <td rowspan="4" width="7"><img src="/edimages/Common/bol/p.gif" width="7" height="6"></td>
+          <td class="auth" width="260"><a href="Javascript:DisplayOrder('3150562');" class="tablink">Unexpected Blessings &raquo;</a><br>
+            Barbara Taylor-Bradford</td>
+          <td class="auth" width="100">&nbsp;</td>
+          <td rowspan="4" width="4"><img src="/edimages/Common/bol/p.gif" width="4" height="7"></td>
+        </tr>
+        <tr> 
+          <td height="14" colspan="2"><b><s>Pub Price: &pound;17.99</s></b></td>
+        </tr>
+        <tr> 
+          <td colspan="2"> 
+            <table width="335" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td class="price" width="122">BOL Price: &pound;7.19</td>
+                <td width="40"> 
+                  <p><img src="/edimages/Common/bol/hm/arrow_rt.gif"></p>
+                </td>
+                <td width="105" class="save">* SAVE 60% *</td>
+                <td width="66"><a href="Javascript:DisplayOrder('3150562');"><img src="/edimages/Common/bol/hm/buy_now.gif" width="66" height="15" border="0"></a></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr> 
+          <td valign="top" colspan="2"> Packed with emotion and suspense, Barbara 
+            Taylor Bradford&#146;s new blockbuster charts Emma Harte&#146;s war 
+            experiences and the repercussions the past has for present members 
+            of the Harte clan. </td>
+        </tr>
+        <tr> 
+          <td colspan="6"><img src="/edimages/Common/bol/hm/more_titles.gif" width="420" height="23"></td>
+        </tr>
+        <tr> 
+          <td width="4">&nbsp;</td>
+          <td colspan="4"> 
+            <table width="412" border="0" cellspacing="0" cellpadding="0" class="body">
+              <tr> 
+                <td class="auth" colspan="5"><a href="Javascript:DisplayOrder('3148566');" class="tablink">Still Thinking of You &raquo;</a>&nbsp;&nbsp;&nbsp;&nbsp;Adele Parks</td>
+              </tr>
+              <tr> 
+                <td width="102"><b><s>Pub Price: &pound;6.99</s></b></td>
+                <td class="price" width="115">BOL Price: &pound;2.79</td>
+                <td width="32"><img src="/edimages/Common/bol/hm/arrow_rt.gif"></td>
+                <td class="save" width="98">* SAVE 60% *</td>
+                <td width="66"> <a href="Javascript:DisplayOrder('3148566');"><img src="/edimages/Common/bol/hm/buy_now.gif" width="66" height="15" border="0"></a></td>
+              </tr>
+              <tr> 
+                <td class="auth" colspan="5"><a href="Javascript:DisplayOrder('3150588');" class="tablink">The Other Side of the Story &raquo;</a>&nbsp;&nbsp;Marian Keyes <b class="body"></b></td>
+              </tr>
+              <tr> 
+                <td><b><s>Pub Price: &pound;12.99</s></b></td>
+                <td class="price">BOL Price: &pound;5.19</td>
+                <td><img src="/edimages/Common/bol/hm/arrow_rt.gif"></td>
+                <td class="save">* SAVE 60 % *</td>
+                <td><a href="Javascript:DisplayOrder('3150588');"><img src="/edimages/Common/bol/hm/buy_now.gif" width="66" height="15" border="0"></a></td>
+              </tr>
+              <tr> 
+                <td class="auth" colspan="5"><a href="Javascript:DisplayOrder('3150570');" class="tablink">Olivia Joules and the Overactive Imagination &raquo;</a>&nbsp;&nbsp;&nbsp;&nbsp;Helen Fielding</td>
+              </tr>
+              <tr> 
+                <td><b><s>Pub Price: &pound;7.99</s></b></td>
+                <td class="price">BOL Price: &pound;3.19</td>
+                <td><img src="/edimages/Common/bol/hm/arrow_rt.gif"></td>
+                <td class="save">* SAVE 60% *</td>
+                <td><a href="Javascript:DisplayOrder('3150570');"><img src="/edimages/Common/bol/hm/buy_now.gif" width="66" height="15" border="0"></a></td>
+              </tr>
+              <tr> 
+                <td colspan="5"> 
+                  <div align="right"><a href="javascript:CAT('New in Romantic Fiction');" class="tablink"><font size="2">Click 
+                    here for more new Romantic Fiction titles &raquo;</font></a></div>
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td width="4">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td colspan="6">&nbsp;</td>
+        </tr>
+      </table>
+      <!--THIRD BLURB TABLE-->
+      <a href="javascript:CAT('New in Hist Politics Society');"><img src="/edimages/Common/bol/hm/t_new_hist.gif" width="420" height="20" border="0"></a> 
+      <table width="420" border="0" cellspacing="0" cellpadding="0" class="body" bgcolor="#FFFCF5">
+        <tr><td colspan="6"><img src="/edimages/Common/bol/p.gif" width="7" height="6"></td></tr>
+        <tr> 
+          <td rowspan="4" width="4"><img src="/edimages/Common/bol/p.gif" width="4" height="7"></td>
+          <td rowspan="4" width="71" valign="top"><img src="/edimages/Common/bol/p.gif" width="7" height="4" border="0"><a href="Javascript:DisplayOrder('3150778');"><img src="/images/titles/129102_70.jpg" width=70 border="0"></a></td>
+          <td rowspan="4" width="7"><img src="/edimages/Common/bol/p.gif" width="7" height="6"></td>
+          <td class="auth" width="260"><a href="Javascript:DisplayOrder('3150778');" class="tablink">Willing 
+            Slaves &raquo;</a><br>
+            Madeleine Bunting</td>
+          <td class="auth" width="100">&nbsp;</td>
+          <td rowspan="4" width="4"><img src="/edimages/Common/bol/p.gif" width="4" height="7"></td>
+        </tr>
+        <tr> 
+          <td height="14" colspan="2"><b><s>Pub Price: &pound;12.99</s></b></td>
+        </tr>
+        <tr> 
+          <td colspan="2"> 
+            <table width="335" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td class="price" width="122">BOL Price: &pound;5.19</td>
+                <td width="40"> 
+                  <p><img src="/edimages/Common/bol/hm/arrow_rt.gif"></p>
+                </td>
+                <td width="105" class="save">* SAVE 60% *</td>
+                <td width="66"><a href="Javascript:DisplayOrder('3150778');"><img src="/edimages/Common/bol/hm/buy_now.gif" width="66" height="15" border="0"></a></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr> 
+          <td valign="top" colspan="2"> Why do we work so hard? Why do we put 
+            up with it? What is the cost to our health, relationships and children? 
+            Willing Slaves explores the paradox of how we allow ourselves to be 
+            exploited and how we look to work to give our lives meaning and purpose.</td>
+        </tr>
+        <tr> 
+          <td colspan="6"><img src="/edimages/Common/bol/hm/more_titles.gif" width="420" height="23"></td>
+        </tr>
+        <tr> 
+          <td width="4">&nbsp;</td>
+          <td colspan="4"> 
+            <table width="412" border="0" cellspacing="0" cellpadding="0" class="body">
+              <tr> 
+                <td class="auth" colspan="5"><a href="Javascript:DisplayOrder('3150786');" class="tablink">Dude, Where's My Country? &raquo; </a>&nbsp;&nbsp;&nbsp;&nbsp;Michael Moore
+                </td>
+              </tr>
+              <tr> 
+                <td width="102"><b><s>Pub Price: &pound;7.99</s></b></td>
+                <td class="price" width="115">BOL Price: &pound;3.19</td>
+                <td width="32"><img src="/edimages/Common/bol/hm/arrow_rt.gif"></td>
+                <td class="save" width="98">* SAVE 60% *</td>
+                <td width="66"> <a href="Javascript:DisplayOrder('3150786');"><img src="/edimages/Common/bol/hm/buy_now.gif" width="66" height="15" border="0"></a></td>
+              </tr>
+              <tr> 
+                <td class="auth" colspan="5"><a href="Javascript:DisplayOrder('3150836');" class="tablink">Not on the Label &raquo;</a>&nbsp;&nbsp;&nbsp;&nbsp;Felicity Lawrence
+                </td>
+              </tr>
+              <tr> 
+                <td><b><s>Pub Price: &pound;7.99</s></b></td>
+                <td class="price">BOL Price: &pound;3.19</td>
+                <td><img src="/edimages/Common/bol/hm/arrow_rt.gif"></td>
+                <td class="save">* SAVE 60 % *</td>
+                <td><a href="Javascript:DisplayOrder('3150836');"><img src="/edimages/Common/bol/hm/buy_now.gif" width="66" height="15" border="0"></a></td>
+              </tr>
+              <tr> 
+                <td class="auth" colspan="5"><a href="Javascript:DisplayOrder('3150885');" class="tablink">Stalin &raquo; </a>&nbsp;&nbsp;&nbsp;Simon Sebag Montefiore</td>
+              </tr>
+              <tr> 
+                <td><b><s>Pub Price: &pound;9.99</s></b></td>
+                <td class="price">BOL Price: &pound;3.99</td>
+                <td><img src="/edimages/Common/bol/hm/arrow_rt.gif"></td>
+                <td class="save">* SAVE 60% *</td>
+                <td><a href="Javascript:DisplayOrder('3150885');"><img src="/edimages/Common/bol/hm/buy_now.gif" width="66" height="15" border="0"></a></td>
+              </tr>
+              <tr> 
+                <td colspan="5"> 
+                  <div align="right"><a href="javascript:CAT('New in Hist Politics Society');" class="tablink"><font size="2">Click 
+                    here for more in History, Politics & Society &raquo;</font></a></div>
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td width="4">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td colspan="6">
+            <div align="right"></div>
+          </td>
+        </tr>
+      </table>
+      <table width="420" border="0" cellspacing="0" cellpadding="0" class="body" bgcolor="#FFFCF5">
+        <tr> 
+          <td colspan="6"><img src="/edimages/Common/bol/hm/bot_design.gif" width="420" height="35"></td>
+        </tr>
+        <tr> 
+          <td colspan="6"> 
+            <table width="420" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF">
+              <tr> 
+                <td width="140" colspan="3"><img src="/edimages/Common/bol/hm/bot_tab_cl.gif" width="420" height="18"></td>
+              </tr>
+              <tr> 
+                <td width="70"><a href="javascript:ETML('current/BGT/Programme/2004/23_July_2004/best_index');" class="tablink"><img src="/edimages/Common/bol/icon/60_off_31.gif" width="32" height="32" border="0"> 
+                  <img src="/edimages/Common/bol/icon/60_off_31.gif" width="32" height="32" border="0"></a></td>
+                <td width="280" align="center"><a href="javascript:ETML('current/BGT/Programme/2004/23_July_2004/best_index');" class="tablink">Click 
+                  here for more new and <br>
+                  bestselling titles at 60% off Pub Price &raquo;</a></td>
+                <td width="70" align="right"><a href="javascript:ETML('current/BGT/Programme/2004/23_July_2004/best_index');" class="tablink"><img src="/edimages/Common/bol/icon/60_off_31.gif" width="32" height="32" border="0"> 
+                  <img src="/edimages/Common/bol/icon/60_off_31.gif" width="32" height="32" border="0"></a></td>
+              </tr>
+              <tr> 
+                <td width="140" colspan="3"><img src="/edimages/Common/bol/hm/bot_tab_cl.gif" width="420" height="18"></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td background="/edimages/Common/bol/hm/div_line.gif" width="11">&nbsp;</td>
+    <td valign="top" width="140"> 
+      <table width="129" border="0" cellspacing="0" cellpadding="0" class="body">
+        <tr> 
+          <td colspan="6" height="22" class="tabtitle" background="/edimages/Common/bol/rh_title.gif"> 
+            <div align="center"> BOOK OF THE MONTH</div>
+          </td>
+        </tr>
+        <tr> 
+          <td rowspan="3" bgcolor="#000000" width="1"><img src="/p.gif" width=1></td>
+          <td colspan="4" height="7"><img src="/p.gif" width=5 height="7"><br>
+            <img src="/p.gif" width=5 height="7" border="0"> <a href="Javascript:DisplayOrder('3151511');" class="tablink"> 
+            The Family Way &raquo;</a><br>
+            <img src="/p.gif" width=8 height="7" border="0"><span class="auth">Tony 
+            Parsons </span><br>
+            <a href="Javascript:DisplayOrder('2164325');" class="tablink"><img src="/p.gif" width=8 height="5" border="0"></a><br>
+          </td>
+          <td rowspan="3" bgcolor="#000000" width="1"><img src="/p.gif" width=1></td>
+        </tr>
+        <tr> 
+          <td width="5 ">&nbsp;</td>
+          <td width="63" valign="top"><b><img src="/p.gif" width=8 height="8" border="0"><br>
+            <a href="Javascript:DisplayOrder('3151511');"> <img src="/images/titles/129188_70.jpg" width=70 border="0"></a><br>
+            <img src="/p.gif" width=8 height="7" border="0"> <a href="Javascript:DisplayOrder('3151511');"><img src="/edimages/Common/bol/rh_buy_now_sml.gif" width="66" height="14" border="0"></a></b></td>
+          <td width="62" class="auth" valign="top"> 
+            <p align="center"><br>
+              <img src="/edimages/Common/bol/icon/60_off_31.gif" width="31" height="31"><br>
+              <br>
+              <b>&nbsp;<s>Pub Price:</s><br>
+              &nbsp;<s>&pound;17.99</s></b><br>
+              <b><font color="#E80101">&nbsp;BOL Price:<br>
+              <font size="3"> &pound;7.19</font></font></b></p>
+          </td>
+          <td width="1">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="5 "><img src="/p.gif" width=5></td>
+          <td colspan="2" valign="top"><a href="javascript:TAB('5','GENERAL','GENERAL HOME HDR');" class="tablink">Click 
+            here for our<br>
+            Feature &raquo;</a> </td>
+          <td width="1"><img src="/p.gif" width=1></td>
+        </tr>
+        <tr> 
+          <td colspan="6"><img src="/edimages/Common/bol/rh_bot.gif" width="140" height="12"><br>
+            <a href="javascript:ETML('common/features/beach_bundles/2004/beachreads_bol');"><img src="/edimages/common/bol/features/Bundles04_70pc140.gif" width=140 border="0"></a><br>
+            <img src="/p.gif" width=8 height="8" border="0"></td>
+        </tr>
+      </table>
+      <table width="139" border="0" cellspacing="0" cellpadding="0" class="body">
+        <tr> 
+          <td colspan="6" height="22" class="tabtitle" background="/edimages/Common/bol/rh_title.gif"> 
+            <div align="center"> HOT TITLE</div>
+          </td>
+        </tr>
+        <tr> 
+          <td rowspan="2" bgcolor="#000000" width="1"><img src="/p.gif" width=1></td>
+          <td colspan="4"> 
+            <p><img src="/p.gif" width=5 height="7"><br>
+              <img src="/p.gif" width=5 height="7" border="0"><a href="Javascript:DisplayOrder('3151255');" class="tablink">Diana: 
+              In Pursuit of <br>
+              <img src="/p.gif" width=5 height="7" border="0">Love &raquo;</a><br>
+              <img src="/p.gif" width=8 height="7" border="0"><span class="auth">Andrew Morton</span><br>
+              <a href="Javascript:DisplayOrder('3150620');" class="tablink"><img src="/p.gif" width=8 height="5" border="0"></a></p>
+          </td>
+          <td rowspan="2" bgcolor="#000000" width="1"><img src="/p.gif" width=1></td>
+        </tr>
+        <tr> 
+          <td width="5">&nbsp;</td>
+          <td width="70" valign="top"> <a href="Javascript:DisplayOrder('3151255');"><img src="/images/titles/127001_70.jpg" width=70 border="0"></a><br>
+            <img src="/p.gif" width=8 height="7" border="0"> <a href="Javascript:DisplayOrder('3151255');"><img src="/edimages/Common/bol/rh_buy_now_sml.gif" width="66" height="14" border="0"></a></td>
+          <td width="62" class="body" valign="top"> 
+            <p align="center"><br>
+              <span class="tablink"><img src="/edimages/Common/bol/icon/60_off_31.gif" width="31" height="31"></span><br>
+              <br>
+              <b>&nbsp;<s>Pub Price:</s><br>
+              &nbsp;<s>&pound;18.00</s></b><br>
+              <b><font color="#E80101">&nbsp;BOL Price:<br>
+              <font size="3"> <font size="4">&pound;7.20</font></font></font></b></p>
+          </td>
+          <td width="1">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td colspan="6"><img src="/edimages/Common/bol/rh_bot.gif" width="140" height="12"><br>
+            <a href="javascript:TAB('6','GENERAL 2','Summer Reads');"><img src="/edimages/Common/Features/summerread/140_tout.gif" border="0"></a><br>
+            <img src="/p.gif" width=8 height="8" border="0"></td>
+        </tr>
+      </table>
+      <table width="129" border="0" cellspacing="0" cellpadding="0" class="body">
+        <tr> 
+          <td colspan="6" height="22" class="tabtitle" background="/edimages/Common/bol/rh_title.gif"> 
+            <div align="center"> HOT TITLE</div>
+          </td>
+        </tr>
+        <tr> 
+          <td rowspan="2" bgcolor="#000000" width="1"><img src="/p.gif" width=1></td>
+          <td colspan="4"> 
+            <p><img src="/p.gif" width=5 height="7"><br>
+              <img src="/p.gif" width=5 height="7" border="0"> <a href="Javascript:DisplayOrder('3151941');" class="tablink"> 
+              The Treasured One &raquo;</a><br>
+              <img src="/p.gif" width=8 height="7" border="0"><span class="auth">David 
+              & Leigh Eddings </span><br>
+              <a href="Javascript:DisplayOrder('3151941');" class="tablink"><img src="/p.gif" width=8 height="5" border="0"></a></p>
+          </td>
+          <td rowspan="2" bgcolor="#000000" width="1"><img src="/p.gif" width=1></td>
+        </tr>
+        <tr>
+          <td width="5">&nbsp;</td>
+          <td width="70" valign="top"> <a href="Javascript:DisplayOrder('3151941');"><img src="/images/titles/128965_70.jpg" width=70 border="0"></a><br>
+            <img src="/p.gif" width=8 height="7" border="0"> <a href="Javascript:DisplayOrder('3151941');"><img src="/edimages/Common/bol/rh_buy_now_sml.gif" width="66" height="14" border="0"></a></td>
+          <td width="62" valign="top"> 
+            <p align="center"><br>
+              <span class="tablink"><img src="/edimages/Common/bol/icon/60_off_31.gif" width="31" height="31"></span><br>
+              <br>
+              <b>&nbsp;<s>Pub Price:</s><br>
+              &nbsp;<s>&pound;18.99</s></b><br>
+              <b><font color="#E80101">&nbsp;BOL Price:<br>
+              <font size="3"> <font size="4">&pound;7.59</font></font></font></b></p>
+          </td>
+          <td width="1">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td colspan="6"><img src="/edimages/Common/bol/rh_bot.gif" width="140" height="12"></td>
+        </tr>
+      </table>
+      <!--BESTSELLERS TABLE-->
+      <!--END BESTSELLERS TABLE-->
+      <script language="javascript">GetTop10()</script>
+      <script language="javascript" src="/EtmlRotator.asp?RID=Tout"></script>
+      <!--TOUT ONE-->
+    </td>
+        </tr>
+      </table>
+
+</center>
+</td>
+</tr>
+</table>
+<table border="0" width="775" cellpadding="0" cellspacing="0">
+<tr>
+<td colspan="3" width="775"><img src="/p.gif" width="775" height="2"></td>
+</tr>
+<tr>
+<td align="center" valign="middle" width="186"><img src="/p.gif" width="186" height="9"><br id=""><a href="http://www.dma.org.uk" target="_blank"><img src="/images/dma_logo_50.gif" width="50" height="50" border="0" alt="DMA"></a><br id=""><font color="#000000" size="1">1998 - 
+				<script language="Javascript">
+				var d = new Date();
+				document.write (d.getFullYear());
+				</script>
+				 BCA<br id=""><br id=""></font>
+</td>
+<td colspan="2" width="589" align="center" class="BOTTOM"><font size="1" color="#000000"><a href="index.asp"><img src="/images/navigation/home.gif" width="53" height="15" border="0" alt="Home"></a><a href="JavaScript:getObject('frmDisplayBasket').submit();"><img src="/images/navigation/basket.gif" width="92" height="15" border="0" alt="Basket"></a><a href="myaccount.asp"><img src="/images/navigation/account.gif" width="96" height="15" border="0" alt="My Account"></a><a href="feedback.asp"><img src="/images/navigation/contact.gif" width="94" height="15" border="0" alt="Contact Us"></a><a href="javascript:ETML('common/sitehelp/help_centre_BOL',0);"><img src="/images/navigation/help_bg.gif" width="54" height="15" border="0" alt="Help"></a><a href="javascript:ETML('common/sitehelp/help_centre_BOL',0);"><img src="/images/navigation/separator.gif" width="8" height="15" border="0" alt="Help"></a><a href="JavaScript:getObject('LoginForm').submit()"><img src="/images/navigation/login.gif" width="60" height="15" border="0" alt="Login"></a><img src="/p.gif" width="5" height="15" border="0"><a href="javascript:ETML('common/sitehelp/bol/09_priv_state_bol',0);"><img src="/images/navigation/privacy_policy.gif" width="108" height="15" border="0" alt="Privacy Policy"></a></font></td>
+</tr>
+<tr>
+<td width="186" height="1"><img src="/p.gif" width="186" height="1"></td>
+<td width="2" height="1"><img src="/p.gif" width="2" height="1"></td>
+<td width="587" height="1"><img src="/p.gif" width="587" height="1"></td>
+</tr>
+</table>
+</center><br id="">
+ 
+<IMG SRC="http://as1.falkag.de/sel?cmd=ban&dat=155875&opt=16&rdm='13753930.9263229'" width="1" height="1" border=0> <IMG SRC="http://rs0.co.uk/gif.php?bbcid=56&bbact=a1&bbval='1'&bbref='http://www.eshops.co.uk/uk-online-shops-books-magazines.html'" height=1 width=1 border=0></body>
+</html>

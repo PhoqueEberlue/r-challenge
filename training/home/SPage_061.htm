@@ -1,0 +1,108 @@
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Search the Internet: 
+</title>
+
+
+<SCRIPT  language="JavaScript">
+<!-- Hide from older browsers...
+//Check the enquiry form is filled in correctly
+function CheckForm () { 
+		
+	//If there is aproblem with the form then display an error
+	if (document.frmInterSearch.search.value == "") {
+		msg = "_________________________________________________________________\n\n";
+		msg += "Your search has not been submitted because there are problem(s) with the form.\n";
+		msg += "Please correct the problem(s) and re-submit the form.\n";
+		msg += "_________________________________________________________________\n\n";
+		msg += "\n\tPlease enter at least one keyword to search for."
+		
+		alert(msg + "\n\n");
+		
+		return false;
+	}
+	
+	return true;
+}
+
+//Function to open pop up window
+function openWin(theURL,winName,features) {
+  	window.open(theURL,winName,'toolbar=0,location=0,status=0,menubar=0,scrollbars=0,resizable=0,width=350,height=310');
+}
+// -->
+</script>
+
+<style type="text/css">
+<!--
+.text {font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: #000000}
+.bold {font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: #000000; font-weight: bold;}
+.italic {font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #009900; font-style: italic;}
+.heading {font-family: Arial, Helvetica, sans-serif; font-size: 24px; color: #000000; font-weight: bold;}
+a {font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: #0000CC}
+a:hover {font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: #FF0000}
+a:visited {font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: #0000CC}
+a:visited:hover {font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: #FF0000}
+
+-->
+</style>
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+
+
+<form method="get" name="frmInterSearch" action="default.asp" onSubmit="return CheckForm();">
+  
+  <table cellpadding="0" cellspacing="0" width="90%" align="center">
+    <tr> 
+      <td height="61" width="231" align="right" rowspan="3"><img src="images/getme.gif" border="0" width="200" height="50" alt=""> 
+      </td>
+      <td height="61" width="21" align="right" rowspan="3">&nbsp;</td>
+      <td class="text" height="29" width="634" valign="bottom">&nbsp;</td>
+    </tr>
+    <tr> 
+      <td class="normal" height="2" width="634"> 
+        <input type="TEXT" name="search" maxlength="50" size="35" value="">&nbsp;from&nbsp;
+		<select name="wherefrom" size="1">
+		<option value="NewZealandSearch" selected> New Zealand Web</option><option value="WorldWideSearch"> World Wide Web</option><option value="AuctionsClassifieds"> Auctions & Classifieds</option><option value="DiscountShopping"> Discount Shopping</option>
+  </select>
+  
+        <input type="submit" value="Search " name="submit">
+        
+      </td>
+    </tr>
+    <tr> 
+      <td class="text" height="29" width="634" valign="top"> Search On : 
+        <input type="radio" name="mode" value="allwords" CHECKED>All Words 
+        <input type="radio" name="mode" value="anywords">Any Words </td>
+    </tr>
+	
+  </table>
+  
+<img src="images/fast.gif" border="0" width="90%" alt="" align="middle">
+
+
+ 
+<table width="98%" border="0" cellspacing="0" cellpadding="1" align="center" bgcolor="#000000">
+  <tr> 
+      <td> 
+        <table width="100%" border="0" cellspacing="0"  align="center" valign="center" cellpadding="0" bgcolor="#CCCCCC">
+          <tr>
+            
+                  <td width="100%"><a href="add_url_form.asp">Submit Web Site</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="default.asp?mode=new">Recently 
+                    Submitted Web Sites</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="default.asp?mode=top">Top rated sites</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="toolbar/default.asp">FREE IE Toolbar</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="webmaster/default.asp">Webmasters</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.nztop50.co.nz/cgi-bin/rankem.cgi?id=jargent" target="_new">Visit the NZ Top50</a> </td>
+                  
+                
+				
+            </td>
+          </tr>
+        </table>
+      </td>
+  </tr>
+</table></form>
+<div align="center"> 
+</div>
+   </body>
+</html>

@@ -1,0 +1,846 @@
+
+	<html lang="en">
+	<head>
+	<title>johnlewis.com - flowers</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<script language="JavaScript">
+	// Used for Doubleclick ads
+var begin = new Date();
+var startYear = new Date("January 1, 1970");
+startYear.setYear(begin.getYear());
+var adRandomOrd = (begin.getTime() - startYear.getTime());
+//Copied from frontpage_js.asp 
+function getCookieVal (offset) 
+{var endstr = document.cookie.indexOf (";", offset);
+if (endstr == -1) endstr = document.cookie.length;
+return unescape(document.cookie.substring(offset, endstr));}
+function GetCookie (name) 
+{var arg = name + "="; var alen = arg.length; var clen = document.cookie.length;
+var i = 0;
+while (i < clen) {
+var j = i + alen;
+if (document.cookie.substring(i, j) == arg) return getCookieVal (j);
+i = document.cookie.indexOf(" ", i) + 1;
+if (i == 0) break;}
+if (name == "basket") {return "Basket Empty";} 
+else {return "null";}}
+//Used to break out of other's frames
+function killFrames() {
+if (self.parent.frames.length != 0) {
+outsideURL = document.referrer;
+killFrame  = outsideURL.indexOf("oneseek.com");
+if (killFrame == -1) {
+self.parent.location=document.location;
+}
+}
+}
+function addbookmark() {
+var myurl, mytitle;
+myurl = "http://www.johnlewis.com/stores/store.asp";
+mytitle = "johnlewis.com - flowers";
+if (document.all)
+window.external.AddFavorite(myurl, mytitle);
+}
+// function to change the action of a form
+function changeFormSubmit(objForm, sFormAction) {
+objForm.action = sFormAction;
+objForm.submit();
+}
+function characterCheck(textBoxObj, textVal, validChars) {
+var parsed = true;
+var tempText = "";
+if (validChars.length == 0)
+validChars = "abcdefghijklmnopqrstuvwxyz0123456789@.-";
+for (var i=0; i < textVal.length; i++) {
+var letter = textVal.charAt(i).toLowerCase();
+if (validChars.indexOf(letter) != -1) {
+tempText = tempText + textVal.charAt(i);
+} else {
+parsed = false;
+}
+}
+if (!parsed) {
+textBoxObj.value = tempText;
+alert("The value you entered contained invalid characters. These have now been removed.");
+}
+}
+//Used for service center pop-up
+function openWindow(url, height, width){
+browser_name = navigator.appName;
+browser_version = parseFloat(navigator.appVersion);
+winprops = "toolbar,scrollbars,resizable,menubar,location";
+if(height > 0 && width > 0)
+{
+winprops = winprops + ",height=" + height + ",width=" + width;
+}
+//IE 5 returns 4 for version!  Only MS could do that.  Laurie
+if (navigator.appVersion.indexOf("MSIE 5.0")!=-1) {
+browser_version = 5
+}
+//macs 
+if (navigator.appVersion.indexOf("Mac")!=-1) {
+//MAC IE (yes status bar)
+if (browser_name == "Microsoft Internet Explorer") 	{
+newwin = window.open(url,"",winprops);
+}
+//MAC Netscape 3.0 (yes status bar)
+if (browser_name == "Netscape" && browser_version < 4.01)	{
+newwin = window.open(url,"",winprops);
+}
+//MAC Netscape 4.0+  (focus, no status bar)
+else {
+newwin = window.open(url,"",winprops);
+newwin.focus(); 
+}
+}	 
+//PCs
+else if (browser_name == "Microsoft Internet Explorer" && browser_version <= 4) {
+//IE 3,4 (no focus, no status bar)
+newwin = window.open(url,"",winprops);
+}
+else if (browser_name == "Netscape" && browser_version < 4.01) {
+//Netscape 3 (focus, yes status bar)
+newwin = window.open(url,"",winprops);
+newwin.focus(); 
+newwin.refer = self;
+}
+else {
+//Netscape 4 .0+, IE 5 (focus, no status bar)
+newwin = window.open(url,"",winprops);	
+newwin.opener=window;
+newwin.focus();
+}
+}killFrames();
+	// -->
+	//-->
+
+	</script>
+	<style type="text/css">
+		.menulinkwhite {BORDER-BOTTOM: green thick;
+							BORDER-LEFT: green thick;
+							BORDER-RIGHT: green thick;
+							BORDER-TOP: green thick;
+							COLOR: #ffffff;
+							FONT-FAMILY: Arial, Helvetica, sans-serif;
+							TEXT-DECORATION: underline
+							}
+	A.sidemenulink:link	{	
+		text-decoration:	none;
+		color:	#3333cc;
+	}	
+			
+	A.sidemenulink:visited	{	
+		text-decoration:	none;
+		color:	#333399;
+		}	
+			
+	A.sidemenulink:active	{	
+		text-decoration:	none;
+		color:	#333399;
+		}	
+			
+	A.sidemenulink:hover	{	
+		text-decoration:	underline;
+		color:	#3333cc;
+		}
+	}
+	</style>
+	</head>
+
+
+
+	<body bgcolor="#ffffff" link="#333333" alink="#333333" vlink="#333333" topmargin="4" leftmargin="4" marginheight="4" marginwidth="4">
+	<!--johnlewis.com offers the best of John Lewis home, gift and technology products, online for your convenience. Shop online for the best of the home and gift range from John Lewis department stores, including kitchen, bedroom, and dining room furniture, together with Jonelle bed linen and housewares, with next day UK delivery and free returns.-->
+	<a name="top"></a>
+	
+		<table width="760" border="0" cellspacing="0" cellpadding="0">
+		<tr valign="bottom">
+			<td><img src="/jl_assets/global/key_606.gif" width="760" height="1"></td>
+		</tr>
+		</table>
+		
+		<table width="760" border="0" cellpadding="0" cellspacing="0" name="johnlewis.com navigation">
+		<tr>
+			<td colspan="2" width="154" valign="middle" bgcolor="#EEEEEE">
+			
+				<a href="http://www.johnlewis.com/default.asp?tabId=01"><img src="/jl_assets/global/johnlewiscom.gif" border="0" alt="johnlewis.com"></a>
+			</td>
+			<td width="606" colspan="7" height="50" align="right" bgcolor="#EEEEEE">
+			<table border="0" cellspacing="0" cellpadding="0" name="search box">
+				<tr>
+				<td align="right" valign="middle">
+
+<script language="javascript">
+	function validate(text){
+		var temptext = "";
+		var validchars = "abcdefghijklmnopqrstuvwxyz0123456789_',*?.-&ƒ‰≈Â÷ˆ…È ";
+		for (var i=0; i < text.length; i++) {
+			var letter = text.charAt(i).toLowerCase();
+			if (validchars.indexOf(letter) != -1) {
+				temptext = temptext + text.charAt(i);
+			}
+		}
+		if (temptext != text) { alert('Invalid characters are being removed and the search will now continue');}
+		return temptext;
+	}
+	
+	function trim(str){
+		var i=0,p = str.length-1;
+		while(str.charAt(i)==' ') i++;
+		while(str.charAt(p)==' ') p--;
+		if(i>p) return '';
+		return str.substring(i,p+1);
+	}
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="http://www.johnlewis.com/style.css">
+<table border="0" cellpadding="1" cellspacing="1" height="100%">
+	<tr> 
+		
+    <td class="sub"> search&nbsp; </td>
+	
+		<form method="get" action="http://www.johnlewis.com/corp/msearch/msearch.asp" id="searchIn" name="searchIn" onSubmit="var d=trim(document.searchIn.qu.value); d=validate(d); document.searchIn.qu.value=d; if (d.length < 2) { alert('Please enter a search term of two or more characters'); return false;}">
+	
+		
+		<td align="right"><nobr> 
+			<div align="left" valign="center">
+			<nobr><input type="text" name="qu" class="default" size="20" maxlength="25">&nbsp;
+			<input type="image" border="0" src="/jl_assets/global/go.gif" align="absmiddle" alt="search">
+			<input type="hidden" name="menuHiLite" value="0">
+			<input type="hidden" name="noHierMenuRoot" value="y">
+			<input type="hidden" name="tabId" value="01">
+			</nobr>
+			</div> 
+		</td>
+    </form>
+	</tr>
+</table>
+</td>
+				<td width="15">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td width="323" align="right"><img src="/jl_assets/global/i_nav.gif" width="323" height="17" usemap="#Map" border="0" alt="navigation">
+				</td>
+				</tr>
+			</table>
+			</td>
+		</tr>
+		<tr>
+			<td valign="middle" colspan="9" height="20" bgcolor="#606069">
+			
+  <map name="NavMap">
+    <area shape="rect" coords="0,0,63,30"    href="http://www.johnlewis.com/stores/division.asp?str=130&tabID=09" alt="Audio and TV" title="Audio and TV">
+	<area shape="rect" coords="66,0,126,30"  href="http://www.johnlewis.com/stores/division.asp?str=27&tabID=08" alt="Bed and bath" title="Bed and bath">
+	<area shape="rect" coords="129,0,190,30" href="http://www.johnlewis.com/stores/division.asp?str=12&tabID=12" alt="Computers and gaming" title="Computers and gaming">
+	<area shape="rect" coords="193,0,253,30" href="http://www.johnlewis.com/stores/division.asp?str=13&tabID=13" alt="Electrical" title="Electrical">
+	<area shape="rect" coords="256,0,316,30" href="http://www.johnlewis.com/stores/division.asp?str=11&tabID=11" alt="Fashion" title="Fashion">
+	<area shape="rect" coords="319,0,379,30" href="http://www.johnlewis.com/stores/division.asp?str=14&tabID=14" alt="For the home" title="For the home">
+	<area shape="rect" coords="382,0,442,30" href="http://www.johnlewis.com/stores/division.asp?str=15&tabID=15" alt="Furniture" title="Furniture">
+	<area shape="rect" coords="445,0,505,30" href="http://www.johnlewis.com/stores/division.asp?str=16&tabID=16" alt="Garden" title="Garden">
+	<area shape="rect" coords="508,0,568,30" href="http://www.johnlewis.com/stores/division.asp?str=17&tabID=17" alt="Gifts and flowers" title="Gifts and flowers">
+	<area shape="rect" coords="571,0,631,30" href="http://www.johnlewis.com/stores/division.asp?str=10&tabID=10" alt="Nursery" title="Nursery">
+	<area shape="rect" coords="634,0,694,30" href="http://www.johnlewis.com/stores/division.asp?str=18&tabID=18" alt="Sport and leisure" title="Sport and leisure">
+    <area shape="rect" coords="697,0,760,30" href="http://www.johnlewis.com/stores/division.asp?str=19&tabID=19" alt="Toys" atitle="Toys">
+</map>
+<img src="/jl_assets/corp/nav3_01.gif" width="760" height="31" alt="audio & tv - bed & bath - computers & gaming - electrical - fashion - for the home - furniture - garden - gifts & flowers - nursery - sport & leisure - toys" usemap="#NavMap" border="0"></td>
+		</tr>
+		</table>
+		
+				<map name="Map">
+				<area shape="rect" coords="0,-8,92,44" href="http://www.johnlewis.com/info/Help_home.asp?str=950&tabId=01" alt="Customer service">
+				<area shape="rect" coords="98,-4,162,33" href="https://www.johnlewis.com/basket/checkout1.asp?referer=eAcc&tabId=01" alt="My details">
+				<area shape="rect" coords="170,-1,232,36" href="https://www.johnlewis.com/corp/servicecenter/orderstatus/SCordertracking.asp?tabId=01" alt="My orders">
+				<area shape="rect" coords="239,-3,335,45" href="http://www.johnlewis.com/stores/division.asp?str=961&tabId=01" alt="Shop information">
+				</map>
+				
+<link type="text/css" rel="stylesheet" href="http://www.johnlewis.com/style.css">
+
+<table width="760" height="450" cellpadding='0' cellspacing='0' border="0" summary="Store page layout">
+  <tr> 
+    <td height="25" colspan="2">
+<font face="arial, helvetica, sans-serif" style="font-size: 11px" color="#666666">
+<a class=under href=http://www.johnlewis.com/default.asp?tabID=01 ><b>home page</b></a> > <a href="/stores/store.asp?str=171">Flowers</a>
+</font>
+ 
+    </td>
+    <td width="144" rowspan="5" align="right" valign="top">
+   <table cellspacing="0" cellpadding="0" align="left" summary="Right menu layout">
+        <tr valign="top"> 
+          <td height="120"><link type="text/css" rel="stylesheet" href="http://www.johnlewis.com/style.css">
+
+			<table border="0" cellpadding="1" cellspacing="0" valign="top" width="144" bgcolor="#cccccc">
+		<tr>
+			<td>
+
+				<table width="144" border="0" cellspacing="0" cellpadding="0">
+					<tr bgcolor="white">
+						<td colspan="2" valign="top">
+							<script>
+								function checkout() {
+									document.ToCheckout.submit();
+								}
+							</script>
+							
+	<table height="71" ID="Table1"><tr><td align=center>&nbsp;&nbsp;&nbsp;&nbsp;<font face="arial" size=1>Your basket is empty</font></td></tr></table> 
+						</td>
+					</tr>
+
+					
+					  <tr bgcolor="#EEEEEE" align="center">
+					
+						<td height="17" colspan="2" class=sub>
+							Subtotal: &#163;0.00
+						</td>
+					</tr>
+					
+
+					<tr bgcolor="#FFFFFF">
+						
+          <td colspan="2"> <img src="/jl_assets/basket/7_basket_button.gif" width="144" height="69" usemap="#Map2" border="0"></td>
+					</tr>
+
+				</table>
+
+			</td>
+		</tr>
+	</table>
+		
+ <map name="Map2"> <area shape="rect" coords="1,1,146,24" href="http://www.johnlewis.com/basket/basket.asp?referrer=VertScroll" alt="Basket" title="Basket"> 
+  <!--area shape="rect" coords="1,24,141,46" href="https://www.johnlewis.com/basket/checkout1.asp?referrer=VertScroll"--> 
+  <area shape="rect" coords="-2,24,138,46" href="javascript:checkout();" alt="Checkout" title="Checkout"> 
+</map>  <form name="ToCheckout" method="POST" action="http://www.johnlewis.com/basket/GoToCheckOut.asp" name="frmcheckout"> 
+<input type="hidden" name="ST" value="" id ="ST">
+	<input type="hidden" name="Ad" value="11533" ID="Ad">
+	<input type="hidden" name="ip" value="194.81.199.48" ID="ip">
+	<input type="hidden" name="CookieId" value="6DA239144F1940658A1CC2DF950908F0">
+	<input type="hidden" name="ShopperName" value="">
+	
+</form>
+</td>
+        </tr>
+        
+        <tr height="25"> 
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td> 
+<! ---- Best Sellers Table ---> 
+
+<link type="text/css" rel="stylesheet" href="http://www.johnlewis.com/style.css">	
+<table width="144" border="0" cellspacing="0" bgcolor="#B2D9C5" cellpadding="0" ID="Table1" summary="Bestsellers decorative table">
+	<tr> 
+		<td> 
+			<table border="0" cellspacing="1" width="100%" height="100%" cellpadding="3" ID="Table2" summary="Bestsellers list">
+				<tr> 
+					<td height="25" colspan="2" class="default">
+						 flowers<br>Best Sellers
+					</td>
+				</tr>
+				 
+					<tr bgcolor="#FFFFFF"> 
+						<td height="30" width="10" align="center" class="sub">
+							1
+						</td>
+						<td height="30">
+							<a href="/stores/product.asp?sku=230198723&amp;str=171" class="sub"> 
+								Delphiniums, Box of 20, Blue
+							</a>
+						</td>
+					</tr>
+					 
+					<tr bgcolor="#FFFFFF"> 
+						<td height="30" width="10" align="center" class="sub">
+							2
+						</td>
+						<td height="30">
+							<a href="/stores/product.asp?sku=230197766&amp;str=171" class="sub"> 
+								Rose and Freesia Bouquet
+							</a>
+						</td>
+					</tr>
+					 
+					<tr bgcolor="#FFFFFF"> 
+						<td height="30" width="10" align="center" class="sub">
+							3
+						</td>
+						<td height="30">
+							<a href="/stores/product.asp?sku=230194186&amp;str=171" class="sub"> 
+								Summer Florist`s Indulgence
+							</a>
+						</td>
+					</tr>
+					 
+					<tr bgcolor="#FFFFFF"> 
+						<td height="30" width="10" align="center" class="sub">
+							4
+						</td>
+						<td height="30">
+							<a href="/stores/product.asp?sku=230194185&amp;str=171" class="sub"> 
+								Summer Pink Zinc Arrangement
+							</a>
+						</td>
+					</tr>
+					 
+					<tr bgcolor="#FFFFFF"> 
+						<td height="30" width="10" align="center" class="sub">
+							5
+						</td>
+						<td height="30">
+							<a href="/stores/product.asp?sku=230192578&amp;str=171" class="sub"> 
+								Rose and Lily Bouquet
+							</a>
+						</td>
+					</tr>
+					 
+			</table>
+		</td>
+	</tr>
+</table>
+
+
+<! ---- Best Sellers Table ends ---> 
+
+ </td>
+        </tr>
+        <tr height="25"> 
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td> 
+	
+<table border="0" cellspacing="0" cellpadding="0" width="144" bgcolor="#B2D9C5" summary="Branded shops layout">
+
+<tr bgcolor="#B2D9C5"> <td height="25" class="default">&nbsp;Related Departments</td></tr>
+
+<tr><td><table border="0" cellspacing="1" cellpadding="0" width="100%">
+
+<tr bgcolor="#FFFFFF"> <td width="100%" height="22" bgcolor="#FFFFFF">
+<A href="/stores/store.asp?str=806"><img src="/jl_assets//stores/storelinks/st_finefoodandwine.gif" width="142" height="22" border=0 alt="fine food and wine"></A></td></tr>
+
+<tr bgcolor="#FFFFFF"> <td width="100%" height="22" bgcolor="#FFFFFF">
+<A href="/stores/division.asp?str=17&tabID=17"><img src="/jl_assets//stores/storelinks/st_gifts.gif" width="142" height="22" border=0 alt="gifts "></A></td></tr>
+
+<tr bgcolor="#FFFFFF"> <td width="100%" height="44" bgcolor="#FFFFFF">
+<A href="javascript:openWindow('http://www.johnlewis.com/info/guides/flowercare2.asp', 462,472)"><img src="/jl_assets//stores/storelinks/st_flowerscare.gif" width="142" height="44" border=0 alt="caring for flowers "></A></td></tr>
+
+</td></tr></table>
+</td></tr></table>
+ </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2" height="20" valign="top"><img src="/jl_assets/global/key_606.gif" width="614" height="1" alt=" "></td>
+  </tr>
+  <tr valign=top> 
+    <td width="154" valign="top" class="titlebig"> flowers<br>	
+     <table width="144" border=0 cellspacing=0 cellpadding=0><tr valign=middle><td>&nbsp;</td><td height=18  valign=middle><a  class="m1" href="/stores/shelf.asp?str=171&shelfid=2150&m=1">Arrangements</a></td></tr><tr valign=middle><td>&nbsp;</td><td height=18  valign=middle><a  class="m1" href="/stores/shelf.asp?str=171&shelfid=2151&m=2">Bouquets</a></td></tr><tr valign=middle><td>&nbsp;</td><td height=18  valign=middle><a  class="m1" href="/stores/shelf.asp?str=171&shelfid=2152&m=3">Grower`s Choice</a></td></tr><tr valign=middle><td>&nbsp;</td><td height=18  valign=middle><a  class="m1" href="/stores/shelf.asp?str=171&shelfid=2778&m=4">Summer Flowers</a></td></tr></table><br>
+     <img src="/jl_assets/global/spacer.gif" border="0" width="154" height="1" alt=" "></td>
+     </td>
+    <td width="462"> 
+    
+		<table width="100%" border="0" cellspacing="0" cellpadding="0" name="central content" background="/jl_assets/stores/flowers/flowerbg.jpg">
+	
+        <tr> 
+          <td>
+    
+		<table width="452" border="0" cellspacing="0" cellpadding="0" summary="Header information">
+		  <tr> 
+		    <td width="147" colspan="3" rowspan="2" valign="top">
+		    		    
+				
+					<a href="/stores/shelf.asp?str=171&shelfid=2778">
+						<img height=298 src="/jl_assets/stores/flowers/hs_230194179.jpg" width=147 border=0 alt="">
+					</a>
+				
+			</td>
+		    <td width="10" rowspan="2">&nbsp;</td>
+		    <td valign="top" class="default">
+		    
+				<img src="/jl_assets/stores/flowers/jlflowers.gif" border=0 alt=""><br/>
+						    
+				<a href="" class="under"><b></b></a>
+				
+				
+					<p><span class="default"><font color="#339966">For a special gift or to fill your own home with seasonal colour and fragrance, choose from our wide range of colourful bouquets, rich tonal arrangements and single variety flowers in abundance. <p>We offer <b>free delivery</b> on all flowers so there are no hidden extra costs. <a href=/info/Help.asp?HelpID=74&str=950#flowers class=under><font color=#339966>Click here to check deliveries to islands and more remote areas</font></a>. A complimentary gift card is also included to add your personal message.<p>
+Add an extra touch of luxury to your flower delivery with a bottle of Champagne - you can also select a pair of Sophia Champagne flutes, ideal for a birthday or anniversary celebration. <p></font></span>
+				
+				<span class="titlemed">
+				 
+				</span>	
+				</span>							
+		    </td>		    
+		  </tr>
+		  <tr> 
+		    <td valign="bottom"><a href="" class="sub"> 		    
+		      </a><br>
+		      <a href="" class="sub">
+		      </a><br>
+		      <a href="" class="sub">
+		      </a></td>
+		  </tr>
+		</table>
+     
+     
+    </td>    
+  </tr>
+  <tr>
+    <td width="452">&nbsp;</td>
+  </tr>
+  <tr>     
+    <td width="452">  
+      <table width="452" border="0"	cellspacing="0"	cellpadding="0" summary="Error content layout">
+         
+        <tr>  
+          <td width="144" valign="top" height="100%">
+            <table width="144" border="0" cellspacing="0" cellpadding="0" height="100%" summary="Body content layout">
+                      
+			<tr valign="top"> 
+                <td width="144" rowspan="2" colspan="2"> 
+                  <table width="100%" border="0" cellspacing="0" cellpadding="1" summary="Featured product areas">
+                    <tr>
+                      <td>
+                      
+						<a href="/stores/multiproduct.asp?shelfid=19350&str=171">
+						<img src="/jl_assets/stores/flowers/sb_230194184.jpg " width="144" height="144" border="0" alt="">
+						</a>
+						
+					  </td>
+                    </tr>
+                  </table>
+                  </td>                
+                  <td width="42" height="72">&nbsp;</td>
+              </tr>
+              <tr valign="top"> 
+                <td width="42" height="72">&nbsp;</td>
+              </tr>
+                        
+              
+              <tr valign="top"> 
+                           
+				<td width="144" colspan="2">
+			  
+                 <table width="100%" border="0" cellspacing="0" cellpadding="4" summary="Central content layout">
+                    <tr valign="top"> 
+                      <td height="210">
+                                                                  
+						<span class="title"><font color="#333333"><b></b></font>&nbsp;
+                      </span>
+					  
+                      <br>
+						
+												
+					<span class="default"><font color=""><a href=/stores/multiproduct.asp?shelfid=19350&str=171 class=under><b><font color=#339966> Lime and Cerise Tank Arrangement £35</font></b></a><br><font color=#339966>
+Bold and cheerful Serena gerberas feature in this hot colour arrangement, accompanied by lime bupleurum and shamrock chrysanthemums, with salal leaves for that finishing touch. 
+</font><br><a href="/stores/shelf.asp?str=171&shelfid=2150" class="under"><font color=#339966>More arrangements</font></a> </font></span></td>
+												
+                    </tr>
+                  </table>
+                  </td>
+              </tr>
+              <tr> 
+                <td width="144" colspan="2"></td>
+              </tr>
+            </table>
+          </td>
+           
+          <td width="10">&nbsp; </td>
+           
+          <td width="144" valign="top" height="100%">
+            <table width="144" border="0" cellspacing="0" cellpadding="0" height="100%" summary="Body content layout">
+                      
+			<tr valign="top"> 
+                <td width="144" rowspan="2" colspan="2"> 
+                  <table width="100%" border="0" cellspacing="0" cellpadding="1" summary="Featured product areas">
+                    <tr>
+                      <td>
+                      
+						<a href="/stores/multiproduct.asp?shelfid=17713&str=171">
+						<img src="/jl_assets/stores/flowers/sb_230192578.jpg" width="144" height="144" border="0" alt="">
+						</a>
+						
+					  </td>
+                    </tr>
+                  </table>
+                  </td>                
+                  <td width="42" height="72">&nbsp;</td>
+              </tr>
+              <tr valign="top"> 
+                <td width="42" height="72">&nbsp;</td>
+              </tr>
+                        
+              
+              <tr valign="top"> 
+                           
+				<td width="144" colspan="2">
+			  
+                 <table width="100%" border="0" cellspacing="0" cellpadding="4" summary="Central content layout">
+                    <tr valign="top"> 
+                      <td height="210">
+                                                                  
+						<span class="title"><font color="#333333"><b></b></font>&nbsp;
+                      </span>
+					  
+                      <br>
+						
+												
+					<span class="default"><font color=""><a href=/stores/multiproduct.asp?shelfid=17713&str=171 class=under><b><font color=#339966>Rose and Lily Bouquet £35</font></b></a><br><font color=#339966>This opulent bouquet is bursting with vitality and fragrance with eucalyptus and steel grass giving shape to extravagant longiflorum lilies and three varieties of rose ñ Mini Eden spray, Sweet Unique and Avalanche.</font>
+<br><a href="/stores/shelf.asp?str=171&shelfid=2151" class="under"><font color=#339966>More bouquets </font></a> </font></span></td>
+												
+                    </tr>
+                  </table>
+                  </td>
+              </tr>
+              <tr> 
+                <td width="144" colspan="2"></td>
+              </tr>
+            </table>
+          </td>
+           
+          <td width="10">&nbsp; </td>
+           
+          <td width="144" valign="top" height="100%">
+            <table width="144" border="0" cellspacing="0" cellpadding="0" height="100%" summary="Body content layout">
+                      
+			<tr valign="top"> 
+                <td width="144" rowspan="2" colspan="2"> 
+                  <table width="100%" border="0" cellspacing="0" cellpadding="1" summary="Featured product areas">
+                    <tr>
+                      <td>
+                      
+						<a href="/stores/multiproduct.asp?shelfid=19344&str=171">
+						<img src="/jl_assets/stores/flowers/sb_230194186.jpg " width="144" height="144" border="0" alt="">
+						</a>
+						
+					  </td>
+                    </tr>
+                  </table>
+                  </td>                
+                  <td width="42" height="72">&nbsp;</td>
+              </tr>
+              <tr valign="top"> 
+                <td width="42" height="72">&nbsp;</td>
+              </tr>
+                        
+              
+              <tr valign="top"> 
+                           
+				<td width="144" colspan="2">
+			  
+                 <table width="100%" border="0" cellspacing="0" cellpadding="4" summary="Central content layout">
+                    <tr valign="top"> 
+                      <td height="210">
+                                                                  
+						<span class="title"><font color="#333333"><b></b></font>&nbsp;
+                      </span>
+					  
+                      <br>
+						
+												
+					<span class="default"><font color=""><a href=/stores/multiproduct.asp?shelfid=19344&str=171 class=under><b><font color=#339966>Summer Florist`s Indulgence £29</font></b></a><br><font color=#339966>
+Arrange this tall graceful collection how you will. Deliciously fragranced white Oriental lilies and purple freesias are accompanied by blue agapanthus and Mount Fuji ornithogalum. 
+</font>
+<br><a href="/stores/shelf.asp?str=171&shelfid=2152" class="under"><font color=#339966>More grower`s choice </font></a>
+ </font></span></td>
+												
+                    </tr>
+                  </table>
+                  </td>
+              </tr>
+              <tr> 
+                <td width="144" colspan="2"></td>
+              </tr>
+            </table>
+          </td>
+           </tr>
+         
+        <tr> 
+          <td width="462" colspan="5">&nbsp; </td>
+        </tr>
+         
+        <tr>  
+          <td width="144" valign="top" height="100%">
+            <table width="144" border="0" cellspacing="0" cellpadding="0" height="100%" summary="Body content layout">
+                      
+			<tr valign="top"> 
+                <td width="144" rowspan="2" colspan="2"> 
+                  <table width="100%" border="0" cellspacing="0" cellpadding="1" summary="Featured product areas">
+                    <tr>
+                      <td>
+                      
+						<a href="/stores/multiproduct.asp?shelfid=19351&str=171">
+						<img src="/jl_assets/stores/flowers/sb_230194185.jpg " width="144" height="144" border="0" alt="">
+						</a>
+						
+					  </td>
+                    </tr>
+                  </table>
+                  </td>                
+                  <td width="42" height="72">&nbsp;</td>
+              </tr>
+              <tr valign="top"> 
+                <td width="42" height="72">&nbsp;</td>
+              </tr>
+                        
+              
+              <tr valign="top"> 
+                           
+				<td width="144" colspan="2">
+			  
+                 <table width="100%" border="0" cellspacing="0" cellpadding="4" summary="Central content layout">
+                    <tr valign="top"> 
+                      <td height="210">
+                                                                  
+						<span class="title"><font color="#333333"><b></b></font>&nbsp;
+                      </span>
+					  
+                      <br>
+						
+												
+					<span class="default"><font color=""><a href=/stores/multiproduct.asp?shelfid=19351&str=171 class=under><b><font color=#339966>Summer Pink Zinc Arrangement £29</font></b></a><br><font color=#339966>A profusion of pinks set off by white astilbe and mini variegated pittosporum. Also contains pink antirrhinum, Yoko Ono chrysanthemums and Purple Rain gerbera, and arrives in a zinc container. </font>
+<br><a href="/stores/shelf.asp?str=171&shelfid=2150" class="under"><font color=#339966>More arrangements</font></a> </font></span></td>
+												
+                    </tr>
+                  </table>
+                  </td>
+              </tr>
+              <tr> 
+                <td width="144" colspan="2"></td>
+              </tr>
+            </table>
+          </td>
+           
+          <td width="10">&nbsp; </td>
+           
+          <td width="144" valign="top" height="100%">
+            <table width="144" border="0" cellspacing="0" cellpadding="0" height="100%" summary="Body content layout">
+                      
+			<tr valign="top"> 
+                <td width="144" rowspan="2" colspan="2"> 
+                  <table width="100%" border="0" cellspacing="0" cellpadding="1" summary="Featured product areas">
+                    <tr>
+                      <td>
+                      
+						<a href="/stores/multiproduct.asp?shelfid=12360&str=171">
+						<img src="/jl_assets/stores/flowers/sb_230170561.jpg" width="144" height="144" border="0" alt="">
+						</a>
+						
+					  </td>
+                    </tr>
+                  </table>
+                  </td>                
+                  <td width="42" height="72">&nbsp;</td>
+              </tr>
+              <tr valign="top"> 
+                <td width="42" height="72">&nbsp;</td>
+              </tr>
+                        
+              
+              <tr valign="top"> 
+                           
+				<td width="144" colspan="2">
+			  
+                 <table width="100%" border="0" cellspacing="0" cellpadding="4" summary="Central content layout">
+                    <tr valign="top"> 
+                      <td height="210">
+                                                                  
+						<span class="title"><font color="#333333"><b></b></font>&nbsp;
+                      </span>
+					  
+                      <br>
+						
+												
+					<span class="default"><font color="339966"><a href=/stores/multiproduct.asp?shelfid=12360&str=171 class=under><b><font color=#339966>Scented Purple and Lime Bouquet £29</font></b></a><br>White roses and freesias, purple lisianthus, lime-fronded shamrock chrysanthemums and mini yellow germini are interwoven with white oriental lilies that bloom full of aroma.<br><font color="#339966"><a href="/stores/shelf.asp?str=171&shelfid=2151" class="under"><font color=339966>More bouquets</font></a> </font></span></td>
+												
+                    </tr>
+                  </table>
+                  </td>
+              </tr>
+              <tr> 
+                <td width="144" colspan="2"></td>
+              </tr>
+            </table>
+          </td>
+           
+          <td width="10">&nbsp; </td>
+           
+          <td width="144" valign="top" height="100%">
+            <table width="144" border="0" cellspacing="0" cellpadding="0" height="100%" summary="Body content layout">
+                      
+			<tr valign="top"> 
+                <td width="144" rowspan="2" colspan="2"> 
+                  <table width="100%" border="0" cellspacing="0" cellpadding="1" summary="Featured product areas">
+                    <tr>
+                      <td>
+                      
+						<a href="/stores/multiproduct.asp?shelfid=12366&str=171">
+						<img src="/jl_assets/stores/flowers/sb_230170567.jpg" width="144" height="144" border="0" alt="">
+						</a>
+						
+					  </td>
+                    </tr>
+                  </table>
+                  </td>                
+                  <td width="42" height="72">&nbsp;</td>
+              </tr>
+              <tr valign="top"> 
+                <td width="42" height="72">&nbsp;</td>
+              </tr>
+                        
+              
+              <tr valign="top"> 
+                           
+				<td width="144" colspan="2">
+			  
+                 <table width="100%" border="0" cellspacing="0" cellpadding="4" summary="Central content layout">
+                    <tr valign="top"> 
+                      <td height="210">
+                                                                  
+						<span class="title"><font color="#333333"><b></b></font>&nbsp;
+                      </span>
+					  
+                      <br>
+						
+												
+					<span class="default"><font color="339966"><a href=/stores/multiproduct.asp?shelfid=12366&str=171 class=under><b><font color=#339966>Longiflorum Lilies, Box of 15, White</font></b></a><br>Believed to date back to around 2000 BC, white lilies were once used for medicinal purposes and are associated with sincerity and purity. Despatched in boxes of 15.
+<br><a href="/stores/shelf.asp?str=171&shelfid=2152" class="under"><font color="#339966">More grower`s choice</font></a> </font></span></td>
+												
+                    </tr>
+                  </table>
+                  </td>
+              </tr>
+              <tr> 
+                <td width="144" colspan="2"></td>
+              </tr>
+            </table>
+          </td>
+           </tr>
+         
+      </table>
+       </td>
+
+</tr>
+</td>
+</table>
+
+  </tr>
+  <tr> 
+    <td width="154" valign="top">&nbsp;</td>
+    <td height="25" width="462">&nbsp;</td>
+    <td align="right" valign="top" width="144">&nbsp;</td>
+  </tr>
+</table>
+
+<table width="760" border="0" cellspacing="0" cellpadding="0">
+<tr><td width="144" height="25">&nbsp;</td><td width="10">&nbsp;</td><td width="452" align="center"><hr size=1 color=#eeeeee noshade>
+<a href="http://www.johnlewis.com/info/Help.asp?HelpID=9&str=950&m=39"><font face="Arial, Helvetica, sans-serif" style="font-size:11px" >Pricing 
+policy</font></a><font face="Arial, Helvetica, sans-serif" style="font-size:11px">&nbsp;</font>&nbsp;|&nbsp;&nbsp;<a href="http://www.johnlewis.com/info/terms.asp?str=950"><font face="Arial, Helvetica, sans-serif" style="font-size:11px">Terms 
+and Conditions</font></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/stores/store.asp?str=171&source=11533#top"><font face="Arial, Helvetica, sans-serif" style="font-size:11px">Top 
+of page</font></a></td><td width="10">&nbsp;</td><td width="144">&nbsp;</td></tr>
+<tr><td width="760" height="35" align="center" colspan="5"><font face="Arial, Helvetica, sans-serif" style="font-size: 10px">Copyright © John Lewis Partnership 2001-2004</font></td></tr>
+</table>
+<script language=JavaScript>var s_pageName="flowers store";var s_server="wgb48";var s_channel="flowers";var s_pageType="";var s_prop1="store";var s_prop2="store.asp";var s_prop3="source=11533|str=171";var s_prop4="";var s_prop5="";var s_campaign="11533";var s_state="";var s_zip="";var s_events="";var s_products="";var s_purchaseID="";var s_eVar1="home page|flowers";var s_eVar2="flowers_171";var s_eVar3="";var s_eVar4="";var s_eVar5="11533";var s_account = 'johnlewis';</script>
+	<script language="JavaScript" src="/inc/reusable/s_code_remote.js"></script>
+	<!-- End SiteCatalyst code version: G.5. -->
+	</body></html>
